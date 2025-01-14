@@ -1,0 +1,183 @@
+exports[`basemainnet send transfer integration test Send all eth from first to second portolio 1`] = `
+{
+  "1_amount": "795780644563539 wei",
+  "2_txId": "0x954e3d526ff6fdeec7799cde2d7f1d52110e70a3543b00c3160c6e8b05efc47b",
+  "3_txRawHex": "02f873822105138401312d00840bebc20082520894f6c138c36341138ddfc314a11038da8264b7ef098702d3c21ea36a5380c080a00ba228d07a07ca4bb5715979c4b6be81f2f1a60dd5e0b36b1bf9251f687b5133a03aba6bbfce3d8b923082ddcb15e4f0fc85b961b737297c11a67793e05fea004e",
+  "4_tx": {
+    "coinAmount": "-0.000795780644563539 BASE",
+    "coinName": "basemainnet",
+    "confirmations": 0,
+    "currencies": {
+      "basemainnet": {
+        "BASE": 18,
+        "Gwei": 9,
+        "Kwei": 3,
+        "Mwei": 6,
+        "finney": 15,
+        "szabo": 12,
+        "wei": 0,
+      },
+    },
+    "data": {
+      "gasLimit": 21000,
+      "nonce": 19,
+      "replacedTxId": undefined,
+      "tipGasPrice": "20000000",
+    },
+    "date": "SOME DATE",
+    "feeAmount": "0.0000042 BASE",
+    "feeCoinName": "basemainnet",
+    "to": "0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+    "txId": "0x954e3d526ff6fdeec7799cde2d7f1d52110e70a3543b00c3160c6e8b05efc47b",
+    "version": 1,
+  },
+  "5_beforeBalances": {
+    "exodus_0": {
+      "basemainnet": {
+        "balance": "0.000795780644563539 BASE",
+        "spendable": "0.000795780644563539 BASE",
+        "spendableBalance": "0.000795780644563539 BASE",
+        "staked": "0 BASE",
+        "total": "0.000795780644563539 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "balance": "0.0002 BASE",
+        "spendable": "0.0002 BASE",
+        "spendableBalance": "0.0002 BASE",
+        "staked": "0 BASE",
+        "total": "0.0002 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+  },
+  "6_afterBalances": {
+    "exodus_0": {
+      "basemainnet": {
+        "balance": "0 BASE",
+        "spendable": "0 BASE",
+        "spendableBalance": "0 BASE",
+        "staked": "0 BASE",
+        "total": "0 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0.000799980644563539 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "balance": "0.0002 BASE",
+        "spendable": "0.0002 BASE",
+        "spendableBalance": "0.0002 BASE",
+        "staked": "0 BASE",
+        "total": "0.0002 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+  },
+}
+`;
+
+exports[`basemainnet send transfer integration test Send some eth from first to second portolio 1`] = `
+{
+  "1_amount": "200000000000000 wei",
+  "2_txId": "0xa40547fc0160f2115c5977486c71b0777073f3fbe161194f6c1fbecf96b4b26a",
+  "3_txRawHex": "02f872822105138401312d00840bebc20082520894f6c138c36341138ddfc314a11038da8264b7ef0986b5e620f4800080c080a069e3f7cc30c4ba4bca606bff724180b07d370eb933145fc628d05d4c88e581a3a014fb1db7d154eac64a30f6859efc995313d569ba26f6e61fdef10347f1c8857c",
+  "4_tx": {
+    "coinAmount": "-0.0002 BASE",
+    "coinName": "basemainnet",
+    "confirmations": 0,
+    "currencies": {
+      "basemainnet": {
+        "BASE": 18,
+        "Gwei": 9,
+        "Kwei": 3,
+        "Mwei": 6,
+        "finney": 15,
+        "szabo": 12,
+        "wei": 0,
+      },
+    },
+    "data": {
+      "gasLimit": 21000,
+      "nonce": 19,
+      "replacedTxId": undefined,
+      "tipGasPrice": "20000000",
+    },
+    "date": "SOME DATE",
+    "feeAmount": "0.0000042 BASE",
+    "feeCoinName": "basemainnet",
+    "to": "0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+    "txId": "0xa40547fc0160f2115c5977486c71b0777073f3fbe161194f6c1fbecf96b4b26a",
+    "version": 1,
+  },
+  "5_beforeBalances": {
+    "exodus_0": {
+      "basemainnet": {
+        "balance": "0.000795780644563539 BASE",
+        "spendable": "0.000795780644563539 BASE",
+        "spendableBalance": "0.000795780644563539 BASE",
+        "staked": "0 BASE",
+        "total": "0.000795780644563539 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "balance": "0.0002 BASE",
+        "spendable": "0.0002 BASE",
+        "spendableBalance": "0.0002 BASE",
+        "staked": "0 BASE",
+        "total": "0.0002 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+  },
+  "6_afterBalances": {
+    "exodus_0": {
+      "basemainnet": {
+        "balance": "0.000591580644563539 BASE",
+        "spendable": "0.000591580644563539 BASE",
+        "spendableBalance": "0.000591580644563539 BASE",
+        "staked": "0 BASE",
+        "total": "0.000591580644563539 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0.0002042 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "balance": "0.0002 BASE",
+        "spendable": "0.0002 BASE",
+        "spendableBalance": "0.0002 BASE",
+        "staked": "0 BASE",
+        "total": "0.0002 BASE",
+        "unconfirmedReceived": "0 BASE",
+        "unconfirmedSent": "0 BASE",
+        "unstaked": "0 BASE",
+        "unstaking": "0 BASE",
+      },
+    },
+  },
+}
+`;

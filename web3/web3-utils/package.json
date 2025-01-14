@@ -1,0 +1,51 @@
+{
+  "name": "@exodus/web3-utils",
+  "description": "Web3 utils",
+  "version": "1.48.3",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean &&  run -T tsc",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-utils"
+  },
+  "devDependencies": {
+    "@exodus/web3-types": "workspace:*"
+  },
+  "peerDependencies": {
+    "@exodus/assets": "^8.0.95"
+  },
+  "dependencies": {
+    "@exodus/currency": "^6.0.1",
+    "@exodus/fetch": "^1.2.1",
+    "bn.js": "^5.2.0"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-utils"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-utils"
+}

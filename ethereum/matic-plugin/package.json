@@ -1,0 +1,37 @@
+{
+  "name": "@exodus/matic-plugin",
+  "version": "2.6.1",
+  "description": "Polygon plugin for Exodus SDK powered wallets",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "!src/**/__tests__"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/ethereum-api": "^8.22.0",
+    "@exodus/matic-meta": "^2.2.3"
+  },
+  "devDependencies": {
+    "@exodus/assets-testing": "workspace:^"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Amatic-plugin"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/matic-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

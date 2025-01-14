@@ -1,0 +1,123 @@
+[
+  {
+    "request": {
+      "resource": "https://base-qn.a.exodus.io",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getTransactionCount\",\"params\":[\"0x90E481d9A664ebbE4Be180d9501962255463036d\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-credentials", "true"],
+      ["access-control-allow-headers", "Content-Type,Authorization,User-Agent"],
+      ["access-control-allow-methods", "GET, POST, OPTIONS"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ed6d06ba80cab31-EZE"],
+      ["connection", "keep-alive"],
+      ["content-length", "40"],
+      ["content-type", "application/json"],
+      ["date", "Thu, 05 Dec 2024 20:33:57 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "__cfruid=bd80e221c206ecc22e4ebfe7a5714abe2cdca991-1733430837; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=_K2HCoy1abis6QF_ECud3iCM2Uwa29nXiXfeywOnznA-1733430837285-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept-Encoding"],
+      ["x-host-id", "f1b546936d23e3b5-4cc9fe210c6fc2b1"],
+      ["x-node-id", "base_base-mainnet_ewr"]
+    ],
+    "url": "https://base-qn.a.exodus.io/",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "jsonrpc": "2.0", "id": 0, "result": "0x1" }
+  }, {
+    "request": {
+      "resource": "https://base-qn.a.exodus.io",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_getCode\",\"params\":[\"0xf6c138C36341138dDFC314a11038dA8264B7Ef09\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-credentials", "true"],
+      ["access-control-allow-headers", "Content-Type,Authorization,User-Agent"],
+      ["access-control-allow-methods", "GET, POST, OPTIONS"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ed6d06d49c5c194-EZE"],
+      ["connection", "keep-alive"],
+      ["content-length", "39"],
+      ["content-type", "application/json"],
+      ["date", "Thu, 05 Dec 2024 20:33:57 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "__cfruid=bd80e221c206ecc22e4ebfe7a5714abe2cdca991-1733430837; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=wl3oW162rf_ACV_lwqhI8ez7LAhtYbvShvvdZa3zMlg-1733430837514-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept-Encoding"],
+      ["x-host-id", "f1b546936d23e3b5-d88038b407993a88"],
+      ["x-node-id", "base_base-mainnet_ewr"]
+    ],
+    "url": "https://base-qn.a.exodus.io/",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "jsonrpc": "2.0", "id": 1, "result": "0x" }
+  }, {
+    "request": {
+      "resource": "https://base-qn.a.exodus.io",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getTransactionCount\",\"params\":[\"0x90E481d9A664ebbE4Be180d9501962255463036d\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-credentials", "true"],
+      ["access-control-allow-headers", "Content-Type,Authorization,User-Agent"],
+      ["access-control-allow-methods", "GET, POST, OPTIONS"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ed6d06f6b7aab31-EZE"],
+      ["connection", "keep-alive"],
+      ["content-length", "40"],
+      ["content-type", "application/json"],
+      ["date", "Thu, 05 Dec 2024 20:33:57 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "__cfruid=bd80e221c206ecc22e4ebfe7a5714abe2cdca991-1733430837; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=PWXqq.aAZA9zUf3T0Y7OKMbztN6dTHeP2mbX9_P9YrQ-1733430837878-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept-Encoding"],
+      ["x-host-id", "f1b546936d23e3b5-ade27722881d3cde"],
+      ["x-node-id", "base_base-mainnet_ewr"]
+    ],
+    "url": "https://base-qn.a.exodus.io/",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "jsonrpc": "2.0", "id": 0, "result": "0x1" }
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "name": "@exodus/bitcoin-meta",
+  "version": "2.0.1",
+  "description": "Bitcoin constants, icons, colors and other metadata",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "assets",
+    "src",
+    "!**/__tests__/**",
+    "CHANGELOG.md"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/bitcoin/bitcoin-meta",
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@exodus/currency": "^6.0.1"
+  },
+  "devDependencies": {
+    "@exodus/assets-meta-testing": "workspace:^"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Abitcoin-meta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

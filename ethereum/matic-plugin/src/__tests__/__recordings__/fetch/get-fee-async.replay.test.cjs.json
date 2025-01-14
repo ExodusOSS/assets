@@ -1,0 +1,95 @@
+[
+  {
+    "request": {
+      "resource": "https://polygon.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xbb42bf5aebbbeaef9335d8b497fb2cff2a010eed",
+      "options": {
+        "timeout": 15000,
+        "method": "GET",
+        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4bd1dddc3ae-WAW"],
+      ["connection", "keep-alive"],
+      ["content-length", "4"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:13 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725054.045.41.751276|10037096a63b189d1e5aeee5030e42e1; Expires=Mon, 05-Aug-24 22:44:13 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=ee18d21031f67d58a2c51b9f72d60075272613c4-1722725053; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=A9cLnNMn7iSJ9bSOwgdPtCF8ZQ41gUSfwkJDre5tV7M-1722725053124-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://polygon.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xbb42bf5aebbbeaef9335d8b497fb2cff2a010eed",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": "0x"
+  },
+  {
+    "request": {
+      "resource": "https://polygon.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=invalid",
+      "options": {
+        "timeout": 15000,
+        "method": "GET",
+        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+      }
+    },
+    "status": 500,
+    "statusText": "Internal Server Error",
+    "ok": false,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4beaf66c3ae-WAW"],
+      ["connection", "keep-alive"],
+      ["content-length", "38"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:13 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725054.294.35.664535|10037096a63b189d1e5aeee5030e42e1; Expires=Mon, 05-Aug-24 22:44:13 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=ee18d21031f67d58a2c51b9f72d60075272613c4-1722725053; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=6w4ahYwHTv3OMKo7P41kU.ilhrvwtxzS.OKMi1DrqdA-1722725053406-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://polygon.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=invalid",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "code": 500, "error": "Invalid address" }
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "name": "@exodus/ethereum-plugin",
+  "version": "2.7.1",
+  "description": "Ethereum plugin for Exodus SDK powered wallets",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "!src/**/__tests__"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/currency": "^6.0.1",
+    "@exodus/ethereum-api": "^8.24.1",
+    "@exodus/ethereum-lib": "^5.8.2",
+    "@exodus/ethereum-meta": "^2.0.0",
+    "@exodus/ethereumjs": "^1.0.0",
+    "@exodus/simple-retry": "^0.0.6",
+    "bn.js": "^5.2.1",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "devDependencies": {
+    "@exodus/assets": "^11.0.0",
+    "@exodus/assets-testing": "workspace:^",
+    "@exodus/models": "^12.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aethereum-plugin"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/ethereum-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

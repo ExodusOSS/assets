@@ -1,0 +1,59 @@
+{
+  "name": "@exodus/solana-api",
+  "version": "3.13.2",
+  "description": "Transaction monitors, fee monitors, RPC with the blockchain node, and other networking code for Solana",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "package.json",
+    "README.md",
+    "!src/**/__tests__"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/asset-json-rpc": "^1.0.0",
+    "@exodus/asset-lib": "^5.0.0",
+    "@exodus/assets": "^11.0.0",
+    "@exodus/basic-utils": "^3.0.1",
+    "@exodus/currency": "^6.0.1",
+    "@exodus/fetch": "^1.2.0",
+    "@exodus/models": "^12.0.1",
+    "@exodus/simple-retry": "^0.0.6",
+    "@exodus/solana-lib": "^3.9.4",
+    "@exodus/solana-meta": "^2.0.2",
+    "@exodus/timer": "^1.1.1",
+    "bn.js": "^4.11.0",
+    "debug": "^4.1.1",
+    "delay": "^4.0.1",
+    "lodash": "^4.17.11",
+    "make-concurrent": "^4.0.0",
+    "minimalistic-assert": "^1.0.1",
+    "ms": "^2.1.3",
+    "url-join": "^4.0.0",
+    "wretch": "^1.5.2"
+  },
+  "devDependencies": {
+    "@exodus/assets-testing": "workspace:^",
+    "@exodus/solana-web3.js": "^1.63.1-exodus.9-rc3"
+  },
+  "gitHead": "9ec7084bcdfe14f1c6f11df393351885773046a6",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asolana-api"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/solana/solana-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

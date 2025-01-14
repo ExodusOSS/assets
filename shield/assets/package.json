@@ -1,0 +1,45 @@
+{
+  "name": "@exodus/assets",
+  "version": "11.1.2",
+  "description": "Exodus assets",
+  "type": "module",
+  "main": "src/index.js",
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/assets",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "!**/__tests__/**"
+  ],
+  "dependencies": {
+    "@exodus/asset": "^2.0.0",
+    "@exodus/basic-utils": "^3.0.1",
+    "@exodus/bip44-constants": "^195.0.0",
+    "@exodus/currency": "^6.0.1",
+    "@exodus/key-utils": "^3.7.0",
+    "lodash": "^4.17.11",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "devDependencies": {
+    "@exodus/assets-base": "workspace:^",
+    "@exodus/binance-lib": "workspace:^",
+    "@exodus/bnbmainnet-meta": "workspace:^",
+    "@exodus/combined-assets-meta": "^3.0.0"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc . --ignore-path ../../.gitignore",
+    "lint:fix": "yarn lint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aassets"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

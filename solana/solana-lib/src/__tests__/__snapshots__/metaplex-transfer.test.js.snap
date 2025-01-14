@@ -1,0 +1,269 @@
+exports[`Solana normal NFT transaction using metaplex transfer 1`] = `
+[
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "2a8MS8dWyyYNgBHgtzeTwrsDKsE6RnCoUqnonB4C8Xc3",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "2a8MS8dWyyYNgBHgtzeTwrsDKsE6RnCoUqnonB4C8Xc3",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "3s4yvESqATKTm6KGKoQhGaD4d8HAjq7XkKu7ACaFg3rs",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "BB11bFyjG8s4DwbB8rQvsekuaD3j5nZL2ojuATRg3N6x",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  },
+  {
+    "isSigner": true,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": true,
+    "isWritable": true,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "Sysvar1nstructions1111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  },
+]
+`;
+
+exports[`Solana programmable NFT transaction 1`] = `
+[
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "8T3zM3cpo44PruakM9RxTET5JkTRByV6oxuZX8vAJpij",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "D6ETjcNWVyejGvCDykoGxc3HBzNGHEEhac95xhMSdDa4",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "3LtDVz2HYAXakiZhv5pi9cetZXoWGutGjc8g4bQnRmWb",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "3YYjPyjkiV8KkiWNJV5SMdDJDjaTj8VZiJeuekMhVd7e",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "4tX3ozaCeJy2ZY9o84BDYMNojrtwAe28xvQChcCWwig6",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "E6wcjEeDTTtratFjisEMadrTZ3yUPrWWqBwQRXpmkXfh",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "vpYHzSJdgc6iXgU85cQ8w6fe3YAeGCYG3z4AMpVf6dZ",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "FySESpdLQaCFQXvKVskfoDEFnDufN2qvBvnVGKUnH8ta",
+  },
+  {
+    "isSigner": true,
+    "isWritable": false,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": true,
+    "isWritable": true,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "Sysvar1nstructions1111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  },
+]
+`;
+
+exports[`Solana programmable NFT transaction using token 2022 1`] = `
+[
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "5qYQ3n4pYYDBsSyx6WK3g8mGPFH4G23TzrG3ssXFTVVF",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "Bh6Utbgqtdyw9QUHQzBi6vkyiw9VU62a7Z8At4sooiBT",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "3LtDVz2HYAXakiZhv5pi9cetZXoWGutGjc8g4bQnRmWb",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "3YYjPyjkiV8KkiWNJV5SMdDJDjaTj8VZiJeuekMhVd7e",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "4tX3ozaCeJy2ZY9o84BDYMNojrtwAe28xvQChcCWwig6",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "E6wcjEeDTTtratFjisEMadrTZ3yUPrWWqBwQRXpmkXfh",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "5yLVx4aqhi1B8d6dnywQNzowuFgrFSHXajKmGiDpe7yG",
+  },
+  {
+    "isSigner": false,
+    "isWritable": true,
+    "pubkey": "ALbiLTmXFG3WvWXmoHNCWfnrnGoNsoiZbZ2Vt5YpWbbX",
+  },
+  {
+    "isSigner": true,
+    "isWritable": false,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": true,
+    "isWritable": true,
+    "pubkey": "9qPGTK92cRkfXzPVVEgz1bUYweNBY9PvoeoiavkMKmMs",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "11111111111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "Sysvar1nstructions1111111111111111111111111",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg",
+  },
+  {
+    "isSigner": false,
+    "isWritable": false,
+    "pubkey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  },
+]
+`;

@@ -1,0 +1,228 @@
+[
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/addrs/txs?noScriptSig=1&noAsm=1&noSpent=0&from=0&to=1",
+      "options": {
+        "method": "post",
+        "timeout": 10000,
+        "body": "{\"addrs\":\"bc1p2kusywwyktpqh346zw305g0mtt285zmjh58dctezrs33pl0c4w5q8zfutg\"}",
+        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4856a05b194-WAW"],
+      ["connection", "keep-alive"],
+      ["content-encoding", "gzip"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:04 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725045.145.40.886132|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:04 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=5b671fa6d6efd19ad88952e26255f46e87183b4e-1722725044; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=HHj.OtkQNNe5NW97v0NE2ab1.C1lkHohD7KesOp20rk-1722725044208-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/addrs/txs?noScriptSig=1&noAsm=1&noSpent=0&from=0&to=1",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": {
+      "items": [
+        {
+          "fees": 0.0000546,
+          "txid": "e0796569b37bc47be691a3f33ddec55e9a0be87390d0ed81c3ba08358247d731",
+          "time": 1697047469,
+          "blockheight": 811741,
+          "confirmations": 43529,
+          "rbf": true,
+          "vsize": 200,
+          "vin": [
+            {
+              "txid": "d42943da122b23d0c3ba95594efc45d19d5c9ea2324084109e6267f7f909f0b4",
+              "vout": 1,
+              "value": "0.00022513",
+              "addr": "bc1pfvuc8espzs3l6ajfj3f33w29x5xse8ukcctytydnnhurwt56qzvqt7d8gv"
+            },
+            {
+              "txid": "9fda7db6836fbc0919fdc41fed68ce039e9038ff8219bf08644e5fb6fd78581f",
+              "vout": 0,
+              "value": "0.00007511",
+              "addr": "bc1pfvuc8espzs3l6ajfj3f33w29x5xse8ukcctytydnnhurwt56qzvqt7d8gv"
+            }
+          ],
+          "vout": [
+            {
+              "n": 0,
+              "scriptPubKey": {
+                "addresses": ["bc1p2kusywwyktpqh346zw305g0mtt285zmjh58dctezrs33pl0c4w5q8zfutg"],
+                "hex": "512055b90239c4b2c20bc6ba13a2fa21fb5ad47a0b72bd0edc2f221c2310fdf8aba8"
+              },
+              "value": "0.00007529"
+            },
+            {
+              "n": 1,
+              "scriptPubKey": {
+                "addresses": ["bc1qgs40uhwwqq0ygchawf3xh9l4wx3ttqyywv33j2"],
+                "hex": "0014442afe5dce001e4462fd72626b97f571a2b58084"
+              },
+              "spentTxId": "fcec0396bd07aab56de763af3b72dec47ea95d065710a44c68c11416922ca279",
+              "spentIndex": 0,
+              "value": "0.00017035"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/addrs/txs?noScriptSig=1&noAsm=1&noSpent=0&from=0&to=1",
+      "options": {
+        "method": "post",
+        "timeout": 10000,
+        "body": "{\"addrs\":\"1PdCrxwW7Z6FpNm7JoekkxhU9uzg6nAWuN\"}",
+        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d486daaeb194-WAW"],
+      ["connection", "keep-alive"],
+      ["content-length", "12"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:04 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725045.362.40.141783|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:04 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=5b671fa6d6efd19ad88952e26255f46e87183b4e-1722725044; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=nW3jJz9gaM127Qhp2qyRnlqSAVY5yF50yaQOfHjuTKc-1722725044426-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/addrs/txs?noScriptSig=1&noAsm=1&noSpent=0&from=0&to=1",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "items": [] }
+  },
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/balance/bc1p2kusywwyktpqh346zw305g0mtt285zmjh58dctezrs33pl0c4w5q8zfutg",
+      "options": {}
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4882b5eb194-WAW"],
+      ["connection", "keep-alive"],
+      ["content-length", "36"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:04 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725045.571.40.176124|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:04 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=5b671fa6d6efd19ad88952e26255f46e87183b4e-1722725044; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=S8RN2v5hR7Nvy_MexeuisLLbk4MT5FptqT_8Tid_.Wg-1722725044629-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/balance/bc1p2kusywwyktpqh346zw305g0mtt285zmjh58dctezrs33pl0c4w5q8zfutg",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "utxoCount": 3, "balance": 0.00032802 }
+  },
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/balance/1PdCrxwW7Z6FpNm7JoekkxhU9uzg6nAWuN",
+      "options": {}
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4896bfcb194-WAW"],
+      ["connection", "keep-alive"],
+      ["content-length", "27"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:04 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725045.789.47.999324|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:04 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=5b671fa6d6efd19ad88952e26255f46e87183b4e-1722725044; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=.5xm3RKKLR2hcstVF5bMnKgtGr24MYfSS08j0RLqak0-1722725044845-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/balance/1PdCrxwW7Z6FpNm7JoekkxhU9uzg6nAWuN",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "utxoCount": 0, "balance": 0 }
+  }
+]

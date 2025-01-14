@@ -1,0 +1,45 @@
+[
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/rawtx/71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+      "options": {}
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8d9d31535d6211bc-MRS"],
+      ["connection", "keep-alive"],
+      ["content-encoding", "gzip"],
+      ["content-security-policy", "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Mon, 28 Oct 2024 19:04:37 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1730142278.741.29.998444|394248dcbb0a1db3f7ca7c307337f261; Expires=Wed, 30-Oct-24 19:04:37 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=384a6b274f923f735fe6f22ef82b3cf437c0334e-1730142277; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=9pZSOoRhMfP.trNMcT8eg4drksSXCLlnPI3uAx2nDk4-1730142277792-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/rawtx/71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": {
+      "rawtx": "02000000000102e0103c63be36a3fc2748f0a7217d342f4edc0fd80db97257b188830e5017b5150100000000fdffffff015df8ec326ac95d11c60aafbe4521bc5e431ec22f55794222b659ebc0765e970100000000fdffffff021f1b00000000000016001491223b6a34a067a8ba0a8d3127090cd64a1b97b9102700000000000016001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae024830450221008de47751a4b64ef93e583864b3e80d3506708bcb09eb7958e7f6759d9c24de9b02205d93a4dc030916c8dd90711adecdca78c0a10acf0df7eb7cf1bcbaaf21d6faba012102547811edc85c96c02c36cc561a3cf57bb71f0d526b1ec2c9803b0a9486f0462402473044022044ec05426e3bbe84320205b9b2494446099a9e77fdb9babb23ff1bc17686879802203719465d576442b06ac373d2369085fabe09548eabf39ce177b135b8ac73222f0121022a8bb930fa5b65c64be7073e62adc946f3da73cabc2bb81bc2e043222db020dc00000000"
+    }
+  }
+]

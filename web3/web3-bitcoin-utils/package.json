@@ -1,0 +1,53 @@
+{
+  "name": "@exodus/web3-bitcoin-utils",
+  "description": "Web3 Bitcoin utils.",
+  "version": "2.3.1",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean &&  run -T tsc",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-bitcoin-utils",
+    "test": "run -T exodus-test --jest --esbuild"
+  },
+  "devDependencies": {
+    "@exodus/bitcoin-meta": "^2.0.0",
+    "@exodus/fetch": "^1.3.0-beta.4",
+    "@exodus/logger": "^1.1.0",
+    "@exodus/web3-types": "workspace:*",
+    "bip174": "^2.1.1"
+  },
+  "dependencies": {
+    "@exodus/bitcoinjs": "^1.3.0",
+    "@exodus/web3-utils": "^1.48.2",
+    "bn.js": "^5.2.0"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-bitcoin-utils"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-bitcoin-utils"
+}

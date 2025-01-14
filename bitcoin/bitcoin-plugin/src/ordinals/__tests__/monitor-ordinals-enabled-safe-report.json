@@ -1,0 +1,4884 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1qtp837el3udhpwct8uzuaxu24m8p39kj22l49hu": {
+                    "address": "bc1qtp837el3udhpwct8uzuaxu24m8p39kj22l49hu",
+                    "path": "m/1/16",
+                    "utxos": [
+                      {
+                        "txId": "dac7da65cc594d862dfc084990f6b30b8a0844f61cb5f85203d096234f306d50",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "0014584f1f67f1e36e176167e0b9d37155d9c312da4a",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/84'/0'/0'/1/16",
+                        "inscriptionsIndexed": true,
+                        "inscriptions": [],
+                        "value": "0.00019116 BTC"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "ordinalsUtxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1plt3f50xhr8d5sxwz7z8ux4rp4nrsqwqysu7amlt0u0ygnlplrhqq4r0chr": {
+                    "address": "bc1plt3f50xhr8d5sxwz7z8ux4rp4nrsqwqysu7amlt0u0ygnlplrhqq4r0chr",
+                    "path": "m/2/0",
+                    "utxos": [
+                      {
+                        "txId": "c76fcf4e3ce3a58a6e2300ba4d44ea1dd54963a1bf0cc6b6074ae05ddf2123a7",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "derivationPath": "m/86'/0'/0'/2/0",
+                        "inscriptionsIndexed": true,
+                        "inscriptions": [],
+                        "value": "0.00006 BTC"
+                      },
+                      {
+                        "txId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedf",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/86'/0'/0'/2/0",
+                        "inscriptionsIndexed": true,
+                        "inscriptions": [
+                          {
+                            "inscriptionId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedfi0",
+                            "offset": 0
+                          }
+                        ],
+                        "value": "0.0001 BTC"
+                      },
+                      {
+                        "txId": "b6b90375238dc8037e55c5f2afee6c9eaedbca6da3f503676105f50417c885ff",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "derivationPath": "m/86'/0'/0'/2/0",
+                        "inscriptionsIndexed": true,
+                        "inscriptions": [
+                          {
+                            "inscriptionId": "6f6ab2bddef42f36fa6ded928f84d23e2574360cabef9b0fe6f726d2fa4eee59i0",
+                            "offset": 0
+                          }
+                        ],
+                        "value": "0.0001 BTC"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "knownBalanceUtxoIds": {
+              "t": "array",
+              "v": []
+            },
+            "mustAvoidUtxoIds": {
+              "t": "array",
+              "v": []
+            },
+            "additionalInscriptions": {
+              "t": "array",
+              "v": []
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcoin": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {},
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "ordinalsUtxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1pe59l2tsfe6t5x6wrcgtsaxy3nrpnky8chq4cvf7zndat99f8t4xsetgm4w": {
+                    "address": "bc1pe59l2tsfe6t5x6wrcgtsaxy3nrpnky8chq4cvf7zndat99f8t4xsetgm4w",
+                    "path": "m/2/0",
+                    "utxos": [
+                      {
+                        "txId": "fad4bdad739a21e409b5d3e0c3a9d5fb1ac188cd1ec9b172ee8912dde7063c91",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120cd0bf52e09ce974369c3c2170e989198c33b10f8b82b8627c29b7ab295275d4d",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/86'/0'/1'/2/0",
+                        "inscriptionsIndexed": true,
+                        "inscriptions": [
+                          {
+                            "inscriptionId": "45199d28c76a6d2b82c35772ed4d1d7b5156dfe7aa385490ac0799c95187038fi0",
+                            "offset": 0
+                          }
+                        ],
+                        "value": "0.00006673 BTC"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "knownBalanceUtxoIds": {
+              "t": "array",
+              "v": []
+            },
+            "mustAvoidUtxoIds": {
+              "t": "array",
+              "v": []
+            },
+            "additionalInscriptions": {
+              "t": "array",
+              "v": []
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": [
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "91128976393498a772709354ec036e7869807d83e442f13bd672e7532291ce21",
+            "date": "2022-04-05T18:13:50.000Z",
+            "confirmations": 1,
+            "from": ["bc1qsge0qugxvy3rcvz6gqez07zrwl9hntmqzjxasz3jsakjuz77zn3s4mg470"],
+            "data": {
+              "feePerKB": 6222.737819025522,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.032 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3a892c24d01cebaaf225e9ae78ad2bba35457ab9e81cf61b7bcd4a2dff80c4fa",
+            "date": "2022-04-05T19:26:02.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 13654.929577464787,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "3MTekqdBceFUwdnNRAKATZTLNC8zDnVt3s",
+                  "amount": "0.00436435 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "91128976393498a772709354ec036e7869807d83e442f13bd672e7532291ce21",
+                      "vout": 4,
+                      "value": "0.032 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                "meta": {
+                  "path": "m/1/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/0"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00436435 BTC",
+            "feeAmount": "0.00001939 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "1a8b512b1eb29f44258fc37e2fbb8e702de3bbd46460d2764e43205debc112f3",
+            "date": "2022-04-06T13:51:17.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 9451.388888888889,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": "0.00446361 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6": {
+                  "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                  "path": "m/1/0",
+                  "utxos": [
+                    {
+                      "script": "001479f52bb01becfb1d89270336f30b2335e6825be1",
+                      "txId": "3a892c24d01cebaaf225e9ae78ad2bba35457ab9e81cf61b7bcd4a2dff80c4fa",
+                      "vout": 1,
+                      "value": "0.02761626 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                "meta": {
+                  "path": "m/1/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/0"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00446361 BTC",
+            "feeAmount": "0.00001361 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "473fd51c089c3519989ee077a3a2a10667c021a6ed0914adcb96d4fd949706be",
+            "date": "2022-04-06T16:21:49.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 15753.521126760565,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "3EWrMp4wXzXRxKHQ6EcKS7ZVF4MpDLzqDz",
+                  "amount": "0.0042 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6": {
+                  "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                  "path": "m/1/0",
+                  "utxos": [
+                    {
+                      "script": "001479f52bb01becfb1d89270336f30b2335e6825be1",
+                      "txId": "1a8b512b1eb29f44258fc37e2fbb8e702de3bbd46460d2764e43205debc112f3",
+                      "vout": 0,
+                      "value": "0.02313904 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qx72cgyt4xnh25s3n05lmxfcr9v323rxhlsp9ee",
+                "meta": {
+                  "path": "m/1/1",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/1"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0042 BTC",
+            "feeAmount": "0.00002237 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "632056bd66482e2fa65e5f00dd1d6b93f61335927ec6d1034d0fbdefc4c4641a",
+            "date": "2022-04-08T14:19:41.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 32555.555555555555,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": "0.0046 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qx72cgyt4xnh25s3n05lmxfcr9v323rxhlsp9ee": {
+                  "address": "bc1qx72cgyt4xnh25s3n05lmxfcr9v323rxhlsp9ee",
+                  "path": "m/1/1",
+                  "utxos": [
+                    {
+                      "script": "0014379584117534eeaa42337d3fb327032b22a88cd7",
+                      "txId": "473fd51c089c3519989ee077a3a2a10667c021a6ed0914adcb96d4fd949706be",
+                      "vout": 0,
+                      "value": "0.01891667 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/2"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0046 BTC",
+            "feeAmount": "0.00004688 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "1ee6d964d5d43ae6e04ad12264ba351fed2ead6a434dae0611609ec3f41e77ce",
+            "date": "2022-04-08T19:19:02.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 15751.773049645388,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qaukcad6r4maeuuh7ux9d5u765wppmlngv8lna0",
+                  "amount": "0.001575 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q": {
+                  "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                  "path": "m/1/2",
+                  "utxos": [
+                    {
+                      "script": "001406ff411d2615aae617e0f3381df404803b5d5b3a",
+                      "txId": "632056bd66482e2fa65e5f00dd1d6b93f61335927ec6d1034d0fbdefc4c4641a",
+                      "vout": 1,
+                      "value": "0.01426979 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/2"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.001575 BTC",
+            "feeAmount": "0.00002221 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "94a7dcb7cd43ca924478e04406e63b9de4ea9b1e684af404a47bef82aa65cc30",
+            "date": "2022-04-12T14:25:43.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11556.338028169013,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "37PFLSAV5ChRAN5unwfqh8dSksoBpRjNno",
+                  "amount": "0.0042 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q": {
+                  "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                  "path": "m/1/2",
+                  "utxos": [
+                    {
+                      "script": "001406ff411d2615aae617e0f3381df404803b5d5b3a",
+                      "txId": "1ee6d964d5d43ae6e04ad12264ba351fed2ead6a434dae0611609ec3f41e77ce",
+                      "vout": 0,
+                      "value": "0.01267258 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/2"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0042 BTC",
+            "feeAmount": "0.00001641 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "153e9751e769f32856e54fc10b1f912e22b30e1697d3285c9ce506e57c985f12",
+            "date": "2022-04-25T19:50:02.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q0r2stwkft0ufk3mld59gzxc00cpmft480wc3xr",
+                  "amount": "0.001365 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q": {
+                  "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                  "path": "m/1/2",
+                  "utxos": [
+                    {
+                      "script": "001406ff411d2615aae617e0f3381df404803b5d5b3a",
+                      "txId": "94a7dcb7cd43ca924478e04406e63b9de4ea9b1e684af404a47bef82aa65cc30",
+                      "vout": 0,
+                      "value": "0.00845617 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/2"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.001365 BTC",
+            "feeAmount": "0.00001481 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "604eb1341c913ecc9f6742f5668909be539bab5768b5d698e7ceefb85d41b837",
+            "date": "2022-05-09T13:12:06.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 27305.55555555556,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": "0.00352152 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q": {
+                  "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                  "path": "m/1/2",
+                  "utxos": [
+                    {
+                      "script": "001406ff411d2615aae617e0f3381df404803b5d5b3a",
+                      "txId": "153e9751e769f32856e54fc10b1f912e22b30e1697d3285c9ce506e57c985f12",
+                      "vout": 1,
+                      "value": "0.00707636 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                "meta": {
+                  "path": "m/1/3",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/3"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00352152 BTC",
+            "feeAmount": "0.00003932 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "59559e162551e335672bd4fb0fe75727a5d4356463fd86a7f9cf9fc19c621e34",
+            "date": "2022-08-02T17:08:08.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 19954.081632653062,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1p95skfd0x56qwthl03gs2d9ynsyv884r0s6g4unmdsq3pvy3vdrdqw62uvf",
+                  "amount": "0.0002 BTC"
+                },
+                {
+                  "address": "bc1p9g24t4wg89xn5z3evz3sk7rh4sz2m6h6350ffa05t8dl4f7eudesx9f5ek",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2": {
+                  "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                  "path": "m/1/3",
+                  "utxos": [
+                    {
+                      "script": "001456508aa92d6d471384f5463e039286ac40853a52",
+                      "txId": "604eb1341c913ecc9f6742f5668909be539bab5768b5d698e7ceefb85d41b837",
+                      "vout": 0,
+                      "value": "0.00351552 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                "meta": {
+                  "path": "m/1/3",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/3"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0003 BTC",
+            "feeAmount": "0.00003911 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0f5e1b0c9a9dd4261720c5dc6881fb60b0850872189f363bef3918c642fd0e45",
+            "date": "2022-08-02T17:20:36.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 16803.92156862745,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1psawvt68mrp2tdg0vz4fzs0shtgrwvy0wjfk3law7khkmz8aa3gqsaa3x8k",
+                  "amount": "0.00012837 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2": {
+                  "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                  "path": "m/1/3",
+                  "utxos": [
+                    {
+                      "script": "001456508aa92d6d471384f5463e039286ac40853a52",
+                      "txId": "59559e162551e335672bd4fb0fe75727a5d4356463fd86a7f9cf9fc19c621e34",
+                      "vout": 0,
+                      "value": "0.00317641 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qt856uktwazg742hgxgm590reezlw0xr0cy92wx",
+                "meta": {
+                  "path": "m/1/4",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/4"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00012837 BTC",
+            "feeAmount": "0.00002571 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "c1b1756cbf584ee51c61698cab2fd27f63c149be1249bd36110c23c840572d77",
+            "date": "2022-08-02T17:29:08.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 13652.77777777778,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "1GQrZZGfzMdchBeyDpJyj3wn616J5u2kQX",
+                  "amount": "0.00012832 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qt856uktwazg742hgxgm590reezlw0xr0cy92wx": {
+                  "address": "bc1qt856uktwazg742hgxgm590reezlw0xr0cy92wx",
+                  "path": "m/1/4",
+                  "utxos": [
+                    {
+                      "script": "001459e9ae596ee891eaaae8323742bc79c8bee7986f",
+                      "txId": "0f5e1b0c9a9dd4261720c5dc6881fb60b0850872189f363bef3918c642fd0e45",
+                      "vout": 0,
+                      "value": "0.00302233 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad",
+                "meta": {
+                  "path": "m/1/5",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/5"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00012832 BTC",
+            "feeAmount": "0.00001966 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+            "date": "2022-09-15T20:25:56.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 18900.709219858156,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.0002 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad": {
+                  "address": "bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad",
+                  "path": "m/1/5",
+                  "utxos": [
+                    {
+                      "script": "0014d75bdef8d704016a626cb870b5f6d19d6b9cc717",
+                      "txId": "c1b1756cbf584ee51c61698cab2fd27f63c149be1249bd36110c23c840572d77",
+                      "vout": 0,
+                      "value": "0.00287435 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs",
+                "meta": {
+                  "path": "m/1/6",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/6"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0002 BTC",
+            "feeAmount": "0.00002665 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4d8afd26043cdb83508ff3b2e6857087afff3a6b1f071642f613a5159e026e1f",
+            "date": "2022-09-21T17:48:47.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 19800,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.00262592 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs": {
+                  "address": "bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs",
+                  "path": "m/1/6",
+                  "utxos": [
+                    {
+                      "script": "0014947eb306af4ecb766595bf251646cc5ab5e9c0a2",
+                      "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+                      "vout": 1,
+                      "value": "0.0026477 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00262592 BTC",
+            "feeAmount": "0.00002178 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+            "date": "2022-09-22T18:51:12.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk",
+              "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3"
+            ],
+            "data": {
+              "feePerKB": 16750.445632798575,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0011 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+            "date": "2022-09-28T13:20:17.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 6331.730769230769,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+                      "vout": 1,
+                      "value": "0.001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00001317 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+            "date": "2022-09-28T16:54:02.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+                      "vout": 0,
+                      "value": "0.00098683 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00000889 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+            "date": "2022-09-28T22:30:42.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+                      "vout": 1,
+                      "value": "0.00087794 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn",
+                "meta": {
+                  "path": "m/1/7",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/7"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00001629 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "849c39e39b2194a9f4e86080772580b00711438961059c5f01b42a844a634276",
+            "date": "2022-09-28T22:42:12.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qdx2yagawmxw0x90sfsaggnn47cra6d7kzz5ldh",
+              "bc1qqpsxme3c3wgm75ehkzt4n7uwd7vd0cgspt0hxp"
+            ],
+            "data": {
+              "feePerKB": 71401.91387559808,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej",
+                "meta": {
+                  "path": "m/0/1",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/1"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+            "date": "2022-09-28T22:42:13.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn": {
+                  "address": "bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn",
+                  "path": "m/1/7",
+                  "utxos": [
+                    {
+                      "script": "00143042c9bb8fdfb2940774eb16d42ac3e088fdf405",
+                      "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+                      "vout": 1,
+                      "value": "0.00076165 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr",
+                "meta": {
+                  "path": "m/1/8",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/8"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00001629 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+            "date": "2022-10-03T10:28:52.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 13649.999999999998,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0",
+                  "amount": "0.0001 BTC"
+                },
+                {
+                  "address": "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+                  "amount": "0.00009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej": {
+                  "address": "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej",
+                  "path": "m/0/1",
+                  "utxos": [
+                    {
+                      "script": "0014cf345755b7022947e34d36ad28faf13479beaef9",
+                      "txId": "849c39e39b2194a9f4e86080772580b00711438961059c5f01b42a844a634276",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr": {
+                  "address": "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr",
+                  "path": "m/1/8",
+                  "utxos": [
+                    {
+                      "script": "001436d17fb808f9c5aea52873efefd46494f86c709c",
+                      "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+                      "vout": 0,
+                      "value": "0.00064536 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk",
+                "meta": {
+                  "path": "m/1/9",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/9"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00019 BTC",
+            "feeAmount": "0.00003276 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+            "date": "2022-10-03T12:15:41.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 14702.127659574468,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs",
+                  "amount": "0.00009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk": {
+                  "address": "bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk",
+                  "path": "m/1/9",
+                  "utxos": [
+                    {
+                      "script": "0014e039e925abfbde1de305c135c5684f4ffb5500b8",
+                      "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+                      "vout": 2,
+                      "value": "0.0005226 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q",
+                "meta": {
+                  "path": "m/1/10",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/10"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00009 BTC",
+            "feeAmount": "0.00002073 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+            "date": "2022-10-03T14:25:38.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q": {
+                  "address": "bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q",
+                  "path": "m/1/10",
+                  "utxos": [
+                    {
+                      "script": "00146a29ba92e33575b3a787074c2a9580bbe6b29591",
+                      "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+                      "vout": 1,
+                      "value": "0.00041187 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w",
+                "meta": {
+                  "path": "m/1/11",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/11"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00001629 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+            "date": "2022-10-04T14:19:49.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w": {
+                  "address": "bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w",
+                  "path": "m/1/11",
+                  "utxos": [
+                    {
+                      "script": "00141f79b1266fa80fa0cdb7b273d94e9ed15fa69f95",
+                      "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+                      "vout": 1,
+                      "value": "0.00029558 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35",
+                "meta": {
+                  "path": "m/1/12",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/12"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00000889 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+            "date": "2022-10-06T09:50:33.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 5255.319148936171,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr",
+                  "amount": "0.00009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35": {
+                  "address": "bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35",
+                  "path": "m/1/12",
+                  "utxos": [
+                    {
+                      "script": "0014715a3ff05d2879e4e1bb012193f28dceaaf2103f",
+                      "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+                      "vout": 1,
+                      "value": "0.00018669 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h",
+                "meta": {
+                  "path": "m/1/13",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/13"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00009 BTC",
+            "feeAmount": "0.00000741 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "33c9053df0603f2fc2fce23a44c072c3aee0083de83f0328273fded9bbee0b69",
+            "date": "2022-10-11T09:33:52.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 3154.5454545454545,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.00008581 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h": {
+                  "address": "bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h",
+                  "path": "m/1/13",
+                  "utxos": [
+                    {
+                      "script": "0014e3e9df8e8f7d08e37678b6ffbca9b8207c8625eb",
+                      "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+                      "vout": 0,
+                      "value": "0.00008928 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00008581 BTC",
+            "feeAmount": "0.00000347 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+            "date": "2022-10-11T19:05:26.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+            ],
+            "data": {
+              "feePerKB": 6301.435406698564,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "e7c8699ceeb91e733c5918923b61cc1477d0ce3bc08c0514ff070d209c473eaf",
+            "date": "2022-10-11T21:42:51.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 8154.545454545456,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+                  "amount": "0.00009103 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+                      "vout": 1,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00009103 BTC",
+            "feeAmount": "0.00000897 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+            "date": "2022-10-11T21:42:52.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn"
+            ],
+            "data": {
+              "feePerKB": 7354.066985645933,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00009 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+            "date": "2022-10-16T22:26:55.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+            ],
+            "data": {
+              "feePerKB": 11550.23923444976,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu",
+                "meta": {
+                  "path": "m/0/2",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/2"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00009 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "9e7ec375707ba29ed11f448b5d9868919e0d8182b9f47eae799e0ea946865a02",
+            "date": "2022-10-21T15:34:15.000Z",
+            "confirmations": 1,
+            "from": ["bc1qmx2r6spek86fza5zp8xucqh2ye58sf0ccslf60"],
+            "data": {
+              "feePerKB": 10500,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "1Azpg7QEdQ8FHhNLzEpbpo1Uowh3t7B3Ex",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 44,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/44'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "22151bbbffb79450f27740c05951e862597fefb5befb99e7d932dfb9a54ad7f7",
+            "date": "2022-10-21T15:41:01.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 10106.382978723404,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": "0.000081 BTC"
+                }
+              ],
+              "inputs": {
+                "1Azpg7QEdQ8FHhNLzEpbpo1Uowh3t7B3Ex": {
+                  "address": "1Azpg7QEdQ8FHhNLzEpbpo1Uowh3t7B3Ex",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "76a9146da8a36d9bad2762d037ef60f974df6fd4c7798c88ac",
+                      "txId": "9e7ec375707ba29ed11f448b5d9868919e0d8182b9f47eae799e0ea946865a02",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.000081 BTC",
+            "feeAmount": "0.000019 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "393af8298935a082ff460112f40f069e3fdd7b0db07385389648fd90fbb5452e",
+            "date": "2022-10-21T17:07:11.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 6255.14403292181,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d98724e2ad070cc74e327f2f5d862b29c5821f939fa69dd4edf97ddeb9b06eeb",
+            "date": "2022-10-25T01:04:29.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E"
+            ],
+            "data": {
+              "feePerKB": 10920.245398773006,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00963489 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "96f2072db2de607c9c3d0da13927305d30b2cc80b9b6236c0696ac8d9e60c94a",
+            "date": "2022-10-25T01:14:37.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11592.000000000002,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": "0.001 BTC"
+                },
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": "0.001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+                      "vout": 1,
+                      "value": "0.00009 BTC"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "393af8298935a082ff460112f40f069e3fdd7b0db07385389648fd90fbb5452e",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "d98724e2ad070cc74e327f2f5d862b29c5821f939fa69dd4edf97ddeb9b06eeb",
+                      "vout": 0,
+                      "value": "0.00963489 BTC"
+                    }
+                  ]
+                },
+                "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu": {
+                  "address": "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu",
+                  "path": "m/0/2",
+                  "utxos": [
+                    {
+                      "script": "0014c912f1dc5dddefcc451a1606eb7ffa7b96d4d1b8",
+                      "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+                      "vout": 0,
+                      "value": "0.00009 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.002 BTC",
+            "feeAmount": "0.00004347 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "437a6598a27449ab438d7f27ce50f5950f77a4e31ea088a243e03ce477cd678c",
+            "date": "2022-10-25T01:26:20.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 11207.865168539327,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00198005 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "25ecff845e3c668c0351d7fddb6b31b3ca8d18b8657640ba6ed5b001268ea89f",
+            "date": "2022-10-25T01:26:21.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": "0.001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "96f2072db2de607c9c3d0da13927305d30b2cc80b9b6236c0696ac8d9e60c94a",
+                      "vout": 2,
+                      "value": "0.00787142 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qlfqnysn046ptccgf42cqqmr268m5ejnn6l8z35",
+                "meta": {
+                  "path": "m/1/14",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/14"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.001 BTC",
+            "feeAmount": "0.00001481 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ccf4db17bc6ddcd7fd6d6bba63cca206576bf2901cd4d41fbb9057c8d23fe03",
+            "date": "2022-10-25T01:37:19.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": "0.001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "437a6598a27449ab438d7f27ce50f5950f77a4e31ea088a243e03ce477cd678c",
+                      "vout": 0,
+                      "value": "0.00198005 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.001 BTC",
+            "feeAmount": "0.00001481 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "271434e5fd1820642d3297a617ff909e3cc3e25609a879435fa30a8a18b37920",
+            "date": "2022-10-25T15:33:25.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 72402.77777777778,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E",
+                  "amount": "0.0002 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "8ccf4db17bc6ddcd7fd6d6bba63cca206576bf2901cd4d41fbb9057c8d23fe03",
+                      "vout": 0,
+                      "value": "0.00096524 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp",
+                "meta": {
+                  "path": "m/1/15",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/15"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0002 BTC",
+            "feeAmount": "0.00010426 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8d4a75bc10f81338b25dff91c4e51e232c0cb2803594bb87c50d55ca333a5d98",
+            "date": "2022-10-25T15:33:26.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "data": {
+              "feePerKB": 62890.90909090909,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [],
+              "inputs": {
+                "bc1qlfqnysn046ptccgf42cqqmr268m5ejnn6l8z35": {
+                  "address": "bc1qlfqnysn046ptccgf42cqqmr268m5ejnn6l8z35",
+                  "path": "m/1/14",
+                  "utxos": [
+                    {
+                      "script": "0014fa4132426fae82bc6109aab0006c6ad1f74cca73",
+                      "txId": "25ecff845e3c668c0351d7fddb6b31b3ca8d18b8657640ba6ed5b001268ea89f",
+                      "vout": 0,
+                      "value": "0.00685661 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "to": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "0 BTC",
+            "feeAmount": "0.00006918 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3ce21aec276f6cdc9717feee049d9e27e688df37436e093d5d1971f704217b9a",
+            "date": "2022-10-25T15:33:27.000Z",
+            "confirmations": 1,
+            "from": ["1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E"],
+            "data": {
+              "feePerKB": 68484.0425531915,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00007125 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d5254af19ca97dc03304519a940f79408691f25b830b4f16d004c71ccfa0b2cf",
+            "date": "2022-11-02T13:41:18.000Z",
+            "confirmations": 1,
+            "from": ["1AwZXaYtHNzMbbE718pSLJWoPzrgPgyoNF"],
+            "data": {
+              "feePerKB": 16751.32275132275,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00016834 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0ed63be44399d2f803758379530d3d0fa45186557f32c2257f384d5be4c009db",
+            "date": "2022-11-02T13:48:19.000Z",
+            "confirmations": 1,
+            "from": ["bc1qchfrxqdd24cy226czkrepalucn4uqendax6ngj"],
+            "data": {
+              "feePerKB": 23290.90909090909,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "23561f66b5844b6c668897f53cfe8915b4cc03d1d6bc9216ab70d99794795a11",
+            "date": "2022-11-08T21:06:09.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 25200.000000000004,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00195212 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da4a38eca7bd8b9089107073b792e3d014f72101323661d6a563355bb79b10ce",
+            "date": "2022-11-12T10:45:46.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 40084.269662921346,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "3ce21aec276f6cdc9717feee049d9e27e688df37436e093d5d1971f704217b9a",
+                      "vout": 0,
+                      "value": "0.00007125 BTC"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "0ed63be44399d2f803758379530d3d0fa45186557f32c2257f384d5be4c009db",
+                      "vout": 0,
+                      "value": "0.0001001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00007135 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "a48792bd9d62b26f899468c3c4532f2fe163140c8afb87b167db327c8b6b5235",
+            "date": "2022-11-14T19:13:29.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 62127.27272727273,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "d5254af19ca97dc03304519a940f79408691f25b830b4f16d004c71ccfa0b2cf",
+                      "vout": 0,
+                      "value": "0.00016834 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00006834 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+            "date": "2022-11-16T13:02:42.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 28812.765957446805,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.00933282 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt": {
+                  "address": "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "5120ca032b3575ddf2693956a16597650c5335f366dd0ba49d42decf33f7c593ba6c",
+                      "txId": "23561f66b5844b6c668897f53cfe8915b4cc03d1d6bc9216ab70d99794795a11",
+                      "vout": 0,
+                      "value": "0.00195212 BTC"
+                    }
+                  ]
+                },
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "8d4a75bc10f81338b25dff91c4e51e232c0cb2803594bb87c50d55ca333a5d98",
+                      "vout": 0,
+                      "value": "0.00678743 BTC"
+                    }
+                  ]
+                },
+                "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp": {
+                  "address": "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp",
+                  "path": "m/1/15",
+                  "utxos": [
+                    {
+                      "script": "0014a7f94eb6cf76046b9de8908fb479f2e0fa74f4d0",
+                      "txId": "271434e5fd1820642d3297a617ff909e3cc3e25609a879435fa30a8a18b37920",
+                      "vout": 1,
+                      "value": "0.00066098 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00933282 BTC",
+            "feeAmount": "0.00006771 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+            "date": "2022-11-29T19:55:49.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x",
+              "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h"
+            ],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "bd6abad81417d362de666d92f885f9ce6a11386af876ccc6e755dd7ecd3f093a",
+            "date": "2022-12-16T11:11:52.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qgf50v806nycw426kl348p67ms7pxfwfaadcd0g",
+              "bc1qteu99m2m0tru4jdcqg7qtqmzauhlal2sdgrnmt"
+            ],
+            "data": {
+              "feePerKB": 56179.77528089887,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "c76fcf4e3ce3a58a6e2300ba4d44ea1dd54963a1bf0cc6b6074ae05ddf2123a7",
+            "date": "2023-06-22T03:40:22.000Z",
+            "confirmations": 1,
+            "from": ["bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"],
+            "data": {
+              "feePerKB": 25928.104575163397,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00006 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedf",
+            "date": "2023-06-22T09:39:23.000Z",
+            "confirmations": 1,
+            "from": ["bc1p0m9k8cu5nj6fc47luux2lpp8rachdjcjryscsvmzq7a85s2lf85qwfj4r3"],
+            "data": {
+              "feePerKB": 32000.000000000004,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [
+                {
+                  "inscriptionId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedfi0",
+                  "offset": 0,
+                  "value": 10000
+                }
+              ]
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "b6b90375238dc8037e55c5f2afee6c9eaedbca6da3f503676105f50417c885ff",
+            "date": "2023-06-22T21:01:27.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1p8ypcxhyp4qrdt2f4u79gwuq8z3hxrjx67gygzcrrvcgzta7x7lnqnpwjkw",
+              "bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"
+            ],
+            "data": {
+              "feePerKB": 23238.09523809524,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [
+                {
+                  "inscriptionId": "6f6ab2bddef42f36fa6ded928f84d23e2574360cabef9b0fe6f726d2fa4eee59i0",
+                  "offset": 0,
+                  "value": 10000
+                }
+              ]
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "dac7da65cc594d862dfc084990f6b30b8a0844f61cb5f85203d096234f306d50",
+            "date": "2024-09-11T23:59:23.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 4229.665071770335,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q5v5yshx57hufasnxq4sudplwrj5yzj73x07x4j",
+                  "amount": "0.0009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+                      "vout": 1,
+                      "value": "0.0001 BTC"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "bd6abad81417d362de666d92f885f9ce6a11386af876ccc6e755dd7ecd3f093a",
+                      "vout": 0,
+                      "value": "0.001 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qtp837el3udhpwct8uzuaxu24m8p39kj22l49hu",
+                "meta": {
+                  "path": "m/1/16",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/16"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0009 BTC",
+            "feeAmount": "0.00000884 BTC"
+          }
+        ]
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcoin": [
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+            "date": "2022-07-28T18:35:54.000Z",
+            "confirmations": 1,
+            "from": ["bc1qqlga2uducxc8gmm9ekqwr9pn592gvgqj59rppv"],
+            "data": {
+              "feePerKB": 32553.11355311355,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/0"
+                  }
+                }
+              },
+              {
+                "address": "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk",
+                "meta": {
+                  "path": "m/0/2",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/2"
+                  }
+                }
+              },
+              {
+                "address": "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6",
+                "meta": {
+                  "path": "m/0/1",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/1"
+                  }
+                }
+              },
+              {
+                "address": "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 44,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/44'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00047647 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+            "date": "2022-09-15T20:25:56.000Z",
+            "confirmations": 1,
+            "from": ["bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad"],
+            "data": {
+              "feePerKB": 18900.709219858156,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0002 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4d8afd26043cdb83508ff3b2e6857087afff3a6b1f071642f613a5159e026e1f",
+            "date": "2022-09-21T17:48:47.000Z",
+            "confirmations": 1,
+            "from": ["bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs"],
+            "data": {
+              "feePerKB": 19800,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00262592 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+            "date": "2022-09-22T18:51:12.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 16750.445632798575,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": "0.0001 BTC"
+                },
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": "0.001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew": {
+                  "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "5120b5c7dcfa43fca2e989ec0ede55a533687957b2fa2557faa82b509b74ee14f537",
+                      "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+                      "vout": 0,
+                      "value": "0.0002 BTC"
+                    },
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "4d8afd26043cdb83508ff3b2e6857087afff3a6b1f071642f613a5159e026e1f",
+                      "vout": 0,
+                      "value": "0.00262592 BTC"
+                    }
+                  ]
+                },
+                "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3": {
+                  "address": "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "76a914653eb948cf07ac5cb15180c6bbf06393ebb935fe88ac",
+                      "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+                      "vout": 4,
+                      "value": "0.00012529 BTC"
+                    }
+                  ]
+                },
+                "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6": {
+                  "address": "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6",
+                  "path": "m/0/1",
+                  "utxos": [
+                    {
+                      "script": "5120740759d775857d99ba461c1bba31a848fce4ab5fee21832e7b3a82f75a2760d0",
+                      "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+                      "vout": 3,
+                      "value": "0.00008344 BTC"
+                    }
+                  ]
+                },
+                "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk": {
+                  "address": "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk",
+                  "path": "m/0/2",
+                  "utxos": [
+                    {
+                      "script": "51203e9bf7fae1924d780b3d36bbee582d945450cc258262ea502cc52f9c632dcf22",
+                      "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+                      "vout": 2,
+                      "value": "0.00016774 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6",
+                "meta": {
+                  "path": "m/1/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/1/0"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0011 BTC",
+            "feeAmount": "0.00009397 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+            "date": "2022-09-28T13:20:17.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 6331.730769230769,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+            "date": "2022-09-28T16:54:02.000Z",
+            "confirmations": 1,
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+            "date": "2022-09-28T22:30:42.000Z",
+            "confirmations": 1,
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn",
+                "meta": {
+                  "path": "m/0/1",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/1"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+            "date": "2022-09-28T22:42:12.000Z",
+            "confirmations": 1,
+            "from": ["bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h",
+                "meta": {
+                  "path": "m/0/2",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/2"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+            "date": "2022-10-03T10:28:52.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr",
+              "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej"
+            ],
+            "data": {
+              "feePerKB": 13649.999999999998,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0",
+                "meta": {
+                  "path": "m/0/3",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/3"
+                  }
+                }
+              },
+              {
+                "address": "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+                "meta": {
+                  "path": "m/0/4",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/4"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00019 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+            "date": "2022-10-03T12:15:41.000Z",
+            "confirmations": 1,
+            "from": ["bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk"],
+            "data": {
+              "feePerKB": 14702.127659574468,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs",
+                "meta": {
+                  "path": "m/0/5",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/5"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00009 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+            "date": "2022-10-03T14:25:38.000Z",
+            "confirmations": 1,
+            "from": ["bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp",
+                "meta": {
+                  "path": "m/0/6",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/6"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+            "date": "2022-10-04T14:19:49.000Z",
+            "confirmations": 1,
+            "from": ["bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w"],
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh",
+                "meta": {
+                  "path": "m/0/7",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/7"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+            "date": "2022-10-06T09:50:33.000Z",
+            "confirmations": 1,
+            "from": ["bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35"],
+            "data": {
+              "feePerKB": 5255.319148936171,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr",
+                "meta": {
+                  "path": "m/0/8",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/8"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00009 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "51ca85813d43dbbabe0faf848fb189c835aafa89c5de8a16d603172c0be817d9",
+            "date": "2022-10-11T09:33:52.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "data": {
+              "feePerKB": 3500.0000000000005,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [],
+              "inputs": {
+                "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0": {
+                  "address": "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0",
+                  "path": "m/0/3",
+                  "utxos": [
+                    {
+                      "script": "001482c3f33f3b14d984b90114aeef3a6c8dd107e523",
+                      "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "to": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "0 BTC",
+            "feeAmount": "0.00000385 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "33c9053df0603f2fc2fce23a44c072c3aee0083de83f0328273fded9bbee0b69",
+            "date": "2022-10-11T09:33:53.000Z",
+            "confirmations": 1,
+            "from": ["bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h"],
+            "data": {
+              "feePerKB": 3154.5454545454545,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00008581 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+            "date": "2022-10-11T19:05:26.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 6301.435406698564,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "33c9053df0603f2fc2fce23a44c072c3aee0083de83f0328273fded9bbee0b69",
+                      "vout": 0,
+                      "value": "0.00008581 BTC"
+                    }
+                  ]
+                },
+                "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd": {
+                  "address": "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+                  "path": "m/0/4",
+                  "utxos": [
+                    {
+                      "script": "00146574f6978888bc2944376ce62cedbcf30b9d6671",
+                      "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+                      "vout": 1,
+                      "value": "0.00009 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00001317 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7bb3e6795b3eb904b2c84f58fbfa992f1514c65fe9bc3a4be30c0c84fe2756cb",
+            "date": "2022-10-11T19:23:57.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "data": {
+              "feePerKB": 33391.47286821705,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "51ca85813d43dbbabe0faf848fb189c835aafa89c5de8a16d603172c0be817d9",
+                      "vout": 0,
+                      "value": "0.00009615 BTC"
+                    },
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+                      "vout": 1,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr": {
+                  "address": "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr",
+                  "path": "m/0/8",
+                  "utxos": [
+                    {
+                      "script": "00149c95429f1b5afeb367d0f338a4d7540389f3f2c9",
+                      "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+                      "vout": 1,
+                      "value": "0.00009 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "to": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "0 BTC",
+            "feeAmount": "0.00008615 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7ddd2ae0005ebe3fc5ecbad18dd73da7e17ea5cba7cbf67eea35cced6dfee79c",
+            "date": "2022-10-11T19:23:58.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "data": {
+              "feePerKB": 27705.263157894737,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+                      "vout": 0,
+                      "value": "0.00006264 BTC"
+                    }
+                  ]
+                },
+                "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs": {
+                  "address": "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs",
+                  "path": "m/0/5",
+                  "utxos": [
+                    {
+                      "script": "00147840323f9dff79c9206c9e008e7d28f619f7a63d",
+                      "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+                      "vout": 0,
+                      "value": "0.00009 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "to": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "0 BTC",
+            "feeAmount": "0.00005264 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "e7c8699ceeb91e733c5918923b61cc1477d0ce3bc08c0514ff070d209c473eaf",
+            "date": "2022-10-11T21:42:51.000Z",
+            "confirmations": 1,
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 8154.545454545456,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+                "meta": {
+                  "path": "m/0/9",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/9"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00009103 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+            "date": "2022-10-11T21:42:52.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 7354.066985645933,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": "0.00009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn": {
+                  "address": "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn",
+                  "path": "m/0/1",
+                  "utxos": [
+                    {
+                      "script": "0014e61cd4cf0d37597058dd88896d69d4f1f565c5b8",
+                      "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00009 BTC",
+            "feeAmount": "0.00001537 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+            "date": "2022-10-16T22:26:55.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 11550.23923444976,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu",
+                  "amount": "0.00009 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+                      "vout": 0,
+                      "value": "0.00009463 BTC"
+                    }
+                  ]
+                },
+                "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk": {
+                  "address": "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+                  "path": "m/0/9",
+                  "utxos": [
+                    {
+                      "script": "00145307eba03ea42c36fda67db8b0d680c18375a9c0",
+                      "txId": "e7c8699ceeb91e733c5918923b61cc1477d0ce3bc08c0514ff070d209c473eaf",
+                      "vout": 0,
+                      "value": "0.00009103 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x",
+                "meta": {
+                  "path": "m/1/1",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/1/1"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00009 BTC",
+            "feeAmount": "0.00002414 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "2096181ad3ce844c1e5f8e033d9caaf84202c1f06d6b8cd67b26a2574a7567db",
+            "date": "2022-10-18T15:39:41.000Z",
+            "confirmations": 1,
+            "from": ["bc1q37svy4n463n8djhqz02e7v452mqnm43ppkdaju"],
+            "data": {
+              "feePerKB": 15702.857142857143,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qrrgurs27sxyknugvx43hy039egrvmx097e8qzf",
+                "meta": {
+                  "path": "m/0/10",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/10"
+                  }
+                }
+              },
+              {
+                "address": "16HHr8LrMG3tKGdq96n6r1tZKe44AaYC83",
+                "meta": {
+                  "path": "m/0/1",
+                  "walletAccount": "exodus_1",
+                  "purpose": 44,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/44'/0'/1'/0/1"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0012 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da4a38eca7bd8b9089107073b792e3d014f72101323661d6a563355bb79b10ce",
+            "date": "2022-11-12T10:45:46.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 40084.269662921346,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "a48792bd9d62b26f899468c3c4532f2fe163140c8afb87b167db327c8b6b5235",
+            "date": "2022-11-14T19:13:29.000Z",
+            "confirmations": 1,
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 62127.27272727273,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+            "date": "2022-11-16T13:02:42.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+              "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 28812.765957446805,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00933282 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+            "date": "2022-11-29T19:55:49.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h": {
+                  "address": "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h",
+                  "path": "m/0/2",
+                  "utxos": [
+                    {
+                      "script": "0014bc59e0bd1cd4286cf304280602aad7f9fac8f506",
+                      "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+                      "vout": 1,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x": {
+                  "address": "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x",
+                  "path": "m/1/1",
+                  "utxos": [
+                    {
+                      "script": "001420d6a7377b48df932dc7ea308901ccc568f51176",
+                      "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+                      "vout": 1,
+                      "value": "0.00007152 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qjy3rk6355pn63ws235cjwzgv6e9ph9aeku0vjl",
+                "meta": {
+                  "path": "m/1/2",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/1/2"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.00000209 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "f8e3d81b920676d2f0b4c90bfae3218d85809629ef5e9e24b3e3ce13b8a88094",
+            "date": "2022-11-29T22:15:15.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 56497.17514124295,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qkd5gd77802tdt0mqqmzfjsakk6tsa3sznkhpjd",
+                  "amount": "0.0001 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp": {
+                  "address": "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp",
+                  "path": "m/0/6",
+                  "utxos": [
+                    {
+                      "script": "001492fa22ce8b66760a8868cc39be67976241a3cfe4",
+                      "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh": {
+                  "address": "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh",
+                  "path": "m/0/7",
+                  "utxos": [
+                    {
+                      "script": "00141bd9fa4db43aec8d89646ac9e3725d4917c3aea5",
+                      "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001 BTC",
+            "feeAmount": "0.0001 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d2627ebefccc448fea0dfaa8e8b365f3d96f3fc32c0551ed539f4329312e54ad",
+            "date": "2023-05-18T13:59:26.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 127469.52224052719,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1q8kdl2kutpd75m7m0hn50yqjpt7ja30e43982p5",
+                  "amount": "0.0001564 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew": {
+                  "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "5120b5c7dcfa43fca2e989ec0ede55a533687957b2fa2557faa82b509b74ee14f537",
+                      "txId": "7ddd2ae0005ebe3fc5ecbad18dd73da7e17ea5cba7cbf67eea35cced6dfee79c",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    },
+                    {
+                      "script": "5120b5c7dcfa43fca2e989ec0ede55a533687957b2fa2557faa82b509b74ee14f537",
+                      "txId": "7bb3e6795b3eb904b2c84f58fbfa992f1514c65fe9bc3a4be30c0c84fe2756cb",
+                      "vout": 0,
+                      "value": "0.0002 BTC"
+                    }
+                  ]
+                },
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "a48792bd9d62b26f899468c3c4532f2fe163140c8afb87b167db327c8b6b5235",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    },
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "da4a38eca7bd8b9089107073b792e3d014f72101323661d6a563355bb79b10ce",
+                      "vout": 0,
+                      "value": "0.0001 BTC"
+                    }
+                  ]
+                },
+                "16HHr8LrMG3tKGdq96n6r1tZKe44AaYC83": {
+                  "address": "16HHr8LrMG3tKGdq96n6r1tZKe44AaYC83",
+                  "path": "m/0/1",
+                  "utxos": [
+                    {
+                      "script": "76a91439ed58f4ac11f1239d9a71b6f6eb82f050e5916288ac",
+                      "txId": "2096181ad3ce844c1e5f8e033d9caaf84202c1f06d6b8cd67b26a2574a7567db",
+                      "vout": 2,
+                      "value": "0.0002 BTC"
+                    }
+                  ]
+                },
+                "bc1qrrgurs27sxyknugvx43hy039egrvmx097e8qzf": {
+                  "address": "bc1qrrgurs27sxyknugvx43hy039egrvmx097e8qzf",
+                  "path": "m/0/10",
+                  "utxos": [
+                    {
+                      "script": "001418d1c1c15e818969f10c3563723e25ca06cd99e5",
+                      "txId": "2096181ad3ce844c1e5f8e033d9caaf84202c1f06d6b8cd67b26a2574a7567db",
+                      "vout": 0,
+                      "value": "0.001 BTC"
+                    }
+                  ]
+                },
+                "bc1qjy3rk6355pn63ws235cjwzgv6e9ph9aeku0vjl": {
+                  "address": "bc1qjy3rk6355pn63ws235cjwzgv6e9ph9aeku0vjl",
+                  "path": "m/1/2",
+                  "utxos": [
+                    {
+                      "script": "001491223b6a34a067a8ba0a8d3127090cd64a1b97b9",
+                      "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+                      "vout": 0,
+                      "value": "0.00006943 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                "meta": {
+                  "path": "m/1/3",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/1/3"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.0001564 BTC",
+            "feeAmount": "0.00077374 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "fad4bdad739a21e409b5d3e0c3a9d5fb1ac188cd1ec9b172ee8912dde7063c91",
+            "date": "2023-07-21T12:52:00.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1pel0va3rpya6hx8m3q9awhp4mcdp6t48xtwyj2pggywuhxn8c6nhqf6pesz",
+              "bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"
+            ],
+            "data": {
+              "feePerKB": 17600,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [
+                {
+                  "inscriptionId": "45199d28c76a6d2b82c35772ed4d1d7b5156dfe7aa385490ac0799c95187038fi0",
+                  "offset": 0,
+                  "value": 6673
+                }
+              ]
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00006673 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "2ae7daaa2a7a8d45efbb033a6efe6038155df66e9f107ae489dbe3178b64c25e",
+            "date": "2024-06-20T19:14:08.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 24166.666666666664,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qvy9dzrysvjvk07xcaynr3l9y8y7yjm2a5wx383",
+                  "amount": "0.00614026 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+                      "vout": 0,
+                      "value": "0.00933282 BTC"
+                    }
+                  ]
+                },
+                "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6": {
+                  "address": "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6",
+                  "path": "m/1/0",
+                  "utxos": [
+                    {
+                      "script": "0014e195090ad06204ee29cdfb10bd9d08485fd13929",
+                      "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+                      "vout": 2,
+                      "value": "0.00210842 BTC"
+                    }
+                  ]
+                },
+                "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny": {
+                  "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                  "path": "m/1/3",
+                  "utxos": [
+                    {
+                      "script": "00140da8889de9cd38f5a5a7408b78fe08ed5ea054b6",
+                      "txId": "d2627ebefccc448fea0dfaa8e8b365f3d96f3fc32c0551ed539f4329312e54ad",
+                      "vout": 1,
+                      "value": "0.00083929 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00614026 BTC",
+            "feeAmount": "0.0000667 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "318cb441f997bdc368611290b73a82946e2bfcab527428c7a9ddc24883a84a0b",
+            "date": "2024-09-09T15:00:35.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 215492.9577464789,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "3BB2HJ646zW7nRdkJ3gsRi58KBv3ZU9sAj",
+                  "amount": "0.00401 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "2ae7daaa2a7a8d45efbb033a6efe6038155df66e9f107ae489dbe3178b64c25e",
+                      "vout": 1,
+                      "value": "0.00607357 BTC"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                "meta": {
+                  "path": "m/1/3",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/1/3"
+                  }
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00401 BTC",
+            "feeAmount": "0.000306 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7a622dcf3f9ced4d3ea28b8b5c8ea51d55304bbdead7bf7649ed42d347ee7562",
+            "date": "2024-09-11T19:35:04.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 45254.54545454546,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "inscriptionsIndexed": true,
+              "sentInscriptions": [],
+              "receivedInscriptions": [],
+              "sent": [
+                {
+                  "address": "bc1qg6gf7syav3qpwgvkjc32qmlhn5xxarhnm38964",
+                  "amount": "0.00170779 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny": {
+                  "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                  "path": "m/1/3",
+                  "utxos": [
+                    {
+                      "script": "00140da8889de9cd38f5a5a7408b78fe08ed5ea054b6",
+                      "txId": "318cb441f997bdc368611290b73a82946e2bfcab527428c7a9ddc24883a84a0b",
+                      "vout": 1,
+                      "value": "0.00175757 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00170779 BTC",
+            "feeAmount": "0.00004978 BTC"
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "bitcoin": {
+        "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+      }
+    },
+    "exodus_1": {
+      "bitcoin": {
+        "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  }
+}

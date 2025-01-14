@@ -1,0 +1,53 @@
+{
+  "name": "@exodus/web3-management",
+  "description": "Apps connectivity library for Exodus management.",
+  "version": "0.36.0",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./provider": "./lib/provider/index.js",
+    "./rpc": "./lib/rpc-handlers/index.js"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean && run -T tsc && yarn build:schemas",
+    "build:schemas": "node ../scripts/build-schemas/index.mjs",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-management",
+    "test": "run -T exodus-test --jest --esbuild"
+  },
+  "dependencies": {
+    "@exodus/json-rpc": "^1.11.0",
+    "@exodus/web3-constants": "^1.30.0",
+    "@exodus/web3-provider": "^3.15.0",
+    "@exodus/web3-rpc-handlers": "^2.26.0"
+  },
+  "devDependencies": {
+    "@exodus/schemasafe": "^1.0.0",
+    "@exodus/web3-types": "workspace:*"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-management"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-management"
+}

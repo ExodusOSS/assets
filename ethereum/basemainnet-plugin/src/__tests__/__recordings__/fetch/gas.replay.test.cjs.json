@@ -1,0 +1,48 @@
+[
+  {
+    "request": {
+      "resource": "https://base-qn.a.exodus.io",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_call\",\"params\":[{\"to\":\"0x420000000000000000000000000000000000000F\",\"data\":\"0x49948e0e0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002ae91f8398968082b2e794c0e9573c1168a7a4198a0f63ac70fd8f62b291d087038d7ea4c680008080808000000000000000000000000000000000000000000000\"},\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-credentials", "true"],
+      ["access-control-allow-headers", "Content-Type,Authorization,User-Agent"],
+      ["access-control-allow-methods", "GET, POST, OPTIONS"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d4a9feb2b1df-WAW"],
+      ["connection", "keep-alive"],
+      ["content-encoding", "gzip"],
+      ["content-type", "application/json"],
+      ["date", "Sat, 03 Aug 2024 22:44:09 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "__cfruid=09552cbf6b3c414086def1aa796e61efcc0fa73a-1722725049; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=gQecsZeOAzg4UWYY3HrgipRCo78mfD9bJFs5rCRPHRo-1722725049955-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
+      ["x-host-id", "f1b546936d23e3b5-c1dce7e248a08423"],
+      ["x-node-id", "base_base-mainnet_fra"]
+    ],
+    "url": "https://base-qn.a.exodus.io/",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "result": "0x000000000000000000000000000000000000000000000000000000010a66a9e2"
+    }
+  }
+]

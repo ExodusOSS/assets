@@ -1,0 +1,40 @@
+{
+  "name": "@exodus/bitcoinregtest-plugin",
+  "version": "1.11.1",
+  "description": "Exodus bitcoinregtest-plugin",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "!src/**/__tests__"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/bitcoin-plugin": "^1.30.1",
+    "@exodus/bitcoinregtest-meta": "^2.0.1"
+  },
+  "devDependencies": {
+    "@exodus/assets": "^11.0.0",
+    "@exodus/assets-testing": "workspace:^",
+    "@exodus/bitcoin-api": "^2.25.0",
+    "lodash": "^4.17.21"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Abitcoinregtest-plugin"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/bitcoin/bitcoinregtest-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

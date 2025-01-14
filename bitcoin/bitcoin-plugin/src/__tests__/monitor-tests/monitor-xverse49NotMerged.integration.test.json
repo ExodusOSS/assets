@@ -1,0 +1,201 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "compatibilityMode": "xverse49NotMerged",
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "37PJ9gNHQy4t3DmHKHFwBQX7FPRKhK3U6Z": {
+                    "address": "37PJ9gNHQy4t3DmHKHFwBQX7FPRKhK3U6Z",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "40a2f33413dafefa506909a21ef4b65c127a988171a450937a2b4a6f83747a42",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "a9143e76d004cdd96eb49a98f3f5d5c050c9f23fcd1787",
+                        "derivationPath": "m/49'/0'/0'/0/0",
+                        "value": "0.00002 BTC"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": [
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "23561f66b5844b6c668897f53cfe8915b4cc03d1d6bc9216ab70d99794795a11",
+            "date": "2022-11-08T21:06:09.000Z",
+            "confirmations": 1,
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 25200.000000000004,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00195212 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+            "date": "2022-11-16T13:02:42.000Z",
+            "confirmations": 1,
+            "data": {
+              "feePerKB": 28812.765957446805,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": "0.00933282 BTC"
+                }
+              ],
+              "inputs": {
+                "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt": {
+                  "address": "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "5120ca032b3575ddf2693956a16597650c5335f366dd0ba49d42decf33f7c593ba6c",
+                      "txId": "23561f66b5844b6c668897f53cfe8915b4cc03d1d6bc9216ab70d99794795a11",
+                      "vout": 0,
+                      "value": "0.00195212 BTC"
+                    }
+                  ]
+                }
+              }
+            },
+            "dropped": false,
+            "coinName": "bitcoin",
+            "feeCoinName": "bitcoin",
+            "coinAmount": "-0.00188441 BTC",
+            "feeAmount": "0.00006771 BTC"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "40a2f33413dafefa506909a21ef4b65c127a988171a450937a2b4a6f83747a42",
+            "date": "2023-10-23T22:35:45.000Z",
+            "confirmations": 1,
+            "from": ["bc1p8ypcxhyp4qrdt2f4u79gwuq8z3hxrjx67gygzcrrvcgzta7x7lnqnpwjkw"],
+            "data": {
+              "feePerKB": 7076.923076923076,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "37PJ9gNHQy4t3DmHKHFwBQX7FPRKhK3U6Z",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 49,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoin",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/49'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "dropped": false,
+            "coinName": "bitcoin",
+            "coinAmount": "0.00002 BTC"
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "bitcoin": {
+        "address": "37PJ9gNHQy4t3DmHKHFwBQX7FPRKhK3U6Z"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  }
+}

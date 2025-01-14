@@ -1,0 +1,91 @@
+[
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/tx/75b8785cf2b2789cc86b235cc0bd776e04c73aa1ab1c8315dbf79790b64dc8e5",
+      "options": {}
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d47f9939c3ec-WAW"],
+      ["connection", "keep-alive"],
+      ["content-encoding", "gzip"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "application/json; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:03 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725044.208.40.731035|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:03 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=440e80921c82576fada0b8d1a6764fe33dfbe089-1722725043; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=g6qXBfeeYpxWh5merFVTPNtEDh0GAhWFA.8oLbeNW6Q-1722725043268-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["transfer-encoding", "chunked"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/tx/75b8785cf2b2789cc86b235cc0bd776e04c73aa1ab1c8315dbf79790b64dc8e5",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": {
+      "txid": "75b8785cf2b2789cc86b235cc0bd776e04c73aa1ab1c8315dbf79790b64dc8e5",
+      "confirmations": 388271
+    }
+  },
+  {
+    "request": {
+      "resource": "https://bitcoin.a.exodus.io/insight/tx/65b8785cf2b2789cc86b235cc0bd776e04c73aa1ab1c8315dbf79790b64dc8e5",
+      "options": {}
+    },
+    "status": 404,
+    "statusText": "Not Found",
+    "ok": false,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "8ad9d480fa77c3ec-WAW"],
+      ["connection", "keep-alive"],
+      ["content-encoding", "gzip"],
+      [
+        "content-security-policy",
+        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
+      ],
+      ["content-type", "text/html; charset=utf-8"],
+      ["date", "Sat, 03 Aug 2024 22:44:03 GMT"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1722725044.431.40.595658|394248dcbb0a1db3f7ca7c307337f261; Expires=Mon, 05-Aug-24 22:44:03 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "__cfruid=440e80921c82576fada0b8d1a6764fe33dfbe089-1722725043; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=eH9CizrDMtJ0VftJkkOxZUuH8wHrT6BfMEDN61.t5HM-1722725043489-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["transfer-encoding", "chunked"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "DENY"]
+    ],
+    "url": "https://bitcoin.a.exodus.io/insight/tx/65b8785cf2b2789cc86b235cc0bd776e04c73aa1ab1c8315dbf79790b64dc8e5",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "text",
+    "body": "Page not found."
+  }
+]

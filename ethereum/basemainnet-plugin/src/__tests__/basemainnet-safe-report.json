@@ -1,0 +1,113 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "basemainnet": {
+          "t": "object",
+          "v": {
+            "startblock": 0,
+            "clarityCursor": "",
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "v": "795780644563539 wei",
+                "u": {
+                  "wei": 0,
+                  "Kwei": 3,
+                  "Mwei": 6,
+                  "Gwei": 9,
+                  "szabo": 12,
+                  "finney": 15,
+                  "BASE": 18
+                }
+              }
+            },
+            "tokenBalances": {
+              "t": "object",
+              "v": {}
+            },
+            "index": 0,
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "basemainnet": {
+          "t": "object",
+          "v": {
+            "startblock": 0,
+            "clarityCursor": "",
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "v": "200000000000000 wei",
+                "u": {
+                  "wei": 0,
+                  "Kwei": 3,
+                  "Mwei": 6,
+                  "Gwei": 9,
+                  "szabo": 12,
+                  "finney": 15,
+                  "BASE": 18
+                }
+              }
+            },
+            "tokenBalances": {
+              "t": "object",
+              "v": {}
+            },
+            "index": 0,
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "basemainnet": {
+        "address": "0x90E481d9A664ebbE4Be180d9501962255463036d"
+      }
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "address": "0xf6c138C36341138dDFC314a11038dA8264B7Ef09"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  }
+}

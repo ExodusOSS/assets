@@ -1,0 +1,2179 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "solana": {
+          "t": "object",
+          "v": {
+            "cursor": "122AjGwKSMzsD1LZYwFZatJUNLmHRjQWzMtHa184YnScLE2HRzjCn3FPN1dHHtaGC9r9UNCfroVVdKAHTddrgMoY",
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "v": "24283531 Lamports",
+                "u": {
+                  "Lamports": 0,
+                  "SOL": 9
+                }
+              }
+            },
+            "tokenBalances": {
+              "t": "object",
+              "v": {}
+            },
+            "rentExemptAmount": {
+              "t": "numberunit",
+              "v": {
+                "v": "890880 Lamports",
+                "u": {
+                  "Lamports": 0,
+                  "SOL": 9
+                }
+              }
+            },
+            "stakingInfo": {
+              "t": "object",
+              "v": {
+                "loaded": true,
+                "staking": {
+                  "t": "object",
+                  "v": {
+                    "enabled": true,
+                    "pool": "9QU2QSxhb24FUX3Tu2FpczXjpK3VYrvRudywSZaM29mF"
+                  }
+                },
+                "isDelegating": false,
+                "locked": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "activating": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "withdrawable": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "pending": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "earned": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "accounts": {
+                  "t": "object",
+                  "v": {}
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "solana": {
+          "t": "object",
+          "v": {
+            "cursor": "2naQ5tHgSHkw8t3pVx9b1rGdUabLp3iGMsw1SdqGbwJW8Pm4m9sheeUFA8Bnxz7CTvJpHbx8BdYs2zeE234Nzz53",
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "v": "52982500 Lamports",
+                "u": {
+                  "Lamports": 0,
+                  "SOL": 9
+                }
+              }
+            },
+            "tokenBalances": {
+              "t": "object",
+              "v": {}
+            },
+            "rentExemptAmount": {
+              "t": "numberunit",
+              "v": {
+                "v": "890880 Lamports",
+                "u": {
+                  "Lamports": 0,
+                  "SOL": 9
+                }
+              }
+            },
+            "stakingInfo": {
+              "t": "object",
+              "v": {
+                "loaded": true,
+                "staking": {
+                  "t": "object",
+                  "v": {
+                    "enabled": true,
+                    "pool": "9QU2QSxhb24FUX3Tu2FpczXjpK3VYrvRudywSZaM29mF"
+                  }
+                },
+                "isDelegating": false,
+                "locked": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "activating": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "withdrawable": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "pending": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "earned": {
+                  "t": "numberunit",
+                  "v": {
+                    "v": "0 Lamports",
+                    "u": {
+                      "Lamports": 0,
+                      "SOL": 9
+                    }
+                  }
+                },
+                "accounts": {
+                  "t": "object",
+                  "v": {}
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "solana": [
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2GtBQDGgWYA3Sziht49yiFTk4BBoxk2pp8Bx5kLJzqf8PrZofmniKRUKt5ZSi1RjpJpYkwdDBP8PeVLAyiiTuA1c",
+            "date": "2022-04-08T13:44:35.000Z",
+            "confirmations": 1,
+            "from": ["6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.16277292 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "UaZAVAZEyBCuXJCbK8xh97KgB2ktMCgeppdomEf6riDsdSyK8HbAGJDVtqVYA54PduN9ZxZsnjuUTHV22LzsPNj",
+            "date": "2022-04-08T13:50:49.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "7HAULvGEChgLZSXV3zwzkJCnArtWbmMA5RygDpsfryEA",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.15276792 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2Apnh4WBnVLpjceHMiMuY3rr49kzTJCMjwH4imsgjSHxtd7hvDQkmScTwuNCN22uAWNu4koDLLSvcFG6TwQnQWp5",
+            "date": "2022-04-08T13:52:36.000Z",
+            "confirmations": 1,
+            "from": ["7HAULvGEChgLZSXV3zwzkJCnArtWbmMA5RygDpsfryEA"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.14276292 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3fiGCohizfVEeSSq4mrfGHve2tZA439toP9RwS1hFX1ViM4VEWX3Dw172ynsrJQ8evcCphohf7r7VTYg1KmvhnUC",
+            "date": "2022-06-09T17:59:06.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "createAccountWithSeed",
+                "seed": "exodus:1654797541558",
+                "stakeAddresses": ["7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR"],
+                "stake": 134570800
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "svnCJSuGCUzHAxxuzG9b2Vt9tYDxCVUuiDTrTA16CpK8fqgQExMesXKBvKUvzXFUG66AwJwmytKNeJy5xeo9Y44",
+            "date": "2022-06-16T16:58:09.000Z",
+            "confirmations": 1,
+            "from": ["F9kqcBbKALWvcjSzeiv595LNmbpXBwg51RNUPfYE11X1"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.02 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "66u9dHXKshqh4BvkRm8tP3QrYJP1pNbdhXmv7aJi2H6AQdR3yvfhekfxemorhDU56DuUppd6kg2c2JuBouFvsjrg",
+            "date": "2022-06-16T16:59:20.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "F9kqcBbKALWvcjSzeiv595LNmbpXBwg51RNUPfYE11X1",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.01 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2K8C41sC7qe5JExaMjwYaCTQrvjEo2fn5wPNUfU6QooytzPkioYjtvjTe8RohWPZnNtQzcv39V1uxKRxhDE9MknE",
+            "date": "2022-06-21T19:00:34.000Z",
+            "confirmations": 1,
+            "from": ["F9kqcBbKALWvcjSzeiv595LNmbpXBwg51RNUPfYE11X1"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "58ZLMcCV3SrciHSBkAem9ht6WBp82JkFP9GaZabSkSNWxMt9EiSuJPBNbV8y4fpjYqjbQJdDz2cXS5kdcJtFtAFg",
+            "date": "2022-08-04T16:57:26.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5yYoAjouVJFMve1Kc8sPyub69Q7MWEEvfMpZTge7QFbWT2BTL5KXBtjTfouCKkwyyrWLbG5c3ttUtMpA8cEkAxg4",
+            "date": "2022-08-05T09:47:08.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "undelegate",
+                "stakeAddresses": ["7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR"]
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2NFqDbDg6QhpuHNwDxQBiVuLCsz5sKUeQVFwsk7PSTCnTG6xUe1vWy8RToZJpWzzr5c56kUKRbkFoxq8iwTsJFA5",
+            "date": "2022-08-10T14:37:57.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR"],
+            "data": {
+              "staking": {
+                "method": "withdraw",
+                "stakeAddresses": ["7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR"],
+                "stake": 135681047
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "i6YkJn4nsZaTMeX2oBfcvx3DBCBMJHCbc6oWNHpGBQqTpnyzuzM9q1kzQfMNPNkpKxDjMUBSb5JbSHqQHaazrqi",
+            "date": "2022-08-22T13:44:27.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.01 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "591BpbY9spsp1LEPJbANtQJGeQRSoAGMYFKwoWqZYE62UuNMrp4JwgHC2mfLidtnV8LsmK44iK6tKbqV5LyKM6nh",
+            "date": "2022-08-22T13:46:08.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "createAccountWithSeed",
+                "seed": "exodus:1661175966990",
+                "stakeAddresses": ["2GMbFfVk7cdfGWGE1k6WjzqwQZqDiJ9yTLL5QfsdFiXd"],
+                "stake": 135651047
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2zQYwggoW1zrhi6G8WXVYoW5SapGyhYjHuE6oepBoCNFAvSmLr5bRUGNwkgFZ2mD2zVGZFt79HMNUVGDpmJexZGZ",
+            "date": "2022-08-25T20:08:20.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "undelegate",
+                "stakeAddresses": ["2GMbFfVk7cdfGWGE1k6WjzqwQZqDiJ9yTLL5QfsdFiXd"]
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "2GMbFfVk7cdfGWGE1k6WjzqwQZqDiJ9yTLL5QfsdFiXd",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5sY9UYTZd3yMcypPBcwp92KXvazFcydrprhC7tx5ZgEyEB1s2p4fjHBTpNczgNZRG89A6cjEZeNAQmHbWZuv7335",
+            "date": "2022-08-26T16:22:25.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000995 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4pRYh72BbvFr2XhR4XNaJq9oPAe9sAb7ipedswWWhSttKr8z9mzywdYBX3c6EPiJwP9bRNBgLiL4QYcESCcaQP5z",
+            "date": "2022-08-26T16:22:58.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["2GMbFfVk7cdfGWGE1k6WjzqwQZqDiJ9yTLL5QfsdFiXd"],
+            "data": {
+              "staking": {
+                "method": "withdraw",
+                "stakeAddresses": ["2GMbFfVk7cdfGWGE1k6WjzqwQZqDiJ9yTLL5QfsdFiXd"],
+                "stake": 135710938
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "HrfdDKfS5Hvcq4N8QNjPP7AppJsRcgEQkGtdzvyGC7ZRdEEncbxAYnT1qqhWZA5XctxUguAuocQFjMHTvD9uT18",
+            "date": "2022-09-15T19:56:36.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5nmW8d9yM8AHEzceaYmtWQ4UR1TTgwStnVEVv3EWEEcSkMtyB9PYkjQntDPYAdvF642otSM4N2fkJ1sdFAMhg8HD",
+            "date": "2022-09-15T20:03:31.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.1 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4qKk9jUWjjJ3iv22GgKGvzQrCkaf19B5xuhmtUfu7SAatdTpNqo8LQf7t1tF7LfULNDzjvjNZnYfxja38bt9zxzU",
+            "date": "2022-10-31T12:07:52.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "createAccountWithSeed",
+                "seed": "exodus:1667218071180",
+                "stakeAddresses": ["CNwWA9JTGY2VnxLFqepSLdktCpW9n1innbaDBS3MLdHw"],
+                "stake": 45680938
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "32Z98CyPBBTZtii9gyFxCxELk4sNN3m11FGrL3wjzUFnVwAhF2vN3yzgptQWFdy5CFSqusn1Ph6VjT1pukisn324",
+            "date": "2022-10-31T12:21:33.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "YcDAKwwPsgZfR42ghrJsMNDuoB28U34b9UE1ET7gvPTUKPZLXVNiAeZ8nFBpVWf2X3y5pF6qyNzSkxd2dPz9i1m",
+            "date": "2022-11-17T14:07:48.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": {
+                "method": "undelegate",
+                "stakeAddresses": ["CNwWA9JTGY2VnxLFqepSLdktCpW9n1innbaDBS3MLdHw"]
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "CNwWA9JTGY2VnxLFqepSLdktCpW9n1innbaDBS3MLdHw",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4yM1QvZJWroic6kbMWXU9wVMhPv3WHNyohWejntvUXR1mMonXRcj8mmBSY3zgRrPkXndXy1EpUjscZvCYX2gzuDD",
+            "date": "2022-11-18T09:21:36.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["CNwWA9JTGY2VnxLFqepSLdktCpW9n1innbaDBS3MLdHw"],
+            "data": {
+              "staking": {
+                "method": "withdraw",
+                "stakeAddresses": ["CNwWA9JTGY2VnxLFqepSLdktCpW9n1innbaDBS3MLdHw"],
+                "stake": 45822145
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4uA5VFdLnHsexDoEheRMoD5sQzGkcWJkShCX1Zc5mriZdb9wjYfhHLkHyXmjgkTkUYJxB5BXoN2TMPYuxSQRsaga",
+            "date": "2024-06-18T14:03:49.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "4LFtsFzx8RbEmnwTP9aFZVk1HpqN3ShZsSkRgLu4C8Gt",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.01 SOL",
+            "feeAmount": "0.000005007 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4H4wU1NxeBKzywAGAJXrQ4DDhKmbQKZtLy7jqKWxNfjLqebrD4WM1BbPP8mqr5hndc3V6f38JTdjGRSQFy5Rjsim",
+            "date": "2024-06-18T15:50:29.000Z",
+            "confirmations": 1,
+            "from": ["4LFtsFzx8RbEmnwTP9aFZVk1HpqN3ShZsSkRgLu4C8Gt"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4WAyqAFMKcZRquUwv6TBy1TmuhzZmc1mSaTLWMBGWRQVVG4uViNP8w9KTnTPKXTtxBuzWQVqT9SbBWKVNYnPokA3",
+            "date": "2024-11-20T17:15:21.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3PkuriHcLwUXZyRHpbcrw22M8onorXB7trpR2kmskuzQuL8UaoBm6KKuBzJrSXsYuvgSWUUiESEjAWtFt9wtZctX",
+            "date": "2024-11-20T17:21:54.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3FordGWnK2xj8fx2ztr8cCJdLWcPpNq18mTyfBxDpiprmEBmRoGJAchCV1H1mK5tKr5TR3YBnUBpuhPAv2BAhEsH",
+            "error": true,
+            "date": "2024-11-20T19:45:15.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3KYpE8yTovwJitDq8Vnhd8Z74s5AJDtrjAFUDSecQ4Ptaui92e74dDaJSCW7iKQb1SiQXLZotzMjmfePfcCJUAuG",
+            "date": "2024-11-21T00:31:57.000Z",
+            "confirmations": 1,
+            "from": ["5Hr7wZg7oBpVhH5nngRqzr5W7ZFUfCsfEhbziZJak7fr"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5nhWqwAoEYsE9FoFUVrtXZtyjDeJRVDdEDTMVojjhbpWWKz9QPA8eFEA1BFaLq2aeCXHnahgXQqEg6ezcqyagemw",
+            "date": "2024-11-21T01:39:05.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2GnbSkCfunHQdWc2MEmWXRcpajdTk7gWkFn6SRgbd67v1CtgERV4DJg5PZqQaqkszbfhjcM38M7rgsnimhcs9u7U",
+            "date": "2024-11-21T01:39:09.000Z",
+            "confirmations": 1,
+            "from": ["fLiPgg2yTvmgfhiPkKriAHkDmmXGP6CdeFX9UF5o7Zc"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "Tr7PPDYnoAXRmyuP3QgEnAVDo1ep3Mc1pcNMmUJA5sX5iRiCLQxvdRvBCqKQeK2LoDmSaU85jCFsABvC6UMhnaM",
+            "date": "2024-11-21T01:39:09.000Z",
+            "confirmations": 1,
+            "from": ["fLiPgg2yTvmgfhiPkKriAHkDmmXGP6CdeFX9UF5o7Zc"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2tPqBMbpcTVgA9EGrbpfL9fJY2gkQtird3XYpiD6Pce75sTk51tByzRiWiLk32wLjQyXBhJWc3wMuKydDDyN6AH7",
+            "date": "2024-11-21T01:48:33.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "bkGMwb2wmhvDAWvTArbsST3zcmqqqUvrw9fjWjzABtRDbKCurw2SxDYpMRzerAfRF2LRzD9LZyBHX15RpkkRm8o",
+            "date": "2024-11-21T01:51:59.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.002 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5Q7d6ZGvTXNMRuXdXeoUy8p24K1X3b6Mq86FcTo8HxWokKJfohJ8JeSSLedLB3bZZbWzxgURL8k3gkNCmLHRKVXw",
+            "date": "2024-11-21T12:53:56.000Z",
+            "confirmations": 1,
+            "from": ["5Hr7wZg7oBpVhH5nngRqzr5W7ZFUfCsfEhbziZJak7fr"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5Fz9Lsvo96VZJ3rcqpvR1ejoN7uQ9U2Z9pGGQL8b1cwQtNrngNw2x6VETWsZz5vYHoT6pMHV8GRpBLZS6asnUEYY",
+            "date": "2024-11-21T21:52:31.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.002 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "57rfaWVGfdrPyNjWTJ2ryYfPosaQvXGvi8MgGjwnnjDuxQvjQNGAjT17Ht4P3oh27YFoZRMGs5PxLuVGohxnJZfM",
+            "date": "2024-11-22T00:06:45.000Z",
+            "confirmations": 1,
+            "from": ["5Hr7wZg7oBpVhH5nngRqzr5W7ZFUfCsfEhbziZJak7fr"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3jZcvFJ8izzNKt2Gpiunfb24ExFvHfbempTgKBb8QMCrAwoGmGSdRpG7KeSnyQQZQ62gMrFdgoMKDakL8JZD9xee",
+            "date": "2024-11-22T12:46:22.000Z",
+            "confirmations": 1,
+            "from": ["5Hr7wZg7oBpVhH5nngRqzr5W7ZFUfCsfEhbziZJak7fr"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "3UgbmRn1r41CufnC6EWbQHu1uQf38BK2kXwXjjP9SFn8yNrCxpY6WhRKjZ7T7NzhhR3nvb84Y5kdp4nwzCxQqE3q",
+            "date": "2024-11-22T16:35:34.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.001 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "26FcxhyTbi6aHPsci99mcZ8A38qoZYvqmEYtvE4hwp29meMiEbiU8Runa8UuQdJChtSrXgF9WpGunZuEn1vTChBf",
+            "date": "2024-11-22T16:35:39.000Z",
+            "confirmations": 1,
+            "from": ["Habp5bncMSsBC3vkChyebepym5dcTNRYeg2LVG464E96"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4hAfxkxjYwKp9SYcuzZYymkVyA6skMvrQxfHbCNzZ7gZo84BEUBRk8Ars2C8w94Uustu9TYJQTHidt4V9dRT4yqu",
+            "date": "2024-11-22T16:35:39.000Z",
+            "confirmations": 1,
+            "from": ["fLiPgg2yTvmgfhiPkKriAHkDmmXGP6CdeFX9UF5o7Zc"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "EThF7S4AGmCUzpb5Xcc48RcCbKqJBQ1X9CjkWjoNaooCB8Se4y3p1PqVnvT5PgR6trXevr62JSo6sj1jha7o4LZ",
+            "error": true,
+            "date": "2024-11-22T16:35:39.000Z",
+            "confirmations": 1,
+            "from": ["fLiPgg2yTvmgfhiPkKriAHkDmmXGP6CdeFX9UF5o7Zc"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "ixjEghfHZBXxvprP5q6gjwMA4gawNmQWh9gEafSX3Y7aULXktDxz8biwy2hTCRXPeKJRaSbTyQ751gagzn8QSGv",
+            "error": true,
+            "date": "2024-11-22T16:35:39.000Z",
+            "confirmations": 1,
+            "from": ["Habp5bncMSsBC3vkChyebepym5dcTNRYeg2LVG464E96"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "45hsyf1vMmAVferuiVfbGHvEwMj5KXRE2Ln4h5a7BFuWeGuReQF7fof7BhWrJbLaiuZHSNQpzYa6gpuETgTqctJ",
+            "date": "2024-11-22T17:08:45.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.0015 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "56mQvWs4B1bJh6zTVNvnHS1vwFoxj8x5ZH244uCv3TFWdUVerCJFUevYxHRzhWb58CfptLFw3tDUB6oCehodELDU",
+            "date": "2024-11-22T17:08:50.000Z",
+            "confirmations": 1,
+            "from": ["fLiPgg2yTvmgfhiPkKriAHkDmmXGP6CdeFX9UF5o7Zc"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "58oNuGroHy4e1oAzzQSaqbFZUqhzgA8SGiDHkfHqqDQsNqN1WBAGGEKzxqPtwNfNAduiEyYKftV2f7thbgrkfBRm",
+            "date": "2024-11-22T17:08:50.000Z",
+            "confirmations": 1,
+            "from": ["Habp5bncMSsBC3vkChyebepym5dcTNRYeg2LVG464E96"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5Zo8tbmeWftQi5HaeXSuWgZLnzvKTT6UPApW1L3JJyxpg5NBe56BqDQrjsZGYqeSvojRgT6PZvw9yng2rVGxpyZz",
+            "error": true,
+            "date": "2024-11-22T17:08:59.000Z",
+            "confirmations": 1,
+            "from": ["Habp5bncMSsBC3vkChyebepym5dcTNRYeg2LVG464E96"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.0000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5KkWoAcktfEE3xC5ERa4L1UxzuyrTp5Gr1QdHBoPDiaiSgDxqwUBCbU4HWJwyVyybiD72cx9C5h1rnMw1zbJMk2J",
+            "date": "2024-11-22T17:27:49.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.0015 SOL",
+            "feeAmount": "0.000105 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "j5fbFA1Hp1pjMymUFZLs8k3xFXQRWUbh6a2iiM5jP1697VGy4pY5Xs82ZuHEUUxKyoGGWjZHC2o4HyCsxbQhdBB",
+            "date": "2024-11-23T00:47:42.000Z",
+            "confirmations": 1,
+            "from": ["5Hr7wZg7oBpVhH5nngRqzr5W7ZFUfCsfEhbziZJak7fr"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.000000001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "4RWa6QnHLfymVzP2KfRSRFamDEKsfZzZntN5yBv1fQPYWNjZUYeHRSGJb9wjTLVSMaLgxjtocJywVkovKJqdxAWM",
+            "error": true,
+            "date": "2024-12-06T08:57:47.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "HbbJGPPMhvoHZ4aUJdSNKw1YKHuitEg6yKBq3ENJGnEW",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.0015 SOL",
+            "feeAmount": "0.000105 SOL"
+          }
+        ]
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "solana": [
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "58ZLMcCV3SrciHSBkAem9ht6WBp82JkFP9GaZabSkSNWxMt9EiSuJPBNbV8y4fpjYqjbQJdDz2cXS5kdcJtFtAFg",
+            "date": "2022-08-04T16:57:26.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "i6YkJn4nsZaTMeX2oBfcvx3DBCBMJHCbc6oWNHpGBQqTpnyzuzM9q1kzQfMNPNkpKxDjMUBSb5JbSHqQHaazrqi",
+            "date": "2022-08-22T13:44:27.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.01 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5sY9UYTZd3yMcypPBcwp92KXvazFcydrprhC7tx5ZgEyEB1s2p4fjHBTpNczgNZRG89A6cjEZeNAQmHbWZuv7335",
+            "date": "2022-08-26T16:22:25.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.000995 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "HrfdDKfS5Hvcq4N8QNjPP7AppJsRcgEQkGtdzvyGC7ZRdEEncbxAYnT1qqhWZA5XctxUguAuocQFjMHTvD9uT18",
+            "date": "2022-09-15T19:56:36.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.001 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5nmW8d9yM8AHEzceaYmtWQ4UR1TTgwStnVEVv3EWEEcSkMtyB9PYkjQntDPYAdvF642otSM4N2fkJ1sdFAMhg8HD",
+            "date": "2022-09-15T20:03:31.000Z",
+            "confirmations": 1,
+            "from": ["8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.1 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "32Z98CyPBBTZtii9gyFxCxELk4sNN3m11FGrL3wjzUFnVwAhF2vN3yzgptQWFdy5CFSqusn1Ph6VjT1pukisn324",
+            "date": "2022-10-31T12:21:33.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.005 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "NNc5BNbckNMDG1F7sDrrE9SEzC1NVtb7aC85Qr2NpDbwfi2i88dESMUzKDmNCCwTefUgWAhFdvTZtWMfuhfdSVs",
+            "date": "2022-11-17T14:12:24.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": {
+                "method": "createAccountWithSeed",
+                "seed": "exodus:1668694342866",
+                "stakeAddresses": ["2snK6mZwzTUnUxeSG3ggJb6LonmrynDeQ9ee3odx8kRz"],
+                "stake": 26498750
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5fZsvgsGwW1oznrr3ibgEh4BZEpqxEs1SDjUaBT8UEYqvtvWt1toyFP7CLvoVQNufPzZBHLHZPxW83h3v5enUfTg",
+            "date": "2022-11-17T14:13:27.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": {
+                "method": "createAccountWithSeed",
+                "seed": "exodus:1668694406043",
+                "stakeAddresses": ["ASvNqjA9jSyjBy9hBo6zXhiw9o2QEuaUNcZ6P3UmRipQ"],
+                "stake": 69486250
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "28BSC3e8XjSzuyVx376AqekztFTkoUytbeR5Jyh2onRePM7n46CcPxK9oaLWMV4RKYArH3gC17cB6wv9xxHjkraJ",
+            "date": "2022-11-17T14:14:50.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": {
+                "method": "undelegate",
+                "stakeAddresses": [
+                  "ASvNqjA9jSyjBy9hBo6zXhiw9o2QEuaUNcZ6P3UmRipQ",
+                  "2snK6mZwzTUnUxeSG3ggJb6LonmrynDeQ9ee3odx8kRz"
+                ]
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "ASvNqjA9jSyjBy9hBo6zXhiw9o2QEuaUNcZ6P3UmRipQ",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "gsDkg8TW5k7fdJfYRnVMBmFNpYJQJ6rpA5ncYjY3bvcwUfjTvvyRk27e7TwKeWL8yiE2MejM3ecHojPg3TdVDoB",
+            "date": "2022-11-17T14:15:36.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["ASvNqjA9jSyjBy9hBo6zXhiw9o2QEuaUNcZ6P3UmRipQ"],
+            "data": {
+              "staking": {
+                "method": "withdraw",
+                "stakeAddresses": ["ASvNqjA9jSyjBy9hBo6zXhiw9o2QEuaUNcZ6P3UmRipQ"],
+                "stake": 69486250
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "5tWW1pp8D8kMtX8Tfx8tp5sz1ih7tu643tvd1VuC2sWgyi5JPfA8og8aEJM7PUcs2dpA788pSmLPxWk7tonpsvjh",
+            "date": "2022-11-17T14:15:38.000Z",
+            "confirmations": 1,
+            "selfSend": true,
+            "from": ["2snK6mZwzTUnUxeSG3ggJb6LonmrynDeQ9ee3odx8kRz"],
+            "data": {
+              "staking": {
+                "method": "withdraw",
+                "stakeAddresses": ["2snK6mZwzTUnUxeSG3ggJb6LonmrynDeQ9ee3odx8kRz"],
+                "stake": 26498750
+              },
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "0 SOL",
+            "feeAmount": "0.000005 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "2naQ5tHgSHkw8t3pVx9b1rGdUabLp3iGMsw1SdqGbwJW8Pm4m9sheeUFA8Bnxz7CTvJpHbx8BdYs2zeE234Nzz53",
+            "date": "2022-11-17T14:26:57.000Z",
+            "confirmations": 1,
+            "from": ["FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "to": "3X752QMwtDj8St5dKX4rUt9d8MD5K7C9mJHNFNM8EDh7",
+            "coinName": "solana",
+            "feeCoinName": "solana",
+            "coinAmount": "-0.0529825 SOL",
+            "feeAmount": "0.000005 SOL"
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "3twg_solana_3835713e": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "7dhb_solana_c9e04412": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "7i5k_solana_c9e04412": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "8hgy_solana_43b58185": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "audius_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "aury_solana_c9e04412": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "eche_solana_c5cba5c4": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "7atg_solana_3506aeb0": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "dezx_solana_3b523050": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "gene_solana_c9e04412": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "jupy_solana_ed7ebe51": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "kinx_solana_bf1442d2": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "mang_solana_c5cba5c4": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "mean_solana_c5cba5c4": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "mefn_solana_5d11b887": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "msol_solana_c9e04412": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "orca_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "poli_solana_0cc3745c": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "2b1k_solana_f3924eb0": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "raydium": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "rndr_solana_4b3ba195": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "serum": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "smoothlovepotion_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "staratlas_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "tetherusd_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "thegraph_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "tulip_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "usdcoin_solana": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      }
+    },
+    "exodus_1": {
+      "solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "3twg_solana_3835713e": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "7dhb_solana_c9e04412": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "7i5k_solana_c9e04412": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "8hgy_solana_43b58185": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "audius_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "aury_solana_c9e04412": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "eche_solana_c5cba5c4": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "7atg_solana_3506aeb0": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "dezx_solana_3b523050": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "gene_solana_c9e04412": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "jupy_solana_ed7ebe51": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "kinx_solana_bf1442d2": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "mang_solana_c5cba5c4": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "mean_solana_c5cba5c4": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "mefn_solana_5d11b887": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "msol_solana_c9e04412": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "orca_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "poli_solana_0cc3745c": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "2b1k_solana_f3924eb0": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "raydium": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "rndr_solana_4b3ba195": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "serum": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "smoothlovepotion_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "staratlas_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "tetherusd_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "thegraph_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "tulip_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "usdcoin_solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  },
+  "balances": {
+    "exodus_0": {
+      "solana": {
+        "total": "24283531 Lamports",
+        "balance": "24283531 Lamports",
+        "spendable": "23392651 Lamports",
+        "spendableBalance": "23392651 Lamports",
+        "walletReserve": "0 Lamports",
+        "networkReserve": "890880 Lamports",
+        "staked": "0 Lamports",
+        "unstaking": "0 Lamports"
+      },
+      "3twg_solana_3835713e": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7dhb_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7i5k_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "8hgy_solana_43b58185": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "audius_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "aury_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "eche_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7atg_solana_3506aeb0": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "dezx_solana_3b523050": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "gene_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "jupy_solana_ed7ebe51": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "kinx_solana_bf1442d2": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mang_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mean_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mefn_solana_5d11b887": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "msol_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "orca_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "poli_solana_0cc3745c": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "2b1k_solana_f3924eb0": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "raydium": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "rndr_solana_4b3ba195": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "serum": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "smoothlovepotion_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "staratlas_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "tetherusd_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "thegraph_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "tulip_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "usdcoin_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      }
+    },
+    "exodus_1": {
+      "solana": {
+        "total": "52982500 Lamports",
+        "balance": "52982500 Lamports",
+        "spendable": "52091620 Lamports",
+        "spendableBalance": "52091620 Lamports",
+        "walletReserve": "0 Lamports",
+        "networkReserve": "890880 Lamports",
+        "staked": "0 Lamports",
+        "unstaking": "0 Lamports"
+      },
+      "3twg_solana_3835713e": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7dhb_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7i5k_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "8hgy_solana_43b58185": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "audius_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "aury_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "eche_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "7atg_solana_3506aeb0": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "dezx_solana_3b523050": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "gene_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "jupy_solana_ed7ebe51": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "kinx_solana_bf1442d2": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mang_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mean_solana_c5cba5c4": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "mefn_solana_5d11b887": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "msol_solana_c9e04412": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "orca_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "poli_solana_0cc3745c": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "2b1k_solana_f3924eb0": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "raydium": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "rndr_solana_4b3ba195": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "serum": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "smoothlovepotion_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "staratlas_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "tetherusd_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "thegraph_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "tulip_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "usdcoin_solana": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      }
+    }
+  }
+}

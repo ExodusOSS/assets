@@ -1,0 +1,33 @@
+{
+  "name": "@exodus/asset",
+  "version": "2.0.1",
+  "description": "Utility functions for asset metadata packages",
+  "type": "module",
+  "main": "src/index.js",
+  "author": "Exodus Movement, Inc.",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset",
+  "files": [
+    "src",
+    "!**/__tests__/**",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@exodus/currency": "^6.0.1",
+    "lodash": "^4.17.11",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "prepublishOnly": "yarn run -T build --scope @exodus/asset"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aasset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

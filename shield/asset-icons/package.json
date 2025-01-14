@@ -1,0 +1,38 @@
+{
+  "name": "@exodus/asset-icons",
+  "version": "4.1.1",
+  "description": "Exodus assets icons generator helpers",
+  "license": "ISC",
+  "author": "Exodus Movement, Inc.",
+  "main": "scripts/generate.web.js",
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset-icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.19.1"
+  },
+  "scripts": {
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "test": "run -T exodus-test --jest"
+  },
+  "files": [
+    "scripts",
+    "README.md",
+    "CHANGELOG.md",
+    "!**/__tests__/**"
+  ],
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aasset-icons"
+  },
+  "devDependencies": {
+    "@exodus/assets-base": "workspace:^",
+    "@exodus/tezos-meta": "workspace:^"
+  },
+  "peerDependencies": {
+    "@exodus/assets-base": ">=8"
+  }
+}

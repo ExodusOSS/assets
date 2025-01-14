@@ -1,0 +1,372 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_2": {
+        "source": "exodus",
+        "index": 2,
+        "label": "Exodus 2",
+        "color": "#ff0002",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "bitcoinregtest": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "mqWmyAVDSRZW4oqxhonyeiDofwHkmXrcZt": {
+                    "address": "mqWmyAVDSRZW4oqxhonyeiDofwHkmXrcZt",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "12d81b495e22bea8c2443d184554a2326a1914c8f5a682e67da55c26eefb337e",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "76a9146da8a36d9bad2762d037ef60f974df6fd4c7798c88ac",
+                        "value": "0.0001 BTCR",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/44'/0'/0'/0/0"
+                      }
+                    ]
+                  },
+                  "bcrt1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqauu7v7": {
+                    "address": "bcrt1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqauu7v7",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "c250cf4073b6cc2f0fa08aaacaf18b0112e83928ee21f6795d66433b95e07d07",
+                        "vout": 1,
+                        "confirmations": 1,
+                        "script": "5120ca032b3575ddf2693956a16597650c5335f366dd0ba49d42decf33f7c593ba6c",
+                        "value": "0.00021 BTCR",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/86'/0'/0'/0/0"
+                      }
+                    ]
+                  },
+                  "bcrt1qz0p68ljq4xslgl09g8rdfzjse7dshm4wjajfea": {
+                    "address": "bcrt1qz0p68ljq4xslgl09g8rdfzjse7dshm4wjajfea",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "8ca0edd7b9d11314e4f2424ef2a72ae3d3f9265efd9fc8c8bdedde451d4d3dd1",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                        "value": "0.0001 BTCR",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/84'/0'/0'/0/0"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTCR": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcoinregtest": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {},
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTCR": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_2": {
+      "data": {
+        "bitcoinregtest": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {},
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTCR": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "bitcoinregtest": [
+          {
+            "currencies": {
+              "bitcoinregtest": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCR": 8
+              }
+            },
+            "txId": "12d81b495e22bea8c2443d184554a2326a1914c8f5a682e67da55c26eefb337e",
+            "date": "2024-05-31T21:02:48.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCR",
+            "coinName": "bitcoinregtest",
+            "from": ["bcrt1qk7lya68sam7gfpdd7j3eqlxlnvwnjujkfglv7r"],
+            "data": {
+              "feePerKB": 20000,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "mqWmyAVDSRZW4oqxhonyeiDofwHkmXrcZt",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 44,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoinregtest",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/44'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoinregtest": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCR": 8
+              }
+            },
+            "txId": "c250cf4073b6cc2f0fa08aaacaf18b0112e83928ee21f6795d66433b95e07d07",
+            "date": "2024-05-31T21:07:48.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00021 BTCR",
+            "coinName": "bitcoinregtest",
+            "from": ["bcrt1qts54j7xs6e729ygf5khvm3rdxvwqxtr36wpc0w"],
+            "data": {
+              "feePerKB": 20000,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bcrt1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqauu7v7",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoinregtest",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoinregtest": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCR": 8
+              }
+            },
+            "txId": "8ca0edd7b9d11314e4f2424ef2a72ae3d3f9265efd9fc8c8bdedde451d4d3dd1",
+            "date": "2024-05-31T21:07:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCR",
+            "coinName": "bitcoinregtest",
+            "from": ["bcrt1qrmz5wz8au8q4svegmyj92c6e8dwavl8c93hlgw"],
+            "data": {
+              "feePerKB": 20000,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bcrt1qz0p68ljq4xslgl09g8rdfzjse7dshm4wjajfea",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcoinregtest",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "bitcoinregtest": {
+        "address": "bcrt1qz0p68ljq4xslgl09g8rdfzjse7dshm4wjajfea"
+      }
+    },
+    "exodus_1": {
+      "bitcoinregtest": {
+        "address": "bcrt1qgxz38crda20mlre427ygezgu67kqvqfracmrgf"
+      }
+    },
+    "exodus_2": {
+      "bitcoinregtest": {
+        "address": "bcrt1q80wm35xel29d2xd79e4uveudejwmh3jn3hwdn0"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  },
+  "utxosReport": {
+    "exodus_0": {
+      "balance": "0.00041 BTCR",
+      "txs": {
+        "size": 3
+      },
+      "utxos": {
+        "addresses": [
+          "mqWmyAVDSRZW4oqxhonyeiDofwHkmXrcZt",
+          "bcrt1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqauu7v7",
+          "bcrt1qz0p68ljq4xslgl09g8rdfzjse7dshm4wjajfea"
+        ],
+        "size": 3
+      },
+      "chains": [
+        {
+          "purpose": 84,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 86,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 44,
+          "chain": [0, 0]
+        }
+      ]
+    },
+    "exodus_1": {
+      "balance": "0 BTCR",
+      "txs": {
+        "size": 0
+      },
+      "utxos": {
+        "addresses": [],
+        "size": 0
+      },
+      "chains": [
+        {
+          "purpose": 84,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 86,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 44,
+          "chain": [0, 0]
+        }
+      ]
+    },
+    "exodus_2": {
+      "balance": "0 BTCR",
+      "txs": {
+        "size": 0
+      },
+      "utxos": {
+        "addresses": [],
+        "size": 0
+      },
+      "chains": [
+        {
+          "purpose": 84,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 86,
+          "chain": [0, 0]
+        },
+        {
+          "purpose": 44,
+          "chain": [0, 0]
+        }
+      ]
+    }
+  }
+}

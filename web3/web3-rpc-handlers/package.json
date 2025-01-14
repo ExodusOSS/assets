@@ -1,0 +1,46 @@
+{
+  "name": "@exodus/web3-rpc-handlers",
+  "description": "Utils for Web3 RPC handlers.",
+  "version": "2.26.1",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean &&  run -T tsc",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "test": "run -T exodus-test --jest --esbuild",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-rpc-handlers"
+  },
+  "dependencies": {
+    "@exodus/web3-errors": "^1.13.0"
+  },
+  "devDependencies": {
+    "@exodus/web3-types": "workspace:*"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-rpc-handlers"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-rpc-handlers"
+}

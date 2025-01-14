@@ -1,0 +1,1060 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "bitcointestnet": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {},
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTCT": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcointestnet": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "mpkHgZ1LxbetHytjQmjCKbNMNAVviZQ4UA": {
+                    "address": "mpkHgZ1LxbetHytjQmjCKbNMNAVviZQ4UA",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "9f517ffca492fdf6da1563d36ae203c3dbed89c61464201ff11f531dc5a96b01",
+                        "vout": 1,
+                        "confirmations": 1,
+                        "script": "76a914653eb948cf07ac5cb15180c6bbf06393ebb935fe88ac",
+                        "value": "0.0001 BTCT",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/44'/0'/1'/0/0"
+                      }
+                    ]
+                  },
+                  "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq": {
+                    "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "c30b7e01d976ad48ae0d20233b341df8f4c846c22f0d2cf63d65bd2801ac36dd",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                        "value": "0.0001 BTCT",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/84'/0'/1'/0/0"
+                      },
+                      {
+                        "txId": "98b1909aac19a5e33bc2f0bdc444516520ff5210cbf3adae1321f99d4f5fd93d",
+                        "vout": 1,
+                        "confirmations": 1,
+                        "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                        "value": "0.0005 BTCT",
+                        "derivationPath": "m/84'/0'/1'/0/0"
+                      }
+                    ]
+                  },
+                  "tb1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575ms6pcnrp": {
+                    "address": "tb1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575ms6pcnrp",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "13b6b61079873a3644fd730e62c6069037cee2a1686240c91ed1aa05d4639e5b",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120b5c7dcfa43fca2e989ec0ede55a533687957b2fa2557faa82b509b74ee14f537",
+                        "value": "0.000002 BTCT",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/86'/0'/1'/0/0"
+                      },
+                      {
+                        "txId": "eba9bc160db082cf39339b3083e8abfa3ba47c88dea58f531c28d144ac1cd943",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120b5c7dcfa43fca2e989ec0ede55a533687957b2fa2557faa82b509b74ee14f537",
+                        "value": "0.000006 BTCT",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/86'/0'/1'/0/0"
+                      }
+                    ]
+                  },
+                  "tb1qucwdfncdxavhqkxa3zyk66w5786kt3dcwfwwtq": {
+                    "address": "tb1qucwdfncdxavhqkxa3zyk66w5786kt3dcwfwwtq",
+                    "path": "m/0/1",
+                    "utxos": [
+                      {
+                        "txId": "acf9b2e4203ef685f9a8e0f42256b5179472c759125cde2ff489f0baa0ed2548",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "0014e61cd4cf0d37597058dd88896d69d4f1f565c5b8",
+                        "value": "0.0001 BTCT",
+                        "rbfEnabled": true,
+                        "derivationPath": "m/84'/0'/1'/0/1"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTCT": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "bitcointestnet": [
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "e2a30c4c4622b11786f6f442661c521fae2c36fb080806d2abdcd45601a6c837",
+            "date": "2022-10-05T15:47:54.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qnkgnss6xfn8rrpue0ys4w845rp88guwcvkf5d3"],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "f653c9db7699db0eaca0df5b51b0bc76e9ed440ede744c95d59c6218ed66a830",
+            "date": "2022-10-05T15:47:55.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00095971 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qfuhwl9qzdnmmspmzf07557pfc6ltcly9hrfx48"],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "a4db359715ffadaa42180babdf46c3220f137f9eb75ce0605b092c95743ce348",
+            "date": "2022-10-05T15:47:56.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qxgvqc36ft09yannd62j4wkyumzhd743wamu55a"],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "bf18ac10d63fba58f546abe13bfc696fcda48c219994e036ab365fe468e5399e",
+            "date": "2022-10-05T18:08:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00003339 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 16052.884615384613,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                  "amount": "0.0001 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5": {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "a4db359715ffadaa42180babdf46c3220f137f9eb75ce0605b092c95743ce348",
+                      "vout": 0,
+                      "value": "0.0001 BTCT"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "e2a30c4c4622b11786f6f442661c521fae2c36fb080806d2abdcd45601a6c837",
+                      "vout": 0,
+                      "value": "0.0001 BTCT"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "tb1q086jhvqmana3mzf8qvm0xzerxhngyklpj6c6vf",
+                "meta": {
+                  "path": "m/1/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/0"
+                  }
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "acf9b2e4203ef685f9a8e0f42256b5179472c759125cde2ff489f0baa0ed2548",
+            "date": "2022-10-10T09:59:38.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00000424 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 2038.4615384615383,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1qucwdfncdxavhqkxa3zyk66w5786kt3dcwfwwtq",
+                  "amount": "0.0001 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5": {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "f653c9db7699db0eaca0df5b51b0bc76e9ed440ede744c95d59c6218ed66a830",
+                      "vout": 1,
+                      "value": "0.00095971 BTCT"
+                    }
+                  ]
+                },
+                "tb1q086jhvqmana3mzf8qvm0xzerxhngyklpj6c6vf": {
+                  "address": "tb1q086jhvqmana3mzf8qvm0xzerxhngyklpj6c6vf",
+                  "path": "m/1/0",
+                  "utxos": [
+                    {
+                      "script": "001479f52bb01becfb1d89270336f30b2335e6825be1",
+                      "txId": "bf18ac10d63fba58f546abe13bfc696fcda48c219994e036ab365fe468e5399e",
+                      "vout": 0,
+                      "value": "0.00006661 BTCT"
+                    }
+                  ]
+                }
+              },
+              "changeAddress": {
+                "address": "tb1qx72cgyt4xnh25s3n05lmxfcr9v323rxh4k6kz2",
+                "meta": {
+                  "path": "m/1/1",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/1/1"
+                  }
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "9f517ffca492fdf6da1563d36ae203c3dbed89c61464201ff11f531dc5a96b01",
+            "date": "2022-10-10T21:00:01.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00000294 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 2041.6666666666663,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "mpkHgZ1LxbetHytjQmjCKbNMNAVviZQ4UA",
+                  "amount": "0.0001 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qx72cgyt4xnh25s3n05lmxfcr9v323rxh4k6kz2": {
+                  "address": "tb1qx72cgyt4xnh25s3n05lmxfcr9v323rxh4k6kz2",
+                  "path": "m/1/1",
+                  "utxos": [
+                    {
+                      "script": "0014379584117534eeaa42337d3fb327032b22a88cd7",
+                      "txId": "acf9b2e4203ef685f9a8e0f42256b5179472c759125cde2ff489f0baa0ed2548",
+                      "vout": 1,
+                      "value": "0.00092208 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "c30b7e01d976ad48ae0d20233b341df8f4c846c22f0d2cf63d65bd2801ac36dd",
+            "date": "2022-10-11T19:04:51.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00001873 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 10179.347826086956,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                  "amount": "0.0001 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5": {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "9f517ffca492fdf6da1563d36ae203c3dbed89c61464201ff11f531dc5a96b01",
+                      "vout": 0,
+                      "value": "0.00081914 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "tb1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqs9kcey",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/0'/0/0"
+                  }
+                }
+              },
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "ded5684fe5993f55426dbdb06a68f3bfed1421f35b043ea00baf535e239d9ffa",
+            "date": "2022-10-11T19:25:08.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq"],
+            "data": {
+              "feePerKB": 9090.909090909092,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "145c88aefeed1380a66f2e98360da9c60163804a9d2402ac031d3a7c422b191b",
+            "date": "2022-10-19T12:28:04.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00056248 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00002793 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 15691.011235955055,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1q3yt56war2meuc0jkp85y9ty58flkwf9nvasec9",
+                  "amount": "0.00056248 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5": {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "ded5684fe5993f55426dbdb06a68f3bfed1421f35b043ea00baf535e239d9ffa",
+                      "vout": 0,
+                      "value": "0.00009 BTCT"
+                    },
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "c30b7e01d976ad48ae0d20233b341df8f4c846c22f0d2cf63d65bd2801ac36dd",
+                      "vout": 2,
+                      "value": "0.00050041 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "c74c12dbf951c5c29a0a8e546138d7eb357e3f6fd83b9499f689ccb20ee315e3",
+            "date": "2023-09-14T18:11:30.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.000016 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00009656 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 68000,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1psc6yd8nppn9p53x4hw9gpdf87r3talzy6jet94lmvlaumnekyj5scuf8kn",
+                  "amount": "0.000016 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqs9kcey": {
+                  "address": "tb1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkqs9kcey",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "5120ca032b3575ddf2693956a16597650c5335f366dd0ba49d42decf33f7c593ba6c",
+                      "txId": "c30b7e01d976ad48ae0d20233b341df8f4c846c22f0d2cf63d65bd2801ac36dd",
+                      "vout": 1,
+                      "value": "0.0002 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "addresses": [
+              {
+                "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_0",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/0'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "94674f2849cbaab7ea5439423a8d8752772df7da77bd9af97ca7bf7638717642",
+            "date": "2023-09-14T21:55:53.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0000176 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00006984 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 57245.90163934426,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1pep5un70jgep3mtky6snv8xzd2tg2vqylc97gef2fqrr7kqru5gdq85sj6a",
+                  "amount": "0.0000176 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5": {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                      "txId": "c74c12dbf951c5c29a0a8e546138d7eb357e3f6fd83b9499f689ccb20ee315e3",
+                      "vout": 1,
+                      "value": "0.00008744 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "version": 1
+          }
+        ]
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcointestnet": [
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "bf18ac10d63fba58f546abe13bfc696fcda48c219994e036ab365fe468e5399e",
+            "date": "2022-10-05T18:08:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": [
+              "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+              "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5"
+            ],
+            "data": {
+              "feePerKB": 16052.884615384613,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "acf9b2e4203ef685f9a8e0f42256b5179472c759125cde2ff489f0baa0ed2548",
+            "date": "2022-10-10T09:59:38.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": [
+              "tb1q086jhvqmana3mzf8qvm0xzerxhngyklpj6c6vf",
+              "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5"
+            ],
+            "data": {
+              "feePerKB": 2038.4615384615383,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qucwdfncdxavhqkxa3zyk66w5786kt3dcwfwwtq",
+                "meta": {
+                  "path": "m/0/1",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/1"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "9f517ffca492fdf6da1563d36ae203c3dbed89c61464201ff11f531dc5a96b01",
+            "date": "2022-10-10T21:00:01.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qx72cgyt4xnh25s3n05lmxfcr9v323rxh4k6kz2"],
+            "data": {
+              "feePerKB": 2041.6666666666663,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "mpkHgZ1LxbetHytjQmjCKbNMNAVviZQ4UA",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 44,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/44'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "c30b7e01d976ad48ae0d20233b341df8f4c846c22f0d2cf63d65bd2801ac36dd",
+            "date": "2022-10-11T19:04:51.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5"],
+            "data": {
+              "feePerKB": 10179.347826086956,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "ded5684fe5993f55426dbdb06a68f3bfed1421f35b043ea00baf535e239d9ffa",
+            "date": "2022-10-11T19:25:08.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009 BTCT",
+            "coinName": "bitcointestnet",
+            "feeAmount": "0.00001 BTCT",
+            "feeCoinName": "bitcointestnet",
+            "data": {
+              "feePerKB": 9090.909090909092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5",
+                  "amount": "0.00009 BTCT"
+                }
+              ],
+              "inputs": {
+                "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq": {
+                  "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                  "path": "m/0/0",
+                  "utxos": [
+                    {
+                      "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                      "txId": "bf18ac10d63fba58f546abe13bfc696fcda48c219994e036ab365fe468e5399e",
+                      "vout": 1,
+                      "value": "0.0001 BTCT"
+                    }
+                  ]
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "98b1909aac19a5e33bc2f0bdc444516520ff5210cbf3adae1321f99d4f5fd93d",
+            "date": "2022-10-11T19:41:44.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0005 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1q30q6yqku8hhk3wvw3xc4rjd3upnttv0r0vf42p"],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 84,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/84'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "eba9bc160db082cf39339b3083e8abfa3ba47c88dea58f531c28d144ac1cd943",
+            "date": "2023-09-14T18:11:30.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.000006 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1psc6yd8nppn9p53x4hw9gpdf87r3talzy6jet94lmvlaumnekyj5scuf8kn"],
+            "data": {
+              "feePerKB": 6410.25641025641,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575ms6pcnrp",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcointestnet": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTCT": 8
+              }
+            },
+            "txId": "13b6b61079873a3644fd730e62c6069037cee2a1686240c91ed1aa05d4639e5b",
+            "date": "2023-09-14T21:55:53.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.000002 BTCT",
+            "coinName": "bitcointestnet",
+            "from": ["tb1pep5un70jgep3mtky6snv8xzd2tg2vqylc97gef2fqrr7kqru5gdq85sj6a"],
+            "data": {
+              "feePerKB": 10000,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "tb1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575ms6pcnrp",
+                "meta": {
+                  "path": "m/0/0",
+                  "walletAccount": "exodus_1",
+                  "purpose": 86,
+                  "keyIdentifier": {
+                    "derivationAlgorithm": "BIP32",
+                    "assetName": "bitcointestnet",
+                    "keyType": "secp256k1",
+                    "derivationPath": "m/86'/0'/1'/0/0"
+                  }
+                }
+              }
+            ],
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "bitcointestnet": {
+        "address": "tb1qz0p68ljq4xslgl09g8rdfzjse7dshm4ws5tyw5"
+      }
+    },
+    "exodus_1": {
+      "bitcointestnet": {
+        "address": "tb1qgxz38crda20mlre427ygezgu67kqvqfrl3zwlq"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  }
+}

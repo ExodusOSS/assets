@@ -1,0 +1,46 @@
+{
+  "name": "@exodus/send-validation",
+  "version": "3.0.3",
+  "description": "Send token screen validation library",
+  "author": "Exodus Movement, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/send-validation",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asend-validation"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "run -T eslint .",
+    "test": "run -T exodus-test --jest",
+    "lint:fix": "yarn lint --fix"
+  },
+  "devDependencies": {
+    "@exodus/cardano-plugin": "^1.2.1",
+    "@testing-library/react-hooks": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0"
+  },
+  "dependencies": {
+    "@exodus/algorand-api": "^2.2.1",
+    "@exodus/basic-utils": "^3.0.1",
+    "@exodus/bitcoin-api": "^2.23.0",
+    "@exodus/neo-lib": "^2.2.7",
+    "@exodus/react-hooks": "^5.1.0",
+    "@exodus/ripple-lib": "^3.0.0",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}

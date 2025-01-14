@@ -1,0 +1,48 @@
+{
+  "name": "@exodus/solana-lib",
+  "version": "3.9.4",
+  "description": "Solana utils, such as for cryptography, address encoding/decoding, transaction building, etc.",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "!src/**/__tests__"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/asset-lib": "^5.0.0",
+    "@exodus/buffer-layout": "^1.2.0-exodus1",
+    "@exodus/crypto": "^1.0.0-rc.16",
+    "@exodus/currency": "^6.0.1",
+    "@exodus/key-utils": "^3.7.0",
+    "@exodus/solana-web3.js": "^1.63.1-exodus.9-rc4",
+    "bn.js": "^5.2.1",
+    "borsh": "^0.7.0",
+    "bs58": "^4.0.1",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "devDependencies": {
+    "@exodus/key-identifier": "^1.3.0",
+    "@exodus/keychain": "^7.3.0",
+    "@exodus/solana-meta": "^2.0.0",
+    "bip39": "^2.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asolana-lib"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/solana/solana-lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

@@ -1,0 +1,14 @@
+exports[`matic index.js test evm fee data snapshot 1`] = `
+{
+  "baseFeePerGas": "100 Gwei",
+  "eip1559Enabled": true,
+  "fuelThreshold": "2500000 Gwei",
+  "gasPrice": "135 Gwei",
+  "gasPriceMaximumRate": 1.3,
+  "gasPriceMinimumRate": 0.6,
+  "max": "300 Gwei",
+  "min": "40 Gwei",
+  "origin": "135 Gwei",
+  "tipGasPrice": "35 Gwei",
+}
+`;

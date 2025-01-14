@@ -1,0 +1,50 @@
+# KIN(SOL)
+- address: kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6
+  solidColor: '#946DFC'
+  gradientColorFrom: '#6F41E8'
+  gradientColorTo: '#946DFC'
+  network: 'solana'
+# POLIS(SOL)
+- address: poLisWXnNRwC6oBu1vHiuKQzFjGL4XDSu4g9qjz9qVk
+  solidColor: '#32FFFF'
+  gradientColorFrom: '#32FFFF'
+  gradientColorTo: '#EDFEFF'
+  network: 'solana'
+# stSOL
+- address: 7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj
+  solidColor: '#00A3FF'
+  gradientColorFrom: '#00A3FF'
+  gradientColorTo: '#3ADCFF'
+  network: 'solana'
+# COPE (SOL)
+- address: 8HGyAAB1yoM1ttS7pXjHMa3dukTFGQggnFFH3hJZgzQh
+  solidColor: '#77B0DD'
+  gradientColorFrom: '#44b6BB'
+  gradientColorTo: '#77B0DD'
+  description: Cope ranks and indexes online call makers (such as trader influencers on social media), and filters out the ones who make low quality calls. This creates a powerful leaderboard that can be used to follow the top call makers.
+  network: 'solana'
+# DFL (SOL)
+- address: DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh
+  solidColor: '#FCDF5A'
+  gradientColorFrom: '#C1A524'
+  gradientColorTo: '#FCDF5A'
+  network: 'solana'
+# FTT (SOL)
+- address: AGFEad2et2ZJif9jaGpdMixQqvW5i81aBdvKe7PHNfz3
+  solidColor: '#02A6C2'
+  gradientColorFrom: '#02A6C2'
+  gradientColorTo: '#ABEBF4'
+  network: 'solana'
+# GENE (SOL)
+- address: GENEtH5amGSi8kHAtQoezp1XEXwZJ8vcuePYnXdKrMYz
+  solidColor: '#00FFC8'
+  gradientColorFrom: '#00AE89'
+  gradientColorTo: '#00FFC8'
+  network: 'solana'
+#  stETH (ETH)
+- address: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84'
+  solidColor: '#00A3FF'
+  gradientColorFrom: '#00A3FF'
+  gradientColorTo: '#3ADCFF'
+  network: 'ethereum'
+  decimals: 18

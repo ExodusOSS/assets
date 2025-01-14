@@ -1,0 +1,37 @@
+{
+  "name": "@exodus/bitcoin-lib",
+  "version": "2.4.3",
+  "description": "Bitcoin utils, such as for cryptography, address encoding/decoding, etc.",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "!**/__tests__/**",
+    "CHANGELOG.md"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "run -T exodus-test --jest",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/key-utils": "^3.7.0",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "devDependencies": {
+    "@exodus/bip44-constants": "^195.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Abitcoin-lib"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/bitcoin/bitcoin-lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  }
+}

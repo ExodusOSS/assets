@@ -1,0 +1,52 @@
+{
+  "name": "@exodus/web3-solana-utils",
+  "description": "Web3 Solana utils.",
+  "version": "2.8.2",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean &&  run -T tsc",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "test": "run -T exodus-test --jest --esbuild",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-solana-utils"
+  },
+  "dependencies": {
+    "@exodus/solana-api": "^3.10.1",
+    "@exodus/solana-web3.js": "^1.63.1-exodus.9-rc3",
+    "@exodus/web3-utils": "^1.48.3",
+    "bs58": "^5.0.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@exodus/web3-types": "workspace:*",
+    "@types/bs58": "^4.0.1"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-solana-utils"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-solana-utils"
+}

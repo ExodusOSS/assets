@@ -1,0 +1,3190 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true
+      },
+      "exodus_1": {
+        "source": "exodus",
+        "index": 1,
+        "label": "Exodus 1",
+        "color": "#ff0001",
+        "icon": "exodus",
+        "enabled": true
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48": {
+                    "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+                        "vout": 1,
+                        "confirmations": 1,
+                        "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                        "value": "0.0001 BTC",
+                        "rbfEnabled": true
+                      },
+                      {
+                        "txId": "bd6abad81417d362de666d92f885f9ce6a11386af876ccc6e755dd7ecd3f093a",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
+                        "value": "0.001 BTC",
+                        "rbfEnabled": true
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "ordinalsUtxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1plt3f50xhr8d5sxwz7z8ux4rp4nrsqwqysu7amlt0u0ygnlplrhqq4r0chr": {
+                    "address": "bc1plt3f50xhr8d5sxwz7z8ux4rp4nrsqwqysu7amlt0u0ygnlplrhqq4r0chr",
+                    "path": "m/2/0",
+                    "utxos": [
+                      {
+                        "txId": "c76fcf4e3ce3a58a6e2300ba4d44ea1dd54963a1bf0cc6b6074ae05ddf2123a7",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "value": "0.00006 BTC"
+                      },
+                      {
+                        "txId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedf",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "value": "0.0001 BTC",
+                        "rbfEnabled": true
+                      },
+                      {
+                        "txId": "b6b90375238dc8037e55c5f2afee6c9eaedbca6da3f503676105f50417c885ff",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120fae29a3cd719db4819c2f08fc35461acc7003804873dddfd6fe3c889fc3f1dc0",
+                        "value": "0.0001 BTC"
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcoin": {
+          "t": "object",
+          "v": {
+            "utxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn": {
+                    "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                    "path": "m/0/0",
+                    "utxos": [
+                      {
+                        "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "0014418513e06dea9fbf8f3557888c891cd7ac060123",
+                        "value": "0.00933282 BTC",
+                        "rbfEnabled": true
+                      }
+                    ]
+                  },
+                  "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6": {
+                    "address": "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6",
+                    "path": "m/1/0",
+                    "utxos": [
+                      {
+                        "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+                        "vout": 2,
+                        "confirmations": 1,
+                        "script": "0014e195090ad06204ee29cdfb10bd9d08485fd13929",
+                        "value": "0.00210842 BTC",
+                        "rbfEnabled": true
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "ordinalsUtxos": {
+              "t": "utxocollection",
+              "v": {
+                "v": {
+                  "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny": {
+                    "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                    "path": "m/1/3",
+                    "utxos": [
+                      {
+                        "txId": "d2627ebefccc448fea0dfaa8e8b365f3d96f3fc32c0551ed539f4329312e54ad",
+                        "vout": 1,
+                        "confirmations": 1,
+                        "script": "00140da8889de9cd38f5a5a7408b78fe08ed5ea054b6",
+                        "value": "0.00083929 BTC",
+                        "inscriptions": [
+                          {
+                            "inscriptionId": "11199d28c76a6d2b82c35772ed4d1d7b5156dfe7aa385490ac0799c95187038fi0",
+                            "offset": 0
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "bc1pe59l2tsfe6t5x6wrcgtsaxy3nrpnky8chq4cvf7zndat99f8t4xsetgm4w": {
+                    "address": "bc1pe59l2tsfe6t5x6wrcgtsaxy3nrpnky8chq4cvf7zndat99f8t4xsetgm4w",
+                    "path": "m/2/0",
+                    "utxos": [
+                      {
+                        "txId": "fad4bdad739a21e409b5d3e0c3a9d5fb1ac188cd1ec9b172ee8912dde7063c91",
+                        "vout": 0,
+                        "confirmations": 1,
+                        "script": "5120cd0bf52e09ce974369c3c2170e989198c33b10f8b82b8627c29b7ab295275d4d",
+                        "value": "0.00006673 BTC",
+                        "rbfEnabled": true,
+                        "inscriptions": [
+                          {
+                            "inscriptionId": "45199d28c76a6d2b82c35772ed4d1d7b5156dfe7aa385490ac0799c95187038fi0",
+                            "offset": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "u": {
+                  "satoshis": 0,
+                  "bits": 2,
+                  "BTC": 8
+                }
+              }
+            },
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "bitcoin": [
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "91128976393498a772709354ec036e7869807d83e442f13bd672e7532291ce21",
+            "date": "2022-04-05T18:13:50.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.032 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qsge0qugxvy3rcvz6gqez07zrwl9hntmqzjxasz3jsakjuz77zn3s4mg470"],
+            "data": {
+              "feePerKB": 6222.737819025522,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3a892c24d01cebaaf225e9ae78ad2bba35457ab9e81cf61b7bcd4a2dff80c4fa",
+            "date": "2022-04-05T19:26:02.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00436435 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001939 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 13654.929577464787,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "3MTekqdBceFUwdnNRAKATZTLNC8zDnVt3s",
+                  "amount": "0.00436435 BTC"
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                "meta": {
+                  "path": "m/1/0",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "1a8b512b1eb29f44258fc37e2fbb8e702de3bbd46460d2764e43205debc112f3",
+            "date": "2022-04-06T13:51:17.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00446361 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001361 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 9451.388888888889,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": {
+                    "value": "0.00446361",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q086jhvqmana3mzf8qvm0xzerxhngyklpcurfh6",
+                "meta": {
+                  "path": "m/1/0",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "473fd51c089c3519989ee077a3a2a10667c021a6ed0914adcb96d4fd949706be",
+            "date": "2022-04-06T16:21:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0042 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002237 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 15753.521126760565,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "3EWrMp4wXzXRxKHQ6EcKS7ZVF4MpDLzqDz",
+                  "amount": {
+                    "value": "0.0042",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qx72cgyt4xnh25s3n05lmxfcr9v323rxhlsp9ee",
+                "meta": {
+                  "path": "m/1/1",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "632056bd66482e2fa65e5f00dd1d6b93f61335927ec6d1034d0fbdefc4c4641a",
+            "date": "2022-04-08T14:19:41.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0046 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00004688 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 32555.555555555555,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": {
+                    "value": "0.0046",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "1ee6d964d5d43ae6e04ad12264ba351fed2ead6a434dae0611609ec3f41e77ce",
+            "date": "2022-04-08T19:19:02.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.001575 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002221 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 15751.773049645388,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qaukcad6r4maeuuh7ux9d5u765wppmlngv8lna0",
+                  "amount": {
+                    "value": "0.001575",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "94a7dcb7cd43ca924478e04406e63b9de4ea9b1e684af404a47bef82aa65cc30",
+            "date": "2022-04-12T14:25:43.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0042 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001641 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11556.338028169013,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "37PFLSAV5ChRAN5unwfqh8dSksoBpRjNno",
+                  "amount": {
+                    "value": "0.0042",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "153e9751e769f32856e54fc10b1f912e22b30e1697d3285c9ce506e57c985f12",
+            "date": "2022-04-25T19:50:02.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.001365 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001481 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q0r2stwkft0ufk3mld59gzxc00cpmft480wc3xr",
+                  "amount": {
+                    "value": "0.001365",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qqml5z8fxzk4wv9lq7vupmaqysqa46ke67cfe9q",
+                "meta": {
+                  "path": "m/1/2",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "604eb1341c913ecc9f6742f5668909be539bab5768b5d698e7ceefb85d41b837",
+            "date": "2022-05-09T13:12:06.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00352152 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00003932 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 27305.55555555556,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "13gGLww8E9DxzFjikmFQp2MLsgibA8V7yB",
+                  "amount": {
+                    "value": "0.00352152",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                "meta": {
+                  "path": "m/1/3",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "59559e162551e335672bd4fb0fe75727a5d4356463fd86a7f9cf9fc19c621e34",
+            "date": "2022-08-02T17:08:08.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0003 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00003911 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 19954.081632653062,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1p95skfd0x56qwthl03gs2d9ynsyv884r0s6g4unmdsq3pvy3vdrdqw62uvf",
+                  "amount": {
+                    "value": "0.0002",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                },
+                {
+                  "address": "bc1p9g24t4wg89xn5z3evz3sk7rh4sz2m6h6350ffa05t8dl4f7eudesx9f5ek",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q2egg42fdd4r38p84gclq8y5x43qg2wjjrwawd2",
+                "meta": {
+                  "path": "m/1/3",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0f5e1b0c9a9dd4261720c5dc6881fb60b0850872189f363bef3918c642fd0e45",
+            "date": "2022-08-02T17:20:36.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00012837 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002571 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 16803.92156862745,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1psawvt68mrp2tdg0vz4fzs0shtgrwvy0wjfk3law7khkmz8aa3gqsaa3x8k",
+                  "amount": {
+                    "value": "0.00012837",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qt856uktwazg742hgxgm590reezlw0xr0cy92wx",
+                "meta": {
+                  "path": "m/1/4",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "c1b1756cbf584ee51c61698cab2fd27f63c149be1249bd36110c23c840572d77",
+            "date": "2022-08-02T17:29:08.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00012832 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001966 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 13652.77777777778,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "1GQrZZGfzMdchBeyDpJyj3wn616J5u2kQX",
+                  "amount": {
+                    "value": "0.00012832",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad",
+                "meta": {
+                  "path": "m/1/5",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+            "date": "2022-09-15T20:25:56.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0002 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002665 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 18900.709219858156,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.0002",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs",
+                "meta": {
+                  "path": "m/1/6",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4d8afd26043cdb83508ff3b2e6857087afff3a6b1f071642f613a5159e026e1f",
+            "date": "2022-09-21T17:48:47.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00262592 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002178 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 19800,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.00262592",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+            "date": "2022-09-22T18:51:12.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0011 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk",
+              "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3"
+            ],
+            "data": {
+              "feePerKB": 16750.445632798575,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+            "date": "2022-09-28T13:20:17.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001317 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 6331.730769230769,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+            "date": "2022-09-28T16:54:02.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000889 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+            "date": "2022-09-28T22:30:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001629 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn",
+                "meta": {
+                  "path": "m/1/7",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "849c39e39b2194a9f4e86080772580b00711438961059c5f01b42a844a634276",
+            "date": "2022-09-28T22:42:12.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qdx2yagawmxw0x90sfsaggnn47cra6d7kzz5ldh",
+              "bc1qqpsxme3c3wgm75ehkzt4n7uwd7vd0cgspt0hxp"
+            ],
+            "data": {
+              "feePerKB": 71401.91387559808,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej",
+                "meta": {
+                  "path": "m/0/1",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+            "date": "2022-09-28T22:42:13.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001629 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr",
+                "meta": {
+                  "path": "m/1/8",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+            "date": "2022-10-03T10:28:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00019 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00003276 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 13649.999999999998,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                },
+                {
+                  "address": "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+                  "amount": {
+                    "value": "0.00009",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk",
+                "meta": {
+                  "path": "m/1/9",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+            "date": "2022-10-03T12:15:41.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002073 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 14702.127659574468,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs",
+                  "amount": {
+                    "value": "0.00009",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q",
+                "meta": {
+                  "path": "m/1/10",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+            "date": "2022-10-03T14:25:38.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001629 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w",
+                "meta": {
+                  "path": "m/1/11",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+            "date": "2022-10-04T14:19:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000889 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35",
+                "meta": {
+                  "path": "m/1/12",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+            "date": "2022-10-06T09:50:33.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000741 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 5255.319148936171,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr",
+                  "amount": {
+                    "value": "0.00009",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h",
+                "meta": {
+                  "path": "m/1/13",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "33c9053df0603f2fc2fce23a44c072c3aee0083de83f0328273fded9bbee0b69",
+            "date": "2022-10-11T09:33:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00008581 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000347 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 3154.5454545454545,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.00008581",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+            "date": "2022-10-11T19:05:26.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+            ],
+            "data": {
+              "feePerKB": 6301.435406698564,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "e7c8699ceeb91e733c5918923b61cc1477d0ce3bc08c0514ff070d209c473eaf",
+            "date": "2022-10-11T21:42:51.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009103 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000897 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 8154.545454545456,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+                  "amount": {
+                    "value": "0.00009103",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+            "date": "2022-10-11T21:42:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+              "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn"
+            ],
+            "data": {
+              "feePerKB": 7354.066985645933,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+            "date": "2022-10-16T22:26:55.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+              "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+            ],
+            "data": {
+              "feePerKB": 11550.23923444976,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu",
+                "meta": {
+                  "path": "m/0/2",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "9e7ec375707ba29ed11f448b5d9868919e0d8182b9f47eae799e0ea946865a02",
+            "date": "2022-10-21T15:34:15.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qmx2r6spek86fza5zp8xucqh2ye58sf0ccslf60"],
+            "data": {
+              "feePerKB": 10500,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "1Azpg7QEdQ8FHhNLzEpbpo1Uowh3t7B3Ex",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 44
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "22151bbbffb79450f27740c05951e862597fefb5befb99e7d932dfb9a54ad7f7",
+            "date": "2022-10-21T15:41:01.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.000081 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.000019 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 10106.382978723404,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": {
+                    "value": "0.000081",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "393af8298935a082ff460112f40f069e3fdd7b0db07385389648fd90fbb5452e",
+            "date": "2022-10-21T17:07:11.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 6255.14403292181,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d98724e2ad070cc74e327f2f5d862b29c5821f939fa69dd4edf97ddeb9b06eeb",
+            "date": "2022-10-25T01:04:29.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00963489 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E"
+            ],
+            "data": {
+              "feePerKB": 10920.245398773006,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "96f2072db2de607c9c3d0da13927305d30b2cc80b9b6236c0696ac8d9e60c94a",
+            "date": "2022-10-25T01:14:37.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.002 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00004347 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11592.000000000002,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": {
+                    "value": "0.001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                },
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": {
+                    "value": "0.001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "437a6598a27449ab438d7f27ce50f5950f77a4e31ea088a243e03ce477cd678c",
+            "date": "2022-10-25T01:26:20.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00198005 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 11207.865168539327,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "25ecff845e3c668c0351d7fddb6b31b3ca8d18b8657640ba6ed5b001268ea89f",
+            "date": "2022-10-25T01:26:21.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001481 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": {
+                    "value": "0.001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qlfqnysn046ptccgf42cqqmr268m5ejnn6l8z35",
+                "meta": {
+                  "path": "m/1/14",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ccf4db17bc6ddcd7fd6d6bba63cca206576bf2901cd4d41fbb9057c8d23fe03",
+            "date": "2022-10-25T01:37:19.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001481 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 10503.546099290781,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+                  "amount": {
+                    "value": "0.001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "271434e5fd1820642d3297a617ff909e3cc3e25609a879435fa30a8a18b37920",
+            "date": "2022-10-25T15:33:25.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0002 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00010426 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 72402.77777777778,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E",
+                  "amount": {
+                    "value": "0.0002",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp",
+                "meta": {
+                  "path": "m/1/15",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8d4a75bc10f81338b25dff91c4e51e232c0cb2803594bb87c50d55ca333a5d98",
+            "date": "2022-10-25T15:33:26.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00006918 BTC",
+            "feeCoinName": "bitcoin",
+            "selfSend": true,
+            "to": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+            "data": {
+              "feePerKB": 62890.90909090909,
+              "blocksSeen": 0,
+              "sent": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3ce21aec276f6cdc9717feee049d9e27e688df37436e093d5d1971f704217b9a",
+            "date": "2022-10-25T15:33:27.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00007125 BTC",
+            "coinName": "bitcoin",
+            "from": ["1cYFm3evxxqJ1r2Fz3mtLWd8XVzTJwd6E"],
+            "data": {
+              "feePerKB": 68484.0425531915,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d5254af19ca97dc03304519a940f79408691f25b830b4f16d004c71ccfa0b2cf",
+            "date": "2022-11-02T13:41:18.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00016834 BTC",
+            "coinName": "bitcoin",
+            "from": ["1AwZXaYtHNzMbbE718pSLJWoPzrgPgyoNF"],
+            "data": {
+              "feePerKB": 16751.32275132275,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0ed63be44399d2f803758379530d3d0fa45186557f32c2257f384d5be4c009db",
+            "date": "2022-11-02T13:48:19.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qchfrxqdd24cy226czkrepalucn4uqendax6ngj"],
+            "data": {
+              "feePerKB": 23290.90909090909,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "23561f66b5844b6c668897f53cfe8915b4cc03d1d6bc9216ab70d99794795a11",
+            "date": "2022-11-08T21:06:09.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00195212 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk",
+              "bc1q3yt56war2meuc0jkp85y9ty58flkwf9nxmt2rk"
+            ],
+            "data": {
+              "feePerKB": 25200.000000000004,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 86
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da4a38eca7bd8b9089107073b792e3d014f72101323661d6a563355bb79b10ce",
+            "date": "2022-11-12T10:45:46.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00007135 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 40084.269662921346,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "a48792bd9d62b26f899468c3c4532f2fe163140c8afb87b167db327c8b6b5235",
+            "date": "2022-11-14T19:13:29.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00006834 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 62127.27272727273,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+            "date": "2022-11-16T13:02:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00933282 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00006771 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 28812.765957446805,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                  "amount": {
+                    "value": "0.00933282",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+            "date": "2022-11-29T19:55:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x",
+              "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h"
+            ],
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "bd6abad81417d362de666d92f885f9ce6a11386af876ccc6e755dd7ecd3f093a",
+            "date": "2022-12-16T11:11:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qgf50v806nycw426kl348p67ms7pxfwfaadcd0g",
+              "bc1qteu99m2m0tru4jdcqg7qtqmzauhlal2sdgrnmt"
+            ],
+            "data": {
+              "feePerKB": 56179.77528089887,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "c76fcf4e3ce3a58a6e2300ba4d44ea1dd54963a1bf0cc6b6074ae05ddf2123a7",
+            "date": "2023-06-22T03:40:22.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00006 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"],
+            "data": {
+              "feePerKB": 25928.104575163397,
+              "blocksSeen": 0,
+              "isInscriptionReceived": true
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "0b1a8d9bd863dc0192712b66905a2ddf2f3eba9855b8b5c43afe9bbaffa4cedf",
+            "date": "2023-06-22T09:39:23.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1p0m9k8cu5nj6fc47luux2lpp8rachdjcjryscsvmzq7a85s2lf85qwfj4r3"],
+            "data": {
+              "feePerKB": 32000.000000000004,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "isInscriptionReceived": true
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "b6b90375238dc8037e55c5f2afee6c9eaedbca6da3f503676105f50417c885ff",
+            "date": "2023-06-22T21:01:27.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1p8ypcxhyp4qrdt2f4u79gwuq8z3hxrjx67gygzcrrvcgzta7x7lnqnpwjkw",
+              "bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"
+            ],
+            "data": {
+              "feePerKB": 23238.09523809524,
+              "blocksSeen": 0,
+              "isInscriptionReceived": true
+            },
+            "version": 1
+          }
+        ]
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "bitcoin": [
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da242bfbe5e03e5c43e7525ba1af1dfa7e00d87dfb715b438d51524105e281d3",
+            "date": "2022-07-28T18:35:54.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00047647 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qqlga2uducxc8gmm9ekqwr9pn592gvgqj59rppv"],
+            "data": {
+              "feePerKB": 32553.11355311355,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 86
+                }
+              },
+              {
+                "address": "bc1p86dl07hpjfxhszeax6a7ukpdj329pnp9sf3w55pvc5heccedeu3qzkh9rk",
+                "meta": {
+                  "path": "m/0/2",
+                  "purpose": 86
+                }
+              },
+              {
+                "address": "bc1pwsr4n4m4s47enwjxrsdm5vdgfr7wf26lacscxtnm82p0wk38vrgqc9ahw6",
+                "meta": {
+                  "path": "m/0/1",
+                  "purpose": 86
+                }
+              },
+              {
+                "address": "1AELPVvN9aDdWsR7hCkpVgA2WAuDjuPDB3",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 44
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "10f25e7b120b2235eb8ac5ab236158754c03c665d70ed0b751aedb96e5695554",
+            "date": "2022-09-15T20:25:56.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0002 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1q6adaa7xhqsqk5cnvhpcttak3n44ee3ch638kad"],
+            "data": {
+              "feePerKB": 18900.709219858156,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4d8afd26043cdb83508ff3b2e6857087afff3a6b1f071642f613a5159e026e1f",
+            "date": "2022-09-21T17:48:47.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00262592 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qj3ltxp40fm9hvev4huj3v3kvt267ns9zuwgezs"],
+            "data": {
+              "feePerKB": 19800,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "43771d0143ccfd5df0e5784127e4e54b40bc93172ff6ffab311ffec9abfe9ebc",
+            "date": "2022-09-22T18:51:12.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0011 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00009397 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 16750.445632798575,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                },
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": {
+                    "value": "0.001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qux2sjzksvgzwu2wdlvgtm8ggfp0azwff53yar6",
+                "meta": {
+                  "path": "m/1/0",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "21b37261f8fed799fa118ccedcd9d530a496cfa2385bdba0de93a74926e0b6f3",
+            "date": "2022-09-28T13:20:17.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 6331.730769230769,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8df9b69ff249f9ca7bb33b555803bcab3565facbd00227891a6aeac469adf1e9",
+            "date": "2022-09-28T16:54:02.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "eaa25cf7c8fa014886f9829390c44beea16fd4f3212ce46f84123c6cbe0c0bb5",
+            "date": "2022-09-28T22:30:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qucwdfncdxavhqkxa3zyk66w5786kt3dcy04asn",
+                "meta": {
+                  "path": "m/0/1",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "975e76c0eb59b6224279552fc21e435ebc2145beaf0ac6115dc96a32ecf85d01",
+            "date": "2022-09-28T22:42:12.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qxppvnwu0m7efgpm5avtdg2kruzy0maq9lst8zn"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qh3v7p0gu6s5xeucy9qrq92khl8av3agxf6u45h",
+                "meta": {
+                  "path": "m/0/2",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3fb449234727cec8cab67671185a48c6536ac0e792149f155a80f747776f5ddd",
+            "date": "2022-10-03T10:28:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00019 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qxmghlwqgl8z6affgw0h7l4ryjnuxcuyu9yyljr",
+              "bc1qeu69w4dhqg550c6dx6kj37h3x3umathejjufej"
+            ],
+            "data": {
+              "feePerKB": 13649.999999999998,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qstplx0emznvcfwgpzjhw7wnv3hgs0efr0tknq0",
+                "meta": {
+                  "path": "m/0/3",
+                  "purpose": 84
+                }
+              },
+              {
+                "address": "bc1qv460d9ug3z7zj3phdnnzemdu7v9e6en3zzkatd",
+                "meta": {
+                  "path": "m/0/4",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "3f8fa0b74cc6640d6d9c2b9532af41e2121e17e455c77c54e4245987778c6c96",
+            "date": "2022-10-03T12:15:41.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1ququ7jfdtl00pmcc9cy6u26z0fla42q9c23qmtk"],
+            "data": {
+              "feePerKB": 14702.127659574468,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1q0pqry0ualauujgrvncqgulfg7cvl0f3ar54uzs",
+                "meta": {
+                  "path": "m/0/5",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7c788a62018915a24cc26b0a4d9de2c9aa2657a93b50d19eb76853811c00215b",
+            "date": "2022-10-03T14:25:38.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qdg5m4yhrx46m8fu8qaxz49vqh0nt99v3ja429q"],
+            "data": {
+              "feePerKB": 11553.191489361703,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qjtaz9n5tvemq4zrgesumueuhvfq68nlyvuv8hp",
+                "meta": {
+                  "path": "m/0/6",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "8ef3775cf84104cfb7d283d58a6291e243985471ade02b7fe6046ccc0a9f0907",
+            "date": "2022-10-04T14:19:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qraumzfn04q86pndhkfeajn576906d8u4vghl6w"],
+            "data": {
+              "feePerKB": 6304.964539007092,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qr0vl5nd58tkgmztydty7xujafytu8t49rjzhuh",
+                "meta": {
+                  "path": "m/0/7",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "069218794534f995f260149706b555310b3c574424ab034dd56e6eee6d4c2a63",
+            "date": "2022-10-06T09:50:33.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qw9drluza9pu7fcdmqyse8u5de640yyplr5gz35"],
+            "data": {
+              "feePerKB": 5255.319148936171,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qnj2598cmttltxe7s7vu2f465qwyl8ukfdrnxrr",
+                "meta": {
+                  "path": "m/0/8",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "51ca85813d43dbbabe0faf848fb189c835aafa89c5de8a16d603172c0be817d9",
+            "date": "2022-10-11T09:33:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000385 BTC",
+            "feeCoinName": "bitcoin",
+            "selfSend": true,
+            "to": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+            "data": {
+              "feePerKB": 3500.0000000000005,
+              "blocksSeen": 0,
+              "sent": []
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "33c9053df0603f2fc2fce23a44c072c3aee0083de83f0328273fded9bbee0b69",
+            "date": "2022-10-11T09:33:53.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00008581 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qu05alr5005ywxanckmlme2dcyp7gvf0tcegh0h"],
+            "data": {
+              "feePerKB": 3154.5454545454545,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7777a189d5b3b4fc251b081510d7663337032c693363799fd279cbd68b90132d",
+            "date": "2022-10-11T19:05:26.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001317 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 6301.435406698564,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7bb3e6795b3eb904b2c84f58fbfa992f1514c65fe9bc3a4be30c0c84fe2756cb",
+            "date": "2022-10-11T19:23:57.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00008615 BTC",
+            "feeCoinName": "bitcoin",
+            "selfSend": true,
+            "to": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+            "data": {
+              "feePerKB": 33391.47286821705,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": []
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 86
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "7ddd2ae0005ebe3fc5ecbad18dd73da7e17ea5cba7cbf67eea35cced6dfee79c",
+            "date": "2022-10-11T19:23:58.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00005264 BTC",
+            "feeCoinName": "bitcoin",
+            "selfSend": true,
+            "to": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+            "data": {
+              "feePerKB": 27705.263157894737,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": []
+            },
+            "addresses": [
+              {
+                "address": "bc1pkhrae7jrlj3wnz0vpm09tffndpu40vh6y4tl42pt2zdhfms575msdfwuew",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 86
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "e7c8699ceeb91e733c5918923b61cc1477d0ce3bc08c0514ff070d209c473eaf",
+            "date": "2022-10-11T21:42:51.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00009103 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 8154.545454545456,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1q2vr7hgp75skrdldx0kutp45qcxpht2wqmll6mk",
+                "meta": {
+                  "path": "m/0/9",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "ae07baf491d401fd374824fc11a8be3a519e540086f25767e37544eb4943350f",
+            "date": "2022-10-11T21:42:52.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00001537 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 7354.066985645933,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": {
+                    "value": "0.00009",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "15b517500e8388b15772b90dd80fdc4e2f347d21a7f04827fca336be633c10e0",
+            "date": "2022-10-16T22:26:55.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.00009 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00002414 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 11550.23923444976,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qeyf0rhzamhhuc3g6zcrwkll60wtdf5dcr7cxhu",
+                  "amount": {
+                    "value": "0.00009",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qyrt2wdmmfr0extw8agcgjqwvc4502ytkttyw7x",
+                "meta": {
+                  "path": "m/1/1",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "2096181ad3ce844c1e5f8e033d9caaf84202c1f06d6b8cd67b26a2574a7567db",
+            "date": "2022-10-18T15:39:41.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0012 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1q37svy4n463n8djhqz02e7v452mqnm43ppkdaju"],
+            "data": {
+              "feePerKB": 15702.857142857143,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qrrgurs27sxyknugvx43hy039egrvmx097e8qzf",
+                "meta": {
+                  "path": "m/0/10",
+                  "purpose": 84
+                }
+              },
+              {
+                "address": "16HHr8LrMG3tKGdq96n6r1tZKe44AaYC83",
+                "meta": {
+                  "path": "m/0/1",
+                  "purpose": 44
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "da4a38eca7bd8b9089107073b792e3d014f72101323661d6a563355bb79b10ce",
+            "date": "2022-11-12T10:45:46.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 40084.269662921346,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "a48792bd9d62b26f899468c3c4532f2fe163140c8afb87b167db327c8b6b5235",
+            "date": "2022-11-14T19:13:29.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.0001 BTC",
+            "coinName": "bitcoin",
+            "from": ["bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"],
+            "data": {
+              "feePerKB": 62127.27272727273,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "4be8bec21742975ffa27145d6683637c2bc8e8ad7b29bedfdb013a844603bbac",
+            "date": "2022-11-16T13:02:42.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00933282 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1pegpjkdt4mhexjw2k59jewegv2v6lxekapwjf6sk7euel03vnhfkq8dqhrt",
+              "bc1q5lu5adk0wczxh80gjz8mg70jura8faxsynw6rp",
+              "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+            ],
+            "data": {
+              "feePerKB": 28812.765957446805,
+              "rbfEnabled": true,
+              "blocksSeen": 0
+            },
+            "addresses": [
+              {
+                "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn",
+                "meta": {
+                  "path": "m/0/0",
+                  "purpose": 84
+                }
+              }
+            ],
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "71cbb7e880b66a2fafecf7feac8dfbd59151ddc785ae6ee81bf9297a91c9d32e",
+            "date": "2022-11-29T19:55:49.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00000209 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 1000.0000000000001,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qjy3rk6355pn63ws235cjwzgv6e9ph9aeku0vjl",
+                "meta": {
+                  "path": "m/1/2",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "f8e3d81b920676d2f0b4c90bfae3218d85809629ef5e9e24b3e3ce13b8a88094",
+            "date": "2022-11-29T22:15:15.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.0001 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 56497.17514124295,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1qkd5gd77802tdt0mqqmzfjsakk6tsa3sznkhpjd",
+                  "amount": {
+                    "value": "0.0001",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "d2627ebefccc448fea0dfaa8e8b365f3d96f3fc32c0551ed539f4329312e54ad",
+            "date": "2023-05-18T13:59:26.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "-0.0001564 BTC",
+            "coinName": "bitcoin",
+            "feeAmount": "0.00077374 BTC",
+            "feeCoinName": "bitcoin",
+            "data": {
+              "feePerKB": 127469.52224052719,
+              "blocksSeen": 0,
+              "sent": [
+                {
+                  "address": "bc1q8kdl2kutpd75m7m0hn50yqjpt7ja30e43982p5",
+                  "amount": {
+                    "value": "0.0001564",
+                    "unit": "BTC",
+                    "unitType": "BTC",
+                    "type": "NumberUnit"
+                  }
+                }
+              ],
+              "changeAddress": {
+                "address": "bc1qpk5g380fe5u0tfd8gz9h3lsga402q49kf2c5ny",
+                "meta": {
+                  "path": "m/1/3",
+                  "purpose": 84
+                }
+              }
+            },
+            "version": 1
+          },
+          {
+            "currencies": {
+              "bitcoin": {
+                "satoshis": 0,
+                "bits": 2,
+                "BTC": 8
+              }
+            },
+            "txId": "fad4bdad739a21e409b5d3e0c3a9d5fb1ac188cd1ec9b172ee8912dde7063c91",
+            "date": "2023-07-21T12:52:00.000Z",
+            "confirmations": 1,
+            "dropped": false,
+            "coinAmount": "0.00006673 BTC",
+            "coinName": "bitcoin",
+            "from": [
+              "bc1pel0va3rpya6hx8m3q9awhp4mcdp6t48xtwyj2pggywuhxn8c6nhqf6pesz",
+              "bc1qcyspqf8yp0pq6fsnle2skwsgv8l3tm6qpxd4fz"
+            ],
+            "data": {
+              "feePerKB": 17600,
+              "rbfEnabled": true,
+              "blocksSeen": 0,
+              "isInscriptionReceived": true
+            },
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "bitcoin": {
+        "address": "bc1qz0p68ljq4xslgl09g8rdfzjse7dshm4w6jsh48"
+      }
+    },
+    "exodus_1": {
+      "bitcoin": {
+        "address": "bc1qgxz38crda20mlre427ygezgu67kqvqfr4heayn"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  }
+}

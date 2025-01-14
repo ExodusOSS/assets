@@ -1,0 +1,26 @@
+{
+  "name": "@exodus/asset-legacy-token-name-mapping",
+  "version": "1.0.1",
+  "description": "Old legacy name mapping for custom token migration.",
+  "type": "module",
+  "main": "src/index.js",
+  "author": "Exodus Movement, Inc.",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset-legacy-token-name-mapping",
+  "files": [
+    "src",
+    "!**/__tests__/**",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "run -T eslintc . --ignore-path ../../.gitignore",
+    "lint:fix": "yarn lint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aasset-legacy-token-name-mapping"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "txData": {
+    "inputs": [
+      {
+        "txId": "2ee8cee0def7354ccca93df0fc45aa93224a8cecb5fc02dd6f53433419738a6e",
+        "vout": 1,
+        "address": "bc1qwrt6lujwp3rplt2prrfc66wzc2ksuth2u5yzye",
+        "value": 37584,
+        "sequence": 4294967295
+      },
+      {
+        "txId": "1ec9fa3f3f74e40266266f319fd7258e7e6676f20000fae2a97e6da9c1fa7cf8",
+        "vout": 0,
+        "address": "bc1qwrt6lujwp3rplt2prrfc66wzc2ksuth2u5yzye",
+        "value": 597157,
+        "sequence": 4294967295
+      }
+    ],
+    "outputs": [
+      ["bc1qm7520rkhy4fp25572t0u7ql2cj0utcga8nddxp", 313866],
+      ["bc1qu0lc37p9nlh8a5u8qhp0aaj0y204rg979pe0am", 314251]
+    ]
+  },
+  "txMeta": {
+    "assetName": "bitcoin",
+    "addressPathsMap": {
+      "bc1qwrt6lujwp3rplt2prrfc66wzc2ksuth2u5yzye": "m/0/0",
+      "bc1qu0lc37p9nlh8a5u8qhp0aaj0y204rg979pe0am": "m/1/0"
+    },
+    "replayProtect": {},
+    "hasChange": true,
+    "feePerKBUsed": 32000
+  }
+}

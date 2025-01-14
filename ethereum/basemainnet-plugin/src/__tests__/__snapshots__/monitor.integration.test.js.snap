@@ -1,0 +1,115 @@
+exports[`basemainnet monitor integration test should start and stop monitor 1`] = `
+{
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "basemainnet": {
+          "t": "object",
+          "v": {
+            "_version": 1,
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "u": {
+                  "BASE": 18,
+                  "Gwei": 9,
+                  "Kwei": 3,
+                  "Mwei": 6,
+                  "finney": 15,
+                  "szabo": 12,
+                  "wei": 0,
+                },
+                "v": "795780644563539 wei",
+              },
+            },
+            "clarityCursor": "",
+            "index": 0,
+            "startblock": 0,
+            "tokenBalances": {
+              "t": "object",
+              "v": {},
+            },
+          },
+        },
+      },
+    },
+    "exodus_1": {
+      "data": {
+        "basemainnet": {
+          "t": "object",
+          "v": {
+            "_version": 1,
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "u": {
+                  "BASE": 18,
+                  "Gwei": 9,
+                  "Kwei": 3,
+                  "Mwei": 6,
+                  "finney": 15,
+                  "szabo": 12,
+                  "wei": 0,
+                },
+                "v": "200000000000000 wei",
+              },
+            },
+            "clarityCursor": "",
+            "index": 0,
+            "startblock": 0,
+            "tokenBalances": {
+              "t": "object",
+              "v": {},
+            },
+          },
+        },
+      },
+    },
+  },
+  "addresses": {
+    "exodus_0": {
+      "basemainnet": {
+        "address": "0x90E481d9A664ebbE4Be180d9501962255463036d",
+      },
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "address": "0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+      },
+    },
+  },
+  "orders": {
+    "data": {},
+  },
+  "version": {
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1",
+    },
+    "platform": "Testing",
+    "version": "0.0.1",
+  },
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "color": "#ff0000",
+        "enabled": true,
+        "icon": "exodus",
+        "index": 0,
+        "isMultisig": false,
+        "label": "Exodus 0",
+        "source": "exodus",
+      },
+      "exodus_1": {
+        "color": "#ff0001",
+        "enabled": true,
+        "icon": "exodus",
+        "index": 1,
+        "isMultisig": false,
+        "label": "Exodus 1",
+        "source": "exodus",
+      },
+    },
+  },
+}
+`;
