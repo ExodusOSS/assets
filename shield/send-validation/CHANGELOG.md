@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.4...@exodus/send-validation@3.0.5) (2025-01-09)
+
+
+### Bug Fixes
+
+
+* fix: send-validations invalid address update (#4803)
+
+
+
+## [3.0.4](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.3...@exodus/send-validation@3.0.4) (2024-12-02)
+
+
+### License
+
+
+* license: re-license under MIT license (#4586)
+
+
+
 ## [3.0.3](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.2...@exodus/send-validation@3.0.3) (2024-11-18)
 
 

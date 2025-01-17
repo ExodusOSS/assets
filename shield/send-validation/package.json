@@ -1,6 +1,6 @@
 {
   "name": "@exodus/send-validation",
-  "version": "3.0.3",
+  "version": "3.0.5",
   "description": "Send token screen validation library",
   "author": "Exodus Movement, Inc.",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/ExodusMovement/assets.git"
   },
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/send-validation",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asend-validation"
   },
@@ -42,5 +42,8 @@
   },
   "peerDependencies": {
     "react": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

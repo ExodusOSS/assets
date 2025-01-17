@@ -1,11 +1,11 @@
 {
   "name": "@exodus/asset",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Utility functions for asset metadata packages",
   "type": "module",
   "main": "src/index.js",
   "author": "Exodus Movement, Inc.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset",
   "files": [
     "src",
@@ -29,5 +29,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
