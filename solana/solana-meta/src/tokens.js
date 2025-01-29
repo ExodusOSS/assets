@@ -3,6 +3,40 @@
 
 export default [
   {
+    name: '6p6x_solana_056c2704',
+    displayName: 'OFFICIAL TRUMP',
+    decimals: 6,
+    ticker: '6P6Xsolana056C2704',
+    displayTicker: 'TRUMP',
+    mintAddress: '6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN',
+    info: {
+      description:
+        'TRUMP tokens are now live on the blockchain. On July 13, 2024, President Trump faced death and rose with strength and courage, rallying the world with his iconic battle cry FIGHT FIGHT FIGHT. This moment ignited a movement and became the meme of the century.',
+      twitter: 'https://twitter.com/GetTrumpMemes',
+      website: 'https://gettrumpmemes.com/',
+    },
+    primaryColor: '#B42B2A',
+    gradientColors: ['#070733', '#B42B2A'],
+    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
+  },
+  {
+    name: 'fuaf_solana_2f933a22',
+    displayName: 'Official Melania Meme',
+    decimals: 6,
+    ticker: 'FUAFsolana2F933A22',
+    displayTicker: 'MELANIA',
+    mintAddress: 'FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P',
+    info: {
+      description:
+        'Melania memes are digital collectibles designed to express support for and engage with the values symbolized by MELANIA.',
+      twitter: 'https://twitter.com/MELANIATRUMP',
+      website: 'https://melaniameme.com/',
+    },
+    primaryColor: '#FFFFFF',
+    gradientColors: ['#DEDEDE', '#FFFFFF'],
+    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
+  },
+  {
     name: '3twg_solana_3835713e',
     displayName: 'Kitten Haimer',
     decimals: 9,

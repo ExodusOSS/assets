@@ -5,6 +5,7 @@ describe(`Specific info for ${asset?.name}`, () => {
     expect(asset.name).toBe('matic')
     expect(asset.ticker).toBe('MATICNATIVE')
     expect(asset.displayTicker).toBe('POL')
+    expect(asset.displayNetworkTicker).toBe('POL')
     expect(asset.units.MATICNATIVE).toBe(18)
     expect(asset.assetType).toBe('ETHEREUM_LIKE')
     expect(asset.gasLimit).toBe(21_000)

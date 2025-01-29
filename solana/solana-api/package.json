@@ -1,6 +1,6 @@
 {
   "name": "@exodus/solana-api",
-  "version": "3.13.2",
+  "version": "3.13.4",
   "description": "Transaction monitors, fee monitors, RPC with the blockchain node, and other networking code for Solana",
   "type": "module",
   "main": "src/index.js",

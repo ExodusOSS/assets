@@ -21,11 +21,11 @@
         "solana": {
           "t": "object",
           "v": {
-            "cursor": "4Km3iyWmu8JmBvAJsiCvWcmvETij4eie6Z7V7BuD9mKku8TZyZgXwPGy8F7adKwj7ReWJr4hxjGysRcb5S7J7jvQ",
+            "cursor": "LsW3zLjEZZn8qqJ4NEPjhWUsYn69eMAAwv2bDMVqvLYUe7VeuKbv4BNgMdSd4cPGh1NSp5Qa2m1oMQvQ6sX38pz",
             "balance": {
               "t": "numberunit",
               "v": {
-                "v": "111695983 Lamports",
+                "v": "214827703 Lamports",
                 "u": {
                   "Lamports": 0,
                   "SOL": 9
@@ -449,6 +449,26 @@
             "feeCoinName": "solana",
             "coinAmount": "0 SOL",
             "feeAmount": "0.000006074 SOL"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "solana": {
+                "Lamports": 0,
+                "SOL": 9
+              }
+            },
+            "txId": "LsW3zLjEZZn8qqJ4NEPjhWUsYn69eMAAwv2bDMVqvLYUe7VeuKbv4BNgMdSd4cPGh1NSp5Qa2m1oMQvQ6sX38pz",
+            "date": "2025-01-09T18:17:08.000Z",
+            "confirmations": 1,
+            "from": ["Gj13VRp2G7ZUkZKzqgrD87Q2NqtDo8EBNG4X7s1S6Bt7"],
+            "data": {
+              "staking": null,
+              "unparsed": false,
+              "swapTx": false
+            },
+            "coinName": "solana",
+            "coinAmount": "0.10313172 SOL"
           }
         ],
         "usdcoin_solana": [

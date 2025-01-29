@@ -1,6 +1,6 @@
 {
   "name": "@exodus/matic-meta",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Polygon constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",

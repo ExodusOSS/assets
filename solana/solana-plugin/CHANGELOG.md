@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.7](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.16.6...@exodus/solana-plugin@1.16.7) (2025-01-21)
+
+
+### Features
+
+
+* chore: add MELANIA as built-in Solana token (#4895)
+
+* chore: add official Trump meme as built-in Solana token (#4889)
+
+
+### Bug Fixes
+
+
+* fix: solana-plugin integration test (#4848)
+
+
+
 ## [1.16.6](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.16.5...@exodus/solana-plugin@1.16.6) (2025-01-09)
 
 

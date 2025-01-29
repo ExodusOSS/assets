@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.3.1...@exodus/solana-meta@2.4.0) (2025-01-22)
+
+
+### Features
+
+
+* feat: high res melania, trump icons (#4901)
+
+
+
+## [2.3.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.3.0...@exodus/solana-meta@2.3.1) (2025-01-21)
+
+
+### Features
+
+
+* chore: add MELANIA as built-in Solana token (#4895)
+
+
+
+## [2.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.2.0...@exodus/solana-meta@2.3.0) (2025-01-19)
+
+
+### Features
+
+
+* feat: official trump (#4889)
+
+
+
 ## [2.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.1.2...@exodus/solana-meta@2.2.0) (2024-12-18)
 
 

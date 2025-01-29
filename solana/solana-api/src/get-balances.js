@@ -46,8 +46,13 @@ export const getBalancesFactory =
 
     const spendable = balanceWithoutStaking.sub(walletReserve).sub(networkReserve).clampLowerZero()
 
+    // leave enough amount for accountReserve if it's not reserved already
+    const stakeable = walletReserve.isZero ? spendable.sub(accountReserve) : spendable
+
     const staked = locked
     const unstaking = pending
+
+    const staking = accountState.activating || zero
 
     return {
       // legacy
@@ -56,7 +61,9 @@ export const getBalancesFactory =
       // new
       total,
       spendable,
+      stakeable,
       staked,
+      staking,
       unstaking,
       networkReserve,
       walletReserve,

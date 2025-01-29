@@ -1631,6 +1631,12 @@
       "solana": {
         "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
       },
+      "6p6x_solana_056c2704": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
+      "fuaf_solana_2f933a22": {
+        "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
+      },
       "3twg_solana_3835713e": {
         "address": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X"
       },
@@ -1718,6 +1724,12 @@
     },
     "exodus_1": {
       "solana": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "6p6x_solana_056c2704": {
+        "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
+      },
+      "fuaf_solana_2f933a22": {
         "address": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR"
       },
       "3twg_solana_3835713e": {
@@ -1825,6 +1837,18 @@
         "networkReserve": "890880 Lamports",
         "staked": "0 Lamports",
         "unstaking": "0 Lamports"
+      },
+      "6p6x_solana_056c2704": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "fuaf_solana_2f933a22": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
       },
       "3twg_solana_3835713e": {
         "total": "0 base",
@@ -2005,6 +2029,18 @@
         "networkReserve": "890880 Lamports",
         "staked": "0 Lamports",
         "unstaking": "0 Lamports"
+      },
+      "6p6x_solana_056c2704": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
+      },
+      "fuaf_solana_2f933a22": {
+        "total": "0 base",
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base"
       },
       "3twg_solana_3835713e": {
         "total": "0 base",

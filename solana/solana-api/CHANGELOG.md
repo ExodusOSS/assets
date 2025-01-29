@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.3...@exodus/solana-api@3.13.4) (2025-01-22)
+
+
+### Bug Fixes
+
+
+* fix: unstaked, unstaking balances (#4874)
+
+
+
+## [3.13.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.2...@exodus/solana-api@3.13.3) (2025-01-17)
+
+**Note:** Version bump only for package @exodus/solana-api
+
+
+
+
+
 ## [3.13.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.1...@exodus/solana-api@3.13.2) (2025-01-09)
 
 
