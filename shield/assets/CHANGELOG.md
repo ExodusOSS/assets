@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.5](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.4...@exodus/assets@11.1.5) (2025-02-12)
+
+
+### Bug Fixes
+
+
+* fix: revert back to lodash for pick (#5039)
+
+
+
+## [11.1.4](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.3...@exodus/assets@11.1.4) (2025-02-10)
+
+**Note:** Version bump only for package @exodus/assets
+
+
+
+
+
+## [11.1.3](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.2...@exodus/assets@11.1.3) (2025-02-06)
+
+**Note:** Version bump only for package @exodus/assets
+
+
+
+
+
 ## [11.1.2](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.1...@exodus/assets@11.1.2) (2024-12-11)
 
 

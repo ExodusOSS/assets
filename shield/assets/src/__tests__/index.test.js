@@ -108,13 +108,13 @@ test('all assets pass validation', () => {
 })
 
 test('object spread propagates property values', () => {
-  const origAsset = assets.bnbmainnet
+  const origAsset = assets.cardano
   expect(origAsset.baseAsset).toBeTruthy()
   expect(origAsset.feeAsset).toBeTruthy()
   expect(typeof origAsset.baseAsset).toBe('object')
   expect(typeof origAsset.feeAsset).toBe('object')
 
-  const origCombinedAsset = assets._bnb
+  const origCombinedAsset = assets._cardano
   expect(origCombinedAsset.combinedAssets).toBeTruthy()
   expect(typeof origCombinedAsset.combinedAssets).toBe('object')
 

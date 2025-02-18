@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/assets-base@12.0.1...@exodus/assets-base@12.1.0) (2025-01-23)
+
+
+### Features
+
+
+* feat: add songbird to assets-base (#4912)
+
+
+
 ## [12.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/assets-base@12.0.0...@exodus/assets-base@12.0.1) (2024-12-02)
 
 

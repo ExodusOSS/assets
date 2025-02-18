@@ -1,6 +1,6 @@
 {
   "name": "@exodus/assets",
-  "version": "11.1.2",
+  "version": "11.1.5",
   "description": "Exodus assets",
   "type": "module",
   "main": "src/index.js",
@@ -25,7 +25,8 @@
     "@exodus/assets-base": "workspace:^",
     "@exodus/binance-lib": "workspace:^",
     "@exodus/bnbmainnet-meta": "workspace:^",
-    "@exodus/combined-assets-meta": "^3.0.0"
+    "@exodus/cardano-meta": "workspace:^",
+    "@exodus/combined-assets-meta": "^3.2.0"
   },
   "scripts": {
     "test": "run -T exodus-test --jest",

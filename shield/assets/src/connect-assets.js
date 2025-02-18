@@ -1,12 +1,15 @@
 /* eslint-disable @exodus/mutable/no-param-reassign-prop-only */
 import { validateBaseAssetDef, validateTokenDef } from '@exodus/asset'
-import { keyBy, mapValues, omit, pick } from '@exodus/basic-utils'
+import { keyBy, mapValues, omit } from '@exodus/basic-utils'
 import { UnitType } from '@exodus/currency'
+import lodash from 'lodash'
 import assert from 'minimalistic-assert'
 
 import { CT_UPDATEABLE_PROPERTIES } from './constants.js'
 import { createCombined } from './create-combined.js'
 import { assertNotAnObjectPrototypeProperty, validateCombinedAsset } from './validate-asset.js'
+
+const { pick } = lodash
 
 const connectProp = (asset, prop, value) => {
   if (asset[prop] === undefined && value !== undefined) asset[prop] = value

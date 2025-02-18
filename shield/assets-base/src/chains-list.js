@@ -56,6 +56,7 @@ import rootstock from '@exodus/rootstock-meta'
 import solana from '@exodus/solana-meta'
 import solanadevnet from '@exodus/solanadevnet-meta'
 import solanatestnet from '@exodus/solanatestnet-meta'
+import songbird from '@exodus/songbird-meta'
 import stellar from '@exodus/stellar-meta'
 import tezos from '@exodus/tezos-meta'
 import theta from '@exodus/theta-meta'
@@ -125,6 +126,7 @@ export default [
   solana,
   solanadevnet,
   solanatestnet,
+  songbird,
   stellar,
   tezos,
   theta,

@@ -1,6 +1,9 @@
 const oldToNewStyleTokenNames = {
   __proto__: null,
 
+  // Algorand
+  tetherusd_algorand: 'usdt_algorand_323d502d',
+
   // BSC
   babydoge_bsc: 'babydoge_bsc_ee74eb55',
   bnx_bsc_f4f64b2a: 'bnx_bsc_f4f64b2a',

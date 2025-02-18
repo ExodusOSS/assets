@@ -1,6 +1,6 @@
 {
   "name": "@exodus/assets-base",
-  "version": "12.0.1",
+  "version": "12.1.0",
   "description": "Base level package for supporting Exodus assets.",
   "type": "module",
   "main": "src/index.js",
@@ -78,6 +78,7 @@
     "@exodus/solana-meta": "*",
     "@exodus/solanadevnet-meta": "*",
     "@exodus/solanatestnet-meta": "*",
+    "@exodus/songbird-meta": "*",
     "@exodus/stellar-meta": "*",
     "@exodus/tezos-meta": "*",
     "@exodus/theta-meta": "*",

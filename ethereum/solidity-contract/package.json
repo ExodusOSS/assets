@@ -1,0 +1,41 @@
+{
+  "name": "@exodus/solidity-contract",
+  "version": "1.2.1",
+  "description": "Object orient smart contract ABI data building/parsing.",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "run -T exodus-test",
+    "lint": "run -T eslintc .",
+    "build": "run -T tsc",
+    "prepublishOnly": "yarn run -T build --scope @exodus/solidity-contract"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "Exodus Movement, Inc.",
+  "license": "MPL2",
+  "dependencies": {
+    "@exodus/crypto": "^1.0.0-rc.14",
+    "@exodus/ethereumjs": "^1.2.0",
+    "@exodus/ethersproject-abi": "^5.4.2-exodus.2",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "tap-spec": "5.0.0",
+    "tape": "4.11.0"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/solidity-contract",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asolidity-contract"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
