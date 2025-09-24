@@ -1,11 +1,11 @@
 [
   {
     "request": {
-      "resource": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getBalance&address=0xaadf409fbefbb7071bab1084083a7ffa5c799622&tag=latest",
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
       "options": {
-        "timeout": 15000,
-        "method": "GET",
-        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getBalance\",\"params\":[\"0xaadf409fbefbb7071bab1084083a7ffa5c799622\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
       }
     },
     "status": 200,
@@ -14,35 +14,34 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cf-cache-status", "DYNAMIC"],
-      ["cf-ray", "8ad9d4b77ed0bfbc-WAW"],
+      ["cf-ray", "95d1bb4edc2d4024-SIN"],
       ["connection", "keep-alive"],
-      ["content-length", "15"],
-      [
-        "content-security-policy",
-        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
-      ],
+      ["content-encoding", "gzip"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Sat, 03 Aug 2024 22:44:12 GMT"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Thu, 10 Jul 2025 17:20:26 GMT"],
+      ["etag", "W/\"31-qBunFMxdAGAQGDrV9dnHaGPrPw0\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
       ["server", "cloudflare"],
       [
         "set-cookie",
-        "route=1722725053.145.44.532778|ed817333ddf9ae6f5e2f21117235f5f3; Expires=Mon, 05-Aug-24 22:44:12 GMT; Max-Age=172800; Path=/; HttpOnly"
+        "route=1752168027.353.31.775664|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Sat, 12-Jul-25 17:20:26 GMT; Max-Age=172800; Path=/; HttpOnly"
       ],
       [
         "set-cookie",
-        "__cfruid=0b1ae365019168581fa10c91a26bf0b6ef377d88-1722725052; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+        "_cfuvid=4_JhUrv87JIQtKaXrI7koFVYZRYGx_vdu7K.aItOBDk-1752168026527-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
       ],
-      [
-        "set-cookie",
-        "_cfuvid=5dczF8Zgmd0jaoTz5m.p4M6GKKwpWOsRARewfgLTrjE-1722725052210-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
-      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
       ["x-content-type-options", "nosniff"],
-      ["x-frame-options", "DENY"]
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
     ],
-    "url": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getBalance&address=0xaadf409fbefbb7071bab1084083a7ffa5c799622&tag=latest",
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
     "redirected": false,
     "type": "basic",
     "bodyType": "json",
-    "body": "0x1374b68fa00"
+    "body": { "jsonrpc": "2.0", "id": 0, "result": "0x1374b68fa00" }
   }
 ]

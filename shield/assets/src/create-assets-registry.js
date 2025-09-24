@@ -1,6 +1,12 @@
 import { pick } from '@exodus/basic-utils'
 
-import { addToken, connectAssetsList, updateToken } from './connect-assets.js'
+import {
+  addCombinedAsset as _addCombinedAsset,
+  addToken,
+  connectAssetsList,
+  updateCombinedAsset as _updateCombinedAsset,
+  updateToken,
+} from './connect-assets.js'
 
 const createAssetRegistry = ({ supportedAssetsList }) => {
   const assetsList = [
@@ -26,9 +32,15 @@ const createAssetRegistry = ({ supportedAssetsList }) => {
   const updateCustomToken = (token) =>
     updateToken(assets, createCustomToken(token, assets[token.baseAssetName]))
 
+  const addCombinedAsset = (assetDef) => _addCombinedAsset(assets, assetDef)
+
+  const updateCombinedAsset = (assetName, ops) => _updateCombinedAsset(assets, assetName, ops)
+
   return {
     addCustomToken,
     updateCustomToken,
+    addCombinedAsset,
+    updateCombinedAsset,
     getAsset: (assetName) => assets[assetName],
     getAssets: () => assets,
   }

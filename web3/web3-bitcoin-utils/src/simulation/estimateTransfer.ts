@@ -11,23 +11,23 @@ import type { Asset, NumberUnit } from '@exodus/web3-types'
 
 export function estimateTransfer({
   addresses,
-  asset,
+  currency,
   fee,
   inputIndexesToSign,
   psbt,
   simulationResult,
 }: {
   addresses: Record<string, boolean>
-  asset: Asset
+  currency: Asset['currency']
   fee: NumberUnit
   inputIndexesToSign: Array<number>
   psbt: Psbt
   simulationResult: BtcAggregatedTransactionSimulationResult
 }): void | never {
-  const inputAmount = asset.currency.baseUnit(
+  const inputAmount = currency.baseUnit(
     calculateInputs({ psbt, inputIndexesToSign }).toString(),
   )
-  const outputAmountSelfSend = asset.currency.baseUnit(
+  const outputAmountSelfSend = currency.baseUnit(
     calculateOutputs({ psbt, addresses }).toString(),
   )
   const outputAmountSelfSendWithFee = outputAmountSelfSend.add(fee)

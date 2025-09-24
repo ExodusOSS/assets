@@ -76,13 +76,16 @@ const _canBumpTx = ({
   // Can't bump a non-rbf tx with no change
   if (!bumpTx && changeUtxos.size === 0) return { errorMessage: 'no change' }
   // Can't bump a confirmed tx
-  if (!bumpTx && changeUtxos.toArray().every(isUtxoConfirmed))
+  if (!bumpTx && changeUtxos.toArray().every(isUtxoConfirmed)) {
     return { errorMessage: 'already confirmed' }
+  }
+
   // Can't bump an rbf tx if change is already spent
-  if (bumpTx && bumpTx.data.changeAddress && changeUtxos.size === 0)
+  if (bumpTx && bumpTx.data.changeAddress && changeUtxos.size === 0) {
     return {
       errorMessage: 'already spent',
     }
+  }
 
   if (bumpTx) {
     const { replaceTx, fee } = selectUtxos({

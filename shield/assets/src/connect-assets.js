@@ -1,6 +1,6 @@
 /* eslint-disable @exodus/mutable/no-param-reassign-prop-only */
-import { validateBaseAssetDef, validateTokenDef } from '@exodus/asset'
-import { keyBy, mapValues, omit } from '@exodus/basic-utils'
+import { validateBaseAssetDef, validateCombinedAssetDef, validateTokenDef } from '@exodus/asset'
+import { difference, keyBy, mapValues, omit } from '@exodus/basic-utils'
 import { UnitType } from '@exodus/currency'
 import lodash from 'lodash'
 import assert from 'minimalistic-assert'
@@ -9,7 +9,7 @@ import { CT_UPDATEABLE_PROPERTIES } from './constants.js'
 import { createCombined } from './create-combined.js'
 import { assertNotAnObjectPrototypeProperty, validateCombinedAsset } from './validate-asset.js'
 
-const { pick } = lodash
+const { pick, uniq } = lodash
 
 const connectProp = (asset, prop, value) => {
   if (asset[prop] === undefined && value !== undefined) asset[prop] = value
@@ -74,7 +74,6 @@ export function coerceTokenProps(asset, baseAsset) {
     baseAsset.displayNetworkTicker || baseAsset.displayTicker
   )
   connectProp(asset, 'blockExplorer', baseAsset.blockExplorer) // this is OK in most cases
-  connectProp(asset, 'gradientCoords', { x1: '0%', y1: '0%', x2: '100%', y2: '100%' })
   connectProp(asset, 'gradientColors', ['#EAEAEA', '#FFF'])
 
   // force proper{Name,Ticker} to be identical to display{Name,Ticker}
@@ -180,7 +179,8 @@ export function addCombinedAsset(assets, assetDef) {
   assertNotAnObjectPrototypeProperty(baseAssetName)
   assert(baseAssetName && name === baseAssetName, `combined asset ${name} invalid`)
 
-  const asset = createCombined(assetDef, assets)
+  const asset = createCombined(assetDef)
+  validateCombinedAssetDef(asset)
   try {
     assets[name] = asset
     defineAssetProps({ assets, asset })
@@ -195,27 +195,44 @@ export function addCombinedAsset(assets, assetDef) {
 
 export function updateCombinedAsset(
   assets,
-  combinedAsset,
-  { newMemberAsset } = Object.create(null)
+  combinedAssetName,
+  { addMembers = [], removeMembers = [] }
 ) {
+  assert(typeof combinedAssetName === 'string', `combined asset name expected`)
+
+  const combinedAsset = assets[combinedAssetName]
+  assert(combinedAsset, `combined asset must exist`)
+
   const { name, isCombined } = combinedAsset
-  assert(isCombined, `asset ${name} must be a combined asset`)
   assertNotAnObjectPrototypeProperty(name)
-  assert(assets[name], `combined asset ${name} does not exist`)
-  assert(assets[newMemberAsset.name], `asset ${newMemberAsset.name} does not exist`)
-  assert(!newMemberAsset.isCombined, `asset ${newMemberAsset.name} must not be a combined asset`)
+  assert(isCombined, `asset ${name} must be a combined asset`)
+
+  addMembers.forEach((member) => {
+    assert(typeof member === 'string', 'asset name must be a string')
+    assertNotAnObjectPrototypeProperty(member)
+    const newMemberAsset = assets[member]
+    assert(newMemberAsset, `asset ${member} does not exist`)
+    assert(!newMemberAsset.isCombined, `asset ${member} must not be a combined asset`)
+  })
+
+  removeMembers.forEach((member) => {
+    assert(typeof member === 'string', 'asset name must be a string')
+  })
 
   const assetDef = omit(combinedAsset, ['baseAsset', 'feeAsset', 'combinedAssets'])
-  assetDef.combinedAssetNames.push(newMemberAsset.name)
+  assetDef.combinedAssetNames = uniq([
+    ...difference(assetDef.combinedAssetNames, removeMembers),
+    ...addMembers,
+  ])
 
-  const asset = createCombined(assetDef, assets)
-  const orig = assets[name]
+  validateCombinedAssetDef(assetDef)
+  const asset = createCombined(assetDef)
   try {
     assets[name] = asset
     defineAssetProps({ assets, asset })
     validateCombinedAsset(asset)
   } catch (e) {
-    assets[name] = orig
+    assets[name] = combinedAsset
     throw e
   }
 

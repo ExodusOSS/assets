@@ -1,7 +1,7 @@
 {
   "name": "@exodus/web3-rpc-handlers",
   "description": "Utils for Web3 RPC handlers.",
-  "version": "2.26.1",
+  "version": "2.28.1",
   "type": "module",
   "sideEffects": false,
   "module": "lib/index.js",
@@ -17,13 +17,13 @@
     "lib/**/*.js"
   ],
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExodusMovement/assets.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "clean": "run -T rimraf lib",
     "build": "yarn clean &&  run -T tsc",
@@ -33,7 +33,7 @@
     "prepublishOnly": "yarn run -T build --scope @exodus/web3-rpc-handlers"
   },
   "dependencies": {
-    "@exodus/web3-errors": "^1.13.0"
+    "@exodus/web3-errors": "^1.13.1"
   },
   "devDependencies": {
     "@exodus/web3-types": "workspace:*"

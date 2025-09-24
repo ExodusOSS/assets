@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.7](https://github.com/ExodusMovement/assets/compare/@exodus/matic-meta@2.2.6...@exodus/matic-meta@2.2.7) (2025-08-19)
+
+
+### Bug Fixes
+
+
+* fix: remove meta boilerplate (#6305)
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [2.2.6](https://github.com/ExodusMovement/assets/compare/@exodus/matic-meta@2.2.5...@exodus/matic-meta@2.2.6) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
+## [2.2.5](https://github.com/ExodusMovement/assets/compare/@exodus/matic-meta@2.2.4...@exodus/matic-meta@2.2.5) (2025-02-26)
+
+
+### Bug Fixes
+
+
+* fix: add assetId to evm metas (#5120)
+
+
+
 ## [2.2.4](https://github.com/ExodusMovement/assets/compare/@exodus/matic-meta@2.2.3...@exodus/matic-meta@2.2.4) (2025-01-17)
 
 **Note:** Version bump only for package @exodus/matic-meta

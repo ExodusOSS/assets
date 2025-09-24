@@ -52,25 +52,22 @@ const createSimpleInsightClient = (baseUrl) => {
   return { fetchTxObject }
 }
 
-const createMockInsightClient = () => {
-  const fetchTxObject = async (txId) => {
-    return magnifierTxs[txId]
-  }
-  return { fetchTxObject }
-}
+const mockFetchTxObject = jest.fn()
+const createMockInsightClient = () => ({
+  fetchTxObject: mockFetchTxObject,
+})
 
 const factoryDependencies = {
-  logger: {
-    error: jest.fn(),
-  },
-}
-const asset = {
-  ...baseAsset,
+  baseAssetName: baseAsset.name,
+  currency: baseAsset.currency,
   insightClient: runAsIntegrationTests
     ? createSimpleInsightClient(
         'https://magiceden-bitcoin-p.a.exodus.io/insight',
       )
     : createMockInsightClient(),
+  logger: {
+    error: jest.fn(),
+  },
 }
 
 describe('createSimulateTransactions', () => {
@@ -81,7 +78,10 @@ describe('createSimulateTransactions', () => {
   })
 
   it('should gracefully handle a missing "logger"', () => {
-    const simulateTransactions = createSimulateTransactions()
+    const simulateTransactions = createSimulateTransactions({
+      ...factoryDependencies,
+      logger: undefined,
+    })
 
     expect(typeof simulateTransactions).toBe('function')
   })
@@ -91,6 +91,9 @@ describe('createSimulateTransactions', () => {
 
     beforeEach(() => {
       simulateTransactions = createSimulateTransactions(factoryDependencies)
+      mockFetchTxObject.mockImplementation(async (txId) => {
+        return magnifierTxs[txId]
+      })
     })
 
     it('estimates changes for a TX with a Witness UTXO input', async () => {
@@ -100,7 +103,6 @@ describe('createSimulateTransactions', () => {
       }
       const { balanceChanges, advancedDetails, displayDetails } =
         await simulateTransactions({
-          asset,
           transactions: [fixtures['witness-utxo'].psbtBase64],
           indexToAddressRecord: {
             0: { address },
@@ -130,7 +132,6 @@ describe('createSimulateTransactions', () => {
         [address]: true,
       }
       const { advancedDetails, balanceChanges } = await simulateTransactions({
-        asset,
         transactions: [fixtures['non-witness-utxo'].psbtBase64],
         indexToAddressRecord: {
           0: { address: 'bc1qmpwzkuwsqc9snjvgdt4czhjsnywa5yjdgwyw6k' },
@@ -164,7 +165,6 @@ describe('createSimulateTransactions', () => {
         [address]: true,
       }
       const { displayDetails } = await simulateTransactions({
-        asset,
         transactions: [fixtures['non-witness-utxo'].psbtBase64],
         indexToAddressRecord: {
           0: { address: 'bc1qmpwzkuwsqc9snjvgdt4czhjsnywa5yjdgwyw6k' },
@@ -190,7 +190,6 @@ describe('createSimulateTransactions', () => {
       }
       const { advancedDetails, balanceChanges, displayDetails } =
         await simulateTransactions({
-          asset,
           transactions: [fixtures['non-witness-utxo-2'].psbtBase64],
           indexToAddressRecord: {
             0: { address: taprootAddress },
@@ -219,7 +218,6 @@ describe('createSimulateTransactions', () => {
         magicEdenBuyOrdinalsFixtures['buy-1-ordinal']
 
       const { balanceChanges, displayDetails } = await simulateTransactions({
-        asset,
         transactions,
         indexToAddressRecord,
         walletAddresses,
@@ -256,7 +254,6 @@ describe('createSimulateTransactions', () => {
         magicEdenBuyOrdinalsFixtures['buy-2-ordinals']
 
       const { balanceChanges, displayDetails } = await simulateTransactions({
-        asset,
         transactions,
         indexToAddressRecord,
         walletAddresses,
@@ -300,7 +297,6 @@ describe('createSimulateTransactions', () => {
         magicEdenSellOrdinalsFixtures['sell-1-ordinal']
 
       const { balanceChanges } = await simulateTransactions({
-        asset,
         transactions,
         indexToAddressRecord,
         walletAddresses,
@@ -336,7 +332,6 @@ describe('createSimulateTransactions', () => {
         magicEdenSellOrdinalsFixtures['sell-2-ordinals']
 
       const { balanceChanges, displayDetails } = await simulateTransactions({
-        asset,
         transactions,
         indexToAddressRecord,
         walletAddresses,
@@ -377,19 +372,14 @@ describe('createSimulateTransactions', () => {
       expect(displayDetails.warnings).toEqual([])
     })
 
-    it('warns if Ordinals transfers can not be simulated', async () => {
+    it('warns if Ordinals transfers cannot be simulated', async () => {
+      mockFetchTxObject.mockReset().mockImplementationOnce(() => {
+        throw new Error('API call error!')
+      })
       const { transactions, indexToAddressRecord, walletAddresses } =
         magicEdenSellOrdinalsFixtures['sell-2-ordinals']
 
       const { balanceChanges, displayDetails } = await simulateTransactions({
-        asset: {
-          ...baseAsset,
-          insightClient: {
-            fetchTxObject: jest.fn().mockImplementation(() => {
-              throw new Error('API call error!')
-            }),
-          },
-        },
         transactions,
         indexToAddressRecord,
         walletAddresses,
@@ -422,7 +412,6 @@ describe('createSimulateTransactions', () => {
       }
       const { balanceChanges, advancedDetails, displayDetails } =
         await simulateTransactions({
-          asset,
           transactions: [fixtures['wallet-transfer'].psbtBase64],
           indexToAddressRecord: {
             0: { address },
@@ -453,7 +442,6 @@ describe('createSimulateTransactions', () => {
       }
       const { balanceChanges, advancedDetails, warnings } =
         await simulateTransactions({
-          asset,
           transactions: [fixtures['invalid-Psbt-buffer'].psbtBase64],
           indexToAddressRecord: {
             0: { address },
@@ -479,7 +467,6 @@ describe('createSimulateTransactions', () => {
       }
       const { balanceChanges, advancedDetails, warnings } =
         await simulateTransactions({
-          asset,
           transactions: [fixtures['invalid-input-to-sign'].psbtBase64],
           indexToAddressRecord: {
             2: { address },
@@ -510,7 +497,6 @@ describe('createSimulateTransactions', () => {
 
         const { balanceChanges, displayDetails, advancedDetails } =
           await simulateTransactions({
-            asset,
             transactions,
             indexToAddressRecord,
             walletAddresses,

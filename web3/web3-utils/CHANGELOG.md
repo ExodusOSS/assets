@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.51.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.51.0...@exodus/web3-utils@1.51.1) (2025-02-21)
+
+
+### Bug Fixes
+
+
+* fix: stop using root domains (#5089)
+
+
+
+## [1.51.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.50.1...@exodus/web3-utils@1.51.0) (2025-02-21)
+
+
+### Features
+
+
+* feat(solana): return recipient addresses from transaction simulation (#5079)
+
+
+
+## [1.50.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.50.0...@exodus/web3-utils@1.50.1) (2025-01-27)
+
+**Note:** Version bump only for package @exodus/web3-utils
+
+
+
+
+
+## [1.50.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.49.0...@exodus/web3-utils@1.50.0) (2025-01-21)
+
+
+### Features
+
+
+* feat: expose `web3.simulateMessage` API (#4870)
+
+
+
+## [1.49.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.48.3...@exodus/web3-utils@1.49.0) (2025-01-21)
+
+
+### Features
+
+
+* feat: generic SIWE parsing (#4868)
+
+
+
 ## [1.48.3](https://github.com/ExodusMovement/assets/compare/@exodus/web3-utils@1.48.2...@exodus/web3-utils@1.48.3) (2024-12-19)
 
 

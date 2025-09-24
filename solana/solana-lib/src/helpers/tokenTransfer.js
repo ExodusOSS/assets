@@ -63,7 +63,6 @@ function createIx(
 export const createTokenTransferInstruction = (owner, fromTokenAddress, to, amount) => {
   const sourcePubkey = new PublicKey(fromTokenAddress) // the token ADDRESS needed!
   const destinationPubkey = new PublicKey(to)
-  console.log(`destination token address: ${destinationPubkey.toBase58()}`)
   const ownerAccountOrWalletPublicKey = new PublicKey(owner) // the only native SOL address
 
   return Token.createTransferInstruction(

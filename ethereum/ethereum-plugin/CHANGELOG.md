@@ -3,13 +3,189 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.2](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.14.1...@exodus/ethereum-plugin@2.14.2) (2025-08-19)
+
+
+### Bug Fixes
+
+
+* fix: remove unused isExchange (#6301)
+
+
+
+## [2.14.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.14.0...@exodus/ethereum-plugin@2.14.1) (2025-08-12)
+
+
+### Bug Fixes
+
+
+* fix: exchange compatibility (#6230)
+
+
+
+## [2.14.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.13.0...@exodus/ethereum-plugin@2.14.0) (2025-08-04)
+
+
+### Features
+
+
+* feat: demote batch of ETH tokens (#6159)
+
+
+
+## [2.13.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.12.1...@exodus/ethereum-plugin@2.13.0) (2025-08-01)
+
+
+### Features
+
+
+* feat: tx send split, tx-create (#5854)
+
+* feat: use hydra modules in memory-wallet testing  (#6157)
+
+
+### Bug Fixes
+
+
+* fix: include assetName in txMeta (#6113)
+
+
+
+## [2.12.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.12.0...@exodus/ethereum-plugin@2.12.1) (2025-07-11)
+
+**Note:** Version bump only for package @exodus/ethereum-plugin
+
+
+
+
+
+## [2.12.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.11.0...@exodus/ethereum-plugin@2.12.0) (2025-07-10)
+
+
+### Features
+
+
+* feat: add supersim optimistic fork testing (#5924)
+
+* feat: set ethereum to use clarity v2 monitor (#5836)
+
+
+
+## [2.11.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.10.1...@exodus/ethereum-plugin@2.11.0) (2025-07-01)
+
+
+### Features
+
+
+* feat: transaction bundles and private server gas estimation (#5953)
+
+
+
+## [2.10.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.10.0...@exodus/ethereum-plugin@2.10.1) (2025-06-26)
+
+
+### Bug Fixes
+
+
+* fix: activate `currentTipGasPrice` for bumped transactions in `tx-send` (#5950)
+
+
+
+## [2.10.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.9.0...@exodus/ethereum-plugin@2.10.0) (2025-06-20)
+
+
+### Features
+
+
+* feat: add `isPrivate` flag to `txSend` and export `transactionPrivacy` feature (#5906)
+
+* feat: enable evm transaction privacy (#5869)
+
+
+
+## [2.9.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.8.0...@exodus/ethereum-plugin@2.9.0) (2025-06-12)
+
+
+### Features
+
+
+* feat: remote config feeData.gasLimits (#5830)
+
+
+
+## [2.8.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.6...@exodus/ethereum-plugin@2.8.0) (2025-06-11)
+
+
+### Features
+
+
+* feat: ethereum api use balances and nonces data (#5727)
+
+
+### Bug Fixes
+
+
+* fix: ethereum api cleaning up (#5832)
+
+* fix: improve evm gas estimation when using arbitrary addresses (#5842)
+
+* fix: prevent the isSendAll invariant from applying to smart contract to addresses (#5658)
+
+
+
+## [2.7.6](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.5...@exodus/ethereum-plugin@2.7.6) (2025-05-07)
+
+**Note:** Version bump only for package @exodus/ethereum-plugin
+
+
+
+
+
+## [2.7.5](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.4...@exodus/ethereum-plugin@2.7.5) (2025-04-29)
+
+**Note:** Version bump only for package @exodus/ethereum-plugin
+
+
+
+
+
+## [2.7.4](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.3...@exodus/ethereum-plugin@2.7.4) (2025-04-03)
+
+
+### Bug Fixes
+
+
+* fix: populate the activeStakedBalance for matic and polygon staking (#5374)
+
+
+
+## [2.7.3](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.2...@exodus/ethereum-plugin@2.7.3) (2025-03-06)
+
+
+### Bug Fixes
+
+
+* fix: ethereum and matic staking service improvements (#5109)
+
+
+
+## [2.7.2](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.1...@exodus/ethereum-plugin@2.7.2) (2025-02-20)
+
+
+### Bug Fixes
+
+
+* fix: ETH pending staking balance (#4816)
+
+
+
 ## [2.7.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-plugin@2.7.0...@exodus/ethereum-plugin@2.7.1) (2024-12-19)
 
 
 ### Bug Fixes
 
 
-* fix: use gasPriceMultipler when setting up min/max/recommended (#4700)
+* fix: use gasPriceMultiplier when setting up min/max/recommended (#4700)
 
 
 ### License

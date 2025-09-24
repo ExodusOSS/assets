@@ -1,6 +1,6 @@
 {
   "name": "@exodus/send-validation",
-  "version": "3.0.5",
+  "version": "5.3.1",
   "description": "Send token screen validation library",
   "author": "Exodus Movement, Inc.",
   "repository": {
@@ -25,19 +25,16 @@
     "lint:fix": "yarn lint --fix"
   },
   "devDependencies": {
-    "@exodus/cardano-plugin": "^1.2.1",
+    "@exodus/react-hooks": "^5.1.0",
     "@testing-library/react-hooks": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0"
   },
   "dependencies": {
-    "@exodus/algorand-api": "^2.2.1",
     "@exodus/basic-utils": "^3.0.1",
-    "@exodus/bitcoin-api": "^2.23.0",
-    "@exodus/neo-lib": "^2.2.7",
-    "@exodus/react-hooks": "^5.1.0",
-    "@exodus/ripple-lib": "^3.0.0",
+    "@exodus/i18n-dummy": "^1.0.0",
+    "@exodus/send-validation-model": "^1.2.0",
     "minimalistic-assert": "^1.0.1"
   },
   "peerDependencies": {

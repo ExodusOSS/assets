@@ -1,6 +1,5 @@
-import * as bs58 from 'bs58'
-
 import type { Base58, Base64, Bytes } from '@exodus/web3-types'
+import bs58 from 'bs58'
 
 export function deserializeTransactionSignature(
   encodedSignature: Base58,

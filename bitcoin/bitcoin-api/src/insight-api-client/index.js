@@ -21,12 +21,14 @@ const fetchJson = async (url, fetchOptions, nullWhen404) => {
     return null
   }
 
-  if (!response.ok)
+  if (!response.ok) {
     throw new Error(
       `${url} returned ${response.status}: ${
         response.statusText || 'Unknown Status Text'
       }. Body: ${await getTextFromResponse(response)}`
     )
+  }
+
   return response.json()
 }
 
@@ -90,7 +92,7 @@ export default class InsightAPIClient {
       value: utxo.amount,
       vout: utxo.vout,
       height: utxo.height,
-      script: utxo.script,
+      script: utxo.script ?? utxo.scriptPubKey,
       asset: utxo.asset,
     }))
   }
@@ -166,6 +168,7 @@ export default class InsightAPIClient {
   }
 
   async broadcastTx(rawTx) {
+    const _rawTx = rawTx instanceof Uint8Array ? Buffer.from(rawTx).toString('hex') : rawTx
     console.log('gonna broadcastTx')
     const url = urlJoin(this._baseURL, '/tx/send')
     const fetchOptions = {
@@ -174,7 +177,7 @@ export default class InsightAPIClient {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ rawtx: rawTx }),
+      body: JSON.stringify({ rawtx: _rawTx }),
     }
 
     const response = await fetch(url, fetchOptions)

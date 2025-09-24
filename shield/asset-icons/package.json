@@ -1,8 +1,8 @@
 {
   "name": "@exodus/asset-icons",
-  "version": "4.1.1",
+  "version": "5.1.0",
   "description": "Exodus assets icons generator helpers",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Exodus Movement, Inc.",
   "main": "scripts/generate.web.js",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset-icons",
@@ -28,11 +28,14 @@
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aasset-icons"
   },
-  "devDependencies": {
-    "@exodus/assets-base": "workspace:^",
-    "@exodus/tezos-meta": "workspace:^"
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0",
+    "js-yaml": "^3.13.1"
   },
   "peerDependencies": {
     "@exodus/assets-base": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

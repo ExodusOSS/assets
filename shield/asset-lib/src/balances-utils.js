@@ -80,17 +80,31 @@ export const getBalancesFromAccountStateFactory =
     const unconfirmedSent = getUnconfirmedSentBalance({ asset, txLog })
     const balance = getBalanceFromAccountState({ accountState, asset })
     const total = shouldFixBalance ? fixBalance({ txLog, balance }) : balance
-    const otherBalances = getOtherBalances({ asset, accountState, txLog }) || {}
-    const frozenBalances = getFrozenBalances({ asset, accountState, txLog }) || {}
-    const frozen = Object.values(frozenBalances).reduce((a, b) => a.add(b), asset.currency.ZERO)
-    const spendable = total.sub(unconfirmedReceived).sub(frozen).clampLowerZero()
-    return {
+
+    const basicBalances = {
       total,
-      spendable,
       unconfirmedReceived,
       unconfirmedSent,
-      ...otherBalances,
+    }
+
+    const frozenBalances =
+      getFrozenBalances({ asset, accountState, txLog, balances: { ...basicBalances, balance } }) ||
+      {}
+    const frozen = Object.values(frozenBalances).reduce((a, b) => a.add(b), asset.currency.ZERO)
+    const spendable = total.sub(unconfirmedReceived).sub(frozen).clampLowerZero()
+
+    const balances = {
+      ...basicBalances,
+      spendable,
       ...frozenBalances,
       frozen,
+    }
+
+    const otherBalances =
+      getOtherBalances({ asset, accountState, txLog, balances: { ...balances, balance } }) || {}
+
+    return {
+      ...balances,
+      ...otherBalances,
     }
   }

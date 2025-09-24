@@ -3,6 +3,334 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.20.7](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.6...@exodus/solana-api@3.20.7) (2025-08-12)
+
+
+### Bug Fixes
+
+
+* fix(solana): do not use coinAmount for staking txs (#6243)
+
+
+
+## [3.20.6](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.5...@exodus/solana-api@3.20.6) (2025-07-18)
+
+
+### Bug Fixes
+
+
+* fix: SOL parse mint transaction (#6045)
+
+
+
+## [3.20.5](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.4...@exodus/solana-api@3.20.5) (2025-07-11)
+
+
+### Bug Fixes
+
+
+* fix: catch SOL rewards endpoint error (#6055)
+
+
+
+## [3.20.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.3...@exodus/solana-api@3.20.4) (2025-07-01)
+
+
+### Bug Fixes
+
+
+* fix: add token creation fee for new token account (#5977)
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [3.20.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.2...@exodus/solana-api@3.20.3) (2025-06-25)
+
+
+### Bug Fixes
+
+
+* fix: SOL add multi-dex swap tests (#5927)
+
+* fix: SOL move funds (#5935)
+
+
+
+## [3.20.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.1...@exodus/solana-api@3.20.2) (2025-06-17)
+
+**Note:** Version bump only for package @exodus/solana-api
+
+
+
+
+
+## [3.20.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.20.0...@exodus/solana-api@3.20.1) (2025-06-11)
+
+
+### Bug Fixes
+
+
+* fix: SOL owner changed check (#5805)
+
+
+
+## [3.20.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.19.0...@exodus/solana-api@3.20.0) (2025-06-11)
+
+
+### Features
+
+
+* feat(solana): implement unconfirmedSent/unconfirmedReceived in solana balances (#5802)
+
+
+
+## [3.19.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.18.2...@exodus/solana-api@3.19.0) (2025-06-10)
+
+
+### Features
+
+
+* feat: support SPL batch send monitoring (#5848)
+
+
+### Bug Fixes
+
+
+* fix: SOL amount NaN case (#5713)
+
+* fix: SOL check fot NFT rent (#5792)
+
+* fix: SOL from/to addresses for token txs (#5751)
+
+
+
+## [3.18.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.18.1...@exodus/solana-api@3.18.2) (2025-05-07)
+
+
+### Bug Fixes
+
+
+* fix: throw only if unitsConsumed is not returned (#5561)
+
+
+
+## [3.18.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.18.0...@exodus/solana-api@3.18.1) (2025-05-05)
+
+
+### Bug Fixes
+
+
+* fix: SOL reserve and units consumed (#5540)
+
+
+
+## [3.18.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.17.4...@exodus/solana-api@3.18.0) (2025-05-01)
+
+
+### Features
+
+
+* feat(solana): make shouldUpdateBalanceBeforeHistory configurable (#5544)
+
+
+### Bug Fixes
+
+
+* fix: SOL staking regression (#5539)
+
+
+
+## [3.17.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.17.3...@exodus/solana-api@3.17.4) (2025-04-25)
+
+
+### Bug Fixes
+
+
+* fix(solana): don't throw for rent when we add a fee payer (#5501)
+
+
+
+## [3.17.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.17.2...@exodus/solana-api@3.17.3) (2025-04-23)
+
+
+### Bug Fixes
+
+
+* fix: SOL skip unparsed token2022 (#5476)
+
+
+
+## [3.17.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.17.1...@exodus/solana-api@3.17.2) (2025-04-21)
+
+**Note:** Version bump only for package @exodus/solana-api
+
+
+
+
+
+## [3.17.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.17.0...@exodus/solana-api@3.17.1) (2025-04-11)
+
+
+### Bug Fixes
+
+
+* fix(solana): don't estimate without fee payer if one is provided (#5435)
+
+
+
+## [3.17.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.16.0...@exodus/solana-api@3.17.0) (2025-04-09)
+
+
+### Features
+
+
+* feat: demote batch of Solana tokens (#5411)
+
+
+
+## [3.16.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.15.1...@exodus/solana-api@3.16.0) (2025-04-08)
+
+
+### Features
+
+
+* feat: Solana rent except sender validation (#5394)
+
+
+
+## [3.15.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.15.0...@exodus/solana-api@3.15.1) (2025-04-04)
+
+
+### Bug Fixes
+
+
+* fix(solana): fee payer validation (#5387)
+
+
+
+## [3.15.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.7...@exodus/solana-api@3.15.0) (2025-04-03)
+
+
+### Features
+
+
+* feat(solana): add optional addExternalFeePayerToTransaction (#5345)
+
+
+
+## [3.14.7](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.6...@exodus/solana-api@3.14.7) (2025-04-03)
+
+**Note:** Version bump only for package @exodus/solana-api
+
+
+
+
+
+## [3.14.6](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.5...@exodus/solana-api@3.14.6) (2025-04-01)
+
+
+### Bug Fixes
+
+
+* fix: SOL staking method param (#5362)
+
+
+
+## [3.14.5](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.4...@exodus/solana-api@3.14.5) (2025-03-25)
+
+
+### Bug Fixes
+
+
+* fix: SOL insufficient funds for rent (#5308)
+
+
+
+## [3.14.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.3...@exodus/solana-api@3.14.4) (2025-03-20)
+
+**Note:** Version bump only for package @exodus/solana-api
+
+
+
+
+
+## [3.14.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.2...@exodus/solana-api@3.14.3) (2025-03-14)
+
+
+### Bug Fixes
+
+
+* fix(SOL): set amount as lamports for internal multi send (#5253)
+
+
+
+## [3.14.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.1...@exodus/solana-api@3.14.2) (2025-03-12)
+
+
+### Bug Fixes
+
+
+* fix: NFT tx amount (#5237)
+
+
+
+## [3.14.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.14.0...@exodus/solana-api@3.14.1) (2025-03-11)
+
+
+### Bug Fixes
+
+
+* fix: prevent SOL invalid account owner error (#5187)
+
+
+
+## [3.14.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.7...@exodus/solana-api@3.14.0) (2025-03-10)
+
+
+### Features
+
+
+* feat: SOL internal sends in txLog (#5199)
+
+
+
+## [3.13.7](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.6...@exodus/solana-api@3.13.7) (2025-03-03)
+
+
+### Bug Fixes
+
+
+* fix: await result in retry (#5113)
+
+* fix: SOL getAccountInfo commitment (#5114)
+
+
+
+## [3.13.6](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.5...@exodus/solana-api@3.13.6) (2025-02-17)
+
+
+### Bug Fixes
+
+
+* fix: SOL stakeable negative balance (#5059)
+
+
+
+## [3.13.5](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.4...@exodus/solana-api@3.13.5) (2025-02-04)
+
+
+### Bug Fixes
+
+
+* fix: check ATA address ownership change (#4865)
+
+* fix: retry when getSignaturesForAddress (#4979)
+
+* fix: SOL integration tests (#4980)
+
+
+
 ## [3.13.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-api@3.13.3...@exodus/solana-api@3.13.4) (2025-01-22)
 
 

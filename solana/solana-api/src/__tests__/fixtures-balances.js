@@ -36,6 +36,8 @@ export const fixture3 = {
         },
       },
     },
+    accountSize: 0,
+    ownerChanged: false,
     cursor: '',
     stakingInfo: {
       t: 'object',
@@ -147,6 +149,8 @@ export const fixture4 = {
         },
       },
     },
+    accountSize: 0,
+    ownerChanged: false,
     cursor: '',
     stakingInfo: {
       t: 'object',

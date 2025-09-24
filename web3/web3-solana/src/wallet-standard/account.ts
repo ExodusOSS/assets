@@ -1,18 +1,23 @@
 // This file is copied with modification from @wallet-standard/wallet.
 
+import { omitBy } from '@exodus/basic-utils'
 import {
+  SignAndSendAllTransactions,
   SolanaSignAndSendTransaction,
+  SolanaSignIn,
   SolanaSignMessage,
   SolanaSignTransaction,
 } from '@exodus/solana-wallet-standard-features'
+import type { WalletAccount, WalletIcon } from '@wallet-standard/base'
+import bs58 from 'bs58'
 
 import { SOLANA_CHAINS } from './chains.js'
 
-import type { WalletAccount } from '@wallet-standard/base'
-
 const chains = SOLANA_CHAINS
 const features = [
+  SolanaSignIn,
   SolanaSignAndSendTransaction,
+  SignAndSendAllTransactions,
   SolanaSignTransaction,
   SolanaSignMessage,
 ] as const
@@ -20,8 +25,6 @@ const features = [
 export class ExodusSolanaWalletAccount implements WalletAccount {
   readonly #address: WalletAccount['address']
   readonly #publicKey: WalletAccount['publicKey']
-  readonly #chains: WalletAccount['chains']
-  readonly #features: WalletAccount['features']
   readonly #label: WalletAccount['label']
   readonly #icon: WalletAccount['icon']
 
@@ -34,11 +37,11 @@ export class ExodusSolanaWalletAccount implements WalletAccount {
   }
 
   get chains() {
-    return this.#chains.slice()
+    return chains.slice()
   }
 
   get features() {
-    return this.#features.slice()
+    return features.slice()
   }
 
   get label() {
@@ -57,8 +60,6 @@ export class ExodusSolanaWalletAccount implements WalletAccount {
   }: Omit<WalletAccount, 'chains' | 'features'>) {
     this.#address = address
     this.#publicKey = publicKey
-    this.#chains = chains
-    this.#features = features
     this.#label = label
     this.#icon = icon
 
@@ -67,5 +68,31 @@ export class ExodusSolanaWalletAccount implements WalletAccount {
     if (new.target === ExodusSolanaWalletAccount) {
       Object.freeze(this)
     }
+  }
+
+  toJSON() {
+    return omitBy(
+      {
+        address: this.#address,
+        chains,
+        features,
+        label: this.#label,
+        icon: this.#icon,
+      },
+      (value) => value === undefined,
+    )
+  }
+
+  static fromJSON(json: {
+    address: string
+    label?: string
+    icon?: WalletIcon
+  }) {
+    return new ExodusSolanaWalletAccount({
+      address: json.address,
+      publicKey: bs58.decode(json.address),
+      label: json.label,
+      icon: json.icon,
+    })
   }
 }

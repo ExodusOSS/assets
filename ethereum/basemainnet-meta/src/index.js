@@ -63,6 +63,7 @@ const assetParams = {
 
 const tokenOverrides = (token) => ({
   ...token,
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
   gasLimit: 120e3,
 })

@@ -48,7 +48,7 @@ test('Solana: parseTransaction passkeys USDC + SOL', async () => {
           feeBasisPoints: 0,
           maximumFee: 0,
         },
-        from: '62K1tcn2GmfDPUfqk248czT2ZPjtzS2UZ49nRoEUwZgx',
+        from: '5Vks2yuTZXaHgX9Cwe4nNFu5zGabx16TqvhMSnyLt3HN',
         to: '3z7g4CaFebcA9UTtMTDV3QuJF2KEHwix3vFbruw2dQKc',
         amount: 10_000_000,
         fee: 0,

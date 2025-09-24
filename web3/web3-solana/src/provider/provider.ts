@@ -1,4 +1,14 @@
+import type {
+  SolanaSignInInput,
+  SolanaSignInOutput,
+} from '@exodus/solana-wallet-standard-features'
+import type {
+  Blockhash,
+  TransactionSignature,
+  TransactionVersion,
+} from '@exodus/solana-web3.js'
 import { PublicKey } from '@exodus/solana-web3.js'
+import type { SendOptions } from '@exodus/solana-web3.js/lib/connection.js'
 import {
   DisconnectedError,
   InvalidInputError,
@@ -6,42 +16,61 @@ import {
   UnsupportedMethodError,
 } from '@exodus/web3-errors'
 import { BaseProvider } from '@exodus/web3-provider'
+import type { Base58, Base64, Bytes } from '@exodus/web3-types'
+import assert from 'minimalistic-assert'
 
 import {
+  RpcConnectParams,
+  RpcConnectResult,
+  RpcSignAndSendAllParams,
+  RpcSignAndSendAllResult,
+  RpcSignInParams,
+  RpcSignInResult,
+  RpcSignMessageParams,
+} from '../rpc-handlers/types.js'
+import { ExodusSolanaWalletAccount } from '../wallet-standard/account.js'
+import {
+  ConnectOptions,
+  Deps,
+  NonEmptyArray,
+  SendAllOptions,
+  SignAndSendAllReturnValue,
+  SignAndSendAllTransactionsInput,
+  SignMessageOptions,
+  TransactionOrRawTransaction,
+  TransactionReturnValue,
+} from './types.js'
+import { assertNonEmpty } from './utils/arrays.js'
+import type { LegacyOrVersionedTransaction } from './utils/index.js'
+import {
+  applySignatures,
+  areFulfilled,
   deserializeMessageSignature,
   deserializePublicKey,
   deserializeTransaction,
+  deserializeTransactionBytes,
   deserializeTransactionSignature,
-  applySignatures,
   isLegacyTransaction,
   serializeEncodedMessage,
   serializeTransaction,
-  deserializeTransactionBytes,
   serializeTransactionAsBytes,
   SUPPORTED_TRANSACTION_VERSIONS,
+  toUint8Array,
 } from './utils/index.js'
-
-import type { ConnectOptions, Deps } from './types.js'
-import type {
-  LegacyOrVersionedTransaction,
-  SolDisplayEncoding as DisplayEncoding,
-} from './utils/index.js'
-import type {
-  Blockhash,
-  TransactionSignature,
-  TransactionVersion,
-} from '@exodus/solana-web3.js'
-import type { SendOptions } from '@exodus/solana-web3.js/lib/connection.js'
-import type { Base58, Base64, Bytes } from '@exodus/web3-types'
+import { normalizeSignMessageOptions } from './utils/messages.js'
+import {
+  isRawTransaction,
+  normalizeSignAndSendAllTransactionInputs,
+} from './utils/transactions.js'
 
 interface SolanaProviderEvents {
-  accountChanged(publicKey: PublicKey): void
+  accountChanged(publicKey: PublicKey | undefined): void
   connect(publicKey: PublicKey): void
   disconnect(): void
 }
 
 export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
-  #publicKey: PublicKey | null = null
+  #publicKeys: PublicKey[] = []
 
   constructor({ transport, accountsObservable }: Deps) {
     super({ transport })
@@ -49,7 +78,8 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
     // Observe account changes.
     this.on('connect', () => {
       const unobserve = accountsObservable.observe((accounts: string[]) => {
-        this._handleAccountsChanged(accounts)
+        // while `accounts` is an array, it only ever contains the active wallet account address or is empty
+        this.#handleActiveAccountChange(accounts[0])
       })
       this.on('disconnect', unobserve)
     })
@@ -60,7 +90,11 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
   }
 
   get publicKey(): PublicKey | null {
-    return this.#publicKey
+    return this.#publicKeys[0] ?? null
+  }
+
+  get publicKeys(): PublicKey[] {
+    return this.#publicKeys
   }
 
   get isConnected(): boolean {
@@ -73,11 +107,26 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
     }
   }
 
-  _handleAccountsChanged = (accounts: string[]) => {
-    // `accounts` is always going to have a single account (or none) for the time being.
-    const publicKey = new PublicKey(accounts[0])
-    if (!this.#publicKey?.equals(publicKey)) {
-      this.#publicKey = publicKey
+  #handleActiveAccountChange = (address: string | undefined) => {
+    const publicKey = address ? deserializePublicKey(address) : undefined
+
+    const isDifferentWallet = (publicKey: PublicKey) => {
+      if (this.#publicKeys.length === 0) return false
+      return !this.#publicKeys.some((it) => it.equals(publicKey))
+    }
+
+    if (!publicKey || isDifferentWallet(publicKey)) {
+      this.#publicKeys = []
+      this.emitAndIgnoreErrors('accountChanged', publicKey)
+      return
+    }
+
+    const activePublicKey = this.publicKey
+    if (!activePublicKey?.equals(publicKey)) {
+      // move the active account to the front of the list
+      const publicKeys = this.#publicKeys.filter((it) => !it.equals(publicKey))
+      publicKeys.unshift(publicKey)
+      this.#publicKeys = publicKeys
 
       this.emitAndIgnoreErrors('accountChanged', publicKey)
     }
@@ -92,11 +141,11 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
     const legacyTransactions = transactions.filter(isLegacyTransaction)
     for (const transaction of legacyTransactions) {
       if (!transaction.feePayer) {
-        transaction.feePayer = this.publicKey!
+        transaction.feePayer = this.publicKey! // eslint-disable-line @typescript-eslint/no-non-null-assertion
       }
 
       if (
-        !transaction.signatures.length &&
+        transaction.signatures.length === 0 &&
         (!transaction.recentBlockhash || forceBlockhashOverride)
       ) {
         if (!latestBlockhash) {
@@ -111,21 +160,35 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
     }
   }
 
-  connect = async ({ onlyIfTrusted = false }: ConnectOptions = {}): Promise<{
+  connect = async ({
+    onlyIfTrusted = false,
+    silent,
+  }: ConnectOptions = {}): Promise<{
     publicKey: PublicKey
+    publicKeys: NonEmptyArray<PublicKey>
   }> => {
-    const wirePublicKey = await this._callRpcMethod<[boolean], Base58>(
-      'sol_connect',
-      [onlyIfTrusted],
+    assert(
+      !silent || onlyIfTrusted,
+      'connect: silent can only be used together with onlyIfTrusted',
     )
 
-    const publicKey = deserializePublicKey(wirePublicKey)
+    const addresses = await this._callRpcMethod<
+      RpcConnectParams,
+      RpcConnectResult
+    >('sol_connect', { onlyIfTrusted, silent })
 
-    this.#publicKey = publicKey
+    const publicKeys = addresses.map(({ address }) =>
+      deserializePublicKey(address),
+    )
+
+    assertNonEmpty(publicKeys)
+    this.#publicKeys = publicKeys
+    const [publicKey] = publicKeys
 
     this.emitAndIgnoreErrors('connect', publicKey)
 
-    return { publicKey }
+    // public key is returned separately for phantom compatibility
+    return { publicKey, publicKeys }
   }
 
   disconnect = (): void => {
@@ -133,14 +196,39 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
       return
     }
 
-    this.#publicKey = null
+    this.#publicKeys = []
 
     this.emitAndIgnoreErrors('disconnect')
   }
 
-  signTransaction = async (
-    transactionOrBytes: LegacyOrVersionedTransaction | Bytes,
-  ): Promise<LegacyOrVersionedTransaction | Bytes> => {
+  signIn = async (
+    input: SolanaSignInInput = {},
+  ): Promise<SolanaSignInOutput> => {
+    const { accounts, signature, signatureType, signedMessage } =
+      await this._callRpcMethod<RpcSignInParams, RpcSignInResult>(
+        'sol_signIn',
+        input,
+      )
+
+    assertNonEmpty(accounts)
+
+    this.#publicKeys = accounts.map((account) =>
+      deserializePublicKey(account.address),
+    )
+
+    this.emitAndIgnoreErrors('accountChanged', this.#publicKeys[0])
+
+    return {
+      signedMessage: toUint8Array(signedMessage),
+      signature: toUint8Array(signature),
+      signatureType,
+      account: ExodusSolanaWalletAccount.fromJSON(accounts[0]),
+    }
+  }
+
+  signTransaction = async <T extends TransactionOrRawTransaction>(
+    transactionOrBytes: T,
+  ): Promise<TransactionReturnValue<T>> => {
     this.#assertConnected()
 
     const isBytesSignature = transactionOrBytes instanceof Uint8Array
@@ -161,14 +249,14 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
 
     applySignatures(transaction, signedTransaction)
 
-    return isBytesSignature
-      ? serializeTransactionAsBytes(transaction)
-      : transaction
+    return (
+      isBytesSignature ? serializeTransactionAsBytes(transaction) : transaction
+    ) as TransactionReturnValue<T>
   }
 
-  signAllTransactions = async (
-    transactionsOrBytes: (LegacyOrVersionedTransaction | Bytes)[],
-  ): Promise<(LegacyOrVersionedTransaction | Bytes)[]> => {
+  signAllTransactions = async <T extends TransactionOrRawTransaction>(
+    transactionsOrBytes: TransactionOrRawTransaction[],
+  ): Promise<TransactionReturnValue<T>[]> => {
     this.#assertConnected()
 
     const isBytesSignature = transactionsOrBytes[0] instanceof Uint8Array
@@ -197,11 +285,80 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
       applySignatures(transaction, signedTransaction)
     })
 
-    return isBytesSignature
-      ? transactions.map((transaction) =>
-          serializeTransactionAsBytes(transaction),
-        )
-      : transactions
+    return (
+      isBytesSignature
+        ? transactions.map((transaction) =>
+            serializeTransactionAsBytes(transaction),
+          )
+        : transactions
+    ) as TransactionReturnValue<T>[]
+  }
+
+  signAndSendAllTransactions = async <
+    O extends SendAllOptions = { parallel: true; atomic: true },
+  >(
+    inputs: SignAndSendAllTransactionsInput[],
+    { parallel = true, atomic = true, ...sendOptions }: O = {} as O,
+  ): Promise<SignAndSendAllReturnValue<O>> => {
+    this.#assertConnected()
+
+    const transactionsWithSendOptions =
+      normalizeSignAndSendAllTransactionInputs(inputs, sendOptions)
+
+    const serialized = transactionsWithSendOptions.map(
+      ({ transaction: transactionOrBytes, options }) => {
+        const transaction = isRawTransaction(transactionOrBytes)
+          ? deserializeTransactionBytes(transactionOrBytes)
+          : transactionOrBytes
+
+        return {
+          transaction: serializeTransaction(transaction),
+          options,
+        }
+      },
+    )
+
+    const results = await this._callRpcMethod<
+      RpcSignAndSendAllParams,
+      RpcSignAndSendAllResult
+    >('sol_signAndSendAllTransactions', [serialized, { parallel }])
+
+    assert(
+      results.length === transactionsWithSendOptions.length,
+      `Unexpected number of signatures returned. Got ${results.length}, expected ${transactionsWithSendOptions.length}.`,
+    )
+
+    const normalizeSignature = (signature: Base64, index: number) => {
+      const isBytesSignature =
+        transactionsWithSendOptions[index].transaction instanceof Uint8Array
+
+      return isBytesSignature
+        ? deserializeTransactionSignature(signature)
+        : signature
+    }
+
+    if (atomic) {
+      assert(areFulfilled(results), 'Some transactions failed to send.')
+
+      return {
+        signatures: results.map(({ value: signature }, index) =>
+          normalizeSignature(signature, index),
+        ),
+      } as SignAndSendAllReturnValue<O>
+    }
+
+    return {
+      signatures: results.map((result, index) => {
+        if (result.status === 'rejected') {
+          return result
+        }
+
+        return {
+          status: 'fulfilled',
+          value: normalizeSignature(result.value, index),
+        }
+      }),
+    } as SignAndSendAllReturnValue<O>
   }
 
   signAndSendTransaction = async (
@@ -234,8 +391,11 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
 
   signMessage = async (
     encodedMessage: Bytes,
-    display: DisplayEncoding = 'utf8',
+    options?: SignMessageOptions,
   ): Promise<{ signature: Bytes; publicKey: PublicKey }> => {
+    const { display = 'utf8', publicKey: fromPublicKey } =
+      normalizeSignMessageOptions(options)
+
     this.#assertConnected()
 
     const isDisplayValid = ['hex', 'utf8'].includes(display)
@@ -245,13 +405,19 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
 
     const wireEncodedMessage = serializeEncodedMessage(encodedMessage)
     const wireSignature = await this._callRpcMethod<
-      [Base64, DisplayEncoding],
+      RpcSignMessageParams,
       Base64
-    >('sol_signMessage', [wireEncodedMessage, display])
+    >('sol_signMessage', [
+      wireEncodedMessage,
+      {
+        display,
+        ...(fromPublicKey && { address: fromPublicKey.toBase58() }),
+      },
+    ])
 
     const signature = deserializeMessageSignature(wireSignature)
 
-    return { signature, publicKey: this.publicKey! }
+    return { signature, publicKey: fromPublicKey ?? this.publicKey! } // eslint-disable-line @typescript-eslint/no-non-null-assertion
   }
 
   postMessage = () => {
@@ -264,6 +430,7 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
       | 'connect'
       | 'isConnected'
       | 'disconnect'
+      | 'signIn'
       | 'signTransaction'
       | 'signAllTransactions'
       | 'signAndSendTransaction'
@@ -281,6 +448,7 @@ export class SolanaProvider extends BaseProvider<SolanaProviderEvents> {
     const hasMethod = [
       'connect',
       'disconnect',
+      'signIn',
       'signTransaction',
       'signAllTransactions',
       'signAndSendTransaction',

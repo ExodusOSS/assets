@@ -10,12 +10,8 @@ const displayNetworkTicker = 'OP'
 const displayNetworkName = 'Optimism'
 const primaryColor = '#8C93AF'
 const gradientColors = ['#474A73', '#8C93AF']
-const gradientCoords = { x1: '17.71%', y1: '-46.968%', x2: '98.837%', y2: '152.777%' }
 const chainBadgeColors = ['#FF0420', '#A10013']
 const chainId = 10
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -44,14 +40,11 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayNetworkName,
   displayNetworkTicker,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -67,8 +60,8 @@ const tokenOverrides = (token) => ({
     addressUrl: (address) =>
       `https://optimistic.etherscan.io/token/${encodeURIComponent(token.addresses.current)}?a=${encodeURIComponent(address)}`,
   },
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

@@ -13,7 +13,6 @@ export default [
     },
     primaryColor: '#EAEAEA',
     gradientColors: ['#EAEAEA', '#FFFFFF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'dllr_rootstock_6cfc3a7b',
@@ -33,6 +32,5 @@ export default [
     },
     primaryColor: '#FF5800',
     gradientColors: ['#FF5800', '#FF9056'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
 ]

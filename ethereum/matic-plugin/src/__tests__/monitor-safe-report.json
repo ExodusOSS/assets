@@ -1,0 +1,675 @@
+{
+  "walletAccounts": {
+    "data": {
+      "exodus_0": {
+        "source": "exodus",
+        "index": 0,
+        "label": "Exodus 0",
+        "color": "#ff0000",
+        "icon": "exodus",
+        "enabled": true,
+        "isMultisig": false
+      }
+    }
+  },
+  "orders": {
+    "data": {}
+  },
+  "accountStates": {
+    "exodus_0": {
+      "data": {
+        "matic": {
+          "t": "object",
+          "v": {
+            "startblock": 0,
+            "clarityCursor": {
+              "t": "buffer",
+              "v": "+8tyBAAAAAA="
+            },
+            "balance": {
+              "t": "numberunit",
+              "v": {
+                "v": "0 MATICNATIVE",
+                "u": {
+                  "wei": 0,
+                  "Kwei": 3,
+                  "Mwei": 6,
+                  "Gwei": 9,
+                  "szabo": 12,
+                  "finney": 15,
+                  "MATICNATIVE": 18
+                }
+              }
+            },
+            "tokenBalances": {
+              "t": "object",
+              "v": {}
+            },
+            "index": 0,
+            "_version": 1
+          }
+        }
+      }
+    }
+  },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "matic": [
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x5d0dc22337180f5ec8339e5f1db0ea4b4bc7410080425a015f65fd4df98d6168",
+            "date": "2022-04-08T19:20:11.094Z",
+            "confirmations": 1,
+            "from": ["0xe1fabf4b99e92a6a896d06919bb6ceb66aedb87c"],
+            "data": {
+              "data": "0x",
+              "nonce": 12502,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "0",
+                "to": "43584328575589865000"
+              },
+              "nonceChange": {
+                "from": "0",
+                "to": "0"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "matic",
+            "coinAmount": "43.584328575589865 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x176c3625989a22a7caf8bd8216d2f078681c377897b0f25487feb809690d20f2",
+            "date": "2022-04-18T02:45:43.069Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0xa9059cbb000000000000000000000000fa56417d077a41a20aa190a8fcd841ebefa2859e000000000000000000000000000000000000000000000000000a9b573be5132f",
+              "nonce": 0,
+              "gasLimit": 62378,
+              "balanceChange": {
+                "from": "43584328575589865000",
+                "to": "43582374536199591190"
+              },
+              "nonceChange": {
+                "from": "0",
+                "to": "1"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "to": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.00195403939027381 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xb98edf73006339fad20fe21674ef75b5c361bb96272dc609032206f9b32c162a",
+            "date": "2022-04-18T03:10:10.055Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x",
+              "nonce": 1,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "43582374536199591190",
+                "to": "38581504822597036190"
+              },
+              "nonceChange": {
+                "from": "1",
+                "to": "2"
+              },
+              "methodId": "0x"
+            },
+            "to": "0xfa56417d077a41a20aa190a8fcd841ebefa2859e",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "-5 MATICNATIVE",
+            "feeAmount": "0.000869713602555 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xf20271d7b05e4a9b138d8b339910d46f1c58b4e06f539e61940a6c7331fae3f0",
+            "date": "2022-05-04T19:03:09.096Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x",
+              "nonce": 2,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "38581504822597036190",
+                "to": "15720123265190"
+              },
+              "nonceChange": {
+                "from": "2",
+                "to": "3"
+              },
+              "methodId": "0x"
+            },
+            "to": "0xfa56417d077a41a20aa190a8fcd841ebefa2859e",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "-38.57712 MATICNATIVE",
+            "feeAmount": "0.004369102473771 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x51ad9889b3862d70a1d21af2a8be4734fb6c531b9772b0410ee2ac371273b79b",
+            "date": "2022-05-04T19:05:05.067Z",
+            "confirmations": 1,
+            "from": ["0xfa56417d077a41a20aa190a8fcd841ebefa2859e"],
+            "data": {
+              "data": "0x",
+              "nonce": 1,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "15720123265190",
+                "to": "2015720123265190"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "matic",
+            "coinAmount": "0.002 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x3c27bb942d9679c2c9cdb437ed702ddfa00adf64494709c1b4a477b02906d68f",
+            "date": "2022-07-01T12:48:50.164Z",
+            "confirmations": 1,
+            "from": ["0xc04b6e3d3c2f743ec4be1db438d1870deb8d9ab0"],
+            "data": {
+              "data": "0x",
+              "nonce": 5,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "2015720123265190",
+                "to": "4002015720123265190"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "matic",
+            "coinAmount": "4 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x4ffa08fa59a2fcf437b3cc4b963d4734b394f02250aaab80b29b4a7845ea21ee",
+            "date": "2022-07-01T12:59:32.076Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef0900000000000000000000000000000000000000000000000000000000000186a0",
+              "nonce": 3,
+              "gasLimit": 77564,
+              "balanceChange": {
+                "from": "4002015720123265190",
+                "to": "4000296900123265190"
+              },
+              "nonceChange": {
+                "from": "3",
+                "to": "4"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "to": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.00171882 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xc83e243f9d58edb52cfd2f70ca78b087c6bc903e597e8727ff4dfa4e4349b955",
+            "date": "2022-07-01T12:59:40.058Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef0900000000000000000000000000000000000000000000000000000000000186a0",
+              "nonce": 4,
+              "gasLimit": 57044,
+              "balanceChange": {
+                "from": "4000296900123265190",
+                "to": "3999091080123265190"
+              },
+              "nonceChange": {
+                "from": "4",
+                "to": "5"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "to": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.00120582 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x4b2581fa521ffb0d445d02049005d21202ca1b77445d0e34ad4623dfe19cfb34",
+            "date": "2022-07-01T14:19:12.039Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x095ea7b3000000000000000000000000def1c0ded9bec7f1a1670819833240f027b25effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "nonce": 5,
+              "gasLimit": 100000,
+              "balanceChange": {
+                "from": "3999091080123265190",
+                "to": "3996948133191061134"
+              },
+              "nonceChange": {
+                "from": "5",
+                "to": "6"
+              },
+              "methodId": "0x095ea7b3"
+            },
+            "to": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.002142946932204056 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x80ebab632e1a7fd9f95a2973f7d683b096300d31f7d46bfa81e3e367f27234c5",
+            "date": "2022-07-01T14:20:24.015Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x415565b0",
+              "nonce": 6,
+              "gasLimit": 424081,
+              "balanceChange": {
+                "from": "3996948133191061134",
+                "to": "3977250998191061134"
+              },
+              "nonceChange": {
+                "from": "6",
+                "to": "7"
+              },
+              "methodId": "0x415565b0"
+            },
+            "to": "0xdef1c0ded9bec7f1a1670819833240f027b25eff",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.019697135 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xb5004e8c7be477f25b02ec9d8907e34257c40e42115610b1fe7285efe7e4a21b",
+            "date": "2022-09-15T20:23:49.106Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef0900000000000000000000000000000000000000000000000000000285f53b6997",
+              "nonce": 7,
+              "gasLimit": 62364,
+              "balanceChange": {
+                "from": "3977250998191061134",
+                "to": "3975835898191061134"
+              },
+              "nonceChange": {
+                "from": "7",
+                "to": "8"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "to": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.0014151 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x49926c68843b20679805cccb209afa8705f62ceed36db1b5354e9b6eb4aa4e4c",
+            "date": "2024-06-24T18:16:52.050Z",
+            "confirmations": 1,
+            "from": ["0xf6c138c36341138ddfc314a11038da8264b7ef09"],
+            "data": {
+              "data": "0x",
+              "nonce": 2,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "3975835898191061134",
+                "to": "277344251811587325383"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "matic",
+            "coinAmount": "273.368415913396264249 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xf094242b0d7311a9025b241f2f64e18d0a4f4429b409794f26e35f063ddde43d",
+            "date": "2024-06-24T20:09:52.046Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef0900000000000000000000000000000000000000000000000000000000000f4240",
+              "nonce": 8,
+              "gasLimit": 77564,
+              "balanceChange": {
+                "from": "277344251811587325383",
+                "to": "277342152051587325383"
+              },
+              "nonceChange": {
+                "from": "8",
+                "to": "9"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "to": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "0 MATICNATIVE",
+            "feeAmount": "0.00209976 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x5ef4f8c42dd4727a713afa03e6cb11e025a40352c663c8b316528645c50a6839",
+            "date": "2024-09-11T18:32:27.025Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x",
+              "nonce": 9,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "277342152051587325383",
+                "to": "12341417051586716383"
+              },
+              "nonceChange": {
+                "from": "9",
+                "to": "10"
+              },
+              "methodId": "0x"
+            },
+            "to": "0xaf8ef340a305e5ecf3f3f1bfdadd3ae6a8bf2fda",
+            "dropped": false,
+            "coinName": "matic",
+            "feeCoinName": "matic",
+            "coinAmount": "-265 MATICNATIVE",
+            "feeAmount": "0.000735000000609 MATICNATIVE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0x6ae3c8ff3821b9ebf61e3d33841922ccba2546206bdca235bc7a6010e801a960",
+            "date": "2025-07-15T15:21:16.051Z",
+            "confirmations": 1,
+            "from": ["0x18917e47756c0618fe2d0f11d41e54c5c9adf34a"],
+            "data": {
+              "data": "0x",
+              "nonce": 0,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "12341417051586716383",
+                "to": "12435746617150224383"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "matic",
+            "coinAmount": "0.094329565563508 MATICNATIVE"
+          }
+        ],
+        "aave_matic_bfdf3c37": [
+          {
+            "version": 1,
+            "currencies": {
+              "aave_matic_bfdf3c37": {
+                "base": 0,
+                "AAVEmaticBFDF3C37": 18
+              },
+              "matic": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "MATICNATIVE": 18
+              }
+            },
+            "txId": "0xd866ef066e149d13ceda314d2cda13d1754b93e5f3bd66b219e63d6416295545",
+            "date": "2025-07-15T15:30:38.044Z",
+            "confirmations": 1,
+            "from": ["0xb63a29c52445673770d8ef03a16b3f9fc2c939a9"],
+            "data": {
+              "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d00000000000000000000000000000000000000000000000000023d72a982e39d",
+              "nonce": 3,
+              "gasLimit": 84233,
+              "balanceChange": {
+                "from": "0",
+                "to": "630512632914845"
+              },
+              "methodId": "0xa9059cbb"
+            },
+            "dropped": false,
+            "coinName": "aave_matic_bfdf3c37",
+            "coinAmount": "0.000630512632914845 AAVEmaticBFDF3C37"
+          }
+        ]
+      }
+    }
+  },
+  "addresses": {
+    "exodus_0": {
+      "matic": {
+        "address": "0x90E481d9A664ebbE4Be180d9501962255463036d"
+      },
+      "aave_matic_bfdf3c37": {
+        "address": "0x90E481d9A664ebbE4Be180d9501962255463036d"
+      }
+    }
+  },
+  "version": {
+    "platform": "Testing",
+    "version": "0.0.1",
+    "navigator": {
+      "name": "nodejs",
+      "version": "0.0.1"
+    }
+  },
+  "balances": {
+    "exodus_0": {
+      "matic": {
+        "total": "12435746617150224383 wei",
+        "balance": "12435746617150224383 wei",
+        "spendable": "12435746617150224383 wei",
+        "spendableBalance": "12435746617150224383 wei",
+        "unconfirmedSent": "0 wei",
+        "unconfirmedReceived": "0 wei",
+        "staking": "0 wei",
+        "staked": "0 wei",
+        "unstaking": "0 wei",
+        "unstaked": "0 wei"
+      },
+      "aave_matic_bfdf3c37": {
+        "total": "630512632914845 base",
+        "balance": "630512632914845 base",
+        "spendable": "630512632914845 base",
+        "spendableBalance": "630512632914845 base",
+        "unconfirmedSent": "0 base",
+        "unconfirmedReceived": "0 base",
+        "staking": "0 base",
+        "staked": "0 base",
+        "unstaking": "0 base",
+        "unstaked": "0 base"
+      }
+    }
+  }
+}

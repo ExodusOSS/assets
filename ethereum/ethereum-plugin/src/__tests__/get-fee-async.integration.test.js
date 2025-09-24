@@ -1,6 +1,10 @@
 import { getTestingSeed, walletTester } from '@exodus/assets-testing'
+import { convertForSnapshot } from '@exodus/ethereum-api/src/__tests__/eth-test-utils.js'
+import { WalletAccount } from '@exodus/models'
 
 import assetPlugin from '../index.js'
+
+const walletAccount = WalletAccount.DEFAULT
 
 describe(`ethereum get async fees`, () => {
   walletTester({
@@ -9,59 +13,57 @@ describe(`ethereum get async fees`, () => {
     assetName: 'ethereum',
     seed: getTestingSeed(),
     tests: {
-      'ethereum without arguments': async ({ asset }) => {
-        const fees = await asset.api.getFeeAsync({ asset })
-        expect(fees).toEqual({
-          extraFeeData: {},
-          fee: asset.currency.parse('1575000 Gwei'),
-          gasLimit: 21_000,
-          gasPrice: asset.currency.parse('75 Gwei'),
-        })
+      'ethereum without arguments': async ({ asset, fees: feesModule }) => {
+        const fees = await feesModule.getFees({ assetName: asset.name, walletAccount })
+
+        asset.server.stop()
+
+        expect(convertForSnapshot(fees)).toMatchSnapshot()
       },
 
-      'ethereum with arguments': async ({ asset }) => {
+      'ethereum with arguments': async ({ asset, fees: feesModule }) => {
         const amount = asset.currency.parse('123 Gwei')
         const fromAddress = '0x111fffffffffffffffffffffffffffffffffffff'
         const toAddress = '0x111fffffffffffffffffffffffffffffffffffff'
         const txInput = '0x'
-        const fees = await asset.api.getFeeAsync({
-          asset,
+        const fees = await feesModule.getFees({
+          assetName: asset.name,
+          walletAccount,
           amount,
           fromAddress,
           toAddress,
           txInput,
         })
-        expect(fees).toEqual({
-          extraFeeData: {},
-          fee: asset.currency.parse('1575000 Gwei'),
-          gasLimit: 21_000,
-          gasPrice: asset.currency.parse('75 Gwei'),
-        })
+
+        asset.server.stop()
+
+        expect(convertForSnapshot(fees)).toMatchSnapshot()
       },
 
-      'polygon without arguments': async ({ asset, assetsModule }) => {
-        const polygon = assetsModule.getAsset('polygon')
-        const fees = await asset.api.getFeeAsync({ asset: polygon })
-        expect(fees).toEqual({
-          extraFeeData: {},
-          fee: asset.currency.parse('2662275 Gwei'),
-          gasLimit: 35_497,
-          gasPrice: asset.currency.parse('75 Gwei'),
-        })
+      'polygon without arguments': async ({ asset, assetsModule, fees: feesModule }) => {
+        const gasLimit = 38_159
+        const fees = await feesModule.getFees({ assetName: 'polygon', walletAccount, gasLimit })
+
+        asset.server.stop()
+
+        expect(convertForSnapshot(fees)).toMatchSnapshot()
       },
 
-      'polygon with arguments': async ({ asset, assetsModule }) => {
+      'polygon with arguments': async ({ asset, assetsModule, fees: feesModule }) => {
         const polygon = assetsModule.getAsset('polygon')
         const amount = polygon.currency.parse('0 base') // no amount
         const fromAddress = '0x111fffffffffffffffffffffffffffffffffffff'
         const toAddress = '0x111fffffffffffffffffffffffffffffffffffff'
-        const fees = await asset.api.getFeeAsync({ asset: polygon, amount, fromAddress, toAddress })
-        expect(fees).toEqual({
-          extraFeeData: {},
-          fee: asset.currency.parse('2662275 Gwei'),
-          gasLimit: 35_497,
-          gasPrice: asset.currency.parse('75 Gwei'),
+        const fees = await feesModule.getFees({
+          assetName: polygon.name,
+          walletAccount,
+          amount,
+          fromAddress,
+          toAddress,
         })
+
+        asset.server.stop()
+        expect(convertForSnapshot(fees)).toMatchSnapshot()
       },
     },
   })

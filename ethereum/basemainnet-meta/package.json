@@ -1,6 +1,6 @@
 {
   "name": "@exodus/basemainnet-meta",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Base Mainnet constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",

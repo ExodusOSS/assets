@@ -1,5 +1,5 @@
 const ALLOWED_CLUSTERS = ['mainnet-beta', 'testnet', 'devnet']
-const MAX_STRING_LENGTH = 10000
+const MAX_STRING_LENGTH = 10_000
 
 const signOptions = {
   type: 'object',
@@ -22,6 +22,7 @@ const sendOptions = {
     minContextSlot: { type: 'integer', minimum: 0 },
   },
 }
+
 export const definitions = {
   sms: {
     signOptions,

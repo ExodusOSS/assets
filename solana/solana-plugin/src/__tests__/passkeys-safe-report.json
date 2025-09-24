@@ -57,6 +57,8 @@
                 }
               }
             },
+            "accountSize": 0,
+            "ownerChanged": false,
             "stakingInfo": {
               "t": "object",
               "v": {
@@ -177,7 +179,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "solana",
             "feeCoinName": "solana",
             "coinAmount": "0 SOL",
@@ -285,7 +287,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "solana",
             "feeCoinName": "solana",
             "coinAmount": "0 SOL",
@@ -313,7 +315,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "solana",
             "feeCoinName": "solana",
             "coinAmount": "0 SOL",
@@ -444,7 +446,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "BjQ1sgPX9LSushr4kxWtYtmKdDxTZhqy5BgcpYZgHigc",
+            "to": "F4jUJqyTMCVH2C1ZiXSg1c9TGpetxWAxo7UTjCJLXStG",
             "coinName": "solana",
             "feeCoinName": "solana",
             "coinAmount": "0 SOL",
@@ -487,7 +489,7 @@
             "txId": "534jE3t8M1b5yeJtjNRJLiRsBWE5r5r8XukKF8kH5fn9kPS6AZjhCLHrERhquKVi6cMCJgVwHUC8sM6LD6GGf9Qs",
             "date": "2024-10-03T20:35:32.000Z",
             "confirmations": 1,
-            "from": ["62K1tcn2GmfDPUfqk248czT2ZPjtzS2UZ49nRoEUwZgx"],
+            "from": ["5Vks2yuTZXaHgX9Cwe4nNFu5zGabx16TqvhMSnyLt3HN"],
             "data": {
               "staking": null,
               "unparsed": false,
@@ -517,7 +519,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "usdcoin_solana",
             "feeCoinName": "solana",
             "coinAmount": "-0.0345 USDCSOL",
@@ -544,7 +546,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "usdcoin_solana",
             "feeCoinName": "solana",
             "coinAmount": "-0.0345 USDCSOL",
@@ -571,7 +573,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "DgVWZyxwwafkdDWq61Yp1ShVY9asMeAh973bqh4SJmKQ",
+            "to": "6Gs6bTp62L9xAJ5pQEv1sFeBkwi3zKyrVfnzgR4Srcij",
             "coinName": "usdcoin_solana",
             "feeCoinName": "solana",
             "coinAmount": "-0.0345 USDCSOL",
@@ -598,7 +600,7 @@
               "unparsed": false,
               "swapTx": false
             },
-            "to": "BjQ1sgPX9LSushr4kxWtYtmKdDxTZhqy5BgcpYZgHigc",
+            "to": "F4jUJqyTMCVH2C1ZiXSg1c9TGpetxWAxo7UTjCJLXStG",
             "coinName": "usdcoin_solana",
             "feeCoinName": "solana",
             "coinAmount": "-4.00206 USDCSOL",

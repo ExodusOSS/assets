@@ -54,8 +54,10 @@ export class Connection {
             console.log(`solana ws: reply timeout (${method}) - ${JSON.stringify(params)} - ${id}`)
             resolve(null)
           }, TIMEOUT)
-          if (typeof this.rpcQueue[id].timeout.unref === 'function')
+          if (typeof this.rpcQueue[id].timeout.unref === 'function') {
             this.rpcQueue[id].timeout.unref()
+          }
+
           this.ws.send(JSON.stringify({ jsonrpc: '2.0', method, params, id }))
         })
       },

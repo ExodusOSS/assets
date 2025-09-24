@@ -27,35 +27,23 @@ describe(`bitcoin fees test`, () => {
       amount,
       isSendAll,
     })
-    const availableBalance = asset.getAvailableBalance({
-      asset: baseAsset,
-      accountState,
-      txSet,
-      feeData,
-      amount,
-      isSendAll,
-    })
 
-    const spendableBalance = asset.getSpendableBalance({
+    const { spendable: spendableBalance } = asset.api.getBalances({
       asset: baseAsset,
       accountState,
-      txSet,
+      txLog: txSet,
       feeData,
-      amount,
-      isSendAll,
     })
     const { balance } = asset.api.getBalances({ asset, accountState, txLog: txSet })
     const amounts = {
       balance,
       fee,
-      availableBalance,
       spendableBalance,
+      availableBalance: spendableBalance.sub(fee),
       extraFee: extraFeeData?.extraFee || asset.currency.ZERO,
     }
     return {
-      ...amounts,
       all: mapValues(amounts, (balance) => balance.toBaseString({ unit: true })),
-      extraFeeType: extraFeeData?.type,
     }
   }
 
@@ -85,7 +73,7 @@ describe(`bitcoin fees test`, () => {
       }) => {
         const walletAccount = `exodus_0`
         const amount = asset.currency.parse('10 satoshis')
-        const { balance, fee, spendableBalance, availableBalance, all } = await resolveAmounts({
+        const { all } = await resolveAmounts({
           assetClientInterface,
           asset,
           walletAccount,
@@ -98,14 +86,6 @@ describe(`bitcoin fees test`, () => {
           extraFee: '0 satoshis',
           spendableBalance: '110000 satoshis',
         })
-
-        expect(balance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
-
-        expect(spendableBalance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
       },
 
       'resolve fee of sending 10 satoshis from exodus_1': async ({
@@ -114,13 +94,12 @@ describe(`bitcoin fees test`, () => {
       }) => {
         const walletAccount = `exodus_1`
         const amount = asset.currency.parse('10 satoshis')
-        const { balance, fee, spendableBalance, availableBalance, extraFee, all } =
-          await resolveAmounts({
-            assetClientInterface,
-            asset,
-            walletAccount,
-            amount,
-          })
+        const { all } = await resolveAmounts({
+          assetClientInterface,
+          asset,
+          walletAccount,
+          amount,
+        })
         expect(all).toEqual({
           availableBalance: '1306719 satoshis',
           balance: '1321067 satoshis',
@@ -128,18 +107,11 @@ describe(`bitcoin fees test`, () => {
           extraFee: '0 satoshis',
           spendableBalance: '1321067 satoshis',
         })
-
-        expect(balance.sub(fee).add(extraFee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
-        expect(spendableBalance.sub(fee).add(extraFee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
       },
 
       'resolve fee of sending all from exodus_0': async ({ assetClientInterface, asset }) => {
         const walletAccount = `exodus_0`
-        const { balance, fee, availableBalance, spendableBalance, all } = await resolveAmounts({
+        const { all } = await resolveAmounts({
           assetClientInterface,
           asset,
           walletAccount,
@@ -152,17 +124,11 @@ describe(`bitcoin fees test`, () => {
           extraFee: '0 satoshis',
           spendableBalance: '110000 satoshis',
         })
-        expect(balance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
-        expect(spendableBalance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
       },
 
       'resolve fee of sending all from exodus_1': async ({ assetClientInterface, asset }) => {
         const walletAccount = `exodus_1`
-        const { balance, fee, availableBalance, spendableBalance, all } = await resolveAmounts({
+        const { all } = await resolveAmounts({
           assetClientInterface,
           asset,
           walletAccount,
@@ -175,12 +141,6 @@ describe(`bitcoin fees test`, () => {
           extraFee: '0 satoshis',
           spendableBalance: '1321067 satoshis',
         })
-        expect(balance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
-        expect(spendableBalance.sub(fee).toBaseString({ unit: true })).toEqual(
-          availableBalance.toBaseString({ unit: true })
-        )
       },
     },
   })

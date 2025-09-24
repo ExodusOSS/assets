@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.7.0...@exodus/matic-plugin@2.7.1) (2025-08-12)
+
+
+### Bug Fixes
+
+
+* fix: exchange compatibility (#6230)
+
+* fix: include assetName in txMeta (#6113)
+
+
+
+## [2.7.0](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.6.4...@exodus/matic-plugin@2.7.0) (2025-07-15)
+
+
+### Features
+
+
+* feat: tx send split, tx-create (#5854)
+
+
+
+## [2.6.4](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.6.3...@exodus/matic-plugin@2.6.4) (2025-07-01)
+
+
+### Bug Fixes
+
+
+* fix: ethereum api cleaning up (#5832)
+
+
+
+## [2.6.3](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.6.2...@exodus/matic-plugin@2.6.3) (2025-04-29)
+
+**Note:** Version bump only for package @exodus/matic-plugin
+
+
+
+
+
+## [2.6.2](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.6.1...@exodus/matic-plugin@2.6.2) (2025-03-06)
+
+
+### Bug Fixes
+
+
+* fix: ethereum and matic staking service improvements (#5109)
+
+* fix: use gasPriceMultiplier when setting up min/max/recommended (#4700)
+
+
+
 ## [2.6.1](https://github.com/ExodusMovement/assets/compare/@exodus/matic-plugin@2.6.0...@exodus/matic-plugin@2.6.1) (2024-12-12)
 
 

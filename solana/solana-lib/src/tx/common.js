@@ -1,3 +1,4 @@
+import { VersionedTransaction } from '@exodus/solana-web3.js'
 import base58 from 'bs58'
 
 export function isVersionedTransaction(tx) {
@@ -10,6 +11,10 @@ export function isLegacyTransaction(tx) {
 
 export function transactionToBase58(tx) {
   return base58.encode(tx.serialize())
+}
+
+export function deserializeTransaction(tx) {
+  return VersionedTransaction.deserialize(tx)
 }
 
 export function getTxId(tx) {

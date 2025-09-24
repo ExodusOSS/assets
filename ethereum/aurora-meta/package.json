@@ -1,6 +1,6 @@
 {
   "name": "@exodus/aurora-meta",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "description": "Aurora constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",
@@ -11,21 +11,21 @@
     "CHANGELOG.md"
   ],
   "author": "Exodus Movement, Inc.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/aurora-meta",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "test": "run -T exodus-test --jest",
-    "lint": "run -T eslint .",
+    "lint": "run -T eslintc .",
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/asset": "^2.0.0"
+    "@exodus/asset": "^2.0.4"
   },
   "devDependencies": {
-    "@exodus/assets-meta-testing": "^1.0.0"
+    "@exodus/assets-meta-testing": "workspace:^"
   },
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aaurora-meta"

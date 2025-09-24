@@ -47,9 +47,21 @@ test('Solana: getTokenAccountsByOwner', async () => {
   expect(usdcAccounts.length).toEqual(0)
 })
 
-test('Solana: getTokensBalance', async () => {
-  const tokensBalance = await api.getTokensBalance({ address: ADDRESS })
+test('Solana: getTokensBalancesAndAccounts', async () => {
+  const { balances: tokensBalance, accounts } = await api.getTokensBalancesAndAccounts({
+    address: ADDRESS,
+  })
   expect(tokensBalance).toEqual({ serum: 100 })
+  expect(accounts.length).toBeTruthy()
+  expect(accounts[0].tokenName).toEqual('serum')
+  expect(accounts[0].ticker).toEqual('SRM')
+  expect(accounts[0].owner).toEqual(ADDRESS)
+  expect(accounts[0].tokenAccountAddress).toEqual(ASSOCIATED_TOKEN_ADDRESS)
+  expect(accounts[0].balance).toEqual('100') // in lamports
+
+  // expect no usdc tokens
+  const usdcAccounts = await api.getTokenAccountsByOwner(ADDRESS, 'USDCSOL')
+  expect(usdcAccounts.length).toEqual(0)
 })
 
 test('Solana: getTokenAddressOwner', async () => {

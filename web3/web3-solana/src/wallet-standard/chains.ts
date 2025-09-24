@@ -17,7 +17,7 @@ export const SOLANA_MAINNET_CHAIN = 'solana:mainnet'
 export const SOLANA_CHAINS = [SOLANA_MAINNET_CHAIN] as const
 
 /** Type of all Solana clusters */
-export type SolanaChain = typeof SOLANA_CHAINS[number]
+export type SolanaChain = (typeof SOLANA_CHAINS)[number]
 
 /**
  * Check if a chain corresponds with one of the Solana clusters.

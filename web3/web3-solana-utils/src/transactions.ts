@@ -1,4 +1,6 @@
 import solanaApi from '@exodus/solana-api'
+import { decodeTransactionInstructions } from '@exodus/solana-lib'
+import type { TransactionVersion } from '@exodus/solana-web3.js'
 import {
   AddressLookupTableAccount,
   Message,
@@ -8,17 +10,15 @@ import {
   TransactionMessage,
   VersionedTransaction,
 } from '@exodus/solana-web3.js'
+import type { Base58, Base64, Bytes } from '@exodus/web3-types'
 
 import { VersionedTransactionUnsupportedError } from './errors.js'
 import {
   MAX_SIGNATURES,
-  SIGNATURE_LENGTH,
   serializeTransactionSignature,
+  SIGNATURE_LENGTH,
 } from './signatures.js'
-
 import type { LegacyOrVersionedTransaction, PreparedMessages } from './types.js'
-import type { TransactionVersion } from '@exodus/solana-web3.js'
-import type { Base58, Base64, Bytes } from '@exodus/web3-types'
 
 export const VERSIONED_TRANSACTION_SUPPORTED = !!VersionedTransaction
 export const SUPPORTED_TRANSACTION_VERSIONS: ReadonlySet<TransactionVersion> =
@@ -54,7 +54,7 @@ function isLegacyMessage(data: Bytes): boolean {
     const message = Message.from(data)
     message.serialize() // Invalid messages will throw on serialization.
     return true
-  } catch (err) {
+  } catch {
     return false
   }
 }
@@ -65,10 +65,10 @@ function isVersionedMessage(data: Bytes) {
     // The first bytes of a transaction message contains its version number
     // so we ban all bytes starting at 0x80 and ending at 0xFE
     // 0xFF is allowed because that is used for offchain messages
-    return data[0] >= 0x80 && data[0] != 0xff
-  } else {
-    return false
+    return data[0] >= 0x80 && data[0] !== 0xff
   }
+
+  return false
 }
 
 export function isTransactionMessage(data: Bytes): boolean {
@@ -97,10 +97,11 @@ export function deserializeTransactionBytes(
 ): LegacyOrVersionedTransaction {
   try {
     return Transaction.from(wireTransactionBuffer)
-  } catch (err) {
+  } catch {
     if (!VersionedTransaction) {
       throw new VersionedTransactionUnsupportedError()
     }
+
     return VersionedTransaction.deserialize(
       Uint8Array.from(wireTransactionBuffer),
     )
@@ -145,11 +146,13 @@ export function buildRawTransaction(
   const rawTransactionLength = signData.length + signaturesLength
 
   if (signatures.length > MAX_SIGNATURES) {
-    throw Error(`Too many signatures: ${signatures.length} > ${MAX_SIGNATURES}`)
+    throw new Error(
+      `Too many signatures: ${signatures.length} > ${MAX_SIGNATURES}`,
+    )
   }
 
   if (rawTransactionLength > PACKET_DATA_SIZE) {
-    throw Error(
+    throw new Error(
       `Transaction too large: ${rawTransactionLength} > ${PACKET_DATA_SIZE}`,
     )
   }
@@ -163,7 +166,7 @@ export function buildRawTransaction(
     }
 
     if (signature.length !== SIGNATURE_LENGTH) {
-      throw Error('Invalid signature length')
+      throw new Error('Invalid signature length')
     }
 
     Buffer.from(signature).copy(
@@ -180,7 +183,13 @@ export function buildRawTransaction(
 export function isLegacyTransaction(
   transaction: LegacyOrVersionedTransaction,
 ): transaction is Transaction {
-  return !Number.isInteger((transaction as VersionedTransaction).version)
+  return !('version' in transaction) && 'instructions' in transaction
+}
+
+export function isVersionedTransaction(
+  transaction: LegacyOrVersionedTransaction,
+): transaction is VersionedTransaction {
+  return 'version' in transaction
 }
 
 export function isTransactionVersionSupported(
@@ -239,6 +248,35 @@ export async function decompileTransactionMessage(
   })
 }
 
+export const decodeRecipientAddresses = (
+  transaction: LegacyOrVersionedTransaction,
+): string[] => {
+  try {
+    const message = isLegacyTransaction(transaction)
+      ? transaction.compileMessage()
+      : transaction.version === 'legacy'
+        ? transaction.message
+        : TransactionMessage.decompile(transaction.message)
+
+    const addresses: string[] = []
+    const instructions = decodeTransactionInstructions([message])
+
+    for (const instruction of instructions) {
+      if (instruction.type === 'systemTransfer') {
+        addresses.push(instruction.data.toPubkey.toBase58())
+      }
+
+      if (instruction.type === 'transfer') {
+        addresses.push(instruction.data.destinationPubKey.toBase58())
+      }
+    }
+
+    return addresses
+  } catch {
+    return []
+  }
+}
+
 async function getAddressLookupTable(
   accountAddress: string,
 ): Promise<AddressLookupTableAccount | null> {
@@ -260,5 +298,5 @@ export function applySignatures(
   transaction: LegacyOrVersionedTransaction,
   signedTransaction: LegacyOrVersionedTransaction,
 ) {
-  transaction.signatures = signedTransaction.signatures
+  transaction.signatures = signedTransaction.signatures // eslint-disable-line @exodus/mutable/no-param-reassign-prop-only
 }

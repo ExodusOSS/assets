@@ -92,6 +92,29 @@ describe('update', () => {
     })
     expect(b === c).toBeFalse()
   })
+
+  test('deep merge', () => {
+    const a = new FeeData({
+      config: { fee: '1 ETH', gasLimts: { token1: { value: 1 }, token2: { value: 2 } } },
+      mainKey: null,
+      currency,
+    })
+    const b = a.update({
+      gasLimts: { token1: { value: 11, another: 'a' }, token3: { value: 3 } },
+    })
+    expect(b.gasLimts).toEqual({
+      token1: {
+        another: 'a',
+        value: 11,
+      },
+      token2: {
+        value: 2,
+      },
+      token3: {
+        value: 3,
+      },
+    })
+  })
 })
 
 test('toJSON', () => {

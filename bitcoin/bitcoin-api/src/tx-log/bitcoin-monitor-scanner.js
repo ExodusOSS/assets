@@ -79,6 +79,9 @@ export class BitcoinMonitorScanner {
       assetName,
       walletAccount,
     })
+
+    const multisigDataLength = assetConfig.multisigDataLength
+
     // multiAddressMode may be null, in which case it is enabled.
     const multiAddressMode = assetConfig.multiAddressMode ?? true
 
@@ -178,37 +181,41 @@ export class BitcoinMonitorScanner {
           addressIndex <= endAddressIndex;
           addressIndex++
         ) {
-          promises.push(
-            assetClientInterface
-              .getAddress({
-                assetName,
-                walletAccount,
-                purpose,
-                chainIndex,
-                addressIndex,
-              })
-              .then((address) => {
-                const addressObject = this.#asset.address.toLegacyAddress
-                  ? Address.create(
-                      this.#asset.address.toLegacyAddress(String(address)),
-                      address.meta
-                    )
-                  : address
-
-                const addressString = String(addressObject)
-
-                if (addrMap[addressString]) {
-                  return null
-                }
-
-                addrMap[addressString] = addressObject
-
-                return {
-                  address: addressObject,
+          const index = multisigDataLength ?? 1
+          for (let i = 0; i < index; i++) {
+            promises.push(
+              assetClientInterface
+                .getAddress({
+                  assetName,
+                  walletAccount,
                   purpose,
-                }
-              })
-          )
+                  chainIndex,
+                  addressIndex,
+                  ...(multisigDataLength ? { multisigDataIndex: i } : Object.create(null)),
+                })
+                .then((address) => {
+                  const addressObject = this.#asset.address.toLegacyAddress
+                    ? Address.create(
+                        this.#asset.address.toLegacyAddress(String(address)),
+                        address.meta
+                      )
+                    : address
+
+                  const addressString = String(addressObject)
+
+                  if (addrMap[addressString]) {
+                    return null
+                  }
+
+                  addrMap[addressString] = addressObject
+
+                  return {
+                    address: addressObject,
+                    purpose,
+                  }
+                })
+            )
+          }
         }
       }
 
@@ -619,7 +626,7 @@ export class BitcoinMonitorScanner {
 
     // this protects from the server returning bad spentTxId
     utxos = utxos.filter((utxo) => {
-      if (!vinTxids[`${utxo.txId}-${utxo.vout}`]) return utxo
+      return !vinTxids[`${utxo.txId}-${utxo.vout}`]
     })
 
     let utxoCol = UtxoCollection.fromArray(utxos, { currency })

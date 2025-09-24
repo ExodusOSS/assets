@@ -4,9 +4,8 @@ import {
   createAccountState,
   createAndBroadcastTXFactory,
   getBalancesFactory,
-  getUnstakingFee,
+  getFeeAsyncFactory,
   isSolanaRewardsActivityTx,
-  SolanaAutoWithdrawMonitor,
   SolanaMonitor,
 } from '@exodus/solana-api'
 import {
@@ -25,9 +24,10 @@ import {
 import ms from 'ms'
 
 import { createGetBalanceForAddress } from './get-balance-for-address.js'
+import sendValidationsFactory from './send-validations.js'
 import { createWeb3API } from './web3/index.js'
 
-const DEFAULT_ACCOUNT_RESERVE = 0.01
+const DEFAULT_ACCOUNT_RESERVE = 0
 const DEFAULT_LOW_BALANCE = 0.01
 const DEFAULT_MIN_STAKING_AMOUNT = 0.01
 
@@ -38,7 +38,9 @@ export const createSolanaAssetFactory =
     config: {
       stakingFeatureAvailable = true,
       includeUnparsed = false,
+      allowSendingAll = true,
       monitorInterval = ms('30s'),
+      shouldUpdateBalanceBeforeHistory = true,
       defaultAccountReserve = DEFAULT_ACCOUNT_RESERVE,
       defaultLowBalance = DEFAULT_LOW_BALANCE,
       defaultMinStakingAmount = DEFAULT_MIN_STAKING_AMOUNT,
@@ -46,15 +48,16 @@ export const createSolanaAssetFactory =
       ticksBetweenStakeFetches,
       txsLimit,
       signWithSigner = true,
+      feePayerApiUrl,
     } = {},
     overrideCallback = ({ asset }) => asset,
   } = {}) => {
     const assets = connectAssetsList(assetList)
 
-    const baseName = assetList.find((asset) => asset.baseAssetName === asset.name)
-    const base = assets[baseName]
+    const { name: baseAssetName } = assetList.find((asset) => asset.baseAssetName === asset.name)
+    const base = assets[baseAssetName]
 
-    const smallTxAmount = base.currency.defaultUnit('0.000005')
+    const smallTxAmount = base.currency.defaultUnit('0.00005')
     const accountReserve = base.currency.defaultUnit(
       defaultAccountReserve ?? DEFAULT_ACCOUNT_RESERVE
     )
@@ -76,11 +79,15 @@ export const createSolanaAssetFactory =
       encodePublic: getAddressFromPublicKey,
     }
 
-    const getBalances = getBalancesFactory({ stakingFeatureAvailable })
+    const getBalances = getBalancesFactory({ stakingFeatureAvailable, allowSendingAll })
 
     const feeData = createFeeData({ asset: base })
 
-    const sendTx = createAndBroadcastTXFactory({ api: serverApi, assetClientInterface })
+    const sendTx = createAndBroadcastTXFactory({
+      api: serverApi,
+      assetClientInterface,
+      feePayerApiUrl,
+    })
 
     const createToken = ({ mintAddress, name, ...tokenDef }) => ({
       ...tokenDef,
@@ -92,7 +99,7 @@ export const createSolanaAssetFactory =
       name,
       api: {
         features: {},
-        getBalances,
+        getBalances: (...args) => api.getBalances(...args),
       },
     })
 
@@ -128,12 +135,28 @@ export const createSolanaAssetFactory =
 
     const defaultAddressPath = 'm/0/0'
 
-    const getFee = ({ feeData }) => {
+    const getFee = ({ asset, feeData }) => {
       const priorityFee = feeData.priorityFee ?? 0
       // NOTE: fee is bumped via remote config, eventually fee = feeData.fee + (priorityFee * unitsConsumed * feeData.computeUnitsMultiplier)
-      const fee = feeData.fee
+      const SOL_TRANSFER_CU = 450 // standard SOL transfer // HACK: solana needs to use getFeeAsync
+      const SPL_TRANSFER_CU = 4944 // SPL transfer // HACK: solana needs to use getFeeAsync
+      const isToken = asset.name !== base.name
+
+      const computeUnits = isToken ? SPL_TRANSFER_CU : SOL_TRANSFER_CU
+      const fee = feeData.baseFee.add(
+        base.currency.baseUnit(priorityFee).mul(computeUnits).div(1_000_000) // micro lamports to lamports
+      )
+
       return { fee, priorityFee }
     }
+
+    const getFeeAsync = getFeeAsyncFactory({ api: serverApi })
+
+    const sendValidations = sendValidationsFactory({
+      api: serverApi,
+      assetName: baseAssetName,
+      assetClientInterface,
+    })
 
     const api = {
       getActivityTxs,
@@ -144,6 +167,7 @@ export const createSolanaAssetFactory =
         new SolanaMonitor({
           assetClientInterface,
           interval: monitorInterval,
+          shouldUpdateBalanceBeforeHistory,
           ticksBetweenHistoryFetches,
           ticksBetweenStakeFetches,
           includeUnparsed,
@@ -159,15 +183,15 @@ export const createSolanaAssetFactory =
       getBalanceForAddress: createGetBalanceForAddress({ api: serverApi, asset: base }),
       getDefaultAddressPath: () => defaultAddressPath,
       getFee,
-      getFeeAsync: getFee, // for now they are the same, eventually prioirtyFee May be calculated
+      getFeeAsync,
       getFeeData: () => feeData,
       getSupportedPurposes: () => [44],
       getKeyIdentifier: createGetKeyIdentifier({ bip44, assetName: base.name }),
+      getSendValidations: () => sendValidations,
       getTokens: () =>
         Object.values(assets)
           .filter((asset) => asset.name !== base.name)
           .map(createToken),
-      getUnstakingFee,
       hasFeature: (feature) => !!features[feature], // @deprecated use api.features instead
       privateKeyEncodingDefinition: { encoding: 'base58', data: 'priv|pub' },
       sendTx,
@@ -198,8 +222,7 @@ export const createSolanaAssetFactory =
       accountReserve,
       lowBalance,
       MIN_STAKING_AMOUNT,
-      createAutoWithdrawMonitor: (args) =>
-        new SolanaAutoWithdrawMonitor({ ...args, assetClientInterface }),
+      serverApi,
     }
 
     return overrideCallback({
@@ -208,6 +231,7 @@ export const createSolanaAssetFactory =
         stakingFeatureAvailable,
         includeUnparsed,
         monitorInterval,
+        shouldUpdateBalanceBeforeHistory,
         defaultAccountReserve,
         defaultLowBalance,
         defaultMinStakingAmount,
@@ -216,6 +240,5 @@ export const createSolanaAssetFactory =
         txsLimit,
         signWithSigner,
       },
-      serverApi,
     })
   }

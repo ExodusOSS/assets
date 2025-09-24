@@ -1,5 +1,6 @@
 export function extractUnits({ token, baseUnitName = 'base' }) {
   if (token.units) return token.units
+  if (token.parameters?.units) return token.parameters.units
 
   // build units object
   const units = { [baseUnitName]: 0 }

@@ -21,12 +21,13 @@ export async function getStakeActivation(api, stakeAddress) {
     })(),
   ])
 
-  if (!stakeAccount)
+  if (!stakeAccount) {
     return {
       status: 'inactive',
       active: 0,
       inactive: 0,
     }
+  }
 
   const rentExemptReserve = stakeAccount.data.parsed.info.meta.rentExemptReserve
   if (stakeAccount.data.parsed.discriminant === 1) {

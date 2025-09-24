@@ -1,6 +1,7 @@
 import { Api } from '../index.js'
 import assets from './assets.js'
 import {
+  JUPITER_MULTI_DEX_SWAP,
   SAMPLE_JUPITER_SWAP,
   SAMPLE_JUPITER_SWAP_JUP_SOL,
   SAMPLE_JUPITER_SWAP_SOL_BONK,
@@ -12,7 +13,10 @@ import {
   SAMPLE_RAYDIUM_SWAP,
   SIMPLE_SERUM_TRANSFER,
   TOKEN_ACCOUNTS,
+  TOKEN_MINT_TX,
   TOKEN_TRANSFER_TX,
+  TOKEN_TRANSFER_TX_1,
+  TOKEN_TRANSFER_TX_RECEIVED,
 } from './fixtures.js'
 
 const api = new Api({ assets })
@@ -23,6 +27,92 @@ const TOKEN_TX_ID =
 const SRM_MINT_ADDRESS = 'SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt'
 const RAY_MINT_ADDRESS = '4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R'
 const BONK_MINT_ADDRESS = 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263'
+
+test('Solana: parseTransaction on a token tx (and get SOL base address as destination "to")', async () => {
+  const owner = 'FmhoEAMq9rdRunJV3afL9kLzGCQitoQxNwq1M7868Abc'
+  const tokenAccountsByOwner = [
+    {
+      tokenAccountAddress: 'Abi5t9RJonWz711eBMB1vCwpFVN6TpbkadgstwfWSYY4',
+      owner: 'FmhoEAMq9rdRunJV3afL9kLzGCQitoQxNwq1M7868Abc',
+      mintAddress: 'JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN',
+      tokenName: 'jupy_solana_ed7ebe51',
+      ticker: 'JUPYsolanaED7EBE51',
+      tokenProgram: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+      balance: '1283300',
+      decimals: 6,
+      feeBasisPoints: 0,
+      maximumFee: 0,
+    },
+  ]
+  const tx = api.parseTransaction(owner, TOKEN_TRANSFER_TX_1, tokenAccountsByOwner)
+  // console.log('Token transaction:', JSON.stringify(tx, null, 2))
+
+  expect(tx.id).toEqual(
+    '2maQW8rHXdD17XuW1FF7JU2gzcpZLKuh9Ptw4rZJE5LudzGxoFrAPDqV5FtKiJfDAiZCUNhfKD2BrXkGfWtmqfQX'
+  )
+  expect(tx.slot).toEqual(330_575_784)
+  expect(tx.error).toEqual(false)
+  expect(tx.tokenTxs[0].id).toEqual(
+    '2maQW8rHXdD17XuW1FF7JU2gzcpZLKuh9Ptw4rZJE5LudzGxoFrAPDqV5FtKiJfDAiZCUNhfKD2BrXkGfWtmqfQX'
+  )
+  expect(tx.tokenTxs[0].from).toEqual('FmhoEAMq9rdRunJV3afL9kLzGCQitoQxNwq1M7868Abc')
+  expect(tx.tokenTxs[0].to).toEqual('atBkHUPcHAXPopfKmoTfT45AaAYNnSCLnWkXnnhDYh3')
+  expect(tx.tokenTxs[0].amount).toEqual(200_000)
+  expect(tx.tokenTxs[0].fee).toEqual(19_832)
+  expect(tx.tokenTxs[0].token).toEqual({
+    decimals: 6,
+    feeBasisPoints: 0,
+    maximumFee: 0,
+    mintAddress: 'JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN',
+    tokenAccountAddress: 'Abi5t9RJonWz711eBMB1vCwpFVN6TpbkadgstwfWSYY4',
+    tokenName: 'jupy_solana_ed7ebe51',
+    ticker: 'JUPYsolanaED7EBE51',
+    tokenProgram: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  })
+})
+
+test('Solana: parseTransaction on a token tx (and get SOL base address as source "from")', async () => {
+  const owner = 'atBkHUPcHAXPopfKmoTfT45AaAYNnSCLnWkXnnhDYh3'
+  const tokenAccountsByOwner = [
+    {
+      tokenAccountAddress: '96j6Ej74Acppj92qjWWuBYHXZ6hSFfoZDJejqjC7qGBA',
+      owner: 'atBkHUPcHAXPopfKmoTfT45AaAYNnSCLnWkXnnhDYh3',
+      mintAddress: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+      tokenName: 'usdcoin_solana',
+      ticker: 'USDCSOL',
+      tokenProgram: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+      balance: '9541330',
+      decimals: 6,
+      feeBasisPoints: 0,
+      maximumFee: 0,
+    },
+  ]
+  const tx = api.parseTransaction(owner, TOKEN_TRANSFER_TX_RECEIVED, tokenAccountsByOwner)
+  // console.log('Token transaction:', JSON.stringify(tx, null, 2))
+
+  expect(tx.id).toEqual(
+    '5kUHeir9J1y9McsY6hynNsu7qA1Yt5ufdZZaPiydSiY47q8Q63Wfv9HhTBCS51CSrKKsq9ugU44FQ6SgA5PAmnzV'
+  )
+  expect(tx.slot).toEqual(325_832_804)
+  expect(tx.error).toEqual(false)
+  expect(tx.tokenTxs[0].id).toEqual(
+    '5kUHeir9J1y9McsY6hynNsu7qA1Yt5ufdZZaPiydSiY47q8Q63Wfv9HhTBCS51CSrKKsq9ugU44FQ6SgA5PAmnzV'
+  )
+  expect(tx.tokenTxs[0].from).toEqual('FmhoEAMq9rdRunJV3afL9kLzGCQitoQxNwq1M7868Abc')
+  expect(tx.tokenTxs[0].to).toEqual('atBkHUPcHAXPopfKmoTfT45AaAYNnSCLnWkXnnhDYh3')
+  expect(tx.tokenTxs[0].amount).toEqual(100_000)
+  expect(tx.tokenTxs[0].fee).toEqual(0) // received tx
+  expect(tx.tokenTxs[0].token).toEqual({
+    decimals: 6,
+    feeBasisPoints: 0,
+    maximumFee: 0,
+    mintAddress: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+    tokenAccountAddress: '96j6Ej74Acppj92qjWWuBYHXZ6hSFfoZDJejqjC7qGBA',
+    tokenName: 'usdcoin_solana',
+    ticker: 'USDCSOL',
+    tokenProgram: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  })
+})
 
 test('Solana: parseTransaction on a Jupiter DEX, SOL -> ZEUS', async () => {
   const owner = 'FfaSnXN7Vwn1s4EiHX82q3Dq8sQM6kcy3uHbYp7StWC6' // SOL base addr
@@ -134,6 +224,37 @@ test('Solana: parseTransaction on a simple Serum transfer', async () => {
   expect(tx.tokenTxs[0].token).toBeTruthy()
 })
 
+test('Solana: parseTransaction on a token Mint tx', async () => {
+  const owner = '56UYhdJ1yJ7Ew6p1RmEm3XCj9DTTadUPR6vehDukFJGs'
+  const tokenAccounts = [
+    {
+      tokenAccountAddress: 'AHN6X8PDiqnDsg1vgyYRZXCaCWiV8i4b7oPzyeyMzoKY',
+      owner,
+      tokenName: 'SOLX',
+      ticker: 'SOLX',
+      balance: '0',
+    },
+  ]
+  const TX_ID =
+    '2evBCeWxZsZGBu7e2XtymmBibncV5xXQptPC24DYxDAv9NaC7eursTy4B81jBqjTQZZKZgeNUjYm3TCxw9UdkBbH'
+
+  const tx = api.parseTransaction(owner, TOKEN_MINT_TX, tokenAccounts)
+  // console.log('Token mint transaction:', JSON.stringify(tx, null, 2))
+
+  expect(tx.id).toEqual(TX_ID)
+  expect(tx.slot).toEqual(351_195_129)
+  expect(tx.error).toEqual(false)
+  expect(tx.tokenTxs[0].from).toEqual('Cf2LnRpmcUxY8qkAyiaaPpgAtUHgzkH3tPhMAevE9zLg')
+  expect(tx.tokenTxs[0].to).toEqual('56UYhdJ1yJ7Ew6p1RmEm3XCj9DTTadUPR6vehDukFJGs')
+  expect(tx.tokenTxs[0].amount).toEqual(155_012_288_500)
+  expect(tx.tokenTxs[0].fee).toEqual(0)
+  expect(tx.tokenTxs[0].token).toEqual({
+    tokenAccountAddress: 'AHN6X8PDiqnDsg1vgyYRZXCaCWiV8i4b7oPzyeyMzoKY',
+    tokenName: 'SOLX',
+    ticker: 'SOLX',
+  })
+})
+
 test('Solana: parseTransaction on a simple Raydium swap', async () => {
   const owner = 'G5xnKeJ6pK4YGVfTPgwaHbkoya3jbf3PCVzWRXaDeKfj' // SOL base addr
   const tokenAccounts = [
@@ -182,7 +303,7 @@ test('Solana: parseTransaction on a Jupiter DEX swap', async () => {
   expect(tx.from).toEqual('AG4WTn4ftX6JHCsUswqANRuRy1sKC1X9gmKXH94xDUfq')
   expect(tx.to).toEqual('2KUDvQNLSbLNqFc6BmfGEhKmMsd64h6yzareCDyH3YDv')
   expect(tx.slot).toEqual(126_288_995)
-  expect(tx.amount).toEqual(144_375_911)
+  expect(tx.amount).toEqual(148_454_471)
   expect(tx.fee).toEqual(5000) // sending SOL tx
   expect(tx.token).toBeFalsy()
 
@@ -529,4 +650,63 @@ test('Solana: parseTransaction on a Jupiter DEX, USDC -> SOL', async () => {
   expect(tx.dexTxs[0].fee).toEqual(80_700)
   expect(tx.dexTxs[0].token.tokenName).toEqual('usdcoin_solana')
   expect(tx.dexTxs[0].token.mintAddress).toEqual('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v')
+})
+
+test('Solana: parseTransaction on a Jupiter multi-DEX swap', async () => {
+  const owner = '4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM' // SOL base addr
+  const tokenAccounts = [
+    {
+      tokenAccountAddress: '4JvYChB2rZFY24nDN2zmJKcoi456WmmUYMjCpPY3b5f3',
+      owner: '4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM',
+      tokenName: '6p6x_solana_056c2704',
+      ticker: '6P6Xsolana056C2704',
+      balance: '20390000',
+      mintAddress: '6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN',
+      tokenProgram: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+      decimals: 6,
+      feeBasisPoints: 0,
+      maximumFee: 0,
+    },
+    {
+      tokenAccountAddress: '4w98DpER9kKWJge1Ni4sCF95xFvAgs2dtZV6Vsadu5Zc',
+      owner: '4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM',
+      tokenName: 'ey59_solana_6cd6d340',
+      ticker: 'EY59solana6CD6D340',
+      balance: '110110000',
+      mintAddress: 'Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk',
+      tokenProgram: 'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb',
+      decimals: 9,
+      feeBasisPoints: 0,
+      maximumFee: 0,
+    },
+  ]
+  const tx = api.parseTransaction(owner, JUPITER_MULTI_DEX_SWAP, tokenAccounts)
+  expect(tx.id).toEqual(
+    '32p9P61V77ReY5TAzpsqB3qHRs5ALs71wN6Kz9AXFTG4efV7mYmrDNC9EvAiGW3DNCS3rXVyZbWFfFzJgnv2iSvo'
+  )
+
+  // console.log('Swap tx:', JSON.stringify(tx, null, 2))
+
+  // SOL tx
+  expect(tx.from).toEqual('4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM')
+  expect(tx.to).toEqual('K8E3xRZtDZQck2vFLUN2AqQUwMS8n9LUB3iNy26M5Au')
+  expect(tx.slot).toEqual(341_524_029)
+  expect(tx.amount).toEqual(100_425_393)
+  expect(tx.fee).toEqual(47_019) // fee is included although it's received
+
+  // USDC tx - additional instruction (stored as separate txLog in wallet)
+  expect(tx.dexTxs[0].id).toEqual(
+    '32p9P61V77ReY5TAzpsqB3qHRs5ALs71wN6Kz9AXFTG4efV7mYmrDNC9EvAiGW3DNCS3rXVyZbWFfFzJgnv2iSvo'
+  )
+  // expect(tx.dexTxs[0].owner).toEqual('4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM')
+  expect(tx.dexTxs[0].from).toEqual('DfWWLJvVHDM9byp6y7Rpw5Rx4mGizSwB5GEoUMegi3z8')
+  expect(tx.dexTxs[0].to).toEqual('4cNXoixrSasjRz5Smxa7vJJKT95aUeLKaFmAz6mrxHSM')
+  expect(tx.dexTxs[0].fee).toEqual(0)
+  expect(tx.dexTxs[0].token.tokenName).toEqual('ey59_solana_6cd6d340')
+  expect(tx.dexTxs[0].token.mintAddress).toEqual('Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk')
+  expect(tx.dexTxs[0].amount).toEqual(3_060_102_277_671)
+  // 2x because of 2 DEXes
+  expect(tx.dexTxs[1].token.tokenName).toEqual('ey59_solana_6cd6d340')
+  expect(tx.dexTxs[1].token.mintAddress).toEqual('Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk')
+  expect(tx.dexTxs[1].amount).toEqual(3_066_695_351_713)
 })

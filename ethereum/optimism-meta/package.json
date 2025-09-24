@@ -1,7 +1,7 @@
 {
   "name": "@exodus/optimism-meta",
-  "version": "2.0.2",
-  "description": "Ethereum (Optimism) constants, icons, colors and other metadata",
+  "version": "2.1.2",
+  "description": "Optimism constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",
   "files": [
@@ -11,10 +11,10 @@
     "CHANGELOG.md"
   ],
   "author": "Exodus Movement, Inc.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/optimism-meta",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "test": "run -T exodus-test --jest",
@@ -22,7 +22,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/asset": "^2.0.1"
+    "@exodus/asset": "^2.0.4"
   },
   "devDependencies": {
     "@exodus/assets-meta-testing": "workspace:^"

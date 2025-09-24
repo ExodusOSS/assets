@@ -1,0 +1,99 @@
+exports[`ethereum get async fees ethereum with arguments 1`] = `
+{
+  "extraFeeData": {},
+  "fee": "0.0010605 ETH",
+  "gasLimit": 21000,
+  "gasPrice": "0.0000000505 ETH",
+  "tipGasPrice": "0.0000000005 ETH",
+  "unsignedTx": {
+    "txData": {
+      "chainId": 1,
+      "transactionBuffer": "02f00180841dcd6500850bc208d90082520894111fffffffffffffffffffffffffffffffffffff851ca35f0e0080c0808080",
+    },
+    "txMeta": {
+      "amount": "0.000000123 ETH",
+      "assetName": "ethereum",
+      "bumpTxId": undefined,
+      "eip1559Enabled": true,
+      "fee": "0.0010605 ETH",
+      "fromAddress": "0x111fffffffffffffffffffffffffffffffffffff",
+      "toAddress": "0x111fffffffffffffffffffffffffffffffffffff",
+    },
+  },
+}
+`;
+
+exports[`ethereum get async fees ethereum without arguments 1`] = `
+{
+  "extraFeeData": {},
+  "fee": "0.0010605 ETH",
+  "gasLimit": 21000,
+  "gasPrice": "0.0000000505 ETH",
+  "tipGasPrice": "0.0000000005 ETH",
+  "unsignedTx": {
+    "txData": {
+      "chainId": 1,
+      "transactionBuffer": "02eb0180841dcd6500850bc208d90082520894fffffffffffffffffeffffffffffffffffffffff8080c0808080",
+    },
+    "txMeta": {
+      "amount": "0 ETH",
+      "assetName": "ethereum",
+      "bumpTxId": undefined,
+      "eip1559Enabled": true,
+      "fee": "0.0010605 ETH",
+      "fromAddress": "0xF3d46F0De925B28fDa1219BbD60F5ae2a0128F9F",
+      "toAddress": "0xfffffffffffffffffeffffffffffffffffffffff",
+    },
+  },
+}
+`;
+
+exports[`ethereum get async fees polygon with arguments 1`] = `
+{
+  "extraFeeData": {},
+  "fee": "0.0019270295 ETH",
+  "gasLimit": 38159,
+  "gasPrice": "0.0000000505 ETH",
+  "tipGasPrice": "0.0000000005 ETH",
+  "unsignedTx": {
+    "txData": {
+      "chainId": 1,
+      "transactionBuffer": "02f8700180841dcd6500850bc208d90082950f947d1afa7b718fb893db30a3abc0cfc608aacfebb080b844a9059cbb000000000000000000000000111fffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000c0808080",
+    },
+    "txMeta": {
+      "amount": "0 MATIC",
+      "assetName": "polygon",
+      "bumpTxId": undefined,
+      "eip1559Enabled": true,
+      "fee": "0.0019270295 ETH",
+      "fromAddress": "0x111fffffffffffffffffffffffffffffffffffff",
+      "toAddress": "0x111fffffffffffffffffffffffffffffffffffff",
+    },
+  },
+}
+`;
+
+exports[`ethereum get async fees polygon without arguments 1`] = `
+{
+  "extraFeeData": {},
+  "fee": "0.0019270295 ETH",
+  "gasLimit": 38159,
+  "gasPrice": "0.0000000505 ETH",
+  "tipGasPrice": "0.0000000005 ETH",
+  "unsignedTx": {
+    "txData": {
+      "chainId": 1,
+      "transactionBuffer": "02f8700180841dcd6500850bc208d90082950f947d1afa7b718fb893db30a3abc0cfc608aacfebb080b844a9059cbb000000000000000000000000fffffffffffffffffeffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000c0808080",
+    },
+    "txMeta": {
+      "amount": "0 MATIC",
+      "assetName": "polygon",
+      "bumpTxId": undefined,
+      "eip1559Enabled": true,
+      "fee": "0.0019270295 ETH",
+      "fromAddress": "0xF3d46F0De925B28fDa1219BbD60F5ae2a0128F9F",
+      "toAddress": "0xfffffffffffffffffeffffffffffffffffffffff",
+    },
+  },
+}
+`;

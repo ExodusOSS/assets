@@ -16,11 +16,12 @@ const createAsset = createAssetFactory({
     eip1559Enabled: true,
   },
   erc20FuelBuffer: 1.1, // 10% more than the required fee
-  serverUrl: 'https://base-qn.a.exodus.io',
+  serverUrl: 'https://base-clarity.a.exodus.io',
   confirmationsNumber: 30,
-  monitorType: 'no-history',
+  monitorType: 'clarity-v2',
   nfts: true,
   l1GasOracleAddress: GAS_ORACLE_ADDRESS,
+  useAbsoluteBalanceAndNonce: true,
 })
 
 const assetPlugin = { createAsset }

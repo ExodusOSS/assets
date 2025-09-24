@@ -52,7 +52,19 @@ test('Solana: undelegate Transaction', () => {
 test('Solana: withdraw Transaction', () => {
   const tx = Transaction.withdraw({
     address: ADDRESS,
-    stakeAddresses: [STAKE_ADDRESS],
+    accounts: {
+      [STAKE_ADDRESS]: {
+        activationEpoch: 776,
+        deactivationEpoch: 778,
+        stake: 7_722_670,
+        voter: EVERSTAKE_POOL,
+        warmupCooldownRate: 0.25,
+        lamports: 10_005_550,
+        state: 'inactive',
+        isDeactivating: false,
+        canWithdraw: true,
+      },
+    },
     amount: 123,
     recentBlockhash: RECENT_BLOCKHASH,
   })

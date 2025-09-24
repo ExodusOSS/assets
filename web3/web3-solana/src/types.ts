@@ -1,4 +1,3 @@
-import type { SolanaProvider } from './provider/provider.js'
 import type {
   Blockhash as SolBlockhash,
   PublicKey as SolPublicKey,
@@ -10,20 +9,23 @@ import type {
 import type { WalletStandardCommonDeps } from '@exodus/web3-provider'
 import type { CommonDeps } from '@exodus/web3-rpc-handlers'
 import type {
+  LegacyOrVersionedTransaction,
   SolAggregatedTransactionSimulationResult,
   SolSimulateTransactionParams,
 } from '@exodus/web3-solana-utils'
-import type { LegacyOrVersionedTransaction } from '@exodus/web3-solana-utils'
 import type {
   Asset,
   Base58,
+  Base64,
   Bytes,
   GetActiveWalletAccountData,
   GetLedgerDevice,
-  ITransactionSignerModule,
   IMessageSignerModule,
-  Base64,
+  ITransactionSignerModule,
+  WalletAccountData,
 } from '@exodus/web3-types'
+
+import type { SolanaProvider } from './provider/provider.js'
 
 export interface WalletStandardDeps extends WalletStandardCommonDeps {
   provider: SolanaProvider
@@ -43,7 +45,12 @@ export interface SolanaMessage {
 
 export interface CreateSolanaDepsParams {
   getActiveWalletAccountData: GetActiveWalletAccountData
+  getWalletAccountsData: () => Promise<Record<string, WalletAccountData>>
   getAddress(assetName: string): Promise<string>
+  getAddressByWalletAccount: (
+    assetName: string,
+    walletAccount: string,
+  ) => Promise<string>
   getAsset: (assetName: string) => Promise<Asset>
   getLedgerDevice?: GetLedgerDevice
   getPrivateKey?: (
@@ -61,7 +68,9 @@ export interface CreateSolanaDepsParams {
 }
 
 export type SolanaDeps = {
-  getPublicKey: () => Promise<{ toBase58: SolPublicKey['toBase58'] }>
+  getPublicKey: (
+    walletAccount?: string,
+  ) => Promise<{ toBase58: SolPublicKey['toBase58'] }>
   sendRawTransaction: (
     rawTransaction: Buffer,
     options: SolSendOptions,
@@ -72,6 +81,7 @@ export type SolanaDeps = {
   ) => Promise<SolAggregatedTransactionSimulationResult>
   transactionSigner: ITransactionSignerModule<SolanaUnsignedTransaction>
   getActiveWalletAccountData: GetActiveWalletAccountData
+  getWalletAccountsData: () => Promise<Record<string, WalletAccountData>>
   messageSigner: IMessageSignerModule<SolanaMessage>
 }
 

@@ -105,6 +105,8 @@ describe('solana monitor', () => {
       expect(accountState.stakingInfo.withdrawable).toBeDefined()
       expect(accountState.stakingInfo.pending).toBeDefined()
       expect(accountState.stakingInfo.earned).toBeDefined()
+      expect(accountState.accountSize).toEqual(0)
+      expect(accountState.rentExemptAmount.toBaseNumber()).toBeGreaterThan(0)
 
       expect(logger.error).not.toBeCalled()
       expect(logger.warn).not.toBeCalled()

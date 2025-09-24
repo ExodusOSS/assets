@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.11.1...@exodus/solana-lib@3.11.2) (2025-05-05)
+
+**Note:** Version bump only for package @exodus/solana-lib
+
+
+
+
+
+## [3.11.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.11.0...@exodus/solana-lib@3.11.1) (2025-04-21)
+
+**Note:** Version bump only for package @exodus/solana-lib
+
+
+
+
+
+## [3.11.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.10.1...@exodus/solana-lib@3.11.0) (2025-04-11)
+
+
+### Features
+
+
+* feat(solana): generalize verify-only-fee-payer-changed (#5434)
+
+
+
+## [3.10.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.10.0...@exodus/solana-lib@3.10.1) (2025-04-04)
+
+
+### Bug Fixes
+
+
+* fix(solana): fee payer validation (#5387)
+
+
+
+## [3.10.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.9.5...@exodus/solana-lib@3.10.0) (2025-04-03)
+
+
+### Features
+
+
+* feat(solana): add optional addExternalFeePayerToTransaction (#5345)
+
+
+
+## [3.9.5](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.9.4...@exodus/solana-lib@3.9.5) (2025-03-25)
+
+
+### License
+
+
+* license: re-license under MIT license (#4814)
+
+
+
 ## [3.9.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-lib@3.9.3...@exodus/solana-lib@3.9.4) (2025-01-02)
 
 

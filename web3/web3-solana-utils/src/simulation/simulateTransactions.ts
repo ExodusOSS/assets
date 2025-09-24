@@ -1,32 +1,34 @@
+/* eslint-disable @exodus/mutable/no-param-reassign-prop-only */
 import solanaApi from '@exodus/solana-api'
 import { PublicKey } from '@exodus/solana-web3.js'
-import { createCurrency, makeSimulationAPICall } from '@exodus/web3-utils'
-
-import { serializeTransaction } from '../transactions.js'
-
-import type {
-  SolAggregatedTransactionSimulationResult,
-  SolSimulateTransactionParams,
-  LegacyOrVersionedTransaction,
-  Transaction,
-} from '../types.js'
-import type { VersionedTransaction } from '@exodus/solana-web3.js'
 import type {
   Asset,
   BalanceChange,
+  BlowfishSimulationError,
+  CompressedNftAsset,
   CreateSimulateTransactionsParams,
   GetFeeData,
   NumberUnit,
   ScanTransactionsSolana200Response,
   ScanTransactionsSolana200ResponseAggregatedExpectedStateChangesValueInner,
   ScanTransactionsSolanaRequest,
-  SplAsset,
-  SolAsset,
-  CompressedNftAsset,
   SimulationWarning,
-  BlowfishSimulationError,
+  SolAsset,
+  SplAsset,
 } from '@exodus/web3-types'
 import type { TransactionScanAPICallParams } from '@exodus/web3-utils'
+import { createCurrency, makeSimulationAPICall } from '@exodus/web3-utils'
+
+import {
+  isLegacyTransaction,
+  isVersionedTransaction,
+  serializeTransaction,
+} from '../transactions.js'
+import type {
+  LegacyOrVersionedTransaction,
+  SolAggregatedTransactionSimulationResult,
+  SolSimulateTransactionParams,
+} from '../types.js'
 
 const SOL_ADDRESS = '11111111111111111111111111111111'
 
@@ -34,18 +36,6 @@ const INTERNAL_ERROR_WARNING: SimulationWarning = {
   kind: 'INTERNAL_ERROR',
   severity: 'HIGH',
   message: 'Balance changes cannot be estimated.',
-}
-
-const isVersionedTransactionInstance = (
-  transaction: LegacyOrVersionedTransaction,
-): transaction is VersionedTransaction => {
-  return (transaction as VersionedTransaction).version !== undefined
-}
-
-const isLegacyTransactionInstance = (
-  transaction: LegacyOrVersionedTransaction,
-): transaction is Transaction => {
-  return (transaction as Transaction).instructions !== undefined
 }
 
 export const getTransactionFee = async ({
@@ -65,33 +55,30 @@ export const getTransactionFee = async ({
 
   const feesPromises = transactionsMessages.map(
     async (transactionMessage: LegacyOrVersionedTransaction) => {
-      if (isVersionedTransactionInstance(transactionMessage)) {
-        if (
-          transactionMessage.message.staticAccountKeys[0].equals(
-            senderPublicKey,
-          )
-        ) {
-          return txFee
-        }
+      if (
+        isVersionedTransaction(transactionMessage) &&
+        transactionMessage.message.staticAccountKeys[0].equals(senderPublicKey)
+      ) {
+        return txFee
       }
 
-      if (isLegacyTransactionInstance(transactionMessage)) {
-        if (transactionMessage.feePayer?.equals(senderPublicKey)) {
-          try {
-            const fee = await solanaApi.getFeeForMessage(
-              transactionMessage.compileMessage(),
-            )
-            return asset.currency.baseUnit(fee)
-          } catch (error: unknown) {
-            console.error('Getting fee error', (error as Error).message)
-            return txFee
-          }
+      if (
+        isLegacyTransaction(transactionMessage) &&
+        transactionMessage.feePayer?.equals(senderPublicKey)
+      ) {
+        try {
+          const fee = await solanaApi.getFeeForMessage(
+            transactionMessage.compileMessage(),
+          )
+          return asset.currency.baseUnit(fee)
+        } catch (error: unknown) {
+          console.error('Getting fee error', (error as Error).message)
+          return txFee
         }
       }
 
       return asset.currency.ZERO
     },
-    asset.currency.ZERO,
   )
 
   const fees = await Promise.all(feesPromises)
@@ -286,6 +273,13 @@ const handleSimulationError = ({
 }) => {
   if (error) {
     simulationResult.warnings.push(INTERNAL_ERROR_WARNING)
+    simulationResult.metadata.humanReadableError = error.humanReadableError
+  } else if (
+    // return human readable error for insufficient funds
+    simulationResult.warnings.some(({ kind }) => kind === 'INSUFFICIENT_FUNDS')
+  ) {
+    simulationResult.metadata.humanReadableError =
+      'Insufficient funds to perform the operation.'
   }
 }
 
@@ -314,7 +308,7 @@ export const simulateTransactions = async ({
   // Simulation is not supported for this asset.
   if (!chain) {
     simulationResult.warnings.push(INTERNAL_ERROR_WARNING)
-
+    simulationResult.metadata.humanReadableError = `Simulation is not supported for this asset.`
     return
   }
 
@@ -331,7 +325,7 @@ export const simulateTransactions = async ({
 
   if (!response) {
     simulationResult.warnings.push(INTERNAL_ERROR_WARNING)
-
+    simulationResult.metadata.humanReadableError = 'Simulation API call failed.'
     return
   }
 
@@ -360,7 +354,7 @@ export const simulateTransactions = async ({
         'This dApp could be malicious. Do not proceed unless you are certain this is safe.',
     }
 
-    if (warnings.find(({ kind }) => kind === 'USER_ACCOUNT_OWNER_CHANGE')) {
+    if (warnings.some(({ kind }) => kind === 'USER_ACCOUNT_OWNER_CHANGE')) {
       warning = {
         kind: 'USER_ACCOUNT_OWNER_CHANGE',
         severity: 'CRITICAL',

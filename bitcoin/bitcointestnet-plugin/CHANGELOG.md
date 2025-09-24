@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcointestnet-plugin@1.13.2...@exodus/bitcointestnet-plugin@2.0.0) (2025-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+* refactor!: remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+
 ## [1.13.2](https://github.com/ExodusMovement/assets/compare/@exodus/bitcointestnet-plugin@1.13.1...@exodus/bitcointestnet-plugin@1.13.2) (2024-12-12)
 
 

@@ -14,11 +14,13 @@ The functions are assumed to be used within platform's scripts and rely on `asse
 
 `get-asset-icon-path-items.js` - exports function returning array of paths to svg files from `-meta` packages. May be used as an input for svgr.
 
-Both scripts use 2 positional process parameters:
+Both scripts use 3 positional process parameters:
 
 `relativeOutputDir` - where to put generated files
 
 `relativeNodeModulesDir` - path to `noode_modules` containing `assets-base` package
+
+`yarnLockPath` - path to the `yarn.lock` file relative to `node_modules`
 
 Example of the `asset-icons.js` script in web platform:
 
@@ -26,7 +28,7 @@ Example of the `asset-icons.js` script in web platform:
 const generate = require('@exodus/asset-icons/scripts/generate.web')
 
 generate()
-generate({ isTransparent: true })
+generate({ yarnLockPath: '../yarn.lock' }) // to generate based on the yarn.lock dependencie rather than assets-base
 ```
 
 And its usage:

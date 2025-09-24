@@ -2,12 +2,15 @@ import {
   definitions as solanaMobileDefinitions,
   methods as solanaMobileMethods,
 } from './solana-mobile.js'
+
 // Maximum over-the-wire size of a Solana Transaction.
 // See: https://solana-labs.github.io/solana-web3.js/modules.html#PACKET_DATA_SIZE.
 const SOLANA_PACKET_DATA_SIZE = 1280
 const ENCODED_TRANSACTION_MAX_LENGTH =
   Math.ceil(SOLANA_PACKET_DATA_SIZE / 3) * 4 // Each 3 bytes are encoded as 4 chars in base64.
 const ENCODED_TRANSACTION_MAX_SAFE_LENGTH = ENCODED_TRANSACTION_MAX_LENGTH * 10 // To accommodate for changes in the protocol.
+
+const nonEmptyString = { type: 'string', pattern: '^[\\s\\S]+$' }
 
 export const definitions = {
   sol: {
@@ -34,6 +37,15 @@ export const definitions = {
       $ref: '#/$defs/encodedData',
       maxLength: ENCODED_TRANSACTION_MAX_SAFE_LENGTH,
     },
+    encodedTransactionWithSendOptions: {
+      type: 'object',
+      required: ['transaction'],
+      additionalProperties: false,
+      properties: {
+        transaction: { $ref: '#/$defs/sol/encodedTransaction' },
+        options: { $ref: '#/$defs/sol/sendOptions' },
+      },
+    },
     sendOptions: {
       type: 'object',
       required: [],
@@ -46,11 +58,51 @@ export const definitions = {
         skipPreflight: { type: 'boolean' },
       },
     },
+    sendAllOptions: {
+      allOf: [
+        { $ref: '#/$defs/sol/sendOptions' },
+        {
+          type: 'object',
+          required: [],
+          additionalProperties: false,
+          properties: {
+            parallel: { type: 'boolean' },
+          },
+        },
+      ],
+    },
     solConnectParams: {
-      type: 'array',
-      items: false,
-      minItems: 1,
-      prefixItems: [{ type: 'boolean' }],
+      type: 'object',
+      required: [],
+      additionalProperties: false,
+      properties: {
+        onlyIfTrusted: { type: 'boolean' },
+        silent: { type: 'boolean' },
+      },
+    },
+    solSignInParams: {
+      type: 'object',
+      required: [],
+      additionalProperties: false,
+      removeAdditional: true,
+      properties: {
+        domain: nonEmptyString,
+        address: nonEmptyString,
+        statement: nonEmptyString,
+        uri: nonEmptyString,
+        version: nonEmptyString,
+        chainId: nonEmptyString,
+        nonce: nonEmptyString,
+        issuedAt: nonEmptyString,
+        expirationTime: nonEmptyString,
+        notBefore: nonEmptyString,
+        requestId: nonEmptyString,
+        resources: {
+          type: 'array',
+          items: nonEmptyString,
+          minItems: 1,
+        },
+      },
     },
     solSignTransactionParams: {
       type: 'array',
@@ -79,13 +131,34 @@ export const definitions = {
         { oneOf: [{ type: 'null' }, { $ref: '#/$defs/sol/sendOptions' }] },
       ],
     },
+    solSignAndSendAllTransactionsParams: {
+      type: 'array',
+      items: false,
+      minItems: 2,
+      prefixItems: [
+        {
+          type: 'array',
+          items: { $ref: '#/$defs/sol/encodedTransactionWithSendOptions' },
+          minItems: 1,
+        },
+        { oneOf: [{ type: 'null' }, { $ref: '#/$defs/sol/sendAllOptions' }] },
+      ],
+    },
     solSignMessageParams: {
       type: 'array',
       items: false,
       minItems: 2,
       prefixItems: [
         { $ref: '#/$defs/sol/encodedMessage' },
-        { $ref: '#/$defs/sol/displayEncoding' },
+        {
+          type: 'object',
+          required: ['display'],
+          additionalProperties: false,
+          properties: {
+            display: { $ref: '#/$defs/sol/displayEncoding' },
+            address: nonEmptyString,
+          },
+        },
       ],
     },
     solGetLatestBlockhashParams: {
@@ -116,6 +189,13 @@ export const methods = [
   {
     required: ['params'],
     properties: {
+      method: { const: 'sol_signIn' },
+      params: { $ref: '#/$defs/sol/solSignInParams' },
+    },
+  },
+  {
+    required: ['params'],
+    properties: {
       method: { const: 'sol_signTransaction' },
       params: { $ref: '#/$defs/sol/solSignTransactionParams' },
     },
@@ -132,6 +212,13 @@ export const methods = [
     properties: {
       method: { const: 'sol_signAndSendTransaction' },
       params: { $ref: '#/$defs/sol/solSignAndSendTransactionParams' },
+    },
+  },
+  {
+    required: ['params'],
+    properties: {
+      method: { const: 'sol_signAndSendAllTransactions' },
+      params: { $ref: '#/$defs/sol/solSignAndSendAllTransactionsParams' },
     },
   },
   {

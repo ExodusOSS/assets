@@ -8,8 +8,8 @@ import lodash from 'lodash'
 import path from 'path'
 
 import assetPlugin from '../../index.js'
-import nftSendCustomFeeUsignedTx from './fixtures/nft-send-custom-fee-usigned-tx.js'
-import nftSendUsignedTx from './fixtures/nft-send-usigned-tx.js'
+import nftSendCustomFeeUnsignedTx from './fixtures/nft-send-custom-fee-unsigned-tx.js'
+import nftSendUnsignedTx from './fixtures/nft-send-unsigned-tx.js'
 
 const config = { ordinalChainIndex: 2, ordinalsEnabled: true }
 
@@ -59,7 +59,7 @@ describe(`bitcoin inscriptions tx-send test`, () => {
           options: { multipleAddressesEnabled: false, isSendAll: false, nft },
           expectedBalance,
           expectedFee,
-          expectedTxData: nftSendUsignedTx,
+          expectedTxData: nftSendUnsignedTx,
         }
         await sendTxTest(params)
       },
@@ -86,7 +86,7 @@ describe(`bitcoin inscriptions tx-send test`, () => {
           },
           expectedBalance,
           expectedFee,
-          expectedTxData: nftSendCustomFeeUsignedTx,
+          expectedTxData: nftSendCustomFeeUnsignedTx,
         }
         await sendTxTest(params)
       },

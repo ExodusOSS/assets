@@ -15,7 +15,6 @@ describe(`${baseAsset.name} index.js test`, () => {
       'useBip86',
       'useMultipleAddresses',
       'canBumpTx',
-      'getAvailableBalance',
     ],
   })
 })

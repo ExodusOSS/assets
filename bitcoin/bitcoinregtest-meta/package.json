@@ -1,6 +1,6 @@
 {
   "name": "@exodus/bitcoinregtest-meta",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Bitcoin Regtest constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",

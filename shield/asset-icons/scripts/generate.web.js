@@ -1,26 +1,19 @@
 const path = require('path')
 const fs = require('fs')
 const aliasesNormal = require('./aliases')
-const aliasesTransparent = require('./aliases-transparent')
 const aliasesNetwork = require('./aliases-network')
 const invert = require('./invert')
 const getAssetIconPathItems = require('./get-asset-icon-path-items')
 const { relativeOutputDir, relativeNodeModulesDir } = require('./common-params')
 
 const POSTFIX_BY_TYPE = {
-  transparent: '-transparent',
   network: '-network',
   default: '',
 }
 
 const ALIASES_BY_TYPE = {
-  transparent: aliasesTransparent,
   network: aliasesNormal,
   default: aliasesNetwork,
-}
-
-const FALLBACK_BY_TYPE = {
-  network: 'transparent',
 }
 
 function mergeAssetData(a, b) {
@@ -49,23 +42,15 @@ function mergeAssetData(a, b) {
   return result
 }
 
-const generate = async ({ type = 'default', legacy = false } = {}) => {
+const generate = async ({ type = 'default', legacy = false, yarnLockPath } = {}) => {
   const postfix = POSTFIX_BY_TYPE[type]
   const outputFileName = `asset-icons${postfix}`
 
   const aliases = ALIASES_BY_TYPE[type]
   const aliasesInverted = invert(aliases)
 
-  let fallbackItems = []
-  let items = await getAssetIconPathItems({ folderPostfix: postfix, legacy })
-  const fallBackType = FALLBACK_BY_TYPE[type]
-  if (fallBackType) {
-    fallbackItems = await getAssetIconPathItems({
-      folderPostfix: POSTFIX_BY_TYPE[fallBackType],
-      onlyBase: type === 'network',
-      legacy,
-    })
-  }
+  const fallbackItems = []
+  let items = await getAssetIconPathItems({ folderPostfix: postfix, legacy, yarnLockPath })
 
   items = mergeAssetData(items, fallbackItems)
 

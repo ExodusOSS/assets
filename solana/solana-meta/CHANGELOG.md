@@ -3,6 +3,88 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.5.4...@exodus/solana-meta@2.6.0) (2025-07-15)
+
+
+### Features
+
+
+* feat: demote batch of BSC tokens (#6042)
+
+
+### Bug Fixes
+
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [2.5.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.5.3...@exodus/solana-meta@2.5.4) (2025-06-23)
+
+
+### Bug Fixes
+
+
+* fix: remove rndr_solana_4b3ba195 icon (#5925)
+
+
+
+## [2.5.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.5.2...@exodus/solana-meta@2.5.3) (2025-06-20)
+
+**Note:** Version bump only for package @exodus/solana-meta
+
+
+
+
+
+## [2.5.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.5.1...@exodus/solana-meta@2.5.2) (2025-06-06)
+
+**Note:** Version bump only for package @exodus/solana-meta
+
+
+
+
+
+## [2.5.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.5.0...@exodus/solana-meta@2.5.1) (2025-05-05)
+
+**Note:** Version bump only for package @exodus/solana-meta
+
+
+
+
+
+## [2.5.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.4.2...@exodus/solana-meta@2.5.0) (2025-04-08)
+
+
+### Features
+
+
+* feat: demote batch of Solana tokens (#5411)
+
+
+
+## [2.4.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.4.1...@exodus/solana-meta@2.4.2) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: demote KHAI spl token to CT (#5255)
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
+## [2.4.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.4.0...@exodus/solana-meta@2.4.1) (2025-02-26)
+
+
+### Bug Fixes
+
+
+* fix: add assetId to token metas (#5121)
+
+
+
 ## [2.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-meta@2.3.1...@exodus/solana-meta@2.4.0) (2025-01-22)
 
 

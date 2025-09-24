@@ -7,7 +7,18 @@ const assetNameRe = /^[\d_a-z]+$/
 const tickerRe = /^\w+$/
 
 function _validateCommonDef(asset) {
-  const { name, displayName, ticker, units, assetType, info } = asset
+  const {
+    name,
+    displayName,
+    ticker,
+    units,
+    assetType,
+    info,
+    chainBadgeColors,
+    gradientColors,
+    primaryColor,
+  } = asset
+
   assert(name && isString(name) && name.match(assetNameRe), 'asset name required')
   assert(displayName && isString(displayName), `asset display name required for ${name}`)
   assert(ticker && isString(ticker) && ticker.match(tickerRe), `ticker name required for ${name}`)
@@ -16,17 +27,6 @@ function _validateCommonDef(asset) {
   assert(isFunction(asset.toString), `isString required for ${name}`)
   assert(asset.toString() === name, `isString must return ${name}`)
   assert(isObject(info), `info missing for ${name}`)
-}
-
-function _validateCommonDef2(asset) {
-  const { name, blockExplorer, chainBadgeColors, gradientColors, gradientCoords, primaryColor } =
-    asset
-
-  assert(
-    isObject(blockExplorer) &&
-      ['addressUrl', 'txUrl'].every((item) => isFunction(blockExplorer[item])),
-    `invalid "blockExplorer" for ${name}`
-  )
   assert(
     isArray(chainBadgeColors) &&
       chainBadgeColors.length === 2 &&
@@ -39,12 +39,17 @@ function _validateCommonDef2(asset) {
       gradientColors.every((item) => isString(item)),
     `invalid "gradientColors" for ${name}`
   )
-  assert(
-    isObject(gradientCoords) &&
-      ['x1', 'y1', 'x2', 'y2'].every((item) => isString(gradientCoords[item])),
-    `invalid "gradientColors" for ${name}`
-  )
   assert(isString(primaryColor), `invalid "primaryColor" for ${name}`)
+}
+
+function _validateCommonDef2(asset) {
+  const { name, blockExplorer } = asset
+
+  assert(
+    isObject(blockExplorer) &&
+      ['addressUrl', 'txUrl'].every((item) => isFunction(blockExplorer[item])),
+    `invalid "blockExplorer" for ${name}`
+  )
 }
 
 export function validateBaseAssetDef(asset) {

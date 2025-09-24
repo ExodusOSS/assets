@@ -40,13 +40,12 @@ describe('Integration tests Matic Staking', () => {
     const approveTxDataEncoded = bufferToHex(approveTxData)
     let nonce = await server.getTransactionCount(delegatorAddress)
     let gasPrice = await server.gasPrice()
-    let gasLimit = await estimateGasLimit(
-      feeAsset,
-      delegatorAddress,
-      asset.contract?.current?.toLowerCase(),
-      feeAsset.currency.ZERO,
-      approveTxDataEncoded
-    )
+    let gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: delegatorAddress,
+      toAddress: asset.contract?.current?.toLowerCase(),
+      data: approveTxDataEncoded,
+    })
 
     const { rawTx: approveRawTx } = await createAndSignTx(
       {
@@ -74,13 +73,12 @@ describe('Integration tests Matic Staking', () => {
     nonce = await server.getTransactionCount(delegatorAddress)
     gasPrice = await server.gasPrice()
 
-    gasLimit = await estimateGasLimit(
-      feeAsset,
-      delegatorAddress,
-      everstakeValidatorContractAddr,
-      feeAsset.currency.ZERO,
-      delegateTxDataEncoded
-    )
+    gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: delegatorAddress,
+      toAddress: everstakeValidatorContractAddr,
+      data: delegateTxDataEncoded,
+    })
 
     const { rawTx: delegateRawTX } = await createAndSignTx(
       {
@@ -118,13 +116,12 @@ describe('Integration tests Matic Staking', () => {
 
     const nonce = await server.getTransactionCount(delegatorAddress)
     const gasPrice = await server.gasPrice()
-    const gasLimit = await estimateGasLimit(
-      feeAsset,
-      delegatorAddress, // from
-      everstakeValidatorContractAddr, // to
-      feeAsset.currency.ZERO,
-      txDataEncoded
-    )
+    const gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: delegatorAddress,
+      toAddress: everstakeValidatorContractAddr,
+      data: txDataEncoded,
+    })
 
     const { rawTx } = await createAndSignTx(
       {
@@ -161,13 +158,12 @@ describe('Integration tests Matic Staking', () => {
 
     let nonce = await server.getTransactionCount(delegatorAddress)
     let gasPrice = await server.gasPrice()
-    let gasLimit = await estimateGasLimit(
-      feeAsset,
-      delegatorAddress, // from
-      everstakeValidatorContractAddr, // to
-      feeAsset.currency.ZERO,
-      undelegateTxDataEncoded
-    )
+    let gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: delegatorAddress,
+      toAddress: everstakeValidatorContractAddr,
+      data: undelegateTxDataEncoded,
+    })
 
     const { rawTx: undelegateRawTx } = await createAndSignTx(
       {
@@ -196,13 +192,12 @@ describe('Integration tests Matic Staking', () => {
 
     nonce = await server.getTransactionCount(delegatorAddress)
     gasPrice = await server.gasPrice()
-    gasLimit = await estimateGasLimit(
-      feeAsset,
-      delegatorAddress, // from
-      everstakeValidatorContractAddr, // to
-      feeAsset.currency.ZERO,
-      claimStakeTxDataEncoded
-    )
+    gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: delegatorAddress,
+      toAddress: everstakeValidatorContractAddr,
+      data: claimStakeTxDataEncoded,
+    })
 
     const { rawTx: claimStakeRawTx } = await createAndSignTx(
       {

@@ -1,6 +1,6 @@
 {
   "name": "@exodus/ethereum-plugin",
-  "version": "2.7.1",
+  "version": "2.14.2",
   "description": "Ethereum plugin for Exodus SDK powered wallets",
   "type": "module",
   "main": "src/index.js",
@@ -21,18 +21,22 @@
   },
   "dependencies": {
     "@exodus/currency": "^6.0.1",
-    "@exodus/ethereum-api": "^8.24.1",
-    "@exodus/ethereum-lib": "^5.8.2",
-    "@exodus/ethereum-meta": "^2.0.0",
+    "@exodus/ethereum-api": "^8.45.5",
+    "@exodus/ethereum-lib": "^5.17.0",
+    "@exodus/ethereum-meta": "^2.9.0",
     "@exodus/ethereumjs": "^1.0.0",
     "@exodus/simple-retry": "^0.0.6",
     "bn.js": "^5.2.1",
     "minimalistic-assert": "^1.0.1"
   },
   "devDependencies": {
-    "@exodus/assets": "^11.0.0",
+    "@exodus/assets": "^11.4.0",
     "@exodus/assets-testing": "workspace:^",
-    "@exodus/models": "^12.0.1"
+    "@exodus/crypto": "^1.0.0-rc.13",
+    "@exodus/evm-fork-testing": "workspace:^",
+    "@exodus/models": "^12.13.0",
+    "@exodus/web3-ethereum-utils": "workspace:^",
+    "delay": "^4.0.1"
   },
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aethereum-plugin"

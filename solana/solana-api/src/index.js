@@ -4,9 +4,9 @@ import assetsList from '@exodus/solana-meta'
 
 import { Api } from './api.js'
 
-export { SolanaMonitor, SolanaAutoWithdrawMonitor } from './tx-log/index.js'
+export { SolanaMonitor } from './tx-log/index.js'
 export { createAccountState } from './account-state.js'
-export { getSolStakedFee, getStakingInfo, getUnstakingFee } from './staking-utils.js'
+export { getStakingInfo } from './staking-utils.js'
 export {
   isSolanaStaking,
   isSolanaUnstaking,
@@ -15,7 +15,9 @@ export {
 } from './txs-utils.js'
 export { createAndBroadcastTXFactory } from './tx-send.js'
 export { getBalancesFactory } from './get-balances.js'
+export { getFeeAsyncFactory } from './get-fees.js'
 export { stakingProviderClientFactory } from './staking-provider-client.js'
+export { createUnsignedTxForSend } from './create-unsigned-tx-for-send.js'
 
 // These are not the same asset objects as the wallet creates, so they should never be returned to the wallet.
 // Initially this may be violated by the Solana code until the first monitor tick updates assets with setTokens()

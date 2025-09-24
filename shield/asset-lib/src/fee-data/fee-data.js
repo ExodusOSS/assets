@@ -4,7 +4,7 @@ import assert from 'minimalistic-assert'
 import { mapCurrency, modelToJSON } from '../utils/index.js'
 import BaseFeeData from './base-fee-data.js'
 
-const { isEmpty, isEqual } = lodash
+const { isEmpty, isEqual, merge } = lodash
 
 // immutable
 /**
@@ -45,7 +45,7 @@ export default class FeeData extends BaseFeeData {
     // This affects only some cases (mixing with local vars?) and e.g. doesn't affect a lone { ...this }
     // Refs: https://github.com/terser/terser/blob/v3.14.1/lib/compress.js#L1135-L1137
     const wrap = (x) => x
-    const newConfig = { ...wrap(this), ...config }
+    const newConfig = merge(Object.create(null), wrap(this), config)
     if (config[this.mainKey]) {
       newConfig.origin = config[this.mainKey]
     }

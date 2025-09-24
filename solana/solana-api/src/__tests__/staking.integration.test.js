@@ -23,11 +23,7 @@ test('Solana: getEpochInfo', async () => {
 })
 
 test('Solana: getRewards', async () => {
-  const addresses = [
-    'AKcDnoJm3EEAKxYLecNkK9HWuneP65tvwqb3t3vU3CXX',
-    '8wH1UPiv1oq5YpY6GggQA4ht45i8vyungZJMRhYuT56u',
-  ]
-  const rewards = await api.getRewards(addresses)
+  const rewards = await api.getRewards('EPpRmq7oNByckkC1nWjmQ48URQR8FEw8igNjMzfWZg6k')
   console.log('rewards:', rewards)
   expect(rewards >= 31_084_037).toBeTruthy() // rewards at 24-09-21
 })

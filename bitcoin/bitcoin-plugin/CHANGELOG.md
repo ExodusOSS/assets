@@ -3,6 +3,110 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@2.1.0...@exodus/bitcoin-plugin@2.1.1) (2025-08-06)
+
+
+### Bug Fixes
+
+
+* fix: bump bitcoin-api to v4 (#6208)
+
+
+
+## [2.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@2.0.0...@exodus/bitcoin-plugin@2.1.0) (2025-07-16)
+
+
+### Features
+
+
+* feat: move send validation to each asset plugin (#6076)
+
+
+
+## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.35.1...@exodus/bitcoin-plugin@2.0.0) (2025-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+* refactor!: remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+
+## [1.35.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.35.0...@exodus/bitcoin-plugin@1.35.1) (2025-07-04)
+
+
+### Bug Fixes
+
+
+* fix: use fee data from balances (#6018)
+
+
+
+## [1.35.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.34.0...@exodus/bitcoin-plugin@1.35.0) (2025-07-03)
+
+
+### Features
+
+
+* feat: use get-activity-txs in bitcoin and litecoin (#6010)
+
+
+
+## [1.34.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.33.1...@exodus/bitcoin-plugin@1.34.0) (2025-05-09)
+
+
+### Features
+
+
+* feat: make multipleAddresses support configurable (#5585)
+
+
+
+## [1.33.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.33.0...@exodus/bitcoin-plugin@1.33.1) (2025-04-21)
+
+
+### Bug Fixes
+
+
+* fix: prevent app crash by adding null checks for toBaseNumber method (#5376)
+
+
+
+## [1.33.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.32.2...@exodus/bitcoin-plugin@1.33.0) (2025-04-01)
+
+
+### Features
+
+
+* feat(bitcoin): allow message signing with external signer (#5365)
+
+
+
+## [1.32.2](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.32.1...@exodus/bitcoin-plugin@1.32.2) (2025-03-19)
+
+
+### Bug Fixes
+
+
+* fix: remove brc20 dead code (#5286)
+
+* fix: spelling (#5284)
+
+
+
+## [1.32.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.32.0...@exodus/bitcoin-plugin@1.32.1) (2025-01-27)
+
+
+### Bug Fixes
+
+
+* fix: ETH web3 assert typo (#4826)
+
+
+
 ## [1.32.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-plugin@1.31.1...@exodus/bitcoin-plugin@1.32.0) (2025-01-10)
 
 

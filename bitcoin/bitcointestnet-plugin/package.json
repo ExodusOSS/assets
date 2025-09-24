@@ -1,6 +1,6 @@
 {
   "name": "@exodus/bitcointestnet-plugin",
-  "version": "1.13.2",
+  "version": "2.0.0",
   "description": "Exodus bitcointestnet-plugin",
   "type": "module",
   "main": "src/index.js",
@@ -20,7 +20,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/bitcoin-plugin": "^1.30.1",
+    "@exodus/bitcoin-plugin": "^2.0.0",
     "@exodus/bitcointestnet-meta": "^2.0.1"
   },
   "devDependencies": {

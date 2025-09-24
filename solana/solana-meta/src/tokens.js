@@ -4,7 +4,7 @@
 export default [
   {
     name: '6p6x_solana_056c2704',
-    displayName: 'OFFICIAL TRUMP',
+    displayName: 'TRUMP',
     decimals: 6,
     ticker: '6P6Xsolana056C2704',
     displayTicker: 'TRUMP',
@@ -15,9 +15,8 @@ export default [
       twitter: 'https://twitter.com/GetTrumpMemes',
       website: 'https://gettrumpmemes.com/',
     },
-    primaryColor: '#B42B2A',
-    gradientColors: ['#070733', '#B42B2A'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
+    primaryColor: '#CBB16D',
+    gradientColors: ['#AF8B4F', '#E9D68C'],
   },
   {
     name: 'fuaf_solana_2f933a22',
@@ -34,25 +33,6 @@ export default [
     },
     primaryColor: '#FFFFFF',
     gradientColors: ['#DEDEDE', '#FFFFFF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
-  },
-  {
-    name: '3twg_solana_3835713e',
-    displayName: 'Kitten Haimer',
-    decimals: 9,
-    ticker: '3TWGsolana3835713E',
-    displayTicker: 'KHAI',
-    mintAddress: '3TWgDvYBL2YPET2LxnWAwsMeoA8aL4DutNuwat2pKCjC',
-    info: {
-      description:
-        'Kitten Haimer is a community-driven crypto token promoting unity and protection against market volatility, embodying vigilance and stability in the digital landscape.',
-      telegram: 'https://t.me/+sAOenzN-GI4yMzk0',
-      twitter: 'https://x.com/KittenHaimer',
-      website: 'https://kittenhaimer.ai/',
-    },
-    primaryColor: '#F8BC4E',
-    gradientColors: ['#DD9F2E', '#F8BC4E'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: '7dhb_solana_c9e04412',
@@ -71,7 +51,6 @@ export default [
     },
     primaryColor: '#00A3FF',
     gradientColors: ['#00A3FF', '#3ADCFF'],
-    gradientCoords: { x1: '29.931%', y1: '11.994%', x2: '10.494%', y2: '28.187%' },
   },
   {
     name: '7i5k_solana_c9e04412',
@@ -80,26 +59,16 @@ export default [
     ticker: '7I5KsolanaC9E04412',
     displayTicker: 'GMT',
     mintAddress: '7i5KKsX2weiTkry7jA4ZwSuXGhs5eJBEjY8vVxR4pfRx',
-    primaryColor: '#E6BC7B',
-    gradientColors: ['#FFE5C0', '#E6BC7B'],
-    gradientCoords: { x1: '3%', y1: '8.5%', x2: '41.043%', y2: '26.738%' },
-  },
-  {
-    name: '8hgy_solana_43b58185',
-    displayName: 'COPE',
-    decimals: 6,
-    ticker: '8HGYsolana43B58185',
-    displayTicker: 'COPE',
-    mintAddress: '8HGyAAB1yoM1ttS7pXjHMa3dukTFGQggnFFH3hJZgzQh',
     info: {
       description:
-        'Cope ranks and indexes online call makers (such as trader influencers on social media), and filters out the ones who make low quality calls. This creates a powerful leaderboard that can be used to follow the top call makers.',
-      twitter: 'https://twitter.com/unlimitedcope',
-      website: 'https://www.unlimitedcope.com',
+        'The Green Metaverse Token is used for governance in STEPN, a gamified health app that rewards users for physical movement such as jogging outside.',
+      reddit: 'https://www.reddit.com/r/StepN/',
+      twitter: 'https://twitter.com/Stepnofficial',
+      website: 'https://www.stepn.com/',
+      telegram: 'https://t.me/STEPNannouncement',
     },
-    primaryColor: '#77B0DD',
-    gradientColors: ['#44b6BB', '#77B0DD'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
+    primaryColor: '#E6BC7B',
+    gradientColors: ['#FFE5C0', '#E6BC7B'],
   },
   {
     name: 'audius_solana',
@@ -110,25 +79,6 @@ export default [
     mintAddress: '9LzCMqDgTKYz9Drzqnpgee3SGa89up3a247ypMj2xrqM',
     primaryColor: '#ED43FF',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
-  },
-  {
-    name: 'aury_solana_c9e04412',
-    displayName: 'Aurory',
-    decimals: 9,
-    ticker: 'AURYsolanaC9E04412',
-    displayTicker: 'AURY',
-    mintAddress: 'AURYydfxJib1ZkTir1Jn1J9ECYUtjb6rKQVmtYaixWPP',
-    info: {
-      description:
-        'Aurory is a Solana-based role-playing game that rewards players with NFTs and tokens. Its universe has a blend of Japanese, retro, and futuristic styles, including hand-drawn art.',
-      twitter: 'https://twitter.com/auroryproject',
-      website: 'https://aurory.io/',
-      telegram: 'https://t.me/aurory_project',
-    },
-    primaryColor: '#B53BE1',
-    gradientColors: ['#8312AC', '#B53BE1'],
-    gradientCoords: { x1: '22.6%', y1: '7.867%', x2: '22.426%', y2: '30.81%' },
   },
   {
     name: 'eche_solana_c5cba5c4',
@@ -145,7 +95,6 @@ export default [
     },
     primaryColor: '#6868FC',
     gradientColors: ['#A0A0FF', '#6868FC'],
-    gradientCoords: { x1: '-4.68%', y1: '1.381%', x2: '48.573%', y2: '30.414%' },
   },
   {
     name: '7atg_solana_3506aeb0',
@@ -160,7 +109,6 @@ export default [
     },
     primaryColor: '#DBDBDB',
     gradientColors: ['#FFFFFF', '#DBDBDB'],
-    gradientCoords: { x1: '-4.68%', y1: '1.381%', x2: '48.573%', y2: '30.414%' },
   },
   {
     name: 'dezx_solana_3b523050',
@@ -175,25 +123,6 @@ export default [
     },
     primaryColor: '#6868FC',
     gradientColors: ['#A0A0FF', '#6868FC'],
-    gradientCoords: { x1: '-4.68%', y1: '1.381%', x2: '48.573%', y2: '30.414%' },
-  },
-  {
-    name: 'gene_solana_c9e04412',
-    displayName: 'Genopets',
-    decimals: 9,
-    ticker: 'GENEsolanaC9E04412',
-    displayTicker: 'GENE',
-    mintAddress: 'GENEtH5amGSi8kHAtQoezp1XEXwZJ8vcuePYnXdKrMYz',
-    info: {
-      description:
-        'Genopets is a game that rewards users for being active while raising their in-game Genopet. The GENE token offers staking, NFT-creation, exclusive features, and governance of the Genopets platform.',
-      reddit: 'https://reddit.com/r/genopets',
-      twitter: 'https://twitter.com/genopets',
-      website: 'https://www.genopets.me/',
-    },
-    primaryColor: '#00FFC8',
-    gradientColors: ['#00AE89', '#00FFC8'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: 'jupy_solana_ed7ebe51',
@@ -210,60 +139,6 @@ export default [
     },
     primaryColor: '#00FFC8',
     gradientColors: ['#98C158', '#C7F284'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
-  },
-  {
-    name: 'kinx_solana_bf1442d2',
-    displayName: 'KIN',
-    decimals: 5,
-    ticker: 'KINXsolanaBF1442D2',
-    displayTicker: 'KIN',
-    mintAddress: 'kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6',
-    info: {
-      description:
-        'Kin is used as money in consumer apps and services in the spaces of gaming, finance, communication, and more. By implementing Kin, apps can offer their users the ability to earn, pay, or transfer cryptocurrency.',
-      telegram: 'https://t.me/TheKinChannel',
-      reddit: 'https://reddit.com/r/KinFoundation',
-      twitter: 'https://twitter.com/kin_ecosystem',
-      website: 'https://kin.org',
-    },
-    primaryColor: '#946DFC',
-    gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
-  },
-  {
-    name: 'mang_solana_c5cba5c4',
-    displayName: 'Mango',
-    decimals: 6,
-    ticker: 'MANGsolanaC5CBA5C4',
-    displayTicker: 'MNGO',
-    mintAddress: 'MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac',
-    info: {
-      description:
-        'MNGO is a governance token for Mango, a DAO offering margin trading, lending, and perpetual futures. Powered by Solana, Mango’s transactions are nearly instant, with fees close to zero. ',
-      twitter: 'https://twitter.com/mangomarkets',
-      website: 'https://mango.markets/',
-    },
-    primaryColor: '#EEB91B',
-    gradientColors: ['#E54033', '#EEB91B'],
-    gradientCoords: { x1: '61.5%', y1: '7.3%', x2: '47.7%', y2: '-6.5%' },
-  },
-  {
-    name: 'mean_solana_c5cba5c4',
-    displayName: 'Meanfi',
-    decimals: 6,
-    ticker: 'MEANsolanaC5CBA5C4',
-    displayTicker: 'MEAN',
-    mintAddress: 'MEANeD3XDdUmNMsRGjASkSWdC8prLYsoRJ61pPeHctD',
-    info: {
-      description:
-        'MeanFi is a self-custody, trustless bank that connects traditional finance and DeFi. It can save users time and money with services such as money streaming, dollar cost averaging, and searches that find the best prices for Solana-based exchanges.',
-      twitter: 'https://twitter.com/meanfinance',
-      website: 'https://meanfi.com/',
-    },
-    primaryColor: '#FF4F4F',
-    gradientColors: ['#B7011C', '#FF4F4F'],
-    gradientCoords: { x1: '10.5%', y1: '3.5%', x2: '38.5%', y2: '53.5%' },
   },
   {
     name: 'mefn_solana_5d11b887',
@@ -280,7 +155,6 @@ export default [
     },
     primaryColor: '#E42575',
     gradientColors: ['#E42575', '#FFC7C2'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'msol_solana_c9e04412',
@@ -297,7 +171,6 @@ export default [
     },
     primaryColor: '#C8ECE1',
     gradientColors: ['#308DBA', '#C8ECE1'],
-    gradientCoords: { x1: '-3.5%', y1: '3.5%', x2: '48.05%', y2: '30.724%' },
   },
   {
     name: 'orca_solana',
@@ -316,7 +189,6 @@ export default [
     },
     primaryColor: '#5969DB',
     gradientColors: ['#1D257A', '#5969DB'],
-    gradientCoords: { x1: '44.5%', y1: '40%', x2: '-4.548%', y2: '4.017%' },
   },
   {
     name: 'poli_solana_0cc3745c',
@@ -334,7 +206,6 @@ export default [
     },
     primaryColor: '#32FFFF',
     gradientColors: ['#32FFFF', '#EDFEFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: '2b1k_solana_f3924eb0',
@@ -349,7 +220,6 @@ export default [
     },
     primaryColor: '#0071F3',
     gradientColors: ['#0071F3', '#338EF8'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'raydium',
@@ -366,26 +236,6 @@ export default [
     },
     primaryColor: '#3772FF',
     gradientColors: ['#3772FF', '#C200FB'],
-    gradientCoords: { x1: '99.911%', y1: '25.033%', x2: '-6.116%', y2: '61.756%' },
-  },
-  {
-    name: 'rndr_solana_4b3ba195',
-    displayName: 'Render',
-    decimals: 8,
-    ticker: 'RNDRsolana4B3BA195',
-    displayTicker: 'RENDER',
-    mintAddress: 'rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof',
-    info: {
-      description:
-        'Render is a token that creators can pay to node operators to get GPU rendering power for their work on images, animation, and special effects. This saves creators money as it’s cheaper than in-house rendering, and it allows node operators to earn RNDR with their idle GPUs.',
-      reddit: 'https://www.reddit.com/r/RenderToken/',
-      twitter: 'https://twitter.com/rendertoken',
-      website: 'https://rendertoken.com/',
-      telegram: 'https://t.me/RenderTokenOfficial',
-    },
-    primaryColor: '#FF5A5A',
-    gradientColors: ['#E62249', '#FF5A5A'],
-    gradientCoords: { x1: '38%', y1: '37.5%', x2: '0.537%', y2: '6.714%' },
   },
   {
     name: 'serum',
@@ -402,7 +252,6 @@ export default [
     },
     primaryColor: '#71E0EC',
     gradientColors: ['#71E0EC', '#05AAC5'],
-    gradientCoords: { x1: '0%', y1: '-.006%', x2: '99.694%', y2: '99.694%' },
   },
   {
     name: 'smoothlovepotion_solana',
@@ -413,7 +262,6 @@ export default [
     mintAddress: '4hpngEp1v3CXpeKB81Gw4sv7YvwUVRKvY3SGag9ND8Q4',
     primaryColor: '#77BAA1',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: 'staratlas_solana',
@@ -432,7 +280,6 @@ export default [
     },
     primaryColor: '#32FFFF',
     gradientColors: ['#32FFFF', '#EDFEFF'],
-    gradientCoords: { x1: '44.5%', y1: '40%', x2: '-4.548%', y2: '4.017%' },
   },
   {
     name: 'tetherusd_solana',
@@ -443,7 +290,6 @@ export default [
     mintAddress: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
     primaryColor: '#53AE94',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: 'thegraph_solana',
@@ -454,25 +300,6 @@ export default [
     mintAddress: 'HGsLG4PnZ28L8A4R5nPqKgZd86zUUdmfnkTRnuFJ5dAX',
     primaryColor: '#33A0FF',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
-  },
-  {
-    name: 'tulip_solana',
-    displayName: 'Tulip Protocol',
-    decimals: 6,
-    ticker: 'TULIPSOL',
-    displayTicker: 'TULIP',
-    mintAddress: 'TuLipcqtGVXP9XR62wM8WWCm6a9vhLs7T1uoWBk6FDs',
-    info: {
-      description:
-        'Tulip is the first Solana-powered platform to offer decentralized yield aggregation and auto-compounding vault strategies.',
-      twitter: 'https://twitter.com/tulipprotocol',
-      website: 'https://tulip.garden',
-      telegram: 'https://t.me/tulipprotocol',
-    },
-    primaryColor: '#1C88B4',
-    gradientColors: ['#2BD9B9', '#D141E9'],
-    gradientCoords: { x1: '44.5%', y1: '40%', x2: '-4.548%', y2: '4.017%' },
   },
   {
     name: 'usdcoin_solana',
@@ -483,6 +310,5 @@ export default [
     mintAddress: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
     primaryColor: '#3E90E8',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
 ]

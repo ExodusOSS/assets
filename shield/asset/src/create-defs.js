@@ -9,7 +9,6 @@ const { isNumber } = lodash
 
 const defaultChainBadgeColors = ['#EAEAEA', '#FFF']
 const defaultGradientColors = defaultChainBadgeColors
-const defaultGradientCoords = { x1: '0%', y1: '0%', x2: '100%', y2: '100%' }
 
 const assertPresence = (obj, list) => {
   return list.every((field) =>
@@ -30,7 +29,6 @@ const assertPresence = (obj, list) => {
  * @param {String} displayNetworkTicker
  * @param {Array} chainBadgeColors
  * @param {Array} gradientColors
- * @param {Object} gradientCoords
  * @param {Object} info
  * @param {String} primaryColor
  * @param {String} tokenAssetType the `assetType` assigned to tokens
@@ -47,7 +45,6 @@ export const createBaseAssetDef = (params) => {
   const displayNetworkTicker = rest.displayNetworkTicker || displayTicker
   const chainBadgeColors = rest.chainBadgeColors || defaultChainBadgeColors
   const gradientColors = rest.gradientColors || defaultGradientColors
-  const gradientCoords = rest.gradientCoords || defaultGradientCoords
   const primaryColor = rest.primaryColor || '#EAEAEA'
   const info = rest.info || Object.create(null)
 
@@ -63,7 +60,6 @@ export const createBaseAssetDef = (params) => {
     displayNetworkTicker,
     displayTicker,
     gradientColors,
-    gradientCoords,
     info,
     name,
     primaryColor,
@@ -92,7 +88,6 @@ export const createBaseAssetDef = (params) => {
  * @param {String} token.displayTicker
  * @param {Array} token.chainBadgeColors
  * @param {Array} token.gradientColors
- * @param {Object} token.gradientCoords
  * @param {Object} token.info
  * @param {String} token.primaryColor
  * @param {Function} tokenOverrides
@@ -111,7 +106,6 @@ export const createTokenDef = ({ asset, token, tokenOverrides = (t) => t, option
   const displayTicker = token.displayTicker || token.ticker
   const chainBadgeColors = token.chainBadgeColors || token.gradientColors || asset.chainBadgeColors
   const gradientColors = token.gradientColors || asset.gradientColors
-  const gradientCoords = token.gradientCoords || asset.gradientCoords
   const primaryColor = token.primaryColor || asset.primaryColor
   const info = token.info || Object.create(null)
 
@@ -128,7 +122,6 @@ export const createTokenDef = ({ asset, token, tokenOverrides = (t) => t, option
     displayNetworkTicker: asset.displayNetworkTicker,
     displayTicker,
     gradientColors,
-    gradientCoords,
     info,
     // name,
     primaryColor,
@@ -146,8 +139,11 @@ export const createTokenDef = ({ asset, token, tokenOverrides = (t) => t, option
 
 export const createMetaDef = ({ assetParams, tokensParams = [], tokenOverrides, options }) => {
   const asset = createBaseAssetDef(assetParams)
-  const tokens = tokensParams.map((token) =>
-    createTokenDef({ asset, token, tokenOverrides, options })
-  )
-  return { asset, tokens, assetsList: [asset, ...tokens] }
+
+  const createTokenDefs = ({ tokens }) =>
+    tokens.map((token) => createTokenDef({ asset, token, tokenOverrides, options }))
+
+  const tokens = createTokenDefs({ tokens: tokensParams })
+
+  return { asset, tokens, assetsList: [asset, ...tokens], createTokenDefs }
 }

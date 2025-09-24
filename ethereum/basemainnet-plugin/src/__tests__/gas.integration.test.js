@@ -23,7 +23,7 @@ describe('Base Gas', () => {
           value: new Uint8Array([3, 141, 126, 164, 198, 128, 0]),
         },
         txMeta: {
-          assetName: 'optimism',
+          assetName: 'basemainnet',
           eip1559Enabled: false,
         },
       },

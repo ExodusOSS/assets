@@ -60,6 +60,18 @@ test('Solana: getTransactionById', async () => {
   )
 })
 
+test('Solana: ownerChanged', async () => {
+  // check owner program
+  const changed = await api.ownerChanged('ByJhT9qkRR6ycbgvwokZG1gifpUyVQ6jXQ6edpwKuzD1') // on this address the owner was changed on purpose
+  expect(changed).toEqual(true)
+  // address purged (for inactivity)
+  const purged = await api.ownerChanged(ADDRESS_WITH_HISTORY)
+  expect(purged).toEqual(false)
+  // regular active address
+  const notChanged = await api.ownerChanged('atBkHUPcHAXPopfKmoTfT45AaAYNnSCLnWkXnnhDYh3')
+  expect(notChanged).toEqual(false)
+})
+
 test('Solana: getFeeForMessage VersionedMessage', async () => {
   const encodedMessage =
     'gAEAAQJJxHzprZ3lsoljx5kIwcKQNuleDp42yIKvsej9ml83BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhs8eaK4yTSLzrL0/7QmEYSLmd3ThYxxtkieE0aZ/AIwBAQIAAAwCAAAA6AMAAAAAAAAA'
@@ -159,6 +171,22 @@ test('Solana: getMinimumBalanceForRentExemption', async () => {
   expect(typeof minimumBalance === 'number').toEqual(true)
 })
 
+test('Solana: getRentExemptionMinAmount', async () => {
+  // for 0 SOL address (with history, still 0)
+  const minimumBalance = await api.getRentExemptionMinAmount(ADDRESS_WITH_HISTORY)
+  expect(minimumBalance > 0).toBeTruthy()
+  // for new address
+  const minimumBalance2 = await api.getRentExemptionMinAmount(
+    '9FtqHbSavgHYbyhgLHCAA7nDHkfisxyRU6ucPwAR25BY'
+  )
+  expect(minimumBalance2 > 0).toBeTruthy()
+  // for address with SOL balance
+  const minimumBalance3 = await api.getRentExemptionMinAmount(
+    '7jq3r3idMRhEvPkRo56TiHLWREMgZQgHWhvPfS3kzgJF'
+  )
+  expect(minimumBalance3).toEqual(0)
+})
+
 test('Solana: getMetaplexMetadata', async () => {
   const MANGO_SPL_TOKEN = 'MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac'
 
@@ -217,14 +245,14 @@ describe('Solana: getDecimals', () => {
 
 describe('Solana: getAccountInfo', () => {
   test('returns parsed data', async () => {
-    const value = await api.getAccountInfo('26EA6FxEfryse9iJbZrtYCUwhAwxmqG1GurrfbJarmem')
+    const value = await api.getAccountInfo('Dy3vP1oawqr3KuvUUWp443Q2rBWxgvet9GfDJthYEeGJ')
     expect(typeof value?.data?.parsed === 'object').toBeTruthy()
   })
 
   test('returns base64 data', async () => {
-    const value = await api.getAccountInfo('26EA6FxEfryse9iJbZrtYCUwhAwxmqG1GurrfbJarmem', 'base64')
+    const value = await api.getAccountInfo('Dy3vP1oawqr3KuvUUWp443Q2rBWxgvet9GfDJthYEeGJ', 'base64')
     expect(Array.isArray(value.data)).toBeTruthy()
-    expect(Buffer.from(value.data[0], 'base64').length).toEqual(8184)
+    expect(Buffer.from(value.data[0], 'base64').length).toEqual(200)
   })
 })
 

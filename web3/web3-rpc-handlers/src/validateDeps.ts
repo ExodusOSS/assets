@@ -29,6 +29,7 @@ function validateAppDeps(deps: AppDeps) {
     'ensureTrusted',
     'isAutoApproved',
     'isTrusted',
+    'addConnection',
     'getOrigin',
     'scanDomains',
   ]
@@ -38,6 +39,7 @@ function validateAppDeps(deps: AppDeps) {
     'getIsConnected',
     'onTransactionsSigned',
     'getPathname',
+    'getConnectedAccounts',
     'ensureUntrusted',
   ]
   validate(deps, requiredKeys, optionalKeys)

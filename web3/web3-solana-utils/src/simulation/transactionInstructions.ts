@@ -2,7 +2,6 @@ import { decodeTransactionInstructions, PublicKey } from '@exodus/solana-lib'
 import { formatAmount } from '@exodus/web3-utils'
 
 import { prepareSolTransactions } from '../transactions.js'
-
 import type {
   AdvancedDetails,
   DecodedTransactionInstruction,
@@ -24,7 +23,7 @@ const formatInstruction = (
   instructionValue: typeof PublicKey,
 ) => {
   let value = instructionValue
-  instructionName = instructionName.replace(/PubKey/i, 'Public Key')
+  instructionName = instructionName.replace(/pubkey/i, 'Public Key')
   let name = instructionNameToTitle(instructionName)
 
   if (Buffer.isBuffer(value)) {
@@ -37,12 +36,12 @@ const formatInstruction = (
 
   if (name === 'Lamports') {
     name = 'Amount'
-    value = `${formatAmount(value, 9).substring(0, 6)} SOL`
+    value = `${formatAmount(value, 9).slice(0, 6)} SOL`
   }
 
   value = String(value)
   const formattedValue =
-    value.length > 14 ? `${value.substring(0, 4)}..${value.slice(-4)}` : value
+    value.length > 14 ? `${value.slice(0, 4)}..${value.slice(-4)}` : value
 
   return {
     name,

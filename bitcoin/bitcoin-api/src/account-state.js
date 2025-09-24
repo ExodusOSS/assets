@@ -1,6 +1,6 @@
 import { AccountState, UtxoCollection } from '@exodus/models'
 
-export function createAccountState({ asset, ordinalsEnabled = false, brc20Enabled = false }) {
+export function createAccountState({ asset, ordinalsEnabled = false }) {
   const empty = UtxoCollection.createEmpty({
     currency: asset.currency,
   })
@@ -16,10 +16,6 @@ export function createAccountState({ asset, ordinalsEnabled = false, brc20Enable
     defaults.knownBalanceUtxoIds = []
     defaults.mustAvoidUtxoIds = []
     defaults.additionalInscriptions = []
-  }
-
-  if (brc20Enabled) {
-    defaults.brc20Balances = {}
   }
 
   return class BitcoinAccountState extends AccountState {

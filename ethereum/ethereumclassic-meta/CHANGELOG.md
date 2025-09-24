@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/ethereumclassic-meta@2.0.1...@exodus/ethereumclassic-meta@2.0.2) (2025-03-07)
+
+
+### Bug Fixes
+
+
+* fix: add missing network icons to metas (#5202)
+
+
+
+## [2.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereumclassic-meta@2.0.0...@exodus/ethereumclassic-meta@2.0.1) (2024-12-12)
+
+
+### License
+
+
+* license: re-license under MIT license (#4580)
+
+
+
 ## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereumclassic-meta@1.0.3...@exodus/ethereumclassic-meta@2.0.0) (2024-07-11)
 
 

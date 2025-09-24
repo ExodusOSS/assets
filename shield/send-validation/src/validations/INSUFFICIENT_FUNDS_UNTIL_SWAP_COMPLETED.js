@@ -1,4 +1,6 @@
-import { PRIORITY_LEVELS, VALIDATION_TYPES } from '../constants.js'
+import { t } from '@exodus/i18n-dummy'
+
+import { FIELDS, PRIORITY_LEVELS, VALIDATION_TYPES } from '../constants.js'
 
 const INSUFFICIENT_FUNDS_UNTIL_SWAP_COMPLETED = {
   id: 'INSUFFICIENT_FUNDS_UNTIL_SWAP_COMPLETED',
@@ -11,6 +13,9 @@ const INSUFFICIENT_FUNDS_UNTIL_SWAP_COMPLETED = {
     return !zeroBalanceAndHasIncomingOrders
   },
 
+  getMessage: () => t('Wait for it to complete to send these funds.'),
+
+  field: FIELDS.AMOUNT,
   priority: PRIORITY_LEVELS.MIDDLE,
 }
 

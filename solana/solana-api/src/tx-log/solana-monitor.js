@@ -23,6 +23,7 @@ export class SolanaMonitor extends BaseMonitor {
     ticksBetweenHistoryFetches = TICKS_BETWEEN_HISTORY_FETCHES,
     ticksBetweenStakeFetches = TICKS_BETWEEN_STAKE_FETCHES,
     txsLimit,
+    shouldUpdateBalanceBeforeHistory = true,
     ...args
   }) {
     super(args)
@@ -33,6 +34,7 @@ export class SolanaMonitor extends BaseMonitor {
     this.staking = DEFAULT_REMOTE_CONFIG.staking
     this.ticksBetweenStakeFetches = ticksBetweenStakeFetches
     this.ticksBetweenHistoryFetches = ticksBetweenHistoryFetches
+    this.shouldUpdateBalanceBeforeHistory = shouldUpdateBalanceBeforeHistory
     this.includeUnparsed = includeUnparsed
     this.txsLimit = txsLimit
     this.addHook('before-stop', (...args) => this.beforeStop(...args))
@@ -143,19 +145,6 @@ export class SolanaMonitor extends BaseMonitor {
     return true
   }
 
-  async getAccountsAndBalances({ refresh, address, accountState, walletAccount }) {
-    const tokenAccounts = await this.api.getTokenAccountsByOwner(address)
-    const { account, staking } = await this.getAccount({
-      refresh,
-      address,
-      tokenAccounts,
-      accountState,
-      walletAccount,
-    })
-
-    return { account, tokenAccounts, staking }
-  }
-
   async tick({ walletAccount, refresh }) {
     // Check for new wallet account
     await this.initWalletAccount({ walletAccount })
@@ -180,10 +169,9 @@ export class SolanaMonitor extends BaseMonitor {
 
     const shouldUpdateHistory = refresh || isHistoryUpdateTick || balanceChanged
     const shouldUpdateOnlyBalance = balanceChanged && !shouldUpdateHistory
-    const shouldUpdateBalanceBeforeHistory = true
 
     // getHistory is more likely to fail/be rate limited, so we want to update users balance only on a lot of ticks
-    if (shouldUpdateBalanceBeforeHistory || shouldUpdateOnlyBalance) {
+    if (this.shouldUpdateBalanceBeforeHistory || shouldUpdateOnlyBalance) {
       // update all state at once
       await this.updateState({ account, walletAccount, staking })
       await this.emitUnknownTokensEvent({ tokenAccounts })
@@ -229,7 +217,7 @@ export class SolanaMonitor extends BaseMonitor {
       if (assetName === 'unknown' || !asset) continue // skip unknown tokens
       const feeAsset = asset.feeAsset
 
-      const coinAmount = asset.currency.baseUnit(tx.amount)
+      const coinAmount = tx.amount ? asset.currency.baseUnit(tx.amount) : asset.currency.ZERO
 
       const item = {
         coinName: assetName,
@@ -249,10 +237,17 @@ export class SolanaMonitor extends BaseMonitor {
 
       if (tx.owner === address) {
         // send transaction
-        item.to = tx.to
+        item.to = Array.isArray(tx.to) ? undefined : tx.to
         item.feeAmount = baseAsset.currency.baseUnit(tx.fee) // in SOL
         item.feeCoinName = baseAsset.name
         item.coinAmount = item.coinAmount.negate()
+
+        if (tx.data?.sent) {
+          item.data.sent = tx.data.sent.map((s) => ({
+            address: s.address,
+            amount: asset.currency.baseUnit(s.amount).toDefaultString({ unit: true }),
+          }))
+        }
 
         if (tx.to === tx.owner) {
           item.selfSend = true
@@ -284,29 +279,33 @@ export class SolanaMonitor extends BaseMonitor {
       mappedTransactions.push(item)
     }
 
-    // logItemsByAsset = { 'solana:': [...], 'serum': [...] }
-
+    const logItemsByAsset = _.groupBy(mappedTransactions, (item) => item.coinName)
     return {
-      logItemsByAsset: _.groupBy(mappedTransactions, (item) => item.coinName),
+      logItemsByAsset,
       hasNewTxs: transactions.length > 0,
       cursorState: { cursor: newCursor },
     }
   }
 
-  async getAccount({ refresh, address, tokenAccounts, accountState, walletAccount }) {
+  async getAccountsAndBalances({ refresh, address, accountState, walletAccount }) {
     const tokens = Object.keys(this.assets).filter((name) => name !== this.asset.name)
-    const accountInfo = await this.api.getAccountInfo(address).catch(() => {})
-    const accountSize = accountInfo?.space || 0
+    const [accountInfo, { balances: splBalances, accounts: tokenAccounts }] = await Promise.all([
+      this.api.getAccountInfo(address).catch(() => {}),
+      this.api.getTokensBalancesAndAccounts({
+        address,
+        filterByTokens: tokens,
+      }),
+    ])
+
     const solBalance = accountInfo?.lamports || 0
 
-    const rentExemptValue = await this.api.getMinimumBalanceForRentExemption(accountSize)
-    const rentExemptAmount = this.asset.currency.baseUnit(rentExemptValue)
+    const accountSize = accountInfo?.space || 0
 
-    const splBalances = await this.api.getTokensBalance({
-      address,
-      filterByTokens: tokens,
-      tokenAccounts,
-    })
+    const rentExemptAmount = this.asset.currency.baseUnit(
+      await this.api.getMinimumBalanceForRentExemption(accountSize)
+    )
+
+    const ownerChanged = await this.api.ownerChanged(address, accountInfo)
 
     const tokenBalances = _.mapValues(splBalances, (balance, name) =>
       this.assets[name].currency.baseUnit(balance)
@@ -326,15 +325,17 @@ export class SolanaMonitor extends BaseMonitor {
 
     const staking =
       this.isStakingEnabled() && fetchStakingInfo
-        ? await this.getStakingInfo({ address, walletAccount })
+        ? await this.getStakingInfo({ address, accountState, walletAccount })
         : { ...accountState.stakingInfo, staking: this.staking }
 
     const stakedBalance = this.asset.currency.baseUnit(staking.locked)
+    const activatingBalance = this.asset.currency.baseUnit(staking.activating)
     const withdrawableBalance = this.asset.currency.baseUnit(staking.withdrawable)
     const pendingBalance = this.asset.currency.baseUnit(staking.pending)
     const balance = this.asset.currency
       .baseUnit(solBalance)
       .add(stakedBalance)
+      .add(activatingBalance)
       .add(withdrawableBalance)
       .add(pendingBalance)
 
@@ -343,16 +344,21 @@ export class SolanaMonitor extends BaseMonitor {
         balance,
         tokenBalances,
         rentExemptAmount,
+        accountSize,
+        ownerChanged,
       },
       staking,
+      tokenAccounts,
     }
   }
 
   async updateState({ account, cursorState, walletAccount, staking }) {
-    const { balance, tokenBalances, rentExemptAmount } = account
+    const { balance, tokenBalances, rentExemptAmount, accountSize, ownerChanged } = account
     const newData = {
       balance,
       rentExemptAmount,
+      accountSize,
+      ownerChanged,
       tokenBalances,
       stakingInfo: staking,
       ...cursorState,
@@ -360,15 +366,15 @@ export class SolanaMonitor extends BaseMonitor {
     return this.updateAccountState({ newData, walletAccount })
   }
 
-  async getStakingInfo({ address, walletAccount }) {
+  async getStakingInfo({ address, accountState, walletAccount }) {
     const stakingInfo = await this.api.getStakeAccountsInfo(address)
-    const stakingAddresses = await this.getStakingAddressesFromTxLog({
-      assetName: this.asset.name,
-      walletAccount,
-    })
-    // merge current and old staking addresses
-    const allStakingAddresses = _.uniq([...Object.keys(stakingInfo.accounts), ...stakingAddresses])
-    const rewards = await this.api.getRewards(allStakingAddresses)
+    let earned = accountState.stakingInfo.earned.toBaseString()
+    try {
+      const rewards = await this.api.getRewards(address)
+      earned = rewards
+    } catch (error) {
+      console.warn(error)
+    }
 
     return {
       loaded: true,
@@ -380,7 +386,7 @@ export class SolanaMonitor extends BaseMonitor {
       activating: this.asset.currency.baseUnit(stakingInfo.activating),
       withdrawable: this.asset.currency.baseUnit(stakingInfo.withdrawable),
       pending: this.asset.currency.baseUnit(stakingInfo.pending), // still undelegating (not yet available for withdraw)
-      earned: this.asset.currency.baseUnit(rewards),
+      earned: this.asset.currency.baseUnit(earned),
       accounts: stakingInfo.accounts, // Obj
     }
   }

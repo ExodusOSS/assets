@@ -165,23 +165,37 @@ export class BaseMonitor extends EventEmitter {
       assetName,
       walletAccounts,
     })
+
+    const walletAccountsToTick = walletAccounts.filter(
+      (existingWalletAccount) => !walletAccount || walletAccount === existingWalletAccount
+    )
     let error = null
+    let result
     try {
-      await Promise.all(
-        walletAccounts
-          .filter(
-            (existingWalletAccount) => !walletAccount || walletAccount === existingWalletAccount
-          )
-          .map((walletAccount) =>
-            this.tickWithExtra({ walletAccount, refresh, highPriority, assetName })
-          )
+      result = await Promise.all(
+        walletAccountsToTick.map((walletAccount) =>
+          this.tickWithExtra({ walletAccount, refresh, highPriority, assetName })
+        )
       )
     } catch (e) {
       error = e
       throw e
     } finally {
+      const tickErrorEntries = result
+        ? walletAccountsToTick
+            .map((walletAccount, i) => {
+              const tickError = result[i]?.error
+              return tickError ? [walletAccount, tickError] : null
+            })
+            .filter(Boolean)
+        : []
+
+      const tickErrors =
+        tickErrorEntries.length > 0 ? Object.fromEntries(tickErrorEntries) : undefined
+
       await this._runHooks('after-tick-multiple-wallet-accounts', {
         error,
+        tickErrors,
         refresh,
         highPriority,
         assetName,
@@ -245,6 +259,8 @@ export class BaseMonitor extends EventEmitter {
       await this._runHooks('after-tick', { ...options, error })
       this.tickCount[walletAccount]++
     }
+
+    return { error }
   }
 
   async tick({ refresh, walletAccount, highPriority }) {

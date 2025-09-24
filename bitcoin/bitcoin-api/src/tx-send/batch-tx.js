@@ -26,6 +26,7 @@ export const getCreateBatchTransaction = ({
     const {
       feeData = await assetClientInterface.getFeeConfig({ assetName }),
       taprootInputWitnessSize,
+      isSendAll = false,
     } = options
 
     const accountState = await assetClientInterface.getAccountState({ assetName, walletAccount })
@@ -123,7 +124,7 @@ export const getCreateBatchTransaction = ({
     }
 
     const change = selectedUtxos.value.sub(amount).sub(fee)
-    if (change.gte(asset.currency.baseUnit(DUST_VALUES[changeAddressType]))) {
+    if (!isSendAll && change.gte(asset.currency.baseUnit(DUST_VALUES[changeAddressType]))) {
       const changeAddress = await assetClientInterface.getNextChangeAddress({
         assetName,
         walletAccount,

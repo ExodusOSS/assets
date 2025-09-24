@@ -10,6 +10,7 @@ it('serializes balance and tokenBalances V0', () => {
   const accountState = new SolanaAccountState({
     balance: solana.currency.baseUnit(100),
     rentExemptAmount: solana.currency.defaultUnit(0),
+    accountSize: 0,
     tokenBalances: { usdcoin_solana: usdcoin.currency.defaultUnit(10) },
   })
   const serialized = accountState.toJSON()

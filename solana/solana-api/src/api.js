@@ -1,5 +1,7 @@
 import createApiCJS from '@exodus/asset-json-rpc'
-import { memoize } from '@exodus/basic-utils'
+import { memoizeLruCache } from '@exodus/asset-lib'
+import { memoize, pickBy } from '@exodus/basic-utils'
+import wretch from '@exodus/fetch/wretch'
 import { retry } from '@exodus/simple-retry'
 import {
   buildRawTransaction,
@@ -14,15 +16,17 @@ import {
   TOKEN_2022_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
 } from '@exodus/solana-lib'
-import BN from 'bn.js'
 import lodash from 'lodash'
 import ms from 'ms'
 import urljoin from 'url-join'
-import wretch from 'wretch'
 
 import { Connection } from './connection.js'
 import { getStakeActivation } from './get-stake-activation/index.js'
-import { isSplTransferInstruction } from './txs-utils.js'
+import {
+  isSolTransferInstruction,
+  isSplMintInstruction,
+  isSplTransferInstruction,
+} from './txs-utils.js'
 
 const createApi = createApiCJS.default || createApiCJS
 
@@ -31,6 +35,12 @@ const createApi = createApiCJS.default || createApiCJS
 const RPC_URL = 'https://solana.a.exodus.io' // https://vip-api.mainnet-beta.solana.com/, https://api.mainnet-beta.solana.com
 const WS_ENDPOINT = 'wss://solana.a.exodus.io/ws' // not standard across all node providers (we're compatible only with Quicknode)
 const FORCE_HTTP = true // use https over ws
+const ZERO = BigInt(0)
+
+const errorMessagesToRetry = [
+  'Blockhash not found',
+  'Failed to query long-term storage; please try again',
+]
 
 // Tokens + SOL api support
 export class Api {
@@ -53,6 +63,12 @@ export class Api {
       (accountSize) => accountSize,
       ms('15m')
     )
+
+    this.getAccountSize = memoize(
+      (address) => this.getAccountInfo(address),
+      (address) => address,
+      ms('3m')
+    )
   }
 
   setServer(rpcUrl) {
@@ -65,7 +81,7 @@ export class Api {
   }
 
   setTokens(assets = {}) {
-    const solTokens = lodash.pickBy(assets, (asset) => asset.assetType === this.tokenAssetType)
+    const solTokens = pickBy(assets, (asset) => asset.assetType === this.tokenAssetType)
     this.tokens = new Map(Object.values(solTokens).map((v) => [v.mintAddress, v]))
   }
 
@@ -129,6 +145,20 @@ export class Api {
 
   isTokenSupported(mint) {
     return this.tokens.has(mint)
+  }
+
+  async getRentExemptionMinAmount(address) {
+    // minimum amount required for the destination account to be rent-exempt
+    const accountInfo = await this.getAccountSize(address).catch(() => {})
+    if (accountInfo?.space === 0) {
+      // no rent required
+      return 0
+    }
+
+    const accountSize = accountInfo?.space || 0
+
+    // Lamports number
+    return this.getMinimumBalanceForRentExemption(accountSize)
   }
 
   async getEpochInfo() {
@@ -206,7 +236,34 @@ export class Api {
 
   async getSignaturesForAddress(address, { until, before, limit } = {}) {
     until = until || undefined
-    return this.rpcCall('getSignaturesForAddress', [address, { until, before, limit }], { address })
+
+    const fetchRetry = retry(
+      async () => {
+        try {
+          return await this.rpcCall(
+            'getSignaturesForAddress',
+            [address, { until, before, limit }],
+            {
+              address,
+            }
+          )
+        } catch (error) {
+          if (
+            error.message &&
+            !errorMessagesToRetry.some((errorMessage) => error.message.includes(errorMessage))
+          ) {
+            error.finalError = true
+          }
+
+          console.warn(`Error getting signatures. Retrying...`, error)
+
+          throw error
+        }
+      },
+      { delayTimesMs: ['8s', '10s', '15s'] }
+    )
+
+    return fetchRetry()
   }
 
   /**
@@ -346,18 +403,18 @@ export class Api {
             (balance) => balance.accountIndex === postBalance.accountIndex
           )
 
-          const preAmount = new BN(lodash.get(preBalance, 'uiTokenAmount.amount', '0'), 10)
-          const postAmount = new BN(lodash.get(postBalance, 'uiTokenAmount.amount', '0'), 10)
+          const preAmount = BigInt(preBalance?.uiTokenAmount?.amount ?? '0')
+          const postAmount = BigInt(postBalance?.uiTokenAmount?.amount ?? '0')
 
-          const amount = postAmount.sub(preAmount)
+          const amount = postAmount - preAmount
 
-          if (!tokenAccount || amount.isZero()) return null
+          if (!tokenAccount || amount === ZERO) return null
 
           // This is not perfect as there could be multiple same-token transfers in single
           // transaction, but our wallet only supports one transaction with single txId
           // so we are picking first that matches (correct token + type - send or receive)
           const match = innerInstructions.find((inner) => {
-            const targetOwner = amount.isNeg() ? ownerAddress : null
+            const targetOwner = amount < ZERO ? ownerAddress : null
             return (
               inner.token.mintAddress === tokenAccount.mintAddress && targetOwner === inner.owner
             )
@@ -380,7 +437,7 @@ export class Api {
             owner,
             from,
             to,
-            amount: amount.abs().toString(), // inconsistent with the rest, but it can and did overflow
+            amount: (amount < ZERO ? -amount : amount).toString(), // inconsistent with the rest, but it can and did overflow
             fee: 0,
             token: tokenAccount,
             data: {
@@ -417,11 +474,18 @@ export class Api {
         return [...acc, ...val.instructions]
       }, [])
       .filter(
-        (ix) => ix.parsed && isSplTransferInstruction({ program: ix.program, type: ix.parsed.type })
+        (ix) =>
+          ix.parsed &&
+          (isSplTransferInstruction({ program: ix.program, type: ix.parsed.type }) ||
+            isSplMintInstruction({ program: ix.program, type: ix.parsed.type }) ||
+            (!includeUnparsed &&
+              isSolTransferInstruction({ program: ix.program, type: ix.parsed.type })))
       )
       .map((ix) => {
-        const source = lodash.get(ix, 'parsed.info.source')
-        const destination = lodash.get(ix, 'parsed.info.destination')
+        let source = lodash.get(ix, 'parsed.info.source')
+        const destination = isSplMintInstruction({ program: ix.program, type: ix.parsed.type })
+          ? lodash.get(ix, 'parsed.info.account') // only for minting
+          : lodash.get(ix, 'parsed.info.destination')
         const amount = Number(
           lodash.get(ix, 'parsed.info.amount', 0) ||
             lodash.get(ix, 'parsed.info.tokenAmount.amount', 0)
@@ -438,10 +502,59 @@ export class Api {
           return
         }
 
+        if (
+          source === ownerAddress &&
+          isSolTransferInstruction({ program: ix.program, type: ix.parsed.type })
+        ) {
+          const lamports = Number(lodash.get(ix, 'parsed.info.lamports', 0))
+          if (solanaTransferTx) {
+            solanaTransferTx.lamports += lamports
+            solanaTransferTx.amount = solanaTransferTx.lamports
+            if (!Array.isArray(solanaTransferTx.to)) {
+              solanaTransferTx.data = {
+                sent: [
+                  {
+                    address: solanaTransferTx.to,
+                    amount: lamports,
+                  },
+                ],
+              }
+              solanaTransferTx.to = [solanaTransferTx.to]
+            }
+
+            solanaTransferTx.to.push(destination)
+            solanaTransferTx.data.sent.push({ address: destination, amount: lamports })
+          } else {
+            solanaTransferTx = {
+              source,
+              owner: source,
+              from: source,
+              to: [destination],
+              lamports,
+              amount: lamports,
+              data: {
+                sent: [
+                  {
+                    address: destination,
+                    amount: lamports,
+                  },
+                ],
+              },
+              fee,
+            }
+          }
+
+          return
+        }
+
         const tokenAccount = tokenAccountsByOwner.find(({ tokenAccountAddress }) => {
           return [source, destination].includes(tokenAccountAddress)
         })
         if (!tokenAccount) return
+
+        if (isSplMintInstruction({ program: ix.program, type: ix.parsed.type })) {
+          source = lodash.get(ix, 'parsed.info.mintAuthority')
+        }
 
         const isSending = tokenAccountsByOwner.some(({ tokenAccountAddress }) => {
           return [source].includes(tokenAccountAddress)
@@ -450,6 +563,8 @@ export class Api {
         // owner if it's a send tx
         return {
           id: txId,
+          program: ix.program,
+          type: ix.parsed.type,
           slot: txDetails.slot,
           owner: isSending ? ownerAddress : null,
           from: isSending ? ownerAddress : source,
@@ -460,6 +575,38 @@ export class Api {
         }
       })
       .filter((ix) => !!ix)
+
+    // Collect inner instructions into batch sends
+    for (let i = 0; i < innerInstructions.length - 1; i++) {
+      const tx = innerInstructions[i]
+
+      for (let j = i + 1; j < innerInstructions.length; j++) {
+        const next = innerInstructions[j]
+        if (
+          tx.id === next.id &&
+          tx.token === next.token &&
+          tx.owner === ownerAddress &&
+          tx.from === next.from
+        ) {
+          if (!tx.data) {
+            tx.data = { sent: [{ address: tx.to, amount: tx.amount }] }
+            tx.to = [tx.to]
+            tx.fee = 0
+          }
+
+          tx.data.sent.push({
+            address: next.to,
+            amount: next.amount,
+          })
+          tx.to.push(next.to)
+
+          tx.amount += next.amount
+
+          innerInstructions.splice(j, 1)
+          j--
+        }
+      }
+    }
 
     // program:type tells us if it's a SOL or Token transfer
 
@@ -525,15 +672,31 @@ export class Api {
           to: solanaTransferTx.destination,
           amount: solanaTransferTx.lamports, // number
           fee: isSending ? fee : 0,
+          data: solanaTransferTx.data,
         }
       }
+
+      const accountIndexes = accountKeys.reduce((acc, key, i) => {
+        const hasKnownOwner = tokenAccountsByOwner.some(
+          (tokenAccount) => tokenAccount.tokenAccountAddress === key.pubkey
+        )
+
+        acc[i] = {
+          ...key,
+          owner: hasKnownOwner ? ownerAddress : null, // not know (like in an outgoing tx)
+        }
+
+        return acc
+      }, Object.create(null)) // { 0: { pubkey, owner }, 1: { ... }, ... }
 
       // Parse Token txs
       const tokenTxs = this._parseTokenTransfers({
         instructions,
+        innerInstructions,
         tokenAccountsByOwner,
         ownerAddress,
         fee,
+        accountIndexes,
         preTokenBalances,
         postTokenBalances,
       })
@@ -547,20 +710,6 @@ export class Api {
         }))
       } else if (preTokenBalances && postTokenBalances) {
         // probably a DEX program is involved (multiple instructions), compute balance changes
-
-        const accountIndexes = accountKeys.reduce((acc, key, i) => {
-          const hasKnownOwner = tokenAccountsByOwner.some(
-            (tokenAccount) => tokenAccount.tokenAccountAddress === key.pubkey
-          )
-
-          acc[i] = {
-            ...key,
-            owner: hasKnownOwner ? ownerAddress : null,
-          }
-
-          return acc
-        }, Object.create(null))
-
         // group by owner and supported token
         const preBalances = preTokenBalances.filter((t) => {
           return (
@@ -634,9 +783,11 @@ export class Api {
 
   _parseTokenTransfers({
     instructions,
+    innerInstructions = [],
     tokenAccountsByOwner,
     ownerAddress,
     fee,
+    accountIndexes = {},
     preTokenBalances,
     postTokenBalances,
   }) {
@@ -644,8 +795,9 @@ export class Api {
       preTokenBalances.length === 0 &&
       postTokenBalances.length === 0 &&
       !Array.isArray(tokenAccountsByOwner)
-    )
+    ) {
       return []
+    }
 
     const tokenTxs = []
 
@@ -655,10 +807,13 @@ export class Api {
       if (isSplTransferInstruction({ program, type })) {
         let tokenAccount = lodash.find(tokenAccountsByOwner, { tokenAccountAddress: source })
         const isSending = !!tokenAccount
-        if (!isSending)
+        if (!isSending) {
+          // receiving
           tokenAccount = lodash.find(tokenAccountsByOwner, {
             tokenAccountAddress: destination,
-          }) // receiving
+          })
+        }
+
         if (!tokenAccount) return // no transfers with our addresses involved
 
         const owner = isSending ? ownerAddress : null
@@ -666,13 +821,59 @@ export class Api {
         delete tokenAccount.balance
         delete tokenAccount.owner
 
+        // If it's a sending tx we want to have the destination's owner as "to" address
+        let to = ownerAddress
+        let from = ownerAddress
+        if (isSending) {
+          to = destination // token account address (trying to get the owner below, we don't always have postTokenBalances...)
+          postTokenBalances.forEach((t) => {
+            if (accountIndexes[t.accountIndex].pubkey === destination) to = t.owner
+          })
+        } else {
+          // is receiving tx
+          from = source // token account address
+          preTokenBalances.forEach((t) => {
+            if (accountIndexes[t.accountIndex].pubkey === source) from = t.owner
+          })
+        }
+
         tokenTxs.push({
           owner,
           token: tokenAccount,
-          from: isSending ? ownerAddress : source,
-          to: isSending ? destination : ownerAddress,
+          from,
+          to,
           amount: Number(amount || tokenAmount?.amount || 0), // supporting types: transfer, transferChecked, transferCheckedWithFee
           fee: isSending ? fee : 0, // in lamports
+        })
+      }
+    })
+
+    innerInstructions.forEach((parsedIx) => {
+      const { type, program, amount, from, to } = parsedIx
+
+      // Handle token minting (mintTo, mintToChecked)
+      if (isSplMintInstruction({ program, type })) {
+        const {
+          token: { tokenAccountAddress },
+        } = parsedIx
+
+        // Check if the destination token account belongs to our owner
+        const tokenAccount = lodash.find(tokenAccountsByOwner, {
+          tokenAccountAddress,
+        })
+
+        if (!tokenAccount) return // not our token account
+
+        delete tokenAccount.balance
+        delete tokenAccount.owner
+
+        tokenTxs.push({
+          owner: null, // no owner for minting (it's created from thin air)
+          token: tokenAccount,
+          from, // mint address as the source
+          to, // our address as recipient
+          amount: Number(amount || 0),
+          fee: 0, // no fee for receiving minted tokens
         })
       }
     })
@@ -727,6 +928,8 @@ export class Api {
       const { pubkey, account } = entry
 
       const mint = lodash.get(account, 'data.parsed.info.mint')
+      if (!mint) continue // not a token account (or cannot be parsed)
+
       const token = this.getTokenByAddress(mint) || {
         name: 'unknown',
         ticker: 'UNKNOWN',
@@ -759,25 +962,30 @@ export class Api {
       : tokenAccounts
   }
 
-  async getTokensBalance({ address, filterByTokens = [], tokenAccounts }) {
-    const accounts = tokenAccounts || (await this.getTokenAccountsByOwner(address))
+  async getTokensBalancesAndAccounts({ address, filterByTokens = [] }) {
+    const accounts = await this.getTokenAccountsByOwner(address)
 
-    return accounts.reduce((acc, { tokenName, balance }) => {
-      if (
-        tokenName === 'unknown' ||
-        (filterByTokens.length > 0 && !filterByTokens.includes(tokenName))
-      )
-        return acc // filter by supported tokens only
-      if (acc[tokenName]) {
-        acc[tokenName] += Number(balance)
-      }
-      // e.g { 'serum': 123 }
-      else {
-        acc[tokenName] = Number(balance)
-      } // merge same token account balance
+    return {
+      balances: accounts.reduce((acc, { tokenName, balance }) => {
+        if (
+          tokenName === 'unknown' ||
+          (filterByTokens.length > 0 && !filterByTokens.includes(tokenName))
+        ) {
+          return acc // filter by supported tokens only
+        }
 
-      return acc
-    }, {})
+        if (acc[tokenName]) {
+          acc[tokenName] += Number(balance)
+        }
+        // e.g { 'serum': 123 }
+        else {
+          acc[tokenName] = Number(balance)
+        } // merge same token account balance
+
+        return acc
+      }, {}),
+      accounts,
+    }
   }
 
   async isAssociatedTokenAccountActive(tokenAddress) {
@@ -790,6 +998,31 @@ export class Api {
     }
   }
 
+  async ataOwnershipChanged(address, tokenAddress) {
+    const value = await this.getAccountInfo(tokenAddress)
+    const owner = value?.data?.parsed?.info?.owner
+    return owner && owner !== address
+  }
+
+  async ownerChanged(address, accountInfo) {
+    // method to check if the owner of the account has changed, compared to standard programs.
+    // as there could be malicious dapps that reassign the ownership of the account (see https://github.com/coinspect/solana-assign-test)
+    const value = accountInfo || (await this.getAccountInfo(address))
+    const owner = value?.owner // program owner
+    if (!owner) return false // not initialized account (or purged)
+    return ![
+      SYSTEM_PROGRAM_ID.toBase58(),
+      TOKEN_PROGRAM_ID.toBase58(),
+      TOKEN_2022_PROGRAM_ID.toBase58(),
+    ].includes(owner)
+  }
+
+  ataOwnershipChangedCached = memoizeLruCache(
+    (...args) => this.ataOwnershipChanged(...args),
+    (address, tokenAddress) => `${address}:${tokenAddress}`,
+    { max: 1000 }
+  )
+
   // Returns account balance of a SPL Token account.
   async getTokenBalance(tokenAddress) {
     const result = await this.rpcCall('getTokenAccountBalance', [tokenAddress])
@@ -799,7 +1032,7 @@ export class Api {
   async getAccountInfo(address, encoding = 'jsonParsed') {
     const { value } = await this.rpcCall(
       'getAccountInfo',
-      [address, { encoding, commitment: 'single' }],
+      [address, { encoding, commitment: 'confirmed' }],
       { address }
     )
     return value
@@ -914,7 +1147,7 @@ export class Api {
       accounts[addr].canWithdraw = state === 'inactive'
       accounts[addr].stake = Number(accounts[addr].stake) || 0 // active staked amount
       totalStake += accounts[addr].stake
-      locked += ['active', 'activating'].includes(accounts[addr].state) ? lamports : 0
+      locked += accounts[addr].state === 'active' ? lamports : 0
       activating += accounts[addr].state === 'activating' ? lamports : 0
       withdrawable += accounts[addr].canWithdraw ? lamports : 0
       pending += accounts[addr].isDeactivating ? lamports : 0
@@ -923,20 +1156,16 @@ export class Api {
     return { accounts, totalStake, locked, withdrawable, pending, activating }
   }
 
-  async getRewards(stakingAddresses = []) {
-    if (stakingAddresses.length === 0) return 0
+  async getRewards(address) {
+    if (Array.isArray(address)) throw new Error('getRewards does not support multiple addresses')
 
     // custom endpoint!
-    const rewards = await this.request('rewards')
-      .post({ addresses: stakingAddresses })
-      .error(500, () => ({})) // addresses not found
-      .error(400, () => ({}))
+    const { rewards } = await this.request('everstake-rewards') // proxied
+      .post({ address })
       .json()
 
-    // sum rewards for all addresses
-    return Object.values(rewards).reduce((total, x) => {
-      return total + x
-    }, 0)
+    // sum rewards for all epochs
+    return rewards || 0
   }
 
   async getProgramAccounts(programId, config) {
@@ -965,7 +1194,6 @@ export class Api {
     const defaultOptions = { encoding: 'base64', preflightCommitment: 'confirmed' }
 
     const params = [signedTx, { ...defaultOptions, ...options }]
-    const errorMessagesToRetry = ['Blockhash not found']
 
     const broadcastTxWithRetry = retry(
       async () => {

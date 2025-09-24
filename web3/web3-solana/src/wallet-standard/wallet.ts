@@ -1,32 +1,33 @@
-import {
-  SolanaSignAndSendTransaction,
-  SolanaSignMessage,
-  SolanaSignTransaction,
-} from '@exodus/solana-wallet-standard-features'
-import { StandardWallet } from '@exodus/web3-provider'
-import {
-  StandardConnect,
-  StandardDisconnect,
-  StandardEvents,
-} from '@wallet-standard/features'
-
-import { ExodusSolanaWalletAccount } from './account.js'
-import { isSolanaChain, SOLANA_CHAINS } from './chains.js'
-import { bytesEqual } from './util.js'
-
-import type { SolanaProvider } from '../provider/provider.js'
-import type { WalletStandardDeps } from '../types.js'
 import type {
+  SolanaSignAndSendAllTransactionsFeature,
+  SolanaSignAndSendAllTransactionsMethod,
+  SolanaSignAndSendAllTransactionsOptions,
   SolanaSignAndSendTransactionFeature,
+  SolanaSignAndSendTransactionInput,
   SolanaSignAndSendTransactionMethod,
   SolanaSignAndSendTransactionOutput,
+  SolanaSignInFeature,
+  SolanaSignInInput,
+  SolanaSignInMethod,
+  SolanaSignInOutput,
   SolanaSignMessageFeature,
+  SolanaSignMessageInput,
   SolanaSignMessageMethod,
   SolanaSignMessageOutput,
   SolanaSignTransactionFeature,
+  SolanaSignTransactionInput,
   SolanaSignTransactionMethod,
   SolanaSignTransactionOutput,
 } from '@exodus/solana-wallet-standard-features'
+import {
+  SignAndSendAllTransactions,
+  SolanaSignAndSendTransaction,
+  SolanaSignIn,
+  SolanaSignMessage,
+  SolanaSignTransaction,
+} from '@exodus/solana-wallet-standard-features'
+import { PublicKey } from '@exodus/solana-web3.js'
+import { StandardWallet } from '@exodus/web3-provider'
 import type { Wallet } from '@wallet-standard/base'
 import type {
   StandardConnectFeature,
@@ -38,16 +39,30 @@ import type {
   StandardEventsNames,
   StandardEventsOnMethod,
 } from '@wallet-standard/features'
+import {
+  StandardConnect,
+  StandardDisconnect,
+  StandardEvents,
+} from '@wallet-standard/features'
+import assert from 'minimalistic-assert'
+
+import type { SolanaProvider } from '../provider/provider.js'
+import type { WalletStandardDeps } from '../types.js'
+import { ExodusSolanaWalletAccount } from './account.js'
+import { isSolanaChain, SOLANA_CHAINS } from './chains.js'
+import { bytesEqual } from './util.js'
 
 export class ExodusSolanaWallet extends StandardWallet implements Wallet {
   readonly #listeners: {
     [E in StandardEventsNames]?: StandardEventsListeners[E][]
   } = Object.create(null)
+
   readonly #version = '1.0.0' as const
   readonly #name
   readonly #icon
-  #account: ExodusSolanaWalletAccount | null = null
   readonly #provider: SolanaProvider
+
+  #accounts: ExodusSolanaWalletAccount[] = []
 
   get version() {
     return this.#version
@@ -62,13 +77,15 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
   }
 
   get chains() {
-    return SOLANA_CHAINS.slice()
+    return [...SOLANA_CHAINS]
   }
 
   get features(): StandardConnectFeature &
     StandardDisconnectFeature &
     StandardEventsFeature &
+    SolanaSignInFeature &
     SolanaSignAndSendTransactionFeature &
+    SolanaSignAndSendAllTransactionsFeature &
     SolanaSignTransactionFeature &
     SolanaSignMessageFeature {
     const { supportedTransactionVersions: supportedTransactionVersionsSet } =
@@ -87,18 +104,23 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
         version: '1.0.0',
         on: this.#on,
       },
+      [SolanaSignIn]: {
+        version: '1.0.0',
+        signIn: this.#signIn,
+      },
       [SolanaSignAndSendTransaction]: {
         version: '1.0.0',
-        supportedTransactionVersions: Array.from(
-          supportedTransactionVersionsSet,
-        ),
+        supportedTransactionVersions: [...supportedTransactionVersionsSet],
         signAndSendTransaction: this.#signAndSendTransaction,
+      },
+      [SignAndSendAllTransactions]: {
+        version: '1.0.0',
+        supportedTransactionVersions: [...supportedTransactionVersionsSet],
+        signAndSendAllTransactions: this.#signAndSendAllTransactions,
       },
       [SolanaSignTransaction]: {
         version: '1.0.0',
-        supportedTransactionVersions: Array.from(
-          supportedTransactionVersionsSet,
-        ),
+        supportedTransactionVersions: [...supportedTransactionVersionsSet],
         signTransaction: this.#signTransaction,
       },
       [SolanaSignMessage]: {
@@ -109,7 +131,7 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
   }
 
   get accounts() {
-    return this.#account ? [this.#account] : []
+    return this.#accounts
   }
 
   constructor({ provider, name, icon }: WalletStandardDeps) {
@@ -128,6 +150,11 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
     provider.on('accountChanged', this.#reconnected, this)
 
     this.#connected()
+
+    // auto-connect if trusted
+    this.#provider.connect({ onlyIfTrusted: true, silent: true }).catch(() => {
+      // origin not trusted
+    })
   }
 
   #on: StandardEventsOnMethod = (event, listener) => {
@@ -154,25 +181,50 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
   }
 
   #connected = () => {
-    const address = this.#provider.publicKey?.toBase58()
-    if (address) {
-      const publicKey = this.#provider.publicKey!.toBytes()
+    const keysAndAddresses = this.#provider.publicKeys.map((publicKey) => ({
+      publicKey: publicKey.toBytes(),
+      address: publicKey.toBase58(),
+    }))
 
-      const account = this.#account
-      if (
-        !account ||
-        account.address !== address ||
-        !bytesEqual(account.publicKey, publicKey)
-      ) {
-        this.#account = new ExodusSolanaWalletAccount({ address, publicKey })
-        this.#emit('change', { accounts: this.accounts })
-      }
+    if (keysAndAddresses.length === 0) {
+      return
     }
+
+    const accounts = this.#accounts
+
+    const hasMatchingAccount = ({
+      address,
+      publicKey,
+    }: (typeof keysAndAddresses)[number]) =>
+      accounts.some(
+        (account) =>
+          address === account.address &&
+          bytesEqual(account.publicKey, publicKey),
+      )
+
+    if (
+      keysAndAddresses.length > 0 &&
+      // order for the first account is important, the others can be matching in arbitrary order
+      accounts[0]?.address === keysAndAddresses[0].address &&
+      keysAndAddresses.every(hasMatchingAccount)
+    ) {
+      return
+    }
+
+    this.#accounts = keysAndAddresses.map(
+      ({ publicKey, address }) =>
+        new ExodusSolanaWalletAccount({
+          publicKey,
+          address,
+        }),
+    )
+
+    this.#emit('change', { accounts: this.accounts })
   }
 
   #disconnected = () => {
-    if (this.#account) {
-      this.#account = null
+    if (this.#accounts.length > 0) {
+      this.#accounts = []
       this.#emit('change', { accounts: this.accounts })
     }
   }
@@ -186,7 +238,7 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
   }
 
   #connect: StandardConnectMethod = async ({ silent } = {}) => {
-    if (!this.#account) {
+    if (this.#accounts.length === 0) {
       await this.#provider.connect(silent ? { onlyIfTrusted: true } : undefined)
     }
 
@@ -199,13 +251,25 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
     await this.#provider.disconnect()
   }
 
+  #signIn: SolanaSignInMethod = async (
+    ...inputs: readonly SolanaSignInInput[]
+  ): Promise<readonly SolanaSignInOutput[]> => {
+    const outputs: SolanaSignInOutput[] = []
+    if (inputs.length > 1) {
+      for (const input of inputs) {
+        outputs.push(await this.#provider.signIn(input))
+      }
+    } else {
+      return [await this.#provider.signIn(inputs[0])]
+    }
+
+    return outputs
+  }
+
   #signAndSendTransaction: SolanaSignAndSendTransactionMethod = async (
     ...inputs
   ) => {
-    if (!this.#account) {
-      throw new Error('not connected')
-    }
-
+    assert(this.#accounts.length, 'not connected')
     const outputs: SolanaSignAndSendTransactionOutput[] = []
 
     if (inputs.length === 1) {
@@ -213,9 +277,7 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
       const { minContextSlot, preflightCommitment, skipPreflight, maxRetries } =
         options || {}
 
-      if (account !== this.#account) {
-        throw new Error('invalid account')
-      }
+      assert(this.#accounts.includes(account), 'invalid account')
 
       if (!isSolanaChain(chain)) {
         throw new Error('invalid chain')
@@ -232,7 +294,9 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
       // 'transaction' is a Uint8Array so the provider returns the same type.
       outputs.push({ signature } as { signature: Uint8Array })
     } else if (inputs.length > 1) {
-      const areInputsFromSameChain = inputs.every(({ chain }) => chain === inputs[0].chain)
+      const areInputsFromSameChain = inputs.every(
+        ({ chain }) => chain === inputs[0].chain,
+      )
       if (!areInputsFromSameChain) {
         throw new Error('conflicting chain')
       }
@@ -245,40 +309,70 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
     return outputs
   }
 
-  #signTransaction: SolanaSignTransactionMethod = async (...inputs) => {
-    if (!this.#account) {
-      throw new Error('not connected')
-    }
+  #signAndSendAllTransactions: SolanaSignAndSendAllTransactionsMethod = async (
+    inputs: readonly SolanaSignAndSendTransactionInput[],
+    options?: SolanaSignAndSendAllTransactionsOptions,
+  ): Promise<
+    readonly PromiseSettledResult<SolanaSignAndSendTransactionOutput>[]
+  > => {
+    assert(this.#accounts.length, 'not connected')
+    const firstChain = inputs[0]?.chain
+
+    const transactionsWithOptions = inputs.map(
+      ({ transaction, account, chain, options }, i) => {
+        assert(
+          this.#accounts.includes(account),
+          `invalid account for transaction at index ${i}`,
+        )
+        assert(
+          isSolanaChain(chain),
+          `invalid chain for transaction at index ${i}`,
+        )
+        assert(chain === firstChain, 'transactions must be from the same chain')
+
+        return { transaction, options }
+      },
+    )
+
+    const { signatures } = await this.#provider.signAndSendAllTransactions(
+      transactionsWithOptions,
+      { parallel: options?.mode !== 'serial', atomic: false },
+    )
+
+    return signatures
+  }
+
+  #signTransaction: SolanaSignTransactionMethod = async (
+    ...inputs: SolanaSignTransactionInput[]
+  ): Promise<SolanaSignTransactionOutput[]> => {
+    assert(this.#accounts.length, 'not connected')
 
     const outputs: SolanaSignTransactionOutput[] = []
 
     if (inputs.length === 1) {
       const { transaction, account, chain } = inputs[0]
 
-      if (account !== this.#account) {
-        throw new Error('invalid account')
-      }
+      assert(this.#accounts.includes(account), 'invalid account')
 
       if (chain && !isSolanaChain(chain)) {
         throw new Error('invalid chain')
       }
 
-      const signedTransaction: unknown = await this.#provider.signTransaction(
-        transaction,
-      )
+      const signedTransaction =
+        await this.#provider.signTransaction(transaction)
 
       // 'transaction' is a Uint8Array so the provider returns the same type.
       outputs.push({ signedTransaction } as { signedTransaction: Uint8Array })
     } else if (inputs.length > 1) {
-      const areInputsFromSameChain = inputs.every(({ chain }) => chain === inputs[0].chain)
+      const areInputsFromSameChain = inputs.every(
+        ({ chain }) => chain === inputs[0].chain,
+      )
       if (!areInputsFromSameChain) {
         throw new Error('conflicting chain')
       }
 
       for (const input of inputs) {
-        if (input.account !== this.#account) {
-          throw new Error('invalid account')
-        }
+        assert(this.#accounts.includes(input.account), 'invalid account')
 
         if (!isSolanaChain(input.chain)) {
           throw new Error('invalid chain')
@@ -287,12 +381,11 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
 
       const transactions = inputs.map(({ transaction }) => transaction)
 
-      const signedTransactions: unknown =
+      const signedTransactions =
         await this.#provider.signAllTransactions(transactions)
 
-      // 'transactions' is an array of 'Uint8Array' so the provider returns the same type.
       outputs.push(
-        ...(signedTransactions as Uint8Array[]).map((signedTransaction) => ({
+        ...signedTransactions.map((signedTransaction) => ({
           signedTransaction,
         })),
       )
@@ -301,26 +394,27 @@ export class ExodusSolanaWallet extends StandardWallet implements Wallet {
     return outputs
   }
 
-  #signMessage: SolanaSignMessageMethod = async (...inputs) => {
-    if (!this.#account) {
-      throw new Error('not connected')
-    }
+  #signMessage: SolanaSignMessageMethod = async (
+    ...inputs: SolanaSignMessageInput[]
+  ): Promise<SolanaSignMessageOutput[]> => {
+    assert(this.#accounts.length, 'not connected')
 
     const outputs: SolanaSignMessageOutput[] = []
 
     if (inputs.length === 1) {
       const { message, account } = inputs[0]
 
-      if (account !== this.#account) {
-        throw new Error('invalid account')
-      }
+      assert(this.#accounts.includes(account), 'invalid account')
 
-      const { signature } = await this.#provider.signMessage(message)
+      const { signature } = await this.#provider.signMessage(message, {
+        publicKey: new PublicKey(account.publicKey),
+      })
 
       outputs.push({ signedMessage: message, signature })
     } else if (inputs.length > 1) {
       for (const input of inputs) {
-        outputs.push(...(await this.#signMessage(input)))
+        const publicKey = new PublicKey(input.account.publicKey)
+        outputs.push(...(await this.#signMessage(input, { publicKey })))
       }
     }
 

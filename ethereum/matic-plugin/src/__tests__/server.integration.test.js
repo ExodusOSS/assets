@@ -8,7 +8,7 @@ describe(`matic server integration tests`, () => {
 
   const { server } = runEvmServerTestSuite({ assetPlugin, walletAddress, contractAddress })
 
-  it.skip('returns transaction by hash', async () => {
+  it('returns transaction by hash', async () => {
     const expected = {
       blockHash: '0x5c7637ec13bfc54a91ec33accc04186ebf1763628e065b4b69450db9366916e8',
       blockNumber: '0x38287ff',

@@ -277,7 +277,7 @@ class Tx {
   }
 
   static undelegate({ address, stakeAddresses, recentBlockhash }) {
-    // undelegate all stake addresses
+    // undelegate all stake addresses, in a single tx
     assert(Array.isArray(stakeAddresses), 'stakeAddresses Array is required')
 
     const fromPubkey = new PublicKey(address)
@@ -295,18 +295,29 @@ class Tx {
     return transaction
   }
 
-  static withdraw({ address, stakeAddresses, amount, recentBlockhash }) {
+  static withdraw({ address, accounts, recentBlockhash }) {
+    // withdraw all inactive unstaked addresses, in a single tx
+    assert(typeof accounts === 'object', 'accounts object is required')
     const fromPubkey = new PublicKey(address)
-    const stakeAddress = Array.isArray(stakeAddresses) ? stakeAddresses[0] : stakeAddresses
-    const stakePublicKey = new PublicKey(stakeAddress)
 
-    const transaction = StakeProgram.withdraw({
-      stakePubkey: stakePublicKey,
-      authorizedPubkey: fromPubkey,
-      toPubkey: fromPubkey,
-      lamports: amount,
-    })
-    transaction.recentBlockhash = recentBlockhash
+    const transaction = new Transaction({ recentBlockhash })
+
+    // putting all withdraw instructions in a single tx
+    for (const [stakeAddress, account] of Object.entries(accounts)) {
+      if (!account.canWithdraw) continue // skip non-withdrawable accounts
+      if (!account.lamports) continue // skip empty accounts
+
+      const stakePublicKey = new PublicKey(stakeAddress)
+
+      const instruction = StakeProgram.withdraw({
+        stakePubkey: stakePublicKey,
+        authorizedPubkey: fromPubkey,
+        toPubkey: fromPubkey,
+        lamports: account.lamports,
+      })
+      transaction.add(instruction)
+    }
+
     return transaction
   }
 

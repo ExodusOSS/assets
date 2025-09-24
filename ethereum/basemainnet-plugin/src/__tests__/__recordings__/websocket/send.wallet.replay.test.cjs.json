@@ -1,0 +1,30 @@
+[
+  {
+    "url": "wss://base-clarity.a.exodus.io/socket.io/?EIO=3&transport=websocket",
+    "log": [
+      { "type": "get binaryType", "at": 18, "value": "nodebuffer" },
+      { "type": "set binaryType", "at": 18, "value": "arraybuffer" },
+      { "type": "open", "at": 1102 },
+      {
+        "type": "message",
+        "at": 1103,
+        "data": "0{\"sid\":\"5P5-cFB-wdrp56iDAAAL\",\"upgrades\":[],\"pingInterval\":25000,\"pingTimeout\":20000}"
+      },
+      { "type": "send()", "at": 1103, "data": "40/v1/basemainnet/rpc," },
+      { "type": "message", "at": 1104, "data": "40" },
+      { "type": "message", "at": 1365, "data": "40/v1/basemainnet/rpc," },
+      {
+        "type": "send()",
+        "at": 1366,
+        "data": "42/v1/basemainnet/rpc,0[\"request\",{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getCode\",\"params\":[\"0xf6c138C36341138dDFC314a11038dA8264B7Ef09\",\"latest\"]}]"
+      }, {
+        "type": "message",
+        "at": 1663,
+        "data": "43/v1/basemainnet/rpc,0[{\"jsonrpc\":\"2.0\",\"id\":0,\"result\":\"0x\"}]"
+      },
+      { "type": "send()", "at": 1700, "data": "41/v1/basemainnet/rpc," },
+      { "type": "close()", "at": 1703 },
+      { "type": "close", "at": 1968, "code": 1005, "reason": "", "wasClean": true }
+    ]
+  }
+]

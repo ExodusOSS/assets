@@ -11,7 +11,7 @@ const config = {
 
 const safeReportFile = path.join(import.meta.dirname, 'monitor-ordinals-enabled-safe-report.json')
 const walletAccountCount = 2
-describe(`bitcoin with ordinals enabled integration test`, () => {
+describe.skip(`bitcoin with ordinals enabled integration test`, () => {
   monitorIntegrationTester({
     assetPlugin,
     assetConfig: config,

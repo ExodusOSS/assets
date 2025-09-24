@@ -1,6 +1,6 @@
 {
   "name": "@exodus/asset-legacy-token-name-mapping",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "description": "Old legacy name mapping for custom token migration.",
   "type": "module",
   "main": "src/index.js",

@@ -6,6 +6,7 @@ export const stakingAccountState = ({ currency }) => ({
   minDelegateAmount: currency.defaultUnit(1),
   unclaimedUndelegatedBalance: currency.ZERO,
   delegatedBalance: currency.ZERO,
+  activeStakedBalance: currency.ZERO,
   rewardsBalance: currency.ZERO,
   withdrawable: currency.ZERO,
   unbondNonce: '0',

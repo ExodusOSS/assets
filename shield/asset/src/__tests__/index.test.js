@@ -12,7 +12,6 @@ describe('create asset definitions', () => {
   test('createBaseAssetDef', () => {
     const asset = createBaseAssetDef(assetSample)
 
-    expect(asset.gasLimit).toBe(21_000)
     expect(asset.toString()).toBe(asset.name)
     expect(asset.currency.toJSON()).toEqual(asset.units)
     expect(typeof asset.blockExplorer.txUrl).toBe('function')
@@ -24,14 +23,12 @@ describe('create asset definitions', () => {
     const tokenOverrides = (token) => ({
       ...token,
       contract: token.addresses,
-      gasLimit: 120e3,
     })
 
     const asset = createBaseAssetDef(assetSample)
     const token = createTokenDef({ asset, token: tokenSample, tokenOverrides })
     const tokenResult = tokensResult.shift()
 
-    expect(token.gasLimit).toBe(120_000)
     expect(token.toString()).toBe(token.name)
     expect(token.currency.toJSON()).toEqual(token.units)
     expect(typeof token.blockExplorer.txUrl).toBe('function')

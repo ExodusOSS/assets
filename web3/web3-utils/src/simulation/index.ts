@@ -4,3 +4,4 @@ export {
   createEmptySimulationResult,
   createScanDomains,
 } from './simulation.js'
+export { tryParsingSIWE } from './tryParsingSIWE.js'

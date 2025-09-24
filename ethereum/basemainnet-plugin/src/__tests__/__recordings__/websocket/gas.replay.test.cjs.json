@@ -1,0 +1,30 @@
+[
+  {
+    "url": "wss://base-clarity.a.exodus.io/socket.io/?EIO=3&transport=websocket",
+    "log": [
+      { "type": "get binaryType", "at": 18, "value": "nodebuffer" },
+      { "type": "set binaryType", "at": 18, "value": "arraybuffer" },
+      { "type": "open", "at": 1119 },
+      {
+        "type": "message",
+        "at": 1120,
+        "data": "0{\"sid\":\"sbzrPf47NJG5Cg05AACk\",\"upgrades\":[],\"pingInterval\":25000,\"pingTimeout\":20000}"
+      },
+      { "type": "send()", "at": 1121, "data": "40/v1/basemainnet/rpc," },
+      { "type": "message", "at": 1122, "data": "40" },
+      { "type": "message", "at": 1390, "data": "40/v1/basemainnet/rpc," },
+      {
+        "type": "send()",
+        "at": 1390,
+        "data": "42/v1/basemainnet/rpc,0[\"request\",{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_call\",\"params\":[{\"to\":\"0x420000000000000000000000000000000000000F\",\"data\":\"0x49948e0e0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002ae91f8398968082b2e794c0e9573c1168a7a4198a0f63ac70fd8f62b291d087038d7ea4c680008080808000000000000000000000000000000000000000000000\"},\"latest\"]}]"
+      }, {
+        "type": "message",
+        "at": 1697,
+        "data": "43/v1/basemainnet/rpc,0[{\"jsonrpc\":\"2.0\",\"id\":0,\"result\":\"0x000000000000000000000000000000000000000000000000000000011c1b903e\"}]"
+      },
+      { "type": "send()", "at": 1699, "data": "41/v1/basemainnet/rpc," },
+      { "type": "close()", "at": 1701 },
+      { "type": "close", "at": 1973, "code": 1005, "reason": "", "wasClean": true }
+    ]
+  }
+]

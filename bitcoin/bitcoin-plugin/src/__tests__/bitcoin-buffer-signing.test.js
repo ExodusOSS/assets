@@ -1,11 +1,11 @@
 import BIP32 from '@exodus/bip32'
+import { mnemonicToSeed } from '@exodus/bip39'
 import { FINAL_SEQUENCE, RBF_SEQUENCE } from '@exodus/bitcoin-lib'
 import KeyIdentifier from '@exodus/key-identifier'
 import { parseDerivationPath } from '@exodus/key-utils'
 import { getSeedId } from '@exodus/keychain/module/crypto/seed-id.js'
 import keychainDefinition from '@exodus/keychain/module/keychain.js'
 import seedBasedTransactionSignerDefinition from '@exodus/tx-signer/lib/module/seed-signer.js'
-import { mnemonicToSeed } from 'bip39'
 import lodash from 'lodash'
 
 import assetPlugin from '../index.js'
@@ -21,9 +21,9 @@ asset.baseAsset = asset
 
 const createHdKey = (xpriv) => BIP32.fromXPriv(xpriv)
 
-const SEED = mnemonicToSeed(
-  'cousin access oak tragic entire dynamic marine expand govern enjoy honey tissue'
-)
+const SEED = await mnemonicToSeed({
+  mnemonic: 'cousin access oak tragic entire dynamic marine expand govern enjoy honey tissue',
+})
 
 const RAW_TX =
   '02000000000102a0171cd5dfbe01f0761e84878487222d439cc0de6ece880b95d217b17fc06e2c000000006a4730440220013ecaaa22220e32f024fc0537db877e7897dd3ee72d5a258b056843a4fb525a02201bf51913a87f3629fb1ae479bcd071ec4a45e0a932b99bc151b11da2a5ae3c770121027135776e6628b3da577e6775193bc219ac054034eda1041138313bc1b4f1110dffffffffa01277a2640e535bb717905619a3730f79ef88c6d3b20aa3eac9f81c5ca168250000000000fdffffff02200b2000000000001976a91434a16426c70a61040314b9d6bf3fc57cb9f7716488ac704c8900000000001600146442b6940261fd6fa63574cc60eeff021dcd2581000247304402203d815d5d689fe4c564537cac9696ab2dfd1b32016e66f749bf912d86c01b03f3022006bd85b503c71b44273ec14536463c30007ee00832f9fb196aeceacf7995d4d0012102c03ea02def600839c25ec2021143e8c82904b506da8729f16984e115341b310f00000000'
@@ -89,9 +89,9 @@ const unsignedTx = {
 }
 
 const createSigner = () => ({
-  sign: async ({ data, ecOptions, enc, keyId }) => {
+  sign: async ({ data, enc, keyId }) => {
     if (keyId.keyType === 'secp256k1') {
-      return keychain.secp256k1.signBuffer({ seedId, keyId, data, ecOptions, enc })
+      return keychain.secp256k1.signBuffer({ seedId, keyId, data, enc })
     }
   },
   getPublicKey: async ({ keyId } = {}) => {

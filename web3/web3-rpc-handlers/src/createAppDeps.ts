@@ -142,8 +142,26 @@ const createAppDeps: createAppDepsFactory =
 
     const getPathname = () => new URL(url).pathname
 
+    const getConnectedAccounts = async () => {
+      return connectedOrigins.getConnectedAccounts({ origin })
+    }
+
+    const addConnection = async (assetNames: [string, ...string[]]) => {
+      const assets = await Promise.all(assetNames.map((name) => getAsset(name)))
+
+      await connectedOrigins.add({
+        origin,
+        name,
+        icon,
+        assetNames: assets.map((it) => it.baseAssetName),
+        connectedAssetName: assets[0].baseAssetName,
+        trusted: true,
+      })
+    }
+
     return {
       ...approvalHandlers,
+      addConnection,
       isTrusted,
       ensureTrusted,
       ensureUntrusted,
@@ -151,6 +169,7 @@ const createAppDeps: createAppDepsFactory =
       getAsset,
       onTransactionsSigned,
       getOrigin,
+      getConnectedAccounts,
       getPathname,
       scanDomains,
     }

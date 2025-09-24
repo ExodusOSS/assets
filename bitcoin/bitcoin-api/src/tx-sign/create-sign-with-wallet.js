@@ -12,6 +12,7 @@ export function createSignWithWallet({
   addressPathsMap,
   coinInfo,
   getKeyIdentifier,
+  getPrivateKeyFromMap,
 }) {
   const getKeyWithMetadata = createGetKeyWithMetadata({
     signer,
@@ -21,6 +22,7 @@ export function createSignWithWallet({
     addressPathsMap,
     coinInfo,
     getKeyIdentifier,
+    getPrivateKeyFromMap,
   })
 
   return async (psbt, inputsToSign, skipFinalize) => {

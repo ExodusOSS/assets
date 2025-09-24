@@ -17,7 +17,6 @@ const expectedOriginal = {
   },
   primaryColor: '#4471ED',
   gradientColors: ['#0D48EA', '#4471ED'],
-  gradientCoords: { x1: '86.792%', y1: '19.043%', x2: '12.879%', y2: '81.232%' },
 }
 
 const expectedUpdated = {
@@ -35,7 +34,6 @@ const expectedUpdated = {
   },
   primaryColor: '#FFFFFF',
   gradientColors: ['#0D48EA', '#FFFFFF'],
-  gradientCoords: { x1: '0%', y1: '19.043%', x2: '12.879%', y2: '81.232%' },
 }
 
 test('update token', () => {
@@ -49,7 +47,6 @@ test('update token', () => {
     info: { ...expectedUpdated.info },
     primaryColor: expectedUpdated.primaryColor,
     gradientColors: expectedUpdated.gradientColors,
-    gradientCoords: expectedUpdated.gradientCoords,
   }
   updateToken(assets, assetUpdate)
   expect(assets.ach_ethereum_fbad19a6).toMatchObject(expectedUpdated)

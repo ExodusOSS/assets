@@ -175,12 +175,14 @@ describe('balance-utils', () => {
     const getBalances = getBalancesFromAccountStateFactory({
       shouldFixBalance: true,
       getFrozenBalances: ({ asset }) => {
-        if (asset.name === 'ethereum')
+        if (asset.name === 'ethereum') {
           return { networkReserve: assets.ethereum.currency.parse('0.0001 ETH') }
+        }
       },
       getOtherBalances: ({ asset }) => {
-        if (asset.name === 'ethereum')
+        if (asset.name === 'ethereum') {
           return { reward: assets.ethereum.currency.parse('0.0002 ETH') }
+        }
       },
     })
 

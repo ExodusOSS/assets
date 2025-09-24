@@ -1,7 +1,7 @@
 {
   "name": "@exodus/web3-utils",
   "description": "Web3 utils",
-  "version": "1.48.3",
+  "version": "1.51.1",
   "type": "module",
   "sideEffects": false,
   "module": "lib/index.js",
@@ -30,7 +30,8 @@
     "build": "yarn clean &&  run -T tsc",
     "lint": "run -T eslintc .",
     "lint:fix": "yarn lint --fix",
-    "prepublishOnly": "yarn run -T build --scope @exodus/web3-utils"
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-utils",
+    "test": "run -T exodus-test --jest --esbuild"
   },
   "devDependencies": {
     "@exodus/web3-types": "workspace:*"

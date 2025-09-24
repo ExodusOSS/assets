@@ -9,6 +9,10 @@ describe('Matic Staking', () => {
   const asset = assets.polygon
   const { server } = assetPlugin.createAsset({ assetClientInterface: Object.create(null) })
 
+  afterEach(() => {
+    server.stop()
+  })
+
   test('Can get current checkpoint', async () => {
     const staking = stakingServerFactory({ asset, contracts, server })
 

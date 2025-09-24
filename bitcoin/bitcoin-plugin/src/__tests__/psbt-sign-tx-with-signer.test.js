@@ -1,10 +1,10 @@
 import { getTestingSeed, walletTester } from '@exodus/assets-testing'
+import { mnemonicToSeed } from '@exodus/bip39'
 import defaultEntropy from '@exodus/bitcoin-api/src/tx-sign/default-entropy.cjs'
 import { getSeedId } from '@exodus/keychain/module/crypto/seed-id.js'
 import keychainDefinition from '@exodus/keychain/module/keychain.js'
 import seedBasedTransactionSignerDefinition from '@exodus/tx-signer/lib/module/seed-signer.js'
 import * as btc from '@scure/btc-signer'
-import { mnemonicToSeed } from 'bip39'
 
 import assetPlugin from '../index.js'
 
@@ -18,9 +18,9 @@ jest
     Buffer.from('1230000000000000000000000000000000000000000000000000000000000000', 'hex')
   )
 
-const SEED = mnemonicToSeed(
-  'menu memory fury language physical wonder dog valid smart edge decrease worth'
-)
+const SEED = await mnemonicToSeed({
+  mnemonic: 'menu memory fury language physical wonder dog valid smart edge decrease worth',
+})
 
 const keychain = createMultiSeedKeychain({})
 keychain.addSeed(SEED)

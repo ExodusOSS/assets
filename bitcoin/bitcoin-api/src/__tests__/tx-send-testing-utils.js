@@ -22,18 +22,28 @@ export const sendTxTest = async ({
   const feeData = await assetClientInterface.getFeeConfig({ assetName })
 
   const nft = options.nft
-  const brc20 = options.brc20
 
-  const availableBalance = asset.getAvailableBalance({
+  const { spendable } = asset.api.getBalances({
+    asset,
+    accountState,
+    txLog: txSet,
+    feeData,
+  })
+
+  const { fee: basicFee } = asset.api.getFee({
     asset,
     accountState,
     txSet,
     feeData,
     isSendAll: options.isSendAll,
   })
+
+  const availableBalance = spendable.sub(basicFee)
+
   expect(availableBalance.toBaseString({ unit: true })).toEqual(
     expectedBalance.toBaseString({ unit: true })
   )
+
   const insightClient = asset.insightClient
 
   if (!jest.isMockFunction(insightClient.broadcastTx)) {
@@ -43,7 +53,7 @@ export const sendTxTest = async ({
   }
 
   expect(insightClient.broadcastTx).not.toBeCalled()
-  const toSendBalance = nft || brc20 ? undefined : amount || availableBalance
+  const toSendBalance = nft ? undefined : amount || availableBalance
   const { fee: calculatedFee, extraFeeData } = asset.api.getFee({
     asset,
     accountState,
@@ -52,7 +62,6 @@ export const sendTxTest = async ({
     customFee: options.customFee,
     amount: toSendBalance,
     nft,
-    brc20,
   })
 
   expect(
@@ -119,11 +128,11 @@ export const sendTxTest = async ({
     expect(rawTxLog.feeAmount.toBaseNumber()).toBeGreaterThanOrEqual(expectedFee.toBaseNumber())
   }
   // when there is dust, it goes to the fee rather than change utxo
-  else if (rawTxLog.data.changeAddress)
+  else if (rawTxLog.data.changeAddress) {
     expect(rawTxLog.feeAmount.toBaseString({ unit: true })).toEqual(
       expectedFee.toBaseString({ unit: true })
     )
-  else {
+  } else {
     expect(rawTxLog.feeAmount.toBaseNumber()).toBeGreaterThanOrEqual(expectedFee.toBaseNumber())
   }
 }

@@ -30,7 +30,7 @@ describe(`solana index.js test`, () => {
     expect(baseAsset.baseAsset).not.toEqual(baseAsset)
     expect(baseAsset.feeAsset).not.toEqual(baseAsset)
 
-    expect(baseAsset.accountReserve.toBaseString({ unit: true })).toEqual('10000000 Lamports')
-    expect(baseAsset.accountReserve.toDefaultString({ unit: true })).toEqual('0.01 SOL')
+    expect(baseAsset.accountReserve.toBaseString({ unit: true })).toEqual('0 Lamports')
+    expect(baseAsset.accountReserve.toDefaultString({ unit: true })).toEqual('0 SOL')
   })
 })

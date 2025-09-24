@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.1.1...@exodus/aurora-meta@2.1.2) (2025-08-19)
+
+
+### Bug Fixes
+
+
+* fix: remove meta boilerplate (#6305)
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [2.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.1.0...@exodus/aurora-meta@2.1.1) (2025-06-26)
+
+
+### Bug Fixes
+
+
+* fix: simplify ETH icon SVG to improve rendering stability on Android (#5938)
+
+
+
+## [2.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.0.3...@exodus/aurora-meta@2.1.0) (2025-04-23)
+
+
+### Features
+
+
+* feat: ethereum alternative chains icon update (#5489)
+
+
+
+## [2.0.3](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.0.2...@exodus/aurora-meta@2.0.3) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
+## [2.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.0.1...@exodus/aurora-meta@2.0.2) (2025-02-26)
+
+
+### Bug Fixes
+
+
+* fix: add assetId to evm metas (#5120)
+
+
+
+## [2.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@2.0.0...@exodus/aurora-meta@2.0.1) (2025-01-09)
+
+
+### Bug Fixes
+
+
+* fix: lint for EVM assets (#2969)
+
+
+### License
+
+
+* license: re-license under MIT license (#4806)
+
+
+
 ## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/aurora-meta@1.0.5...@exodus/aurora-meta@2.0.0) (2024-07-11)
 
 

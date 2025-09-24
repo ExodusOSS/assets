@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.0](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.5.0...@exodus/basemainnet-plugin@2.6.0) (2025-07-10)
+
+
+### Features
+
+
+* feat: add supersim optimistic fork testing (#5924)
+
+* feat: set ethereum to use clarity v2 monitor (#5836)
+
+
+
+## [2.5.0](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.4.2...@exodus/basemainnet-plugin@2.5.0) (2025-07-01)
+
+
+### Features
+
+
+* feat: enable absolute balance for basemainnet (#5983)
+
+
+### Bug Fixes
+
+
+* fix: include l1 fee in tx log (#5986)
+
+
+
+## [2.4.2](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.4.1...@exodus/basemainnet-plugin@2.4.2) (2025-06-20)
+
+**Note:** Version bump only for package @exodus/basemainnet-plugin
+
+
+
+
+
+## [2.4.1](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.4.0...@exodus/basemainnet-plugin@2.4.1) (2025-06-19)
+
+
+### Bug Fixes
+
+
+* fix: include l1 in fee  (#5895)
+
+
+
+## [2.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.3.3...@exodus/basemainnet-plugin@2.4.0) (2025-06-17)
+
+
+### Features
+
+
+* feat: clarity basemainnet (#5876)
+
+
+
+## [2.3.3](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.3.2...@exodus/basemainnet-plugin@2.3.3) (2025-04-29)
+
+
+### Bug Fixes
+
+
+* fix: ETH pending staking balance (#4816)
+
+* fix: use gasPriceMultiplier when setting up min/max/recommended (#4700)
+
+
+
 ## [2.3.2](https://github.com/ExodusMovement/assets/compare/@exodus/basemainnet-plugin@2.3.1...@exodus/basemainnet-plugin@2.3.2) (2024-12-12)
 
 

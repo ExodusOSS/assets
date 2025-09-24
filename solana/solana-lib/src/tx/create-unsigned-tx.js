@@ -6,6 +6,7 @@ export function createUnsignedTx({
   fee,
   feeData,
   recentBlockhash,
+  useFeePayer,
   // Tokens related:
   tokenMintAddress,
   destinationAddressType,
@@ -17,6 +18,7 @@ export function createUnsignedTx({
   method,
   // Staking related:
   stakeAddresses,
+  accounts,
   seed,
   pool,
   // MagicEden escrow/related:
@@ -53,6 +55,7 @@ export function createUnsignedTx({
       // Staking related:
       method,
       stakeAddresses,
+      accounts,
       seed,
       pool,
       // MagicEden escrow/related:
@@ -73,6 +76,7 @@ export function createUnsignedTx({
     },
     txMeta: {
       assetName: asset.name,
+      useFeePayer,
     },
   }
 }

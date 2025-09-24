@@ -4,11 +4,7 @@ const sampleum = {
   ticker: 'SAM',
   primaryColor: '#8C93AF',
   gradientColors: ['#474A73', '#8C93AF'],
-  gradientCoords: { x1: '17.71%', y1: '-46.968%', x2: '98.837%', y2: '152.777%' },
   chainBadgeColors: ['#FFFFFF', '#D6DAFF'],
-
-  gasLimit: 21e3, // enough to send ETH to a normal address
-  contractGasLimit: 1e6, // used when estimateGas fails
 
   units: {
     wei: 0,

@@ -1,6 +1,6 @@
 {
   "name": "@exodus/solana-meta",
-  "version": "2.4.0",
+  "version": "2.6.0",
   "description": "Solana constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",

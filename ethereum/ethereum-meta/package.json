@@ -1,6 +1,6 @@
 {
   "name": "@exodus/ethereum-meta",
-  "version": "2.2.1",
+  "version": "2.9.1",
   "description": "Ethereum constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",
@@ -22,7 +22,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/asset": "^2.0.1"
+    "@exodus/asset": "^2.0.4"
   },
   "devDependencies": {
     "@exodus/assets-meta-testing": "workspace:^",

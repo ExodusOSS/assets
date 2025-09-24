@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.5.0](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.4.0...@exodus/assets@11.5.0) (2025-08-29)
+
+
+### Features
+
+
+* feat: add metadata to combined assets (#6082)
+
+
+
+## [11.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.3.2...@exodus/assets@11.4.0) (2025-08-04)
+
+
+### Features
+
+
+* feat: demote batch of ETH tokens (#6159)
+
+
+
+## [11.3.2](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.3.1...@exodus/assets@11.3.2) (2025-07-15)
+
+**Note:** Version bump only for package @exodus/assets
+
+
+
+
+
+## [11.3.1](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.3.0...@exodus/assets@11.3.1) (2025-06-30)
+
+
+### Bug Fixes
+
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [11.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.2.0...@exodus/assets@11.3.0) (2025-04-16)
+
+
+### Features
+
+
+* feat: demote troublesome tokens (#5280)
+
+* feat: enhance updateCombinedAsset (#5443)
+
+
+
+## [11.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.5...@exodus/assets@11.2.0) (2025-03-03)
+
+
+### Features
+
+
+* feat: demote a batch of tokens (#5070)
+
+
+
 ## [11.1.5](https://github.com/ExodusMovement/assets/compare/@exodus/assets@11.1.4...@exodus/assets@11.1.5) (2025-02-12)
 
 

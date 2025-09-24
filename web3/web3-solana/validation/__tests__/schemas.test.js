@@ -6,13 +6,38 @@ describe('validateRequest', () => {
       {
         jsonrpc: '2.0',
         method: 'sol_connect',
-        params: [false],
+        params: { onlyIfTrusted: false },
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {
         jsonrpc: '2.0',
         method: 'sol_connect',
-        params: [true],
+        params: { onlyIfTrusted: true },
+        id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
+      },
+      {
+        jsonrpc: '2.0',
+        method: 'sol_signIn',
+        params: {
+          domain: 'some string',
+          address: 'some string',
+          statement: 'some string',
+          uri: 'some string',
+          version: 'some string',
+          chainId: 'some string',
+          nonce: 'some string',
+          issuedAt: 'some string',
+          expirationTime: 'some string',
+          notBefore: 'some string',
+          requestId: 'some string',
+          resources: ['some string'],
+        },
+        id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
+      },
+      {
+        jsonrpc: '2.0',
+        method: 'sol_signIn',
+        params: {},
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {
@@ -78,13 +103,13 @@ describe('validateRequest', () => {
       {
         jsonrpc: '2.0',
         method: 'sol_signMessage',
-        params: ['c2lnbiBiZWxvdw==', 'hex'],
+        params: ['c2lnbiBiZWxvdw==', { display: 'hex' }],
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {
         jsonrpc: '2.0',
         method: 'sol_signMessage',
-        params: ['c2lnbiBiZWxvdw==', 'utf8'],
+        params: ['c2lnbiBiZWxvdw==', { display: 'utf8' }],
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {
@@ -225,13 +250,13 @@ describe('validateRequest', () => {
       {
         jsonrpc: '2.0',
         method: 'sol_signMessage',
-        params: ['invalidMessage', 'hex'],
+        params: ['invalidMessage', { display: 'hex' }],
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {
         jsonrpc: '2.0',
         method: 'sol_signMessage',
-        params: ['c2lnbiBiZWxvdw==', 'invalidDisplay'],
+        params: ['c2lnbiBiZWxvdw==', { display: 'invalidDisplay' }],
         id: '3d748fba-2f33-410d-9ab3-3272a7cc0d25',
       },
       {

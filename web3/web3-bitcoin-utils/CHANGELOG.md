@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/ExodusMovement/assets/compare/@exodus/web3-bitcoin-utils@2.3.2...@exodus/web3-bitcoin-utils@2.3.3) (2025-01-27)
+
+**Note:** Version bump only for package @exodus/web3-bitcoin-utils
+
+
+
+
+
+## [2.3.2](https://github.com/ExodusMovement/assets/compare/@exodus/web3-bitcoin-utils@2.3.1...@exodus/web3-bitcoin-utils@2.3.2) (2024-12-19)
+
+
+### License
+
+
+* license: re-license under MIT license (#4579)
+
+
+
 ## [2.3.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-bitcoin-utils@2.3.0...@exodus/web3-bitcoin-utils@2.3.1) (2024-11-22)
 
 ### Fix

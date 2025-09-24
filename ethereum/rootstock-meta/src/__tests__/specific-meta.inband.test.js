@@ -7,7 +7,5 @@ describe(`Specific info for ${asset?.name}`, () => {
     expect(asset.displayTicker).toBe('RBTC')
     expect(asset.units.RSK).toBe(18)
     expect(asset.assetType).toBe('ETHEREUM_LIKE')
-    expect(asset.gasLimit).toBe(21_000)
-    expect(asset.contractGasLimit).toBe(1_000_000)
   })
 })

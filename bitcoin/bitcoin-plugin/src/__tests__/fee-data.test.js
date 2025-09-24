@@ -13,9 +13,9 @@ describe('bitcoin fee data', () => {
       expect(feeData.currency).toBeDefined()
       expect(Object.entries(defaults).length).toEqual(11)
       Object.entries(defaults).forEach(([field, value]) => {
-        if (typeof value === 'string')
+        if (typeof value === 'string') {
           expect(feeData[field].equals(feeData.currency.parse(value))).toEqual(true)
-        else {
+        } else {
           expect(feeData[field]).toEqual(value)
         }
       })

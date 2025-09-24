@@ -89,7 +89,7 @@ test('createLimiter with concurrency 2 with delay callbacks', async () => {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
   const delayCall = (fn, ms) => {
     return async () => {
-      await delay(ms)
+      await delay(ms * 10)
       await fn()
     }
   }

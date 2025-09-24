@@ -2,10 +2,11 @@ import { createCurrency } from '@exodus/web3-utils'
 
 import { getInscriptionsDataFromInput, getTxId } from './common.js'
 
-import type { Inscription, RawTransaction } from '../types.js'
 import type {
-  AssetWithInsightClient,
   BtcAggregatedTransactionSimulationResult,
+  Inscription,
+  InsightClient,
+  RawTransaction,
 } from '../types.js'
 import type { Psbt } from '@exodus/bitcoinjs'
 import type { Logger } from '@exodus/logger'
@@ -13,23 +14,22 @@ import type { Asset } from '@exodus/web3-types'
 
 export async function estimateOrdinalsTransfers({
   addresses,
-  asset,
+  currency,
+  insightClient,
   inputIndexesToSign,
   logger,
   psbt,
   simulationResult,
 }: {
   addresses: Record<string, boolean>
-  asset: Asset
+  currency: Asset['currency']
+  insightClient: InsightClient
   inputIndexesToSign: number[]
   logger?: Logger
   psbt: Psbt
   simulationResult: BtcAggregatedTransactionSimulationResult
 }) {
   try {
-    const insightClient = (asset as unknown as AssetWithInsightClient)
-      .insightClient
-
     const allInscriptions: Inscription[] = []
     let inputOffset = 0
 
@@ -54,10 +54,10 @@ export async function estimateOrdinalsTransfers({
 
     for (let inputIdx = 0; inputIdx < psbt.txInputs.length; inputIdx++) {
       const inputData = getInscriptionsDataFromInput({
+        currency,
         psbt,
         inputIdx,
         txObjectsMap,
-        asset,
       })
 
       if (!inputData) {
@@ -96,7 +96,7 @@ export async function estimateOrdinalsTransfers({
 
     let outputOffset = 0
     for (const output of psbt.txOutputs) {
-      const value = asset.currency.baseUnit(output.value).toBaseNumber()
+      const value = currency.baseUnit(output.value).toBaseNumber()
       const inscriptions = allInscriptions
         .map((i) => ({ ...i, offset: i.offset - outputOffset }))
         .filter((i) => i.offset >= 0 && i.offset < value)

@@ -3,6 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@7.1.0...@exodus/web3-solana@7.1.1) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix(web3-solana): harden implementation (#5354)
+
+
+
+## [7.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@7.0.3...@exodus/web3-solana@7.1.0) (2025-03-24)
+
+
+### Features
+
+
+* feat(web3-solana): return all accounts from solana wallet (#5290)
+
+
+
+## [7.0.3](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@7.0.2...@exodus/web3-solana@7.0.3) (2025-03-18)
+
+**Note:** Version bump only for package @exodus/web3-solana
+
+
+
+
+
+## [7.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@6.1.0...@exodus/web3-solana@7.0.2) (2025-03-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **web3-solana:** allow signing in with a non-active wallet account (#5246)
+
+### Features
+
+
+* feat(web3-solana)!: allow signing in with a non-active wallet account (#5246)
+
+* feat(web3-solana): auto-connect if trusted (#5256)
+
+* feat(web3-solana): implement `signAndSendAllTransactions` (#5221)
+
+* feat(web3-solana): implement `solana:signIn` (#5236)
+
+
+### Bug Fixes
+
+
+* fix(web3-solana): add schema for signAndSendAllTransactions (#5240)
+
+* fix(web3-type): mark signTransactions params readonly (#5228)
+
+
+
+## [6.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@6.0.9...@exodus/web3-solana@6.1.0) (2025-03-11)
+
+
+### Features
+
+
+* feat(web3-solana): support signing multiple transactions at once (#5223)
+
+
+
 ## [6.0.9](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana@6.0.8...@exodus/web3-solana@6.0.9) (2025-01-02)
 
 

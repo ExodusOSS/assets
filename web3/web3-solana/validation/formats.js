@@ -1,7 +1,7 @@
 // 3 base64URL encoded dot separated strings.
-const jwtRegEx = /^[A-Z0-9_-]+\.[A-Z0-9_-]+\.[A-Z0-9_-]*$/i
+const jwtRegEx = /^(?:[\w-]+\.){2}[\w-]*$/i
 
 export const formats = {
   jwt: jwtRegEx,
-  base64String: (input) => /^[a-z0-9+/]*={0,3}$/i.test(input),
+  base64String: (input) => /^[\d+/a-z]*={0,3}$/i.test(input),
 }

@@ -25,4 +25,55 @@ describe(`ethereum index.js test`, () => {
     expect(asset.api.features.customTokens).toEqual(false)
     expect(asset.api.features.customTokens).toEqual(false)
   })
+
+  test('feeData gasLimits update', () => {
+    const asset = assetPlugin.createAsset({ assetClientInterface: {} })
+
+    const feeData = asset.api.getFeeData().update({
+      gasLimits: {
+        another_ethereum_token: {
+          gasLimitMultiplier: 1.9,
+        },
+      },
+    })
+    expect(feeData.toJSON()).toEqual({
+      baseFeePerGas: '50 Gwei',
+      eip1559Enabled: true,
+      enableFeeDelegation: false,
+      fuelThreshold: '0.025 ETH',
+      gasLimits: {
+        aave: {
+          fixedGasLimit: 250_000,
+        },
+        amp: {
+          fixedGasLimit: 151_000,
+        },
+        another_ethereum_token: {
+          gasLimitMultiplier: 1.9,
+        },
+        gusd_ethereum_1ea2a0d4: {
+          fixedGasLimit: 75_000,
+        },
+        snx: {
+          fixedGasLimit: 220_000,
+        },
+        tetherusd: {
+          fixedGasLimit: 70_000,
+        },
+        usdcoin: {
+          fixedGasLimit: 70_000,
+        },
+      },
+      gasPrice: '75 Gwei',
+      gasPriceMaximumRate: 1.3,
+      gasPriceMinimumRate: 0.5,
+      gasPriceMultiplier: 1,
+      max: '250 Gwei',
+      min: '1 Gwei',
+      origin: '75 Gwei',
+      rbfEnabled: true,
+      swapFee: '0.05 ETH',
+      tipGasPrice: '0.5 Gwei',
+    })
+  })
 })

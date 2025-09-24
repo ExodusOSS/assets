@@ -8,12 +8,8 @@ const ticker = 'FTMMAINNET'
 const displayTicker = 'FTM'
 const primaryColor = '#13B5EC'
 const gradientColors = ['#A0E7FF', '#13B5EC']
-const gradientCoords = { x1: '119.625%', y1: '113.067%', x2: '0%', y2: '0%' }
 const chainBadgeColors = gradientColors
 const chainId = 250
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -26,8 +22,9 @@ const units = {
 const assetType = 'ETHEREUM_LIKE'
 const tokenAssetType = 'FTM_ERC20'
 const blockExplorer = {
-  addressUrl: (accountId) => `https://ftmscan.com/address/${encodeURIComponent(accountId)}`,
-  txUrl: (txId) => `https://ftmscan.com/tx/${encodeURIComponent(txId)}`,
+  addressUrl: (accountId) =>
+    `https://explorer.fantom.network/address/${encodeURIComponent(accountId)}`,
+  txUrl: (txId) => `https://explorer.fantom.network/transactions/${encodeURIComponent(txId)}`,
 }
 const info = {
   description:
@@ -44,12 +41,9 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -60,8 +54,8 @@ const assetParams = {
 
 const tokenOverrides = (token) => ({
   ...token,
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

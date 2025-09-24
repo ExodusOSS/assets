@@ -20,6 +20,8 @@ export const createAccountState = ({ assetList }) => {
       balance: asset.currency.ZERO,
       tokenBalances: Object.create(null),
       rentExemptAmount: asset.currency.ZERO,
+      accountSize: 0,
+      ownerChanged: false,
       stakingInfo: {
         loaded: false,
         staking: {

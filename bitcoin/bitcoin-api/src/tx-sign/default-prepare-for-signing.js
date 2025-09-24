@@ -1,6 +1,8 @@
 import { Psbt as DefaultPsbt, Transaction as DefaultTransaction } from '@exodus/bitcoinjs'
 import assert from 'minimalistic-assert'
 
+import { writePsbtBlockHeight } from '../psbt-proprietary-types.js'
+
 const _MAXIMUM_FEE_RATES = {
   qtumignition: 25_000,
   ravencoin: 1_000_000,
@@ -40,6 +42,7 @@ export function createPrepareForSigning({
 
     // Create PSBT based on internal Exodus data structure
     const psbt = createPsbtFromTxData({
+      assetName,
       ...unsignedTx.txData,
       ...unsignedTx.txMeta,
       resolvePurpose,
@@ -68,12 +71,20 @@ function createPsbtFromTxData({
   assetName,
   Psbt,
   Transaction,
+  blockHeight,
 }) {
   // use harcoded max fee rates for specific assets
   // if undefined, will be set to default value by PSBT (2500)
   const maximumFeeRate = _MAXIMUM_FEE_RATES[assetName]
 
   const psbt = new Psbt({ maximumFeeRate, network: networkInfo })
+
+  // If present, add blockHeight as a proprietary field
+  if (blockHeight !== undefined) {
+    writePsbtBlockHeight(psbt, blockHeight)
+  }
+
+  const assetRequiresUtxoInInput = !['zcash', 'decred'].includes(assetName)
 
   // Fill tx
   for (const { txId, vout, address, value, script, sequence, tapLeafScript } of inputs) {
@@ -86,6 +97,11 @@ function createPsbtFromTxData({
 
     const txIn = { hash: txId, index: vout, sequence }
 
+    if (!assetRequiresUtxoInInput) {
+      txIn.script = script
+      txIn.value = value
+    }
+
     if (isTaprootAddress && tapLeafScript) {
       txIn.tapLeafScript = tapLeafScript
     }
@@ -97,12 +113,9 @@ function createPsbtFromTxData({
 
     const rawTx = (rawTxs || []).find((t) => t.txId === txId)
 
-    // Non-taproot outputs require the full transaction
-    assert(
-      isTaprootAddress || !!rawTx?.rawData,
-      `Non-taproot outputs require the full previous transaction.`
-    )
-    if (!isTaprootAddress) {
+    if (!isTaprootAddress && assetRequiresUtxoInInput) {
+      assert(!!rawTx?.rawData, `Non-taproot outputs require the full previous transaction.`)
+
       const rawTxBuffer = Buffer.from(rawTx.rawData, 'hex')
       if (canParseTx(Transaction, rawTxBuffer)) {
         txIn.nonWitnessUtxo = rawTxBuffer

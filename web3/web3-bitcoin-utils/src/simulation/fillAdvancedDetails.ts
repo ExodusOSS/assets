@@ -30,13 +30,13 @@ export function reverseBuffer(buffer: Buffer): Buffer {
 
 export function fillAdvancedDetails({
   addresses,
-  asset,
+  currency,
   indexToAddressRecord,
   psbt,
   simulationResult,
 }: {
   addresses: Record<string, boolean>
-  asset: Asset
+  currency: Asset['currency']
   psbt: Psbt
   indexToAddressRecord: IndexToAddressRecord
   simulationResult: BtcAggregatedTransactionSimulationResult
@@ -47,7 +47,7 @@ export function fillAdvancedDetails({
       simulationResult.advancedDetails.inputs.push({
         txID: reverseBuffer(psbt.txInputs[inputIdx].hash).toString('hex'),
         index: psbt.txInputs[inputIdx].index,
-        value: asset.currency.baseUnit(value.toString(10)),
+        value: currency.baseUnit(value.toString(10)),
         address: indexToAddressRecord[inputIdx]
           ? indexToAddressRecord[inputIdx].address
           : undefined,
@@ -57,7 +57,7 @@ export function fillAdvancedDetails({
 
   psbt.txOutputs.forEach((output) => {
     simulationResult.advancedDetails.outputs.push({
-      value: asset.currency.baseUnit(output.value),
+      value: currency.baseUnit(output.value),
       address: output.address
         ? output.address
         : script.toASM(script.decompile(output.script)!),

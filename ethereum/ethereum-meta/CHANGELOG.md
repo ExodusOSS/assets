@@ -3,6 +3,152 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.9.0...@exodus/ethereum-meta@2.9.1) (2025-08-19)
+
+
+### Bug Fixes
+
+
+* fix: remove meta boilerplate (#6305)
+
+
+
+## [2.9.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.8.4...@exodus/ethereum-meta@2.9.0) (2025-08-04)
+
+
+### Features
+
+
+* feat: demote batch of ETH tokens (#6159)
+
+
+### Bug Fixes
+
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+
+
+## [2.8.4](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.8.3...@exodus/ethereum-meta@2.8.4) (2025-06-26)
+
+
+### Bug Fixes
+
+
+* fix: simplify ETH icon SVG to improve rendering stability on Android (#5938)
+
+
+
+## [2.8.3](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.8.2...@exodus/ethereum-meta@2.8.3) (2025-06-23)
+
+
+### Bug Fixes
+
+
+* fix: remove demoted render icon (#5910)
+
+
+
+## [2.8.2](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.8.1...@exodus/ethereum-meta@2.8.2) (2025-06-20)
+
+**Note:** Version bump only for package @exodus/ethereum-meta
+
+
+
+
+
+## [2.8.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.8.0...@exodus/ethereum-meta@2.8.1) (2025-06-11)
+
+
+### Bug Fixes
+
+
+* fix: demote USDD and FET (#5858)
+
+
+
+## [2.8.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.7.0...@exodus/ethereum-meta@2.8.0) (2025-04-23)
+
+
+### Features
+
+
+* feat: ethereum alternative chains icon update (#5489)
+
+
+
+## [2.7.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.6.0...@exodus/ethereum-meta@2.7.0) (2025-04-22)
+
+
+### Features
+
+
+* feat: eth icons update (#5477)
+
+
+
+## [2.6.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.5.0...@exodus/ethereum-meta@2.6.0) (2025-04-10)
+
+
+### Features
+
+
+* feat: eth colors update (#5424)
+
+
+
+## [2.5.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.4.1...@exodus/ethereum-meta@2.5.0) (2025-04-08)
+
+
+### Features
+
+
+* feat: demote batch of 20 tokens (#5347)
+
+
+
+## [2.4.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.4.0...@exodus/ethereum-meta@2.4.1) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: remove DigixDAO (DGD) token from built-in assets (#5336)
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
+## [2.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.3.0...@exodus/ethereum-meta@2.4.0) (2025-03-18)
+
+
+### Features
+
+
+* feat: demote troublesome tokens (#5280)
+
+
+
+## [2.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.2.2...@exodus/ethereum-meta@2.3.0) (2025-03-03)
+
+
+### Features
+
+
+* feat: demote a batch of tokens (#5070)
+
+
+
+## [2.2.2](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.2.1...@exodus/ethereum-meta@2.2.2) (2025-02-26)
+
+
+### Bug Fixes
+
+
+* fix: add assetId to evm metas (#5120)
+
+
+
 ## [2.2.1](https://github.com/ExodusMovement/assets/compare/@exodus/ethereum-meta@2.2.0...@exodus/ethereum-meta@2.2.1) (2024-12-12)
 
 

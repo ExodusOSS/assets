@@ -10,12 +10,8 @@ const displayTicker = 'POL'
 const displayNetworkTicker = 'POL'
 const primaryColor = '#9962f6'
 const gradientColors = ['#5A63B8', '#C86DD7']
-const gradientCoords = { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' }
 const chainBadgeColors = ['#904FFF', '#6A2FCC']
 const chainId = 137
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -47,14 +43,11 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayNetworkName,
   displayNetworkTicker,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -69,8 +62,8 @@ const tokenOverrides = (token) => ({
     ...token.blockExplorer,
     addressUrl: (address) => `https://polygonscan.com/address/${encodeURIComponent(address)}`,
   },
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

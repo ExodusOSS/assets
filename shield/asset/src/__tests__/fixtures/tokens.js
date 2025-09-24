@@ -14,7 +14,6 @@ const tokens = [
     },
     primaryColor: '#FF3495',
     gradientColors: ['#FC6CAB', '#FF007A'],
-    gradientCoords: { x1: '0%', y1: '21.958%', x2: '214.397%', y2: '181.316%' },
   },
   {
     name: 'usdcoin',
@@ -31,7 +30,6 @@ const tokens = [
     },
     primaryColor: '#3E90E8',
     gradientColors: ['#3E90E8', '#2775CA'],
-    gradientCoords: { x1: '102%', y1: '101%', x2: '0%', y2: '0%' },
   },
 ]
 

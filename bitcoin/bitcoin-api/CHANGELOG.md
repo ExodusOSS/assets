@@ -3,6 +3,162 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@4.0.1...@exodus/bitcoin-api@4.0.2) (2025-09-01)
+
+
+### Bug Fixes
+
+
+* fix: use buffers to represent digibyte tx values (#6375)
+
+
+
+## [4.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@4.0.0...@exodus/bitcoin-api@4.0.1) (2025-08-28)
+
+**Note:** Version bump only for package @exodus/bitcoin-api
+
+
+
+
+
+## [4.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@3.3.0...@exodus/bitcoin-api@4.0.0) (2025-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove old bitcoin-api exports (#6196)
+
+### Features
+
+
+* feat!: remove old bitcoin-api exports (#6196)
+
+
+
+## [3.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@3.2.0...@exodus/bitcoin-api@3.3.0) (2025-07-23)
+
+
+### Features
+
+
+* feat: multisiglength monitor (#6141)
+
+
+
+## [3.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@3.1.1...@exodus/bitcoin-api@3.2.0) (2025-07-16)
+
+
+### Features
+
+
+* feat: move send validation to each asset plugin (#6076)
+
+
+
+## [3.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@3.1.0...@exodus/bitcoin-api@3.1.1) (2025-07-16)
+
+
+### Bug Fixes
+
+
+* fix: fetchUTXOs now search input script in response script and scriptPubKey fields (#6097)
+
+
+
+## [3.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@3.0.0...@exodus/bitcoin-api@3.1.0) (2025-07-15)
+
+
+### Features
+
+
+* feat: enable buffer signing in decred (#5881)
+
+
+
+## [3.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.34.1...@exodus/bitcoin-api@3.0.0) (2025-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+* refactor!: remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+
+## [2.34.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.34.0...@exodus/bitcoin-api@2.34.1) (2025-07-04)
+
+
+### Bug Fixes
+
+
+* fix: use fee data from balances (#6018)
+
+
+
+## [2.34.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.33.1...@exodus/bitcoin-api@2.34.0) (2025-07-03)
+
+
+### Features
+
+
+* feat: add getActivityTxs (#6003)
+
+
+
+## [2.33.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.33.0...@exodus/bitcoin-api@2.33.1) (2025-07-02)
+
+
+### Bug Fixes
+
+
+* fix: fix zcash buffer signing audit findings (#5997)
+
+
+
+## [2.33.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.32.0...@exodus/bitcoin-api@2.33.0) (2025-06-30)
+
+
+### Features
+
+
+* feat: enable zcash buffer signer (#5732)
+
+
+
+## [2.32.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.31.1...@exodus/bitcoin-api@2.32.0) (2025-04-01)
+
+
+### Features
+
+
+* feat(bitcoin): allow message signing with external signer (#5365)
+
+
+
+## [2.31.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.31.0...@exodus/bitcoin-api@2.31.1) (2025-03-19)
+
+
+### Bug Fixes
+
+
+* fix: BTC monitor scanning enhancement (#5112)
+
+* fix: remove brc20 dead code (#5286)
+
+
+
+## [2.31.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.30.0...@exodus/bitcoin-api@2.31.0) (2025-01-23)
+
+
+### Features
+
+
+* feat(eth-like,btc-like): make broadcastTx compatible with rawTx (#4911)
+
+
+
 ## [2.30.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-api@2.29.8...@exodus/bitcoin-api@2.30.0) (2025-01-10)
 
 

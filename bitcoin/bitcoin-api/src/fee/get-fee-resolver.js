@@ -41,23 +41,15 @@ export class GetFeeResolver {
     customFee,
     isSendAll,
     nft, // sending one nft
-    brc20, // sending multiple inscriptions ids (as in sending multiple transfer ordinals)
     receiveAddress,
     taprootInputWitnessSize,
   }) => {
     if (nft) {
       assert(!amount, 'amount must not be provided when nft is provided!!!')
       assert(!isSendAll, 'isSendAll must not be provided when nft is provided!!!')
-      assert(!brc20, 'brc20 must not be provided when nft is provided!!!')
     }
 
-    if (brc20) {
-      // assert(!amount, 'amount must not be provided when brc20 is provided!!!')
-      assert(!isSendAll, 'isSendAll must not be provided when brc20 is provided!!!')
-      assert(!nft, 'nft must not be provided when brc20 is provided!!!')
-    }
-
-    const inscriptionIds = getInscriptionIds({ nft, brc20 })
+    const inscriptionIds = getInscriptionIds({ nft })
 
     const { fee, unspendableFee, extraFeeData } = this.#getUtxosData({
       asset,
@@ -65,46 +57,13 @@ export class GetFeeResolver {
       txSet,
       feeData,
       receiveAddress,
-      amount: brc20 ? undefined : amount,
+      amount,
       customFee,
       isSendAll,
       inscriptionIds,
       taprootInputWitnessSize,
     })
     return { fee, unspendableFee, extraFeeData }
-  }
-
-  getAvailableBalance = ({
-    asset,
-    accountState,
-    txSet,
-    feeData,
-    amount,
-    customFee,
-    isSendAll,
-    taprootInputWitnessSize,
-  }) => {
-    return this.#getUtxosData({
-      asset,
-      accountState,
-      txSet,
-      feeData,
-      customFee,
-      isSendAll,
-      amount,
-      taprootInputWitnessSize,
-    }).availableBalance
-  }
-
-  getSpendableBalance = ({ asset, accountState, txSet, feeData, taprootInputWitnessSize }) => {
-    return this.#getUtxosData({
-      asset,
-      accountState,
-      txSet,
-      feeData,
-      isSendAll: true,
-      taprootInputWitnessSize,
-    }).spendableBalance
   }
 
   #getUtxosData = ({

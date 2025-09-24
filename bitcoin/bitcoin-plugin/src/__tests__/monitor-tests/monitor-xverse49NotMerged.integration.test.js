@@ -10,6 +10,7 @@ const config = {
 
 describe(`xverse49NotMerged`, () => {
   monitorIntegrationTester({
+    refresh: false,
     assetPlugin,
     assetConfig: config,
     seed: getPrivateSeed(),

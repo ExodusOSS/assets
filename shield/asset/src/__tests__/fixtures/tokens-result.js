@@ -14,7 +14,6 @@ const tokens = [
     },
     primaryColor: '#FF3495',
     gradientColors: ['#FC6CAB', '#FF007A'],
-    gradientCoords: { x1: '0%', y1: '21.958%', x2: '214.397%', y2: '181.316%' },
     baseAssetName: 'smapleum',
     chainBadgeColors: ['#FC6CAB', '#FF007A'],
     displayNetworkName: 'Sampleum',
@@ -25,7 +24,6 @@ const tokens = [
     units: { base: 0, UNI: 18 },
     assetType: 'ETHEREUM_ERC20',
     contract: { current: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984' },
-    gasLimit: 120_000,
   },
   {
     name: 'usdcoin',
@@ -42,7 +40,6 @@ const tokens = [
     },
     primaryColor: '#3E90E8',
     gradientColors: ['#3E90E8', '#2775CA'],
-    gradientCoords: { x1: '102%', y1: '101%', x2: '0%', y2: '0%' },
     baseAssetName: 'smapleum',
     chainBadgeColors: ['#3E90E8', '#2775CA'],
     displayNetworkName: 'Sampleum',
@@ -53,7 +50,6 @@ const tokens = [
     units: { base: 0, USDC: 6 },
     assetType: 'ETHEREUM_ERC20',
     contract: { current: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48' },
-    gasLimit: 120_000,
   },
 ]
 

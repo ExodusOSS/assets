@@ -52,9 +52,9 @@
                         "vout": 0,
                         "confirmations": 1,
                         "script": "76a9146da8a36d9bad2762d037ef60f974df6fd4c7798c88ac",
-                        "value": "0.0001 BTCR",
                         "rbfEnabled": true,
-                        "derivationPath": "m/44'/0'/0'/0/0"
+                        "derivationPath": "m/44'/0'/0'/0/0",
+                        "value": "0.0001 BTCR"
                       }
                     ]
                   },
@@ -67,9 +67,9 @@
                         "vout": 1,
                         "confirmations": 1,
                         "script": "5120ca032b3575ddf2693956a16597650c5335f366dd0ba49d42decf33f7c593ba6c",
-                        "value": "0.00021 BTCR",
                         "rbfEnabled": true,
-                        "derivationPath": "m/86'/0'/0'/0/0"
+                        "derivationPath": "m/86'/0'/0'/0/0",
+                        "value": "0.00021 BTCR"
                       }
                     ]
                   },
@@ -82,9 +82,9 @@
                         "vout": 0,
                         "confirmations": 1,
                         "script": "001413c3a3fe40a9a1f47de541c6d48a50cf9b0beeae",
-                        "value": "0.0001 BTCR",
                         "rbfEnabled": true,
-                        "derivationPath": "m/84'/0'/0'/0/0"
+                        "derivationPath": "m/84'/0'/0'/0/0",
+                        "value": "0.0001 BTCR"
                       }
                     ]
                   }
@@ -149,6 +149,7 @@
       "data": {
         "bitcoinregtest": [
           {
+            "version": 1,
             "currencies": {
               "bitcoinregtest": {
                 "satoshis": 0,
@@ -159,9 +160,6 @@
             "txId": "12d81b495e22bea8c2443d184554a2326a1914c8f5a682e67da55c26eefb337e",
             "date": "2024-05-31T21:02:48.000Z",
             "confirmations": 1,
-            "dropped": false,
-            "coinAmount": "0.0001 BTCR",
-            "coinName": "bitcoinregtest",
             "from": ["bcrt1qk7lya68sam7gfpdd7j3eqlxlnvwnjujkfglv7r"],
             "data": {
               "feePerKB": 20000,
@@ -184,9 +182,12 @@
                 }
               }
             ],
-            "version": 1
+            "dropped": false,
+            "coinName": "bitcoinregtest",
+            "coinAmount": "0.0001 BTCR"
           },
           {
+            "version": 1,
             "currencies": {
               "bitcoinregtest": {
                 "satoshis": 0,
@@ -197,9 +198,6 @@
             "txId": "c250cf4073b6cc2f0fa08aaacaf18b0112e83928ee21f6795d66433b95e07d07",
             "date": "2024-05-31T21:07:48.000Z",
             "confirmations": 1,
-            "dropped": false,
-            "coinAmount": "0.00021 BTCR",
-            "coinName": "bitcoinregtest",
             "from": ["bcrt1qts54j7xs6e729ygf5khvm3rdxvwqxtr36wpc0w"],
             "data": {
               "feePerKB": 20000,
@@ -222,9 +220,12 @@
                 }
               }
             ],
-            "version": 1
+            "dropped": false,
+            "coinName": "bitcoinregtest",
+            "coinAmount": "0.00021 BTCR"
           },
           {
+            "version": 1,
             "currencies": {
               "bitcoinregtest": {
                 "satoshis": 0,
@@ -235,9 +236,6 @@
             "txId": "8ca0edd7b9d11314e4f2424ef2a72ae3d3f9265efd9fc8c8bdedde451d4d3dd1",
             "date": "2024-05-31T21:07:49.000Z",
             "confirmations": 1,
-            "dropped": false,
-            "coinAmount": "0.0001 BTCR",
-            "coinName": "bitcoinregtest",
             "from": ["bcrt1qrmz5wz8au8q4svegmyj92c6e8dwavl8c93hlgw"],
             "data": {
               "feePerKB": 20000,
@@ -260,7 +258,9 @@
                 }
               }
             ],
-            "version": 1
+            "dropped": false,
+            "coinName": "bitcoinregtest",
+            "coinAmount": "0.0001 BTCR"
           }
         ]
       }

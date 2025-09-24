@@ -77,16 +77,28 @@ test('add new combined asset', () => {
     baseAssetName: '_foobar',
     combinedAssetNames: ['foo'], // foo from `add token` test
     units: { microbase: 0, [ticker]: 6 },
+    info: {},
+    primaryColor: '#FFFFFF',
+    gradientColors: ['#000000', '#FFFFFF'],
+    chainBadgeColors: ['#000000', '#FFFFFF'],
   }
-  const assetDef = createCombined(newCombinedDef, assets)
+  const assetDef = createCombined(newCombinedDef)
   addCombinedAsset(assets, assetDef)
   assert.doesNotThrow(() => validateAsset(assets._foobar))
 })
 
-test('update combined asset', () => {
-  updateCombinedAsset(assets, assets._foobar, { newMemberAsset: assets.bar })
+test('update combined asset (addMembers)', () => {
+  updateCombinedAsset(assets, assets._foobar.name, { addMembers: ['bar'] })
   assert.doesNotThrow(() => validateAsset(assets._foobar))
   expect(assets._foobar.combinedAssetNames).toEqual(['foo', 'bar'])
   expect(assets._foobar.combinedAssets.length).toBe(2)
+  expect(assets._foobar.baseAsset).toBe(assets._foobar)
+})
+
+test('update combined asset (removeMembers)', () => {
+  updateCombinedAsset(assets, assets._foobar.name, { removeMembers: ['bar'] })
+  assert.doesNotThrow(() => validateAsset(assets._foobar))
+  expect(assets._foobar.combinedAssetNames).toEqual(['foo'])
+  expect(assets._foobar.combinedAssets.length).toBe(1)
   expect(assets._foobar.baseAsset).toBe(assets._foobar)
 })

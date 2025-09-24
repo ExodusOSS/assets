@@ -1,6 +1,6 @@
-import tokensParams from './tokens.js'
-
 import { createMetaDef } from '@exodus/asset'
+
+import tokensParams from './tokens.js'
 
 const name = 'aurora'
 const displayName = 'Ethereum'
@@ -10,12 +10,8 @@ const displayNetworkTicker = 'AURORA'
 const displayNetworkName = 'Aurora'
 const primaryColor = '#8C93AF'
 const gradientColors = ['#474A73', '#8C93AF']
-const gradientCoords = { x1: '17.71%', y1: '-46.968%', x2: '98.837%', y2: '152.777%' }
 const chainBadgeColors = ['#5deb5a', '#8AFF88']
 const chainId = 1_313_161_554
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -47,14 +43,11 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayNetworkName,
   displayNetworkTicker,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -65,8 +58,8 @@ const assetParams = {
 
 const tokenOverrides = (token) => ({
   ...token,
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

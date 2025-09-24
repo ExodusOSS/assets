@@ -65,7 +65,8 @@ describe('solana monitor', () => {
       expect(accountState.cursor).toEqual(
         '3fiGCohizfVEeSSq4mrfGHve2tZA439toP9RwS1hFX1ViM4VEWX3Dw172ynsrJQ8evcCphohf7r7VTYg1KmvhnUC'
       )
-      expectSameValue(accountState.rentExemptAmount, asset.currency.baseUnit('200000'))
+      expect(accountState.rentExemptAmount.toBaseNumber()).toEqual(300_000)
+      expect(accountState.accountSize).toEqual(5)
 
       // Some token balances my account has.
       expectSameValue(

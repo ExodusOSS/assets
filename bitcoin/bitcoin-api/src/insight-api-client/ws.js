@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events'
+import EventEmitter from 'events/events.js'
 import io from 'socket.io-client'
 
 export default class InsightWSClient extends EventEmitter {

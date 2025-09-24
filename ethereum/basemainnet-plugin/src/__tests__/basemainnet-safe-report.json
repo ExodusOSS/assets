@@ -35,7 +35,7 @@
             "balance": {
               "t": "numberunit",
               "v": {
-                "v": "795780644563539 wei",
+                "v": "0 BASE",
                 "u": {
                   "wei": 0,
                   "Kwei": 3,
@@ -67,7 +67,7 @@
             "balance": {
               "t": "numberunit",
               "v": {
-                "v": "200000000000000 wei",
+                "v": "0 BASE",
                 "u": {
                   "wei": 0,
                   "Kwei": 3,
@@ -90,6 +90,119 @@
       }
     }
   },
+  "txLog": {
+    "exodus_0": {
+      "data": {
+        "basemainnet": [
+          {
+            "version": 1,
+            "currencies": {
+              "basemainnet": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "BASE": 18
+              }
+            },
+            "txId": "0x85fa87c20a9416697fefce05115de263a0e6927da78bbe97b528fe3e839f21d5",
+            "date": "2024-04-28T18:58:05.001Z",
+            "confirmations": 1,
+            "from": ["0x464f62159e067a8c231b5c3f9a7144e191750051"],
+            "data": {
+              "data": "0x",
+              "nonce": 72,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "0",
+                "to": "1000000000000000"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "basemainnet",
+            "coinAmount": "0.001 BASE"
+          },
+          {
+            "version": 1,
+            "currencies": {
+              "basemainnet": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "BASE": 18
+              }
+            },
+            "txId": "0xbce047fb7444b66e7d8e370834144bad1191b8bd3ea4aab32f5cd340241ff506",
+            "date": "2024-04-28T19:05:57.008Z",
+            "confirmations": 1,
+            "data": {
+              "data": "0x",
+              "nonce": 0,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "1000000000000000",
+                "to": "795780644563539"
+              },
+              "nonceChange": {
+                "from": "0",
+                "to": "1"
+              },
+              "methodId": "0x"
+            },
+            "to": "0xf6c138c36341138ddfc314a11038da8264b7ef09",
+            "dropped": false,
+            "coinName": "basemainnet",
+            "feeCoinName": "basemainnet",
+            "coinAmount": "-0.0002 BASE",
+            "feeAmount": "0.000004219355436461 BASE"
+          }
+        ]
+      }
+    },
+    "exodus_1": {
+      "data": {
+        "basemainnet": [
+          {
+            "version": 1,
+            "currencies": {
+              "basemainnet": {
+                "wei": 0,
+                "Kwei": 3,
+                "Mwei": 6,
+                "Gwei": 9,
+                "szabo": 12,
+                "finney": 15,
+                "BASE": 18
+              }
+            },
+            "txId": "0xbce047fb7444b66e7d8e370834144bad1191b8bd3ea4aab32f5cd340241ff506",
+            "date": "2024-04-28T19:05:57.008Z",
+            "confirmations": 1,
+            "from": ["0x90e481d9a664ebbe4be180d9501962255463036d"],
+            "data": {
+              "data": "0x",
+              "nonce": 0,
+              "gasLimit": 21000,
+              "balanceChange": {
+                "from": "0",
+                "to": "200000000000000"
+              },
+              "methodId": "0x"
+            },
+            "dropped": false,
+            "coinName": "basemainnet",
+            "coinAmount": "0.0002 BASE"
+          }
+        ]
+      }
+    }
+  },
   "addresses": {
     "exodus_0": {
       "basemainnet": {
@@ -108,6 +221,36 @@
     "navigator": {
       "name": "nodejs",
       "version": "0.0.1"
+    }
+  },
+  "balances": {
+    "exodus_0": {
+      "basemainnet": {
+        "total": "795780644563539 wei",
+        "balance": "795780644563539 wei",
+        "spendable": "795780644563539 wei",
+        "spendableBalance": "795780644563539 wei",
+        "unconfirmedSent": "0 wei",
+        "unconfirmedReceived": "0 wei",
+        "staking": "0 wei",
+        "staked": "0 wei",
+        "unstaking": "0 wei",
+        "unstaked": "0 wei"
+      }
+    },
+    "exodus_1": {
+      "basemainnet": {
+        "total": "200000000000000 wei",
+        "balance": "200000000000000 wei",
+        "spendable": "200000000000000 wei",
+        "spendableBalance": "200000000000000 wei",
+        "unconfirmedSent": "0 wei",
+        "unconfirmedReceived": "0 wei",
+        "staking": "0 wei",
+        "staked": "0 wei",
+        "unstaking": "0 wei",
+        "unstaked": "0 wei"
+      }
     }
   }
 }

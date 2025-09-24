@@ -35,6 +35,8 @@ const ASSETS_SUPPORTED_BIP_174 = new Set([
   'vertcoin', // is not available on mobile!
 ])
 
+const ASSETS_USING_BUFFER_VALUES = new Set(['dogecoin', 'digibyte'])
+
 export async function getNonWitnessTxs(asset, utxos, insightClient) {
   const rawTxs = []
 
@@ -202,7 +204,7 @@ export const getPrepareSendTransaction =
     assetClientInterface,
     changeAddressType,
   }) =>
-  async ({ asset: maybeToken, walletAccount, address, amount: tokenAmount, options }) => {
+  async ({ asset, walletAccount, address, amount, options }) => {
     const {
       multipleAddressesEnabled,
       feePerKB,
@@ -210,14 +212,12 @@ export const getPrepareSendTransaction =
       isSendAll,
       bumpTxId,
       nft,
-      feeOpts,
       isExchange,
       isBip70,
       isRbfAllowed,
       taprootInputWitnessSize,
     } = options
 
-    const asset = maybeToken.baseAsset
     const assetName = asset.name
     const accountState = await assetClientInterface.getAccountState({ assetName, walletAccount })
     const feeData = await assetClientInterface.getFeeConfig({ assetName })
@@ -225,19 +225,11 @@ export const getPrepareSendTransaction =
     const insightClient = asset.baseAsset.insightClient
 
     const blockHeight = providedBlockHeight || (await getBlockHeight({ assetName, insightClient }))
-    const brc20 = options.brc20 || feeOpts?.brc20 // feeOpts is the only way I've found atm to pass brc20 param without changing the tx-send hydra module
 
     const rbfEnabled =
-      providedRbfEnabled ||
-      (feeData.rbfEnabled && !isExchange && !isBip70 && isRbfAllowed && !nft && !brc20)
+      providedRbfEnabled || (feeData.rbfEnabled && !isExchange && !isBip70 && isRbfAllowed && !nft)
 
-    const isToken = maybeToken.name !== asset.name
-    if (isToken) {
-      assert(brc20, 'brc20 is required when sending bitcoin token')
-    }
-
-    const amount = isToken ? asset.currency.ZERO : tokenAmount
-    const inscriptionIds = getInscriptionIds({ nft, brc20 })
+    const inscriptionIds = getInscriptionIds({ nft })
 
     assert(
       ordinalsEnabled || !inscriptionIds,
@@ -465,20 +457,16 @@ export const createAndBroadcastTXFactory =
     assetClientInterface,
     changeAddressType,
   }) =>
-  async ({ asset: maybeToken, walletAccount, address, amount: tokenAmount, options }) => {
+  async ({ asset, walletAccount, address, amount, options }) => {
     // Prepare transaction
-    const { bumpTxId, nft, isExchange, isBip70, isRbfAllowed = true, feeOpts } = options
+    const { bumpTxId, nft, isExchange, isBip70, isRbfAllowed = true } = options
 
-    const asset = maybeToken.baseAsset
     const assetName = asset.name
     const feeData = await assetClientInterface.getFeeConfig({ assetName })
     const accountState = await assetClientInterface.getAccountState({ assetName, walletAccount })
     const insightClient = asset.baseAsset.insightClient
-    const isToken = maybeToken.name !== asset.name
-    const brc20 = options.brc20 || feeOpts?.brc20
 
-    const rbfEnabled =
-      feeData.rbfEnabled && !isExchange && !isBip70 && isRbfAllowed && !nft && !brc20
+    const rbfEnabled = feeData.rbfEnabled && !isExchange && !isBip70 && isRbfAllowed && !nft
 
     // blockHeight
     const blockHeight = await getBlockHeight({ assetName, insightClient })
@@ -492,9 +480,8 @@ export const createAndBroadcastTXFactory =
       rbfEnabled,
       assetClientInterface,
       changeAddressType,
-    })({ asset: maybeToken, walletAccount, address, amount: tokenAmount, options })
+    })({ asset, walletAccount, address, amount, options })
     const {
-      amount,
       change,
       totalAmount,
       currentOrdinalsUtxos,
@@ -536,8 +523,10 @@ export const createAndBroadcastTXFactory =
             /txn-mempool-conflict/.test(e.message) ||
             /tx-size/.test(e.message) ||
             /txn-already-in-mempool/.test(e.message)
-          )
+          ) {
             e.finalError = true
+          }
+
           throw e
         }
       },
@@ -648,11 +637,7 @@ export const createAndBroadcastTXFactory =
 
     const calculateCoinAmount = () => {
       if (selfSend) {
-        return maybeToken.currency.ZERO
-      }
-
-      if (isToken) {
-        return tokenAmount.abs().negate()
+        return asset.currency.ZERO
       }
 
       if (nft) {
@@ -665,14 +650,14 @@ export const createAndBroadcastTXFactory =
     const coinAmount = calculateCoinAmount()
 
     await assetClientInterface.updateTxLogAndNotify({
-      assetName: maybeToken.name,
+      assetName: asset.name,
       walletAccount,
       txs: [
         {
           txId,
           confirmations: 0,
           coinAmount,
-          coinName: maybeToken.name,
+          coinName: asset.name,
           feeAmount: fee,
           feeCoinName: assetName,
           selfSend,
@@ -721,12 +706,11 @@ export const createAndBroadcastTXFactory =
   }
 
 export function createInputs(assetName, ...rest) {
-  switch (assetName) {
-    case 'dogecoin':
-      return dogecoinCreateInputs(...rest)
-    default:
-      return defaultCreateInputs(...rest)
+  if (ASSETS_USING_BUFFER_VALUES.has(assetName)) {
+    return dogecoinCreateInputs(...rest)
   }
+
+  return defaultCreateInputs(...rest)
 }
 
 function defaultCreateInputs(utxos, rbfEnabled) {
@@ -743,12 +727,11 @@ function defaultCreateInputs(utxos, rbfEnabled) {
 }
 
 export function createOutput(assetName, ...rest) {
-  switch (assetName) {
-    case 'dogecoin':
-      return dogecoinCreateOutput(...rest)
-    default:
-      return defaultCreateOutput(...rest)
+  if (ASSETS_USING_BUFFER_VALUES.has(assetName)) {
+    return dogecoinCreateOutput(...rest)
   }
+
+  return defaultCreateOutput(...rest)
 }
 
 function defaultCreateOutput(address, sendAmount) {

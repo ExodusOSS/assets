@@ -1,42 +1,26 @@
-/* global Observable */
-
+import { PublicKey } from '@exodus/solana-web3.js'
 import {
   DisconnectedError,
   MethodNotFoundError,
   UnsupportedMethodError,
 } from '@exodus/web3-errors'
+import type { Observable } from '@exodus/web3-types'
 
 import type { Deps } from '../types.js'
 
 await import('../../../../web3.test.global.js')
 
 const deserializeMessageSignature = jest.fn()
-const deserializePublicKey = jest.fn()
 const deserializeTransaction = jest.fn()
 const serializeEncodedMessage = jest.fn()
 const serializeTransaction = jest.fn()
 const isLegacyTransaction = jest.fn()
 const applySignatures = jest.fn()
 
-// Set up mocks.
-jest.doMock('@exodus/solana-web3.js', () => ({
-  __esModule: true,
-  ...jest.requireActual('@exodus/solana-web3.js'),
-  PublicKey: function (value) {
-    return { toBase58: () => value }
-  },
-}))
-
 jest.doMock('../utils/signatures.js', () => ({
   __esModule: true,
   ...jest.requireActual('../utils/signatures.js'),
   deserializeMessageSignature,
-}))
-
-jest.doMock('../utils/keys.js', () => ({
-  __esModule: true,
-  ...jest.requireActual('../utils/keys.js'),
-  deserializePublicKey,
 }))
 
 jest.doMock('../utils/messages.js', () => ({
@@ -65,15 +49,19 @@ jest.doMock('@exodus/json-rpc', () => {
 const { SolanaProvider } = await import('../provider.js')
 
 describe('SolanaProvider', () => {
-  const publicKeyBase58 = 'pubkey'
-  const publicKey = {
-    equals: (publicKey) => publicKey.toBase58() === publicKeyBase58,
-    toBase58: () => publicKeyBase58,
+  const publicKeyBase58 = '7gcvi5aP1tqnqqestvT22ocoSPQzVJfA6FoCEkMbfHva'
+  const publicKey = new PublicKey(publicKeyBase58)
+
+  let accountsObservable: Observable & { notify: (args: unknown) => void }
+
+  let solana: InstanceType<typeof SolanaProvider>
+
+  const notifyAccountChange = (publicKey: string | PublicKey) => {
+    solana.emitAndIgnoreErrors('connect', null as never) // make sure connected
+    accountsObservable.notify([
+      publicKey instanceof PublicKey ? publicKey.toBase58() : publicKey,
+    ])
   }
-
-  let accountsObservable
-
-  let solana
 
   beforeEach(() => {
     jest.resetAllMocks()
@@ -82,7 +70,9 @@ describe('SolanaProvider', () => {
     accountsObservable = new Observable()
 
     // Omit `transport` dependency as the `RPC` class is mocked above.
-    solana = new SolanaProvider({ accountsObservable } as Deps)
+    solana = new SolanaProvider({
+      accountsObservable,
+    } as Deps)
   })
 
   it('exposes list of supported transaction versions', () => {
@@ -100,43 +90,39 @@ describe('SolanaProvider', () => {
       expect(solana.isConnected).toBe(false)
     })
 
-    it('is true if public key is not null', () => {
-      solana._handleAccountsChanged([publicKey])
+    it('is true if public key is not null', async () => {
+      notifyAccountChange(publicKey.toBase58())
 
       expect(solana.isConnected).toBe(true)
     })
   })
 
   describe('connect', () => {
-    const wirePublicKey = 'wirePubkey'
+    const wirePublicKey = '7gcvi5aP1tqnqqestvT22ocoSPQzVJfA6FoCEkMbfHva'
+    const publicKey = new PublicKey(wirePublicKey)
 
     beforeEach(() => {
-      mockCallMethod.mockResolvedValueOnce(wirePublicKey)
-      deserializePublicKey.mockReturnValueOnce(publicKey)
+      mockCallMethod.mockResolvedValueOnce([{ address: wirePublicKey }])
     })
 
     it('calls the corresponding RPC method', async () => {
       await solana.connect()
 
-      expect(mockCallMethod).toHaveBeenCalledWith('sol_connect', [false])
-    })
-
-    it('deserializes the wire public key', async () => {
-      await solana.connect()
-
-      expect(deserializePublicKey).toHaveBeenCalledWith(wirePublicKey)
+      expect(mockCallMethod).toHaveBeenCalledWith('sol_connect', {
+        onlyIfTrusted: false,
+      })
     })
 
     it('sets the public key', async () => {
       await solana.connect()
 
-      expect(solana.publicKey).toEqual(publicKey)
+      expect(solana.publicKey!).toEqual(publicKey)
     })
 
     it('returns a response including the public key', async () => {
       const resp = await solana.connect()
 
-      expect(resp.publicKey).toBe(publicKey)
+      expect(resp.publicKey).toEqual(publicKey)
     })
 
     it("emits a 'connect' event", async () => {
@@ -160,13 +146,15 @@ describe('SolanaProvider', () => {
     it("accepts an 'onlyIfTrusted' option", async () => {
       await solana.connect({ onlyIfTrusted: true })
 
-      expect(mockCallMethod).toHaveBeenCalledWith('sol_connect', [true])
+      expect(mockCallMethod).toHaveBeenCalledWith('sol_connect', {
+        onlyIfTrusted: true,
+      })
     })
   })
 
   describe('disconnect', () => {
     beforeEach(async () => {
-      deserializePublicKey.mockReturnValueOnce(publicKey)
+      mockCallMethod.mockResolvedValueOnce([{ address: publicKeyBase58 }])
       await solana.connect()
     })
 
@@ -202,7 +190,7 @@ describe('SolanaProvider', () => {
     const wireSignedTransaction = 'wireSignedTx'
 
     beforeEach(() => {
-      solana._handleAccountsChanged([publicKey])
+      notifyAccountChange(publicKey.toBase58())
       serializeTransaction.mockReturnValueOnce(wireTransaction)
       mockCallMethod.mockResolvedValueOnce(wireSignedTransaction)
       deserializeTransaction.mockReturnValueOnce(signedTransaction)
@@ -265,7 +253,7 @@ describe('SolanaProvider', () => {
     const signedTransactions = [signedTransaction0, signedTransaction1]
 
     beforeEach(() => {
-      solana._handleAccountsChanged([publicKey])
+      notifyAccountChange(publicKey.toBase58())
       serializeTransaction
         .mockReturnValueOnce(wireTransactions[0])
         .mockReturnValueOnce(wireTransactions[1])
@@ -337,7 +325,7 @@ describe('SolanaProvider', () => {
     const newBlockhash = 'newBlockhash'
 
     beforeEach(() => {
-      solana._handleAccountsChanged([publicKey])
+      notifyAccountChange(publicKey.toBase58())
       serializeTransaction.mockReturnValueOnce(wireTransaction)
       mockCallMethod
         .mockResolvedValueOnce(newBlockhash)
@@ -386,16 +374,95 @@ describe('SolanaProvider', () => {
     })
   })
 
+  describe('signAndSendAllTransactions', () => {
+    const transaction0 = {
+      recentBlockhash: 'blockhash',
+      signatures: [],
+    }
+    const transaction1 = {
+      recentBlockhash: 'blockhash',
+      signatures: [],
+    }
+    const transactions = [transaction0, transaction1]
+    const wireTransactions = ['wireTx0', 'wireTx1']
+    const signedTransaction0 = { signatures: [Buffer.from('signature0')] }
+    const signedTransaction1 = { signatures: [Buffer.from('signature1')] }
+    const signedTransactions = [signedTransaction0, signedTransaction1]
+    const encodedSignatures = ['encodedSignature0', 'encodedSignature1']
+
+    beforeEach(() => {
+      notifyAccountChange(publicKey.toBase58())
+      serializeTransaction
+        .mockReturnValueOnce(wireTransactions[0])
+        .mockReturnValueOnce(wireTransactions[1])
+      mockCallMethod.mockResolvedValueOnce(
+        encodedSignatures.map((sig) => ({ status: 'fulfilled', value: sig })),
+      )
+
+      deserializeTransaction
+        .mockReturnValueOnce(signedTransactions[0])
+        .mockReturnValueOnce(signedTransactions[1])
+      isLegacyTransaction.mockReturnValue(true)
+    })
+
+    it('serializes the given transaction', async () => {
+      await solana.signAndSendAllTransactions(transactions)
+
+      expect(serializeTransaction).toHaveBeenNthCalledWith(1, transaction0)
+      expect(serializeTransaction).toHaveBeenNthCalledWith(2, transaction1)
+    })
+
+    it('calls the corresponding RPC method', async () => {
+      await solana.signAndSendAllTransactions(transactions)
+
+      expect(mockCallMethod).toHaveBeenCalledWith(
+        'sol_signAndSendAllTransactions',
+        [
+          wireTransactions.map((tx) => ({ transaction: tx, options: {} })),
+          { parallel: true },
+        ],
+      )
+    })
+
+    it('returns a response including the signature', async () => {
+      const resp = await solana.signAndSendAllTransactions(transactions)
+
+      expect(resp.signatures).toEqual(encodedSignatures)
+    })
+
+    it('accepts send options', async () => {
+      const options = { maxRetries: 3, preflightCommitment: 'processed' }
+
+      await solana.signAndSendAllTransactions(transactions, options)
+
+      expect(mockCallMethod).toHaveBeenCalledWith(
+        'sol_signAndSendAllTransactions',
+        [
+          wireTransactions.map((tx) => ({ transaction: tx, options })),
+          { parallel: true },
+        ],
+      )
+    })
+
+    it('throws if not connected', async () => {
+      solana.disconnect()
+
+      await expect(async () => {
+        await solana.signAndSendAllTransactions(transactions)
+      }).rejects.toThrow(DisconnectedError)
+    })
+  })
+
   describe('signMessage', () => {
     const message = 'sign below'
-    const encodedMessage = new Uint8Array(Buffer.from(message)).toString()
+    const encodedMessage = new Uint8Array(Buffer.from(message))
     const wireEncodedMessage = new Uint8Array(Buffer.from(message))
     const display = 'utf8'
     const signature = 'signature'
     const wireSignature = 'wireSignature'
 
     beforeEach(() => {
-      solana._handleAccountsChanged([publicKey])
+      notifyAccountChange(publicKey.toBase58())
       serializeEncodedMessage.mockReturnValueOnce(wireEncodedMessage)
       mockCallMethod.mockResolvedValueOnce(wireSignature)
       deserializeMessageSignature.mockReturnValueOnce(signature)
@@ -412,7 +479,7 @@ describe('SolanaProvider', () => {
 
       expect(mockCallMethod).toHaveBeenCalledWith('sol_signMessage', [
         wireEncodedMessage,
-        display,
+        { display },
       ])
     })
 
@@ -420,7 +487,7 @@ describe('SolanaProvider', () => {
       const resp = await solana.signMessage(encodedMessage, display)
 
       expect(resp.signature).toBe(signature)
-      expect(resp.publicKey.toBase58()).toBe(publicKey)
+      expect(resp.publicKey).toEqual(publicKey)
     })
 
     it('throws if not connected', async () => {
@@ -456,7 +523,7 @@ describe('SolanaProvider', () => {
     it('throws if the given RPC method does not exist', async () => {
       await expect(async () => {
         await solana.request({
-          method: 'unknownMethod',
+          method: 'unknownMethod' as never,
           params: [],
         })
       }).rejects.toThrow(MethodNotFoundError)
@@ -464,25 +531,25 @@ describe('SolanaProvider', () => {
   })
 
   describe('when accounts change', () => {
-    const newPublicKeyBase58 = 'newPubkey'
+    const newPublicKeyBase58 = 'NTYeYJ1wr4bpM5xo6zx5En44SvJFAd35zTxxNoERYqd'
 
     beforeEach(async () => {
-      deserializePublicKey.mockReturnValueOnce(publicKey)
+      mockCallMethod.mockResolvedValueOnce([{ address: publicKeyBase58 }])
       await solana.connect()
     })
 
     describe('when connected', () => {
       it('updates the public key', () => {
-        accountsObservable.notify([newPublicKeyBase58])
+        notifyAccountChange(newPublicKeyBase58)
 
-        expect(solana.publicKey.toBase58()).toBe(newPublicKeyBase58)
+        expect(solana.publicKey!.toBase58()).toBe(newPublicKeyBase58)
       })
 
       it("emits an 'accountChanged' event", () => {
         const handleAccountChanged = jest.fn()
         solana.on('accountChanged', handleAccountChanged)
 
-        accountsObservable.notify([newPublicKeyBase58])
+        notifyAccountChange(newPublicKeyBase58)
 
         expect(handleAccountChanged).toHaveBeenCalledWith(solana.publicKey)
       })
@@ -491,9 +558,9 @@ describe('SolanaProvider', () => {
         const handleAccountChanged = jest.fn()
         solana.on('accountChanged', handleAccountChanged)
 
-        accountsObservable.notify([publicKeyBase58])
+        notifyAccountChange(publicKeyBase58)
 
-        expect(solana.publicKey.toBase58()).toBe(publicKeyBase58)
+        expect(solana.publicKey!.toBase58()).toBe(publicKeyBase58)
         expect(handleAccountChanged).not.toHaveBeenCalled()
       })
     })

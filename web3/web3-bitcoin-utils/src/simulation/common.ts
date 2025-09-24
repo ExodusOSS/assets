@@ -18,12 +18,12 @@ export function getTxId({ input }: { input: PsbtInput }): string | null {
 }
 
 export function getInscriptionsDataFromInput({
+  currency,
   psbt,
   inputIdx,
   txObjectsMap,
-  asset,
 }: {
-  asset: Asset
+  currency: Asset['currency']
   psbt: Psbt
   inputIdx: number
   txObjectsMap: Map<string, RawTransaction>
@@ -37,7 +37,7 @@ export function getInscriptionsDataFromInput({
     if (!tx?.vout?.[vout]) {
       return null
     }
-    const value = asset.currency.defaultUnit(tx.vout[vout].value).toBaseNumber()
+    const value = currency.defaultUnit(tx.vout[vout].value).toBaseNumber()
     const inscriptions = tx.vout[vout].inscriptions || []
     return { value, inscriptions }
   }

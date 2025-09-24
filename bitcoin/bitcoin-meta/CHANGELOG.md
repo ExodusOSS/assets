@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-meta@2.0.1...@exodus/bitcoin-meta@2.0.2) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
 ## [2.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoin-meta@2.0.0...@exodus/bitcoin-meta@2.0.1) (2024-12-12)
 
 

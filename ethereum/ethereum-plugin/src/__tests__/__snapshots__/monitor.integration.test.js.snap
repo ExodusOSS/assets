@@ -23,7 +23,7 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "clarityCursor": "",
-            "index": 43,
+            "index": 0,
             "staking": {
               "t": "object",
               "v": {
@@ -120,7 +120,7 @@ exports[`ethereum monitor integration test default monitor tests should start an
                           "szabo": 12,
                           "wei": 0,
                         },
-                        "v": "0 wei",
+                        "v": "0 ETH",
                       },
                     },
                     "unclaimedUndelegatedBalance": {
@@ -143,6 +143,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
                 "polygon": {
                   "t": "object",
                   "v": {
+                    "activeStakedBalance": {
+                      "t": "numberunit",
+                      "v": {
+                        "u": {
+                          "MATIC": 18,
+                          "base": 0,
+                        },
+                        "v": "0 base",
+                      },
+                    },
                     "canClaimUndelegatedBalance": false,
                     "delegatedBalance": {
                       "t": "numberunit",
@@ -242,7 +252,7 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "clarityCursor": "",
-            "index": 13,
+            "index": 0,
             "staking": {
               "t": "object",
               "v": {
@@ -339,7 +349,7 @@ exports[`ethereum monitor integration test default monitor tests should start an
                           "szabo": 12,
                           "wei": 0,
                         },
-                        "v": "0 wei",
+                        "v": "0 ETH",
                       },
                     },
                     "unclaimedUndelegatedBalance": {
@@ -362,6 +372,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
                 "polygon": {
                   "t": "object",
                   "v": {
+                    "activeStakedBalance": {
+                      "t": "numberunit",
+                      "v": {
+                        "u": {
+                          "MATIC": 18,
+                          "base": 0,
+                        },
+                        "v": "0 base",
+                      },
+                    },
                     "canClaimUndelegatedBalance": false,
                     "delegatedBalance": {
                       "t": "numberunit",
@@ -470,6 +490,108 @@ exports[`ethereum monitor integration test default monitor tests should start an
       },
     },
   },
+  "balances": {
+    "exodus_0": {
+      "bat": {
+        "balance": "4422771120000000000 base",
+        "spendable": "4422771120000000000 base",
+        "spendableBalance": "4422771120000000000 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "4422771120000000000 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+      "ethereum": {
+        "balance": "4228230740891449 wei",
+        "spendable": "4228230740891449 wei",
+        "spendableBalance": "4228230740891449 wei",
+        "staked": "0 wei",
+        "staking": "0 wei",
+        "total": "4228230740891449 wei",
+        "unconfirmedReceived": "0 wei",
+        "unconfirmedSent": "0 wei",
+        "unstaked": "0 wei",
+        "unstaking": "0 wei",
+      },
+      "polygon": {
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "0 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+      "tetherusd": {
+        "balance": "6414404 base",
+        "spendable": "6414404 base",
+        "spendableBalance": "6414404 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "6414404 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+    },
+    "exodus_1": {
+      "bat": {
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "0 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+      "ethereum": {
+        "balance": "0 wei",
+        "spendable": "0 wei",
+        "spendableBalance": "0 wei",
+        "staked": "0 wei",
+        "staking": "0 wei",
+        "total": "0 wei",
+        "unconfirmedReceived": "0 wei",
+        "unconfirmedSent": "0 wei",
+        "unstaked": "0 wei",
+        "unstaking": "0 wei",
+      },
+      "polygon": {
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "0 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+      "tetherusd": {
+        "balance": "0 base",
+        "spendable": "0 base",
+        "spendableBalance": "0 base",
+        "staked": "0 base",
+        "staking": "0 base",
+        "total": "0 base",
+        "unconfirmedReceived": "0 base",
+        "unconfirmedSent": "0 base",
+        "unstaked": "0 base",
+        "unstaking": "0 base",
+      },
+    },
+  },
   "orders": {
     "data": {},
   },
@@ -497,6 +619,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "8422771120000000000",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d00000000000000000000000000000000000000000000000074e3b1b53804e000",
               "gasLimit": 80208,
               "methodId": "0xa9059cbb",
@@ -530,6 +656,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "8422771120000000000",
+                "to": "7422771120000000000",
+              },
               "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef090000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 62193,
               "methodId": "0xa9059cbb",
@@ -563,6 +693,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "7422771120000000000",
+                "to": "3422771120000000000",
+              },
               "data": "0xa9059cbb00000000000000000000000018917e47756c0618fe2d0f11d41e54c5c9adf34a0000000000000000000000000000000000000000000000003782dace9d900000",
               "gasLimit": 62193,
               "methodId": "0xa9059cbb",
@@ -596,6 +730,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "3422771120000000000",
+                "to": "4422771120000000000",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d0000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 41678,
               "methodId": "0xa9059cbb",
@@ -627,10 +765,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "14076670000000000",
+              },
               "data": "0x",
               "gasLimit": 63000,
               "methodId": "0x",
               "nonce": 1649534,
+              "nonceChange": {
+                "from": "0",
+                "to": "0",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -656,6 +802,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "14076670000000000",
+                "to": "68366530000000000",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
@@ -685,10 +835,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "68366530000000000",
+                "to": "63498488568380667",
+              },
               "data": "0xa9059cbb000000000000000000000000fa56417d077a41a20aa190a8fcd841ebefa2859e0000000000000000000000000000000000000000000000000000000000712284",
               "gasLimit": 70000,
               "methodId": "0xa9059cbb",
               "nonce": 0,
+              "nonceChange": {
+                "from": "0",
+                "to": "1",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -717,10 +875,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "63498488568380667",
+                "to": "57979346819491677",
+              },
               "data": "0xa9059cbb000000000000000000000000a9866ef5574a256b4b85ad2b80880da2ef1b001100000000000000000000000000000000000000000000000000038d7ea4c68000",
               "gasLimit": 116205,
               "methodId": "0xa9059cbb",
               "nonce": 1,
+              "nonceChange": {
+                "from": "1",
+                "to": "2",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -746,10 +912,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "57979346819491677",
+                "to": "55313732877916697",
+              },
               "data": "0xa9059cbb000000000000000000000000a9866ef5574a256b4b85ad2b80880da2ef1b001100000000000000000000000000000000000000000000000000005af3107a4000",
               "gasLimit": 95671,
               "methodId": "0xa9059cbb",
               "nonce": 2,
+              "nonceChange": {
+                "from": "2",
+                "to": "3",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -775,6 +949,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "55313732877916697",
+                "to": "59794212877916697",
+              },
               "data": "0x",
               "gasLimit": 63000,
               "methodId": "0x",
@@ -804,10 +982,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "59794212877916697",
+                "to": "51201488965893697",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 3,
+              "nonceChange": {
+                "from": "3",
+                "to": "4",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -833,6 +1019,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "51201488965893697",
+                "to": "51391428965893697",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
@@ -862,10 +1052,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "51391428965893697",
+                "to": "50351991063527697",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 4,
+              "nonceChange": {
+                "from": "4",
+                "to": "5",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -891,10 +1089,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "50351991063527697",
+                "to": "41759353698322947",
+              },
               "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef09000000000000000000000000000000000000000000000000000009184e72a000",
               "gasLimit": 118850,
               "methodId": "0xa9059cbb",
               "nonce": 5,
+              "nonceChange": {
+                "from": "5",
+                "to": "6",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -920,10 +1126,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "41759353698322947",
+                "to": "38871455782550947",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 6,
+              "nonceChange": {
+                "from": "6",
+                "to": "7",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -949,19 +1163,24 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "38871455782550947",
+                "to": "38138987518094410",
+              },
               "data": "0x095ea7b300000000000000000000000040ec5b33f54e0e8a33a975908c5ba1c14e5bbbdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
               "gasLimit": 48897,
               "methodId": "0x095ea7b3",
               "nonce": 7,
+              "nonceChange": {
+                "from": "7",
+                "to": "8",
+              },
             },
             "date": Any<String>,
             "dropped": false,
             "feeAmount": "0.000732468264456537 ETH",
             "feeCoinName": "ethereum",
             "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-            "tokens": [
-              "tetherusd",
-            ],
             "txId": "0xfdefa99404f12d151511a29bc2c5e8cc7bca4b90531744f1c0a513b10a65af7c",
             "version": 1,
           },
@@ -981,10 +1200,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "38138987518094410",
+                "to": "36609005902448310",
+              },
               "data": "0xe3dec8fb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000f4240",
               "gasLimit": 108169,
               "methodId": "0xe3dec8fb",
               "nonce": 8,
+              "nonceChange": {
+                "from": "8",
+                "to": "9",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1013,10 +1240,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "36609005902448310",
+                "to": "35487928809778827",
+              },
               "data": "0x4faa8a2600000000000000000000000090e481d9a664ebbe4be180d9501962255463036d",
               "gasLimit": 94491,
               "methodId": "0x4faa8a26",
               "nonce": 9,
+              "nonceChange": {
+                "from": "9",
+                "to": "10",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1042,10 +1277,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "35487928809778827",
+                "to": "34498151258252511",
+              },
               "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef090000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 62193,
               "methodId": "0xa9059cbb",
               "nonce": 10,
+              "nonceChange": {
+                "from": "10",
+                "to": "11",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1074,10 +1317,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "34498151258252511",
+                "to": "32701362833068081",
+              },
               "data": "0xd0e30db0",
               "gasLimit": 54045,
               "methodId": "0xd0e30db0",
               "nonce": 11,
+              "nonceChange": {
+                "from": "11",
+                "to": "12",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1103,10 +1354,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "32701362833068081",
+                "to": "31058788356808995",
+              },
               "data": "0xd0e30db0",
               "gasLimit": 33525,
               "methodId": "0xd0e30db0",
               "nonce": 12,
+              "nonceChange": {
+                "from": "12",
+                "to": "13",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1132,10 +1391,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "31058788356808995",
+                "to": "30601304622772995",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 13,
+              "nonceChange": {
+                "from": "13",
+                "to": "14",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1162,10 +1429,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "30601304622772995",
+                "to": "27618952122772995",
+              },
               "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef0900000000000000000000000000000000000000000000000000071afd498d0000",
               "gasLimit": 61898,
               "methodId": "0xa9059cbb",
               "nonce": 14,
+              "nonceChange": {
+                "from": "14",
+                "to": "15",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1191,10 +1466,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "27618952122772995",
+                "to": "14025367941254498",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 15,
+              "nonceChange": {
+                "from": "15",
+                "to": "16",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1220,10 +1503,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "14025367941254498",
+                "to": "7244524547875249",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 16,
+              "nonceChange": {
+                "from": "16",
+                "to": "17",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1249,10 +1540,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "7244524547875249",
+                "to": "6343980740891449",
+              },
               "data": "0xa9059cbb00000000000000000000000018917e47756c0618fe2d0f11d41e54c5c9adf34a0000000000000000000000000000000000000000000000003782dace9d900000",
               "gasLimit": 62193,
               "methodId": "0xa9059cbb",
               "nonce": 17,
+              "nonceChange": {
+                "from": "17",
+                "to": "18",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1281,10 +1580,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "6343980740891449",
+                "to": "0",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 18,
+              "nonceChange": {
+                "from": "18",
+                "to": "19",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1310,6 +1617,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "4228230740891449",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
@@ -1345,12 +1656,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "962496",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d00000000000000000000000000000000000000000000000000000000000eafc0",
               "gasLimit": 93836,
               "methodId": "0xa9059cbb",
               "nonce": 3586084,
             },
-            "date": "2022-04-05T20:37:29.000Z",
+            "date": "2022-04-05T20:37:30.045Z",
             "dropped": false,
             "from": [
               "0x2faf487a4414fe77e2327f0bf4ae2a264a776ad2",
@@ -1378,12 +1693,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "962496",
+                "to": "14828808",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d0000000000000000000000000000000000000000000000000000000000d39548",
               "gasLimit": 73316,
               "methodId": "0xa9059cbb",
               "nonce": 3590423,
             },
-            "date": "2022-04-06T12:09:34.000Z",
+            "date": "2022-04-06T12:09:41.179Z",
             "dropped": false,
             "from": [
               "0x2faf487a4414fe77e2327f0bf4ae2a264a776ad2",
@@ -1411,12 +1730,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "14828808",
+                "to": "7414404",
+              },
               "data": "0xa9059cbb000000000000000000000000fa56417d077a41a20aa190a8fcd841ebefa2859e0000000000000000000000000000000000000000000000000000000000712284",
               "gasLimit": 70000,
               "methodId": "0xa9059cbb",
               "nonce": 0,
             },
-            "date": "2022-04-13T13:50:09.000Z",
+            "date": "2022-04-13T13:50:09.160Z",
             "dropped": false,
             "feeAmount": "0.004868041431619333 ETH",
             "feeCoinName": "ethereum",
@@ -1444,12 +1767,16 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "7414404",
+                "to": "6414404",
+              },
               "data": "0xe3dec8fb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000f4240",
               "gasLimit": 108169,
               "methodId": "0xe3dec8fb",
               "nonce": 8,
             },
-            "date": "2022-07-01T12:24:48.000Z",
+            "date": "2022-07-01T12:24:48.041Z",
             "dropped": false,
             "feeAmount": "0.0015299816156461 ETH",
             "feeCoinName": "ethereum",
@@ -1483,6 +1810,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "1000000000000000000",
+              },
               "data": "0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef090000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 62193,
               "methodId": "0xa9059cbb",
@@ -1516,6 +1847,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "1000000000000000000",
+                "to": "0",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d0000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 41678,
               "methodId": "0xa9059cbb",
@@ -1547,10 +1882,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "0",
+                "to": "8219210000000000",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 3,
+              "nonceChange": {
+                "from": "0",
+                "to": "0",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1576,10 +1919,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "8219210000000000",
+                "to": "6084400332742000",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 0,
+              "nonceChange": {
+                "from": "0",
+                "to": "1",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1605,6 +1956,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "6084400332742000",
+                "to": "6104453012742000",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
@@ -1634,6 +1989,10 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "6104453012742000",
+                "to": "8104453012742000",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
@@ -1663,10 +2022,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "8104453012742000",
+                "to": "6188048052753065",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d0000000000000000000000000000000000000000000000000000093a0cf2c7fd",
               "gasLimit": 98344,
               "methodId": "0xa9059cbb",
               "nonce": 1,
+              "nonceChange": {
+                "from": "1",
+                "to": "2",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1692,10 +2059,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "6188048052753065",
+                "to": "5932010192264297",
+              },
               "data": "0xa9059cbb00000000000000000000000090e481d9a664ebbe4be180d9501962255463036d0000000000000000000000000000000000000000000000000de0b6b3a7640000",
               "gasLimit": 41678,
               "methodId": "0xa9059cbb",
               "nonce": 2,
+              "nonceChange": {
+                "from": "2",
+                "to": "3",
+              },
             },
             "date": Any<String>,
             "dropped": false,
@@ -1724,10 +2099,18 @@ exports[`ethereum monitor integration test default monitor tests should start an
               },
             },
             "data": {
+              "balanceChange": {
+                "from": "5932010192264297",
+                "to": "0",
+              },
               "data": "0x",
               "gasLimit": 21000,
               "methodId": "0x",
               "nonce": 3,
+              "nonceChange": {
+                "from": "3",
+                "to": "4",
+              },
             },
             "date": Any<String>,
             "dropped": false,

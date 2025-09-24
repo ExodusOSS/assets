@@ -3,6 +3,226 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.4](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.24.3...@exodus/solana-plugin@1.24.4) (2025-09-16)
+
+
+### Bug Fixes
+
+
+* fix: simplify solana address type validation (#6474)
+
+
+
+## [1.24.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.24.2...@exodus/solana-plugin@1.24.3) (2025-09-16)
+
+
+### Bug Fixes
+
+
+* fix: solana asset name perf (#6467)
+
+
+
+## [1.24.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.24.1...@exodus/solana-plugin@1.24.2) (2025-09-15)
+
+
+### Bug Fixes
+
+
+* fix: update Solana base asset name (#6466)
+
+
+
+## [1.24.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.24.0...@exodus/solana-plugin@1.24.1) (2025-09-15)
+
+
+### Bug Fixes
+
+
+* fix: integration tests of SOL, THETA, DOT (#6166)
+
+* fix: use toMatchObject to ignore extra keys in actual reports (#6260)
+
+
+
+## [1.24.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.23.2...@exodus/solana-plugin@1.24.0) (2025-07-16)
+
+
+### Features
+
+
+* feat: move send validation to each asset plugin (#6076)
+
+
+
+## [1.23.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.23.1...@exodus/solana-plugin@1.23.2) (2025-06-25)
+
+
+### Bug Fixes
+
+
+* fix: SOL add multi-dex swap tests (#5927)
+
+* fix: SOL move funds (#5935)
+
+
+
+## [1.23.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.23.0...@exodus/solana-plugin@1.23.1) (2025-06-11)
+
+
+### Bug Fixes
+
+
+* fix: SOL owner changed check (#5805)
+
+
+
+## [1.23.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.22.0...@exodus/solana-plugin@1.23.0) (2025-06-11)
+
+
+### Features
+
+
+* feat(solana): implement unconfirmedSent/unconfirmedReceived in solana balances (#5802)
+
+
+### Bug Fixes
+
+
+* fix: SOL amount NaN case (#5713)
+
+* fix: SOL from/to addresses for token txs (#5751)
+
+
+
+## [1.22.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.21.1...@exodus/solana-plugin@1.22.0) (2025-05-15)
+
+
+### Features
+
+
+* feat(solana): allow overridding getBalances for custom tokens (#5644)
+
+
+
+## [1.21.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.21.0...@exodus/solana-plugin@1.21.1) (2025-05-05)
+
+
+### Bug Fixes
+
+
+* fix: SOL reserve and units consumed (#5540)
+
+
+
+## [1.21.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.20.1...@exodus/solana-plugin@1.21.0) (2025-05-01)
+
+
+### Features
+
+
+* feat(solana): make shouldUpdateBalanceBeforeHistory configurable (#5544)
+
+
+
+## [1.20.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.20.0...@exodus/solana-plugin@1.20.1) (2025-04-21)
+
+
+### Bug Fixes
+
+
+* fix: SOL fees for Desktop (#5417)
+
+
+
+## [1.20.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.19.0...@exodus/solana-plugin@1.20.0) (2025-04-08)
+
+
+### Features
+
+
+* feat: Solana rent except sender validation (#5394)
+
+
+
+## [1.19.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.18.3...@exodus/solana-plugin@1.19.0) (2025-04-03)
+
+
+### Features
+
+
+* feat(solana): add optional addExternalFeePayerToTransaction (#5345)
+
+
+
+## [1.18.3](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.18.2...@exodus/solana-plugin@1.18.3) (2025-04-03)
+
+
+### Bug Fixes
+
+
+* fix: SOL staking method param (#5362)
+
+
+
+## [1.18.2](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.18.1...@exodus/solana-plugin@1.18.2) (2025-03-25)
+
+
+### Bug Fixes
+
+
+* fix: demote KHAI spl token to CT (#5255)
+
+* fix: SOL insufficient funds for rent (#5308)
+
+
+
+## [1.18.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.18.0...@exodus/solana-plugin@1.18.1) (2025-03-14)
+
+
+### Bug Fixes
+
+
+* fix(SOL): set amount as lamports for internal multi send (#5253)
+
+
+
+## [1.18.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.17.1...@exodus/solana-plugin@1.18.0) (2025-03-10)
+
+
+### Features
+
+
+* feat: SOL internal sends in txLog (#5199)
+
+
+### Bug Fixes
+
+
+* fix: increase SOL dust threshold amount (#5205)
+
+
+
+## [1.17.1](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.17.0...@exodus/solana-plugin@1.17.1) (2025-01-22)
+
+
+### Bug Fixes
+
+
+* fix: unstaked, unstaking balances (#4874)
+
+
+
+## [1.17.0](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.16.7...@exodus/solana-plugin@1.17.0) (2025-01-21)
+
+
+### Features
+
+
+* feat: expose `web3.simulateMessage` API (#4870)
+
+
+
 ## [1.16.7](https://github.com/ExodusMovement/assets/compare/@exodus/solana-plugin@1.16.6...@exodus/solana-plugin@1.16.7) (2025-01-21)
 
 

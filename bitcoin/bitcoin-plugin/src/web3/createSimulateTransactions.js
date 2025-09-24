@@ -2,13 +2,24 @@ import { createSimulateTransactions as createSimulateBitcoinTransactions } from 
 import assert from 'minimalistic-assert'
 
 // This function accepts either a list of transactions created by a wallet (unsignedTxs) or a web3 transaction (transactionBuffers).
-export const createSimulateTransactions = ({ asset, assetClientInterface, prepareForSigning }) => {
-  assert('asset', '"asset" should be passed.')
-  assert('assetClientInterface', '"assetClientInterface" should be passed.')
-  assert('prepareForSigning', '"prepareForSigning" should be passed')
+export const createSimulateTransactions = ({
+  assetClientInterface,
+  baseAssetName,
+  currency,
+  insightClient,
+  prepareForSigning,
+}) => {
+  assert(assetClientInterface, '"assetClientInterface" should be passed.')
+  assert(baseAssetName, '"baseAssetName" should be passed.')
+  assert(currency, '"currency" should be passed.')
+  assert(insightClient, '"insightClient" should be passed.')
+  assert(prepareForSigning, '"prepareForSigning" should be passed')
 
   const simulateBitcoinTransactions = createSimulateBitcoinTransactions({
-    logger: assetClientInterface.createLogger(`${asset.name}:simulation`),
+    baseAssetName,
+    currency,
+    insightClient,
+    logger: assetClientInterface.createLogger(`${baseAssetName}:simulation`),
   })
 
   return function simulateTransactions({ transactionBuffers, unsignedTxs, ...restParameters }) {
@@ -52,7 +63,6 @@ export const createSimulateTransactions = ({ asset, assetClientInterface, prepar
       }, {})
 
       return simulateBitcoinTransactions({
-        asset,
         transactions: [psbtBase64],
         walletAddresses,
         indexToAddressRecord,

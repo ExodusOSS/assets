@@ -1,0 +1,39 @@
+{
+  "name": "@exodus/web3-errors",
+  "description": "Web3 errors.",
+  "version": "1.13.1",
+  "type": "module",
+  "sideEffects": false,
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "react-native": "./lib/index.js",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.mjs",
+    "lib/**/*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "run -T rimraf lib",
+    "build": "yarn clean &&  run -T tsc",
+    "lint": "run -T eslintc .",
+    "lint:fix": "yarn lint --fix",
+    "prepublishOnly": "yarn run -T build --scope @exodus/web3-errors"
+  },
+  "author": "Exodus Movement, Inc.",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aweb3-errors"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/web3/web3-errors"
+}

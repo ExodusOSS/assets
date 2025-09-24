@@ -13,8 +13,10 @@ import type {
   BtcAggregatedTransactionSimulationResult,
   BtcSimulateTransactionParams,
   BitcoinAdvancedDetails,
+  InsightClient,
 } from './types.js'
 import type { Logger } from '@exodus/logger'
+import type { Asset } from '@exodus/web3-types'
 
 function sanitizeErroredSimulationResult(
   simulationResult: BtcAggregatedTransactionSimulationResult,
@@ -24,11 +26,18 @@ function sanitizeErroredSimulationResult(
 }
 
 export const createSimulateTransactions = ({
+  baseAssetName,
+  currency,
+  insightClient,
   logger,
-}: { logger?: Logger } = {}) => {
+}: {
+  baseAssetName: string
+  currency: Asset['currency']
+  insightClient: InsightClient
+  logger?: Logger
+}) => {
   return async function simulationTransactions({
     transactions,
-    asset,
     indexToAddressRecord,
     walletAddresses,
   }: BtcSimulateTransactionParams): Promise<BtcAggregatedTransactionSimulationResult> {
@@ -36,7 +45,7 @@ export const createSimulateTransactions = ({
       unknown,
       BitcoinAdvancedDetails
     >({
-      asset,
+      baseAssetName,
     })
     simulationResult.advancedDetails = {
       inputs: [],
@@ -55,13 +64,13 @@ export const createSimulateTransactions = ({
       )
 
       estimateFee({
-        asset,
         inputIndexesToSign,
+        currency,
         psbt,
         simulationResult,
       })
       estimateTransfer({
-        asset,
+        currency,
         inputIndexesToSign,
         addresses: walletAddresses,
         psbt,
@@ -70,14 +79,15 @@ export const createSimulateTransactions = ({
       })
       fillAdvancedDetails({
         addresses: walletAddresses,
-        asset,
+        currency,
         indexToAddressRecord,
         psbt,
         simulationResult,
       })
       await estimateOrdinalsTransfers({
-        asset,
         addresses: walletAddresses,
+        currency,
+        insightClient,
         inputIndexesToSign,
         logger,
         psbt,

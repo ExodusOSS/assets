@@ -12,6 +12,7 @@ import { xverse49 } from '../compatibility-modes.js'
 import assetPlugin from '../index.js'
 
 const fixturesPath = join(import.meta.dirname, 'fixtures/sign')
+const fixturesRequire = (name) => require('./fixtures/sign/' + name) // eslint-disable-line @exodus/hydra/no-require
 
 describe(`bitcoin tx-sign test`, () => {
   afterEach(() => {
@@ -30,9 +31,7 @@ describe(`bitcoin tx-sign test`, () => {
           Buffer.from('1230000000000000000000000000000000000000000000000000000000000000', 'hex')
         )
     },
-    tests: {
-      ...createSignTestCases({ fixturesPath }),
-    },
+    tests: createSignTestCases({ fixturesPath, fixturesRequire }),
   })
 })
 

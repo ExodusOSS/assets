@@ -1,9 +1,16 @@
+import type RPC from '@exodus/json-rpc'
+import type { VersionedTransaction } from '@exodus/solana-web3.js'
 import { Keypair } from '@exodus/solana-web3.js'
+import type { SendOptions } from '@exodus/solana-web3.js/lib/connection.js'
 import {
   InvalidInputError,
   UserRejectedRequestError,
 } from '@exodus/web3-errors'
 import { connect } from '@exodus/web3-rpc-handlers'
+import type {
+  LegacyOrVersionedTransaction,
+  SolDisplayEncoding,
+} from '@exodus/web3-solana-utils'
 import {
   decodeMessage,
   deserializeEncodedMessage,
@@ -17,15 +24,6 @@ import {
   serializeTransaction,
   sign,
 } from '@exodus/web3-solana-utils'
-
-import type { SolanaMobileConnection, SolanaMobileDeps } from '../types.js'
-import type RPC from '@exodus/json-rpc'
-import type { VersionedTransaction } from '@exodus/solana-web3.js'
-import type { SendOptions } from '@exodus/solana-web3.js/lib/connection.js'
-import type {
-  SolDisplayEncoding,
-  LegacyOrVersionedTransaction,
-} from '@exodus/web3-solana-utils'
 import type {
   AppDeps,
   Base58,
@@ -33,6 +31,8 @@ import type {
   Bytes,
   WalletDeps,
 } from '@exodus/web3-types'
+
+import type { SolanaMobileConnection, SolanaMobileDeps } from '../types.js'
 
 const NETWORK = 'solana'
 interface SignOptions {
@@ -230,6 +230,7 @@ export function exposeSolanaMobileHandlers(
       if (wireEncodedMessages.length !== 1) {
         throw new InvalidInputError()
       }
+
       const wireEncodedMessage = wireEncodedMessages[0]
 
       const encodedMessage = deserializeEncodedMessage(wireEncodedMessage)

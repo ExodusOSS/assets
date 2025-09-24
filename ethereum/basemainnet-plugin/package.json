@@ -1,6 +1,6 @@
 {
   "name": "@exodus/basemainnet-plugin",
-  "version": "2.3.2",
+  "version": "2.6.0",
   "description": "Base Mainnet plugin for Exodus SDK powered wallets",
   "type": "module",
   "main": "src/index.js",
@@ -21,10 +21,11 @@
   },
   "dependencies": {
     "@exodus/basemainnet-meta": "^2.0.3",
-    "@exodus/ethereum-api": "^8.22.1"
+    "@exodus/ethereum-api": "^8.39.0"
   },
   "devDependencies": {
-    "@exodus/assets-testing": "workspace:^"
+    "@exodus/assets-testing": "workspace:^",
+    "@exodus/evm-fork-testing": "workspace:^"
   },
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Abasemainnet-plugin"

@@ -141,12 +141,12 @@ const createUndelegateTransaction = ({ address, recentBlockhash, stakeAddresses 
     stakeAddresses,
   })
 
-const createWithdrawTransaction = ({ address, amount, recentBlockhash, stakeAddresses }) =>
+const createWithdrawTransaction = ({ address, amount, recentBlockhash, accounts }) =>
   Transaction.withdraw({
     address,
     amount,
     recentBlockhash,
-    stakeAddresses,
+    accounts,
   })
 
 const createMagicEdenInitializeEscrowTransaction = ({

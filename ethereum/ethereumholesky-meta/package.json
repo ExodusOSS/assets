@@ -1,7 +1,7 @@
 {
   "name": "@exodus/ethereumholesky-meta",
-  "version": "2.0.0",
-  "description": "Ethereum (HOLESKY) constants, icons, colors and other metadata",
+  "version": "2.0.5",
+  "description": "Ethereum Holesky constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",
   "files": [
@@ -11,21 +11,21 @@
     "CHANGELOG.md"
   ],
   "author": "Exodus Movement, Inc.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/ethereum/ethereumholesky-meta",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "test": "run -T exodus-test --jest",
-    "lint": "run -T eslint .",
+    "lint": "run -T eslintc .",
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/asset": "^2.0.0"
+    "@exodus/asset": "^2.0.4"
   },
   "devDependencies": {
-    "@exodus/assets-meta-testing": "^1.0.0"
+    "@exodus/assets-meta-testing": "workspace:^"
   },
   "bugs": {
     "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Aethereumholesky-meta"

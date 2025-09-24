@@ -65,14 +65,14 @@ function createInsightClient({ confirmations = 0 } = {}) {
         ],
         vin: [
           {
-            tx: 'oldtx1',
+            txid: 'oldtx1',
             vout: 0,
             addr: 'bitcoin_exodus0_84_1_3',
             value: 0.3,
           },
           {
             value: 0.4,
-            tx: 'oldtx2',
+            txid: 'oldtx2',
             vout: 1,
             addr: 'bitcoin_exodus0_44_0_4',
           },
@@ -177,6 +177,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_44_0_4',
                   value: '0.4 BTC',
+                  txId: 'oldtx2',
                   vout: 1,
                 },
               ],
@@ -188,6 +189,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_84_1_3',
                   value: '0.3 BTC',
+                  txId: 'oldtx1',
                   vout: 0,
                 },
               ],
@@ -277,13 +279,13 @@ const createRescanTest = (gapLimit) => () => {
           utxos: [
             {
               confirmations: 1,
-              tx: 'oldtx1',
+              txId: 'oldtx1',
               vout: 0,
               value: '0.3 BTC',
             },
             {
               confirmations: 1,
-              tx: 'anotherOne',
+              txId: 'anotherOne',
               vout: 0,
               value: '0.5 BTC',
             },
@@ -379,6 +381,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_44_0_4',
                   value: '0.4 BTC',
+                  txId: 'oldtx2',
                   vout: 1,
                 },
               ],
@@ -390,6 +393,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_84_1_3',
                   value: '0.3 BTC',
+                  txId: 'oldtx1',
                   vout: 0,
                 },
               ],
@@ -460,6 +464,18 @@ const createRescanTest = (gapLimit) => () => {
             txId: 'tx1',
             value: '0.2 BTC',
             vout: 3,
+          },
+        ],
+      },
+      bitcoin_exodus0_84_1_3: {
+        address: 'bitcoin_exodus0_84_1_3',
+        path: 'm/1/3',
+        utxos: [
+          {
+            confirmations: 1,
+            txId: 'anotherOne',
+            value: '0.5 BTC',
+            vout: 0,
           },
         ],
       },
@@ -591,6 +607,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_44_0_4',
                   value: '0.4 BTC',
+                  txId: 'oldtx2',
                   vout: 1,
                 },
               ],
@@ -602,6 +619,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_84_1_3',
                   value: '0.3 BTC',
+                  txId: 'oldtx1',
                   vout: 0,
                 },
               ],
@@ -784,6 +802,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_44_0_4',
                   value: '0.4 BTC',
+                  txId: 'oldtx2',
                   vout: 1,
                 },
               ],
@@ -795,6 +814,7 @@ const createRescanTest = (gapLimit) => () => {
                 {
                   script: 'bitcoin_exodus0_84_1_3',
                   value: '0.3 BTC',
+                  txId: 'oldtx1',
                   vout: 0,
                 },
               ],

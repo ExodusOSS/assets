@@ -10,12 +10,8 @@ const displayNetworkTicker = 'HOETH'
 const displayNetworkName = 'Holesky'
 const primaryColor = '#8C93AF'
 const gradientColors = ['#EAEAEA', '#FFF']
-const gradientCoords = { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' }
 const chainBadgeColors = gradientColors
 const chainId = 17_000
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -43,14 +39,11 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayNetworkName,
   displayNetworkTicker,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -66,8 +59,8 @@ const tokenOverrides = (token) => ({
     addressUrl: (address) =>
       `https://arbiscan.io/token/${encodeURIComponent(token.addresses.current)}?a=${encodeURIComponent(address)}`,
   },
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

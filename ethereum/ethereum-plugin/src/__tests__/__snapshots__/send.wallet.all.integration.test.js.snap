@@ -1,0 +1,260 @@
+exports[`ethereum tx-send all invariant rpc tests ethereum can resolve address for all purposes 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests ethereum correctly encodes private key 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_checkMutableAccountState 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_getBalance 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_getBlockNumber 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_pseudoRandomAmount 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_HACK_maybeRefineSendAllAmount 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_bumpTx 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 916,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f501820394841dcd6500850bc208d90082520894000000000000000000000000000000000000dead88016345785d8a000080c0808080",
+    "value": "100000000000000000",
+  },
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50600000000,
+    "maxPriorityFeePerGas": 600000000,
+    "nonce": 916,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f5018203948423c34600850bc7feba0082520894000000000000000000000000000000000000dead88016345785d8a000080c0808080",
+    "value": "100000000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_insufficientBalance 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 915,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f501820393841dcd6500850bc208d90082520894000000000000000000000000000000000000dead880de0b6b3a764000080c0808080",
+    "value": "1000000000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_resolveNonce 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 42000000000,
+    "nonce": 915,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f6018203938509c7652400850bc208d90082520894000000000000000000000000000000000000dead88016345785d8a000080c0808080",
+    "value": "100000000000000000",
+  },
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 69000000000,
+    "maxPriorityFeePerGas": 69000000000,
+    "nonce": 915,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820393851010b87200851010b8720082520894000000000000000000000000000000000000dead88016345785d8a000080c0808080",
+    "value": "100000000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_sendAll 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 50500000000,
+    "nonce": 917,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820395850bc208d900850bc208d90082520894000000000000000000000000000000000000dead880ddcf22ec19b380080c0808080",
+    "value": "998939500000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_sendAllCustomGasPrice 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 101000000000,
+    "maxPriorityFeePerGas": 101000000000,
+    "nonce": 918,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f60182039685178411b20085178411b20082520894000000000000000000000000000000000000dead880dd92da9dbd2700080c0808080",
+    "value": "997879000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_sendAllWhilstPending 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 50500000000,
+    "nonce": 920,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820398850bc208d900850bc208d90082520894000000000000000000000000000000000000dead8806f05b59d3b2000080c0808080",
+    "value": "500000000000000000",
+  },
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 50500000000,
+    "nonce": 921,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820399850bc208d900850bc208d90082520894000000000000000000000000000000000000dead8806e8d2500820700080c0808080",
+    "value": "497879000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_sendAllWithTruthyTxData 1`] = `
+[
+  {
+    "data": "a9059cbb000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000006969696969696969696969",
+    "gasLimit": 44284,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 922,
+    "to": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "transactionBuffer": "02f8720182039a841dcd6500850bc208d90082acfc944d224452801aced8b2f0aebe155379bb5d59438180b844a9059cbb000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000006969696969696969696969c0808080",
+    "value": "0",
+  },
+  {
+    "data": "095ea7b3000000000000000000000000000000000000000000000000000000000000deadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "gasLimit": 59787,
+    "gasPrice": undefined,
+    "maxFeePerGas": 75000000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 923,
+    "to": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "transactionBuffer": "02f8720182039b841dcd6500851176592e0082e98b944d224452801aced8b2f0aebe155379bb5d59438180b844095ea7b3000000000000000000000000000000000000000000000000000000000000deadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0808080",
+    "value": "0",
+  },
+  {
+    "data": "095ea7b3000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000000000000000000000000000",
+    "gasLimit": 37233,
+    "gasPrice": undefined,
+    "maxFeePerGas": 75000000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 924,
+    "to": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "transactionBuffer": "02f8720182039c841dcd6500851176592e00829171944d224452801aced8b2f0aebe155379bb5d59438180b844095ea7b3000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000000000000000000000000000c0808080",
+    "value": "0",
+  },
+  {
+    "data": "095ea7b3000000000000000000000000000000000000000000000000000000000000deadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "gasLimit": 59787,
+    "gasPrice": undefined,
+    "maxFeePerGas": 75000000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 925,
+    "to": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "transactionBuffer": "02f8720182039d841dcd6500851176592e0082e98b944d224452801aced8b2f0aebe155379bb5d59438180b844095ea7b3000000000000000000000000000000000000000000000000000000000000deadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0808080",
+    "value": "0",
+  },
+  {
+    "data": "095ea7b3000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000000000000000000000000000",
+    "gasLimit": 37233,
+    "gasPrice": undefined,
+    "maxFeePerGas": 75000000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 926,
+    "to": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "transactionBuffer": "02f8720182039e841dcd6500851176592e00829171944d224452801aced8b2f0aebe155379bb5d59438180b844095ea7b3000000000000000000000000000000000000000000000000000000000000dead0000000000000000000000000000000000000000000000000000000000000000c0808080",
+    "value": "0",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_sendAll_useBaseFeePerGas 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 50500000000,
+    "nonce": 919,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820397850bc208d900850bc208d90082520894000000000000000000000000000000000000dead880ddcf22ec19b380080c0808080",
+    "value": "998939500000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_sendTx_transferToDeadAddress 1`] = `
+[
+  {
+    "data": "",
+    "gasLimit": 21000,
+    "gasPrice": undefined,
+    "maxFeePerGas": 50500000000,
+    "maxPriorityFeePerGas": 500000000,
+    "nonce": 914,
+    "to": "0x000000000000000000000000000000000000dead",
+    "transactionBuffer": "02f601820392841dcd6500850bc208d90082520894000000000000000000000000000000000000dead8903bd913e6c1df4000080c0808080",
+    "value": "69000000000000000000",
+  },
+]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_setBalance 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_setBaseFeePerGas 1`] = `
+[]
+`;
+
+exports[`ethereum tx-send all invariant rpc tests walletTesterTest_setStorageAt 1`] = `
+[]
+`;

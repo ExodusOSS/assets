@@ -4,6 +4,26 @@ exports[`ethereum index.js test evm fee data snapshot 1`] = `
   "eip1559Enabled": true,
   "enableFeeDelegation": false,
   "fuelThreshold": "0.025 ETH",
+  "gasLimits": {
+    "aave": {
+      "fixedGasLimit": 250000,
+    },
+    "amp": {
+      "fixedGasLimit": 151000,
+    },
+    "gusd_ethereum_1ea2a0d4": {
+      "fixedGasLimit": 75000,
+    },
+    "snx": {
+      "fixedGasLimit": 220000,
+    },
+    "tetherusd": {
+      "fixedGasLimit": 70000,
+    },
+    "usdcoin": {
+      "fixedGasLimit": 70000,
+    },
+  },
   "gasPrice": "75 Gwei",
   "gasPriceMaximumRate": 1.3,
   "gasPriceMinimumRate": 0.5,
@@ -13,6 +33,6 @@ exports[`ethereum index.js test evm fee data snapshot 1`] = `
   "origin": "75 Gwei",
   "rbfEnabled": true,
   "swapFee": "0.05 ETH",
-  "tipGasPrice": "2 Gwei",
+  "tipGasPrice": "0.5 Gwei",
 }
 `;

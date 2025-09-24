@@ -16,6 +16,7 @@ const createAsset = createAssetFactory({
   nfts: true,
   serverUrl: 'https://polygon-clarity.a.exodus.io',
   monitorType: 'clarity-v2',
+  useAbsoluteBalanceAndNonce: true,
   confirmationsNumber: 50,
 })
 

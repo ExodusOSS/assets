@@ -1,4 +1,6 @@
 export { deserializePublicKey } from './keys.js'
+export { areFulfilled } from './arrays.js'
+export { toUint8Array } from './encoding.js'
 
 export { serializeEncodedMessage } from './messages.js'
 

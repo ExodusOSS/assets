@@ -39,7 +39,7 @@ class StakingServer {
     }
 
     const eth = this.server
-    return retry(eth.ethCall, { delayTimesMs: RETRY_DELAYS })(data)
+    return retry((...args) => eth.ethCall(...args), { delayTimesMs: RETRY_DELAYS })(data)
   }
 
   getWithdrawalDelay = async () => {

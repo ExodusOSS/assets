@@ -43,45 +43,36 @@ const getFeeEstimator = getFeeEstimatorFactory({
 })
 
 describe('get-fee-resolver', () => {
+  const allowUnconfirmedRbfEnabledUtxos = false
   const getFeeResolver = new GetFeeResolver({
     getFeeEstimator,
-    allowUnconfirmedRbfEnabledUtxos: false,
+    allowUnconfirmedRbfEnabledUtxos,
     changeAddressType: 'P2WPKH',
   })
 
   const assertValues = (params, expected) => {
     const balance = params.accountState.utxos.value
-    const availableBalance = getFeeResolver.getAvailableBalance(params)
-    const spendableBalance = getFeeResolver.getSpendableBalance(params)
-    const { fee, extraFeeData } = getFeeResolver.getFee(params)
-    const currentValues = {
-      balance,
-      availableBalance,
-      spendableBalance,
-      fee,
-      extraFee: extraFeeData?.extraFee,
-    }
-    if (!params.nft && !params.brc20)
-      // fee is extra when sending nft or brc20 (utxos that are not counted as balance)
-      expect(availableBalance.add(fee).toDefaultString({ unit: true })).toEqual(
-        spendableBalance.toDefaultString({ unit: true })
-      )
-
-    expect(mapValues(currentValues, (balance) => balance?.toBaseString({ unit: true }))).toEqual(
-      expected
-    )
 
     const getBalances = getBalancesFactory({
       feeData: params.feeData,
-      getSpendableBalance: getFeeResolver.getSpendableBalance,
+      allowUnconfirmedRbfEnabledUtxos,
     })
+
     const balances = getBalances({
       txLog: params.txSet,
       accountState: params.accountState,
       asset: params.asset,
     })
-    expect(balances.spendableBalance.toDefaultString({ unit: true })).toEqual(
-      spendableBalance.toDefaultString({ unit: true })
+    const { fee, extraFeeData } = getFeeResolver.getFee(params)
+    const currentValues = {
+      balance,
+      spendableBalance: balances.spendable,
+      fee,
+      extraFee: extraFeeData?.extraFee,
+    }
+
+    expect(mapValues(currentValues, (balance) => balance?.toBaseString({ unit: true }))).toEqual(
+      expected
     )
   }
 
@@ -90,7 +81,6 @@ describe('get-fee-resolver', () => {
     const txSet = TxSet.fromArray([])
     const params = { asset, accountState, txSet, feeData }
     assertValues(params, {
-      availableBalance: '99998110 satoshis',
       balance: '100000000 satoshis',
       fee: '1890 satoshis',
       spendableBalance: '100000000 satoshis',
@@ -112,7 +102,6 @@ describe('get-fee-resolver', () => {
     const txSet = TxSet.fromArray([])
     const params = { asset, accountState, txSet, feeData }
     assertValues(params, {
-      availableBalance: '149998110 satoshis',
       balance: '150000000 satoshis',
       fee: '1890 satoshis',
       spendableBalance: '150000000 satoshis',
@@ -142,7 +131,6 @@ describe('get-fee-resolver', () => {
       isSendAll: false,
     }
     assertValues(params, {
-      availableBalance: '149998110 satoshis',
       balance: '150000000 satoshis',
       fee: '1890 satoshis',
       spendableBalance: '150000000 satoshis',
@@ -172,7 +160,6 @@ describe('get-fee-resolver', () => {
       isSendAll: false,
     }
     assertValues(params, {
-      availableBalance: '149997680 satoshis',
       balance: '150000000 satoshis',
       fee: '2320 satoshis',
       spendableBalance: '150000000 satoshis',
@@ -202,112 +189,9 @@ describe('get-fee-resolver', () => {
     }
 
     assertValues(params, {
-      availableBalance: '149996510 satoshis',
       balance: '150000000 satoshis',
       fee: '3490 satoshis',
       spendableBalance: '150000000 satoshis',
-    })
-  })
-
-  test('confirmed utxos + send nft ', () => {
-    const ordinalsUtxos = createCollection([
-      {
-        txId: '1i0 tx',
-        value: '1000 satoshis',
-        confirmations: 1,
-        vout: 0,
-        script: '5120d96a4516786abc536ac4445887262770134f2ab139012856c1f3fdd13c1b02ac',
-        inscriptions: [
-          {
-            inscriptionId: '1i0',
-            offset: 0,
-          },
-        ],
-      },
-      {
-        txId: '2i0 tx',
-        value: '500 satoshis',
-        confirmations: 1,
-        vout: 0,
-        script: '5120d96a4516786abc536ac4445887262770134f2ab139012856c1f3fdd13c1b02ac',
-        inscriptions: [
-          {
-            inscriptionId: '2i0',
-            offset: 0,
-          },
-        ],
-      },
-    ])
-    const accountState = {
-      utxos: confirmedUtxos,
-      ordinalsUtxos,
-    }
-
-    const txSet = TxSet.fromArray([])
-    const params = {
-      asset,
-      accountState,
-      txSet,
-      feeData,
-      nft: { tokenId: '1i0' },
-    }
-
-    assertValues(params, {
-      availableBalance: '99998110 satoshis',
-      balance: '100000000 satoshis',
-      fee: '2910 satoshis',
-      spendableBalance: '100000000 satoshis',
-    })
-  })
-
-  test('confirmed utxos + send brc20 ', () => {
-    const ordinalsUtxos = createCollection([
-      {
-        txId: '1i0 tx',
-        value: '1000 satoshis',
-        confirmations: 1,
-        vout: 0,
-        script: '5120d96a4516786abc536ac4445887262770134f2ab139012856c1f3fdd13c1b02ac',
-        inscriptions: [
-          {
-            inscriptionId: '1i0',
-            offset: 0,
-          },
-        ],
-      },
-      {
-        txId: '2i0 tx',
-        value: '500 satoshis',
-        confirmations: 1,
-        vout: 0,
-        script: '5120d96a4516786abc536ac4445887262770134f2ab139012856c1f3fdd13c1b02ac',
-        inscriptions: [
-          {
-            inscriptionId: '2i0',
-            offset: 0,
-          },
-        ],
-      },
-    ])
-    const accountState = {
-      utxos: confirmedUtxos,
-      ordinalsUtxos,
-    }
-
-    const txSet = TxSet.fromArray([])
-    const params = {
-      asset,
-      accountState,
-      txSet,
-      feeData,
-      brc20: { inscriptionIds: ['1i0', '2i0'] },
-    }
-
-    assertValues(params, {
-      availableBalance: '99998110 satoshis',
-      balance: '100000000 satoshis',
-      fee: '3910 satoshis',
-      spendableBalance: '100000000 satoshis',
     })
   })
 
@@ -334,7 +218,6 @@ describe('get-fee-resolver', () => {
       isSendAll: false,
     }
     assertValues(params, {
-      availableBalance: '149996200 satoshis',
       balance: '150000000 satoshis',
       fee: '3800 satoshis',
       spendableBalance: '150000000 satoshis',
@@ -370,7 +253,6 @@ describe('get-fee-resolver', () => {
     }
 
     assertValues(params, {
-      availableBalance: '99997210 satoshis',
       balance: '100000000 satoshis',
       extraFee: '900 satoshis',
       fee: '2790 satoshis',

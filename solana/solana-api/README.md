@@ -1,8 +1,24 @@
-# @exodus/solana-api
+# @exodus/solana-api &middot; [![npm version](https://img.shields.io/badge/npm-public-blue.svg?style=flat)](https://www.npmjs.com/package/@exodus/solana-api)
 
-Transaction monitors, fee monitors, RPC with the blockchain node, and other networking code for Solana. See [Asset Packages](../../docs/asset-packages.md) for more detail on this package's role.
+The **solana-api** provides utilities for interacting with the Solana blockchain.
+It offers functionality to query transaction data, monitor network health, and broadcast transactions, specifically:
 
-## Known Issues
+- Provides an interface for communicating with the Solana backend, exposing methods to fetch transaction and account details, check node health, query staked amounts, and retrieve withdrawal histories.
+- Includes functions for broadcasting transactions to the Solana network.
+- Monitors transactions, retrieves staking data, and logs transaction history, ensuring the wallet’s state remains in sync with on-chain data.
 
-- To get all transactions data from an address we gotta call 3 rpcs `getSignaturesForAddress` (get txIds) -> `getTransaction` (get tx details) -> `getBlockTime` (get tx timestamp). Pretty annoying and resource-consuming backend-side. (https://github.com/solana-labs/solana/issues/12411)
-- calling `getBlockTime` might results in an error if the slot/block requested is too old (https://github.com/solana-labs/solana/issues/12413), looks like some Solana validators can choose to not keep all the ledger blocks (fix in progress by solana team).
+---
+
+## Installation
+
+Install the package via `yarn`:
+
+```bash
+yarn add @exodus/solana-api
+```
+
+## License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute this software under the terms of the MIT License.
+For more details, see the [LICENSE](LICENSE) file.

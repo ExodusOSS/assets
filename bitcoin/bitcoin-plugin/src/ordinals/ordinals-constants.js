@@ -1,8 +1,3 @@
-// Ordinal postage is the amount of sats left in an inscription for future transferring fee
-// Wallet may use some postage when transferring an ordinal utxos or consume the fee from another regular utxos
-// In general, wallets don't spend the postage.
-export const DEFAULT_BRC20_POSTAGE = 546
-
 export const DEFAULT_ORDINAL_POSTAGE = 10_000
 
 // What's the taproot chain index to use as the default ordinal address (as in purpose 86, m/2/0).

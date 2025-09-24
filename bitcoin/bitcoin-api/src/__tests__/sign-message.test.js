@@ -1,4 +1,7 @@
-import { signMessage } from '../sign-message.js'
+import { ecdsaSignHash, privateKeyToPublicKey } from '@exodus/crypto/secp256k1'
+import assert from 'minimalistic-assert'
+
+import { signMessage, signMessageWithSigner } from '../sign-message.js'
 
 const PRIVATE_KEY = 'f337ed3d9ff8a861d9b83e444c0bfb51a24388e39f23ca96e33565265a58f2e5'
 
@@ -31,13 +34,42 @@ const fixtures = [
   },
 ]
 
+const privateKey = Buffer.from(PRIVATE_KEY, 'hex')
+
 describe('.signMessage()', () => {
-  const privateKey = Buffer.from(PRIVATE_KEY, 'hex')
   it.each(fixtures)('$descr', async ({ input, expected }) => {
     const result = await signMessage({
       privateKey,
       message: input,
     })
+    expect(result.toString('hex')).toEqual(expected.toString('hex'))
+  })
+})
+
+describe('.signMessageWithSigner()', () => {
+  const createSigner = () => ({
+    getPublicKey: async () => Buffer.from(privateKeyToPublicKey({ privateKey })),
+    sign: ({ data, signatureType, enc }) => {
+      assert(signatureType === 'ecdsa', `cannot sign ${signatureType} for secp256k1 keys`)
+      assert(['sig,rec', 'sig'].includes(enc), 'invalid signatureType')
+
+      return ecdsaSignHash({
+        hash: data,
+        privateKey,
+        extraEntropy: null,
+        der: enc === 'der',
+        recovery: enc !== 'der' && enc !== 'sig',
+        format: 'buffer',
+      })
+    },
+  })
+
+  it.each(fixtures)('$descr', async ({ input, expected }) => {
+    const result = await signMessageWithSigner({
+      signer: createSigner(),
+      message: input,
+    })
+
     expect(result.toString('hex')).toEqual(expected.toString('hex'))
   })
 })

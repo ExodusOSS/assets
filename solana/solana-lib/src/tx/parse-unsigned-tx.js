@@ -9,6 +9,7 @@ export function parseUnsignedTx({ asset, unsignedTx }) {
     fromTokenAddresses,
     method,
     stakeAddresses,
+    accounts,
     seed,
     pool,
     initializerAddress,
@@ -41,6 +42,7 @@ export function parseUnsignedTx({ asset, unsignedTx }) {
     // staking related
     method,
     stakeAddresses,
+    accounts,
     seed,
     pool,
     // MagicEden escrow/related:

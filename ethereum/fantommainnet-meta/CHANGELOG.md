@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@2.0.4...@exodus/fantommainnet-meta@2.0.5) (2025-08-19)
+
+
+### Bug Fixes
+
+
+* fix: remove meta boilerplate (#6305)
+
+
+
+## [2.0.4](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@2.0.3...@exodus/fantommainnet-meta@2.0.4) (2025-07-01)
+
+
+### Bug Fixes
+
+
+* fix: remove unused gradientCoords from meta and validation (#5937)
+
+* fix: update FTM explorer URLs to official fantom.network (#5993)
+
+
+
+## [2.0.3](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@2.0.2...@exodus/fantommainnet-meta@2.0.3) (2025-03-31)
+
+
+### Bug Fixes
+
+
+* fix: remove unused transparent icons from metas (#5209)
+
+
+
+## [2.0.2](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@2.0.1...@exodus/fantommainnet-meta@2.0.2) (2025-02-26)
+
+
+### Bug Fixes
+
+
+* fix: add assetId to evm metas (#5120)
+
+
+
+## [2.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@2.0.0...@exodus/fantommainnet-meta@2.0.1) (2024-12-12)
+
+
+### License
+
+
+* license: re-license under MIT license (#4580)
+
+
+
 ## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/fantommainnet-meta@1.1.2...@exodus/fantommainnet-meta@2.0.0) (2024-07-11)
 
 

@@ -1,0 +1,34 @@
+{
+  "name": "@exodus/send-validation-model",
+  "version": "1.2.0",
+  "description": "Send token screen validation models with basic constants and factories",
+  "author": "Exodus Movement, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/send-validation-model",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/assets/issues?q=is%3Aissue+is%3Aopen+label%3Asend-validation-model"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "run -T eslint .",
+    "test": "run -T exodus-test --jest",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@exodus/i18n-dummy": "^1.0.0",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

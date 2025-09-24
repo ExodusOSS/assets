@@ -10,12 +10,8 @@ const displayNetworkTicker = 'RSK'
 const displayNetworkName = 'Rootstock'
 const primaryColor = '#FF9931'
 const gradientColors = ['#FF9931', '#7CDB9A']
-const gradientCoords = { x1: '0%', y1: '0%', x2: '100%', y2: '100%' }
 const chainBadgeColors = ['#FF9931', '#7CDB9A']
 const chainId = 30
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -47,14 +43,11 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
   displayNetworkName,
   displayNetworkTicker,
   displayTicker,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -65,8 +58,8 @@ const assetParams = {
 
 const tokenOverrides = (token) => ({
   ...token,
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

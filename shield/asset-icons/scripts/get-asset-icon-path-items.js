@@ -1,6 +1,13 @@
+const locakfile = require('@yarnpkg/lockfile')
+
 const path = require('path')
 const fs = require('fs')
 const { relativeNodeModulesDir } = require('./common-params')
+
+const jsYaml = require('js-yaml')
+
+const parseYaml = jsYaml.load
+const parseLock = locakfile.parse
 
 const processDirectory = process.cwd()
 
@@ -28,15 +35,29 @@ const assertNotGlobalFolder = (packagePath) => {
   }
 }
 
-const getAssetMetaPackages = (legacy = false) => {
-  const packageJsonPath = legacy
-    ? path.resolve(processDirectory, relativeNodeModulesDir, '@exodus/assets-base/package.json')
-    : require.resolve('@exodus/assets-base/package.json')
+const getLockFileObject = (yarnLockPath) => {
+  const yarnLockFile = path.resolve(processDirectory, relativeNodeModulesDir, yarnLockPath)
+  const content = fs.readFileSync(yarnLockFile, 'utf8')
+  try {
+    // old yarn
+    return parseLock(content).object
+  } catch {
+    // newer yarn
+    return parseYaml(content)
+  }
+}
 
-  assertNotGlobalFolder(path.dirname(packageJsonPath))
-
-  const json = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
-  return Object.keys(json.dependencies).filter((name) => name.match(/^@exodus\/[^/]+-meta$/))
+const getAssetMetaPackagesFromYarnLock = (yarnLockPath) => {
+  const yarnLockContent = getLockFileObject(yarnLockPath)
+  const lines = Object.keys(yarnLockContent)
+  const deps = lines.map((name) => {
+    const firstDep = name.slice(0, name.indexOf(','))
+    return firstDep.slice(0, firstDep.lastIndexOf('@'))
+  })
+  const duplicated = deps.filter((name) => {
+    return name.match(/^@exodus\/[^/]+-meta$/)
+  })
+  return [...new Set(duplicated)].sort()
 }
 
 const getImportPath = ({ packagePath, packageName, legacy = false }) => {
@@ -49,7 +70,7 @@ const getImportPath = ({ packagePath, packageName, legacy = false }) => {
   return require.resolve(packageName)
 }
 
-const _generate = async (folder, { packageName, onlyBase, legacy = false }) => {
+const _generate = async (folder, { packageName, legacy = false }) => {
   try {
     const packagePath = legacy
       ? path.resolve(processDirectory, relativeNodeModulesDir, packageName)
@@ -57,19 +78,22 @@ const _generate = async (folder, { packageName, onlyBase, legacy = false }) => {
 
     assertNotGlobalFolder(packagePath)
 
-    const { asset } = await import(getImportPath({ packagePath, packageName, legacy }))
-    const { baseAssetName } = asset
+    const { default: assetsList } = await import(
+      getImportPath({ packagePath, packageName, legacy })
+    )
+
+    if (!Array.isArray(assetsList) || assetsList.length === 0) {
+      return []
+    }
+
     const dir = path.join(packagePath, folder)
     const files = fs.existsSync(dir) ? fs.readdirSync(dir) : []
     const items = []
 
     files.forEach((filename) => {
+      if (filename.startsWith('.')) return
       const assetName = filename.split('.svg')[0].replace('-sign', '')
-      if (onlyBase) {
-        assetName === baseAssetName && items.push([assetName, `${packageName}/${folder}`, filename])
-      } else {
-        items.push([assetName, `${packageName}/${folder}`, filename])
-      }
+      items.push([assetName, `${packageName}/${folder}`, filename])
     })
 
     return items
@@ -79,11 +103,18 @@ const _generate = async (folder, { packageName, onlyBase, legacy = false }) => {
   }
 }
 
-const getAssetIconPathItems = async ({ folderPostfix, onlyBase, legacy } = Object.create(null)) => {
-  const assetMetaPackages = getAssetMetaPackages(legacy)
+const getAssetIconPathItems = async (
+  { folderPostfix, legacy, yarnLockPath } = Object.create(null)
+) => {
+  if (!yarnLockPath) {
+    throw new Error('yarnLockPath is required to resolve icons!')
+  }
+
+  const assetMetaPackages = getAssetMetaPackagesFromYarnLock(yarnLockPath)
+
   const promises = assetMetaPackages.map((packageName) => {
     const folderPath = `assets/svg${folderPostfix || ''}`
-    return _generate(folderPath, { packageName, onlyBase, legacy })
+    return _generate(folderPath, { packageName, legacy })
   })
   const results = await Promise.all(promises)
   return results.flat()

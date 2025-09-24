@@ -1,10 +1,7 @@
 const asset = {
   primaryColor: '#8C93AF',
   gradientColors: ['#474A73', '#8C93AF'],
-  gradientCoords: { x1: '17.71%', y1: '-46.968%', x2: '98.837%', y2: '152.777%' },
   chainBadgeColors: ['#FFFFFF', '#D6DAFF'],
-  gasLimit: 21_000,
-  contractGasLimit: 1_000_000,
   assetType: 'ETHEREUM_LIKE',
   tokenAssetType: 'ETHEREUM_ERC20',
   info: {

@@ -1,0 +1,132 @@
+exports[`solana send transfer integration test Send NFT integration test tokenStandard 4 1`] = `
+{
+  "coinAmount": "0 SOL",
+  "coinName": "solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.000014851 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;
+
+exports[`solana send transfer integration test Send all integration test 1`] = `
+{
+  "coinAmount": "0 SOL",
+  "coinName": "solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.00000545 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;
+
+exports[`solana send transfer integration test Send all wallet 2 include dust integration test 1`] = `
+{
+  "coinAmount": "0 SOL",
+  "coinName": "solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.00000545 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "FegJauRKyricstvwpXuNkrG4GTzbJt5n6qiUdnhmH7rR",
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;
+
+exports[`solana send transfer integration test Send some integration test 1`] = `
+{
+  "coinAmount": "0 SOL",
+  "coinName": "solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.00000545 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;
+
+exports[`solana send transfer integration test Send some staratlas_solana integration test 1`] = `
+{
+  "coinAmount": "0 ATLASSOL",
+  "coinName": "staratlas_solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+    "staratlas_solana": {
+      "ATLASSOL": 8,
+      "base": 0,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.000009674 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;
+
+exports[`solana send transfer integration test Send some staratlas_solana integration test 2`] = `
+{
+  "coinAmount": "0 SOL",
+  "coinName": "solana",
+  "confirmations": 0,
+  "currencies": {
+    "solana": {
+      "Lamports": 0,
+      "SOL": 9,
+    },
+  },
+  "date": "NOW",
+  "feeAmount": "0.000009674 SOL",
+  "feeCoinName": "solana",
+  "selfSend": true,
+  "to": "8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X",
+  "tokens": [
+    "staratlas_solana",
+  ],
+  "txId": "SOME_TX_ID",
+  "version": 1,
+}
+`;

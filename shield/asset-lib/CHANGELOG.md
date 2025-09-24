@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.5.0...@exodus/asset-lib@5.6.0) (2025-09-04)
+
+
+### Features
+
+
+* feat: enhance balances factory (#6397)
+
+
+
+## [5.5.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.4.0...@exodus/asset-lib@5.5.0) (2025-07-30)
+
+
+### Features
+
+
+* feat(asset-lib): after-tick-multiple-wallet-accounts reports tick errors (#6165)
+
+
+
+## [5.4.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.3.0...@exodus/asset-lib@5.4.0) (2025-06-10)
+
+
+### Features
+
+
+* feat: feeData deep merge (#5841)
+
+
+
+## [5.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.2.3...@exodus/asset-lib@5.3.0) (2025-03-03)
+
+
+### Features
+
+
+* feat: demote a batch of tokens (#5070)
+
+
+
+## [5.2.3](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.2.2...@exodus/asset-lib@5.2.3) (2025-01-09)
+
+
+### License
+
+
+* license: re-license under MIT license (#4731)
+
+
+
 ## [5.2.2](https://github.com/ExodusMovement/assets/compare/@exodus/asset-lib@5.2.1...@exodus/asset-lib@5.2.2) (2024-11-21)
 
 

@@ -12,7 +12,6 @@ const displayNetworkName = displayName
 const baseAssetName = name
 const primaryColor = '#14F195'
 const gradientColors = ['#14F195', '#9BFFD7']
-const gradientCoords = { x1: '12.519%', y1: '28.482%', x2: '27.289%', y2: '11.831%' }
 const chainBadgeColors = ['#0CF3A8', '#D823FE']
 
 const units = {
@@ -48,7 +47,6 @@ const assetParams = {
   displayNetworkTicker,
   displayTicker,
   gradientColors,
-  gradientCoords,
   tokenAssetType,
   info,
   name,
@@ -60,6 +58,10 @@ const assetParams = {
 export const { asset, tokens, assetsList } = createMetaDef({
   assetParams,
   tokensParams,
+  tokenOverrides: (token) => ({
+    ...token,
+    assetId: token.mintAddress,
+  }),
 })
 
 export default [asset, ...tokens]

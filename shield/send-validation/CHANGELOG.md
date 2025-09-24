@@ -3,6 +3,209 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@5.3.0...@exodus/send-validation@5.3.1) (2025-09-17)
+
+
+### Bug Fixes
+
+
+* fix: drop isAccountBased param from INVALID_ADDRESS validation (#6499)
+
+
+
+## [5.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@5.2.0...@exodus/send-validation@5.3.0) (2025-09-15)
+
+
+### Features
+
+
+* feat: algorand new address details validation (#6446)
+
+
+### Bug Fixes
+
+
+* fix: remove deprecated xmrValidators and monero validation code (#6459)
+
+
+
+## [5.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@5.1.0...@exodus/send-validation@5.2.0) (2025-09-10)
+
+
+### Features
+
+
+* feat: move address validation to plugins and add validation model (#6402)
+
+
+
+## [5.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@5.0.0...@exodus/send-validation@5.1.0) (2025-08-04)
+
+
+### Features
+
+
+* feat: memo send validation (#6174)
+
+
+
+## [5.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.2.0...@exodus/send-validation@5.0.0) (2025-07-16)
+
+### ⚠ BREAKING CHANGES
+
+
+* move send validation to each asset plugin (#6076)
+
+
+### Features
+
+
+* feat!: move send validation to each asset plugin (#6076)
+
+
+
+## [4.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.5...@exodus/send-validation@4.2.0) (2025-07-16)
+
+
+### Features
+
+
+* feat: send-validation-model (#6100)
+
+
+
+## [4.1.5](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.4...@exodus/send-validation@4.1.5) (2025-07-14)
+
+
+### Bug Fixes
+
+
+* fix: update bitcoin-api v3 (#6075)
+
+
+
+## [4.1.4](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.3...@exodus/send-validation@4.1.4) (2025-07-04)
+
+
+### Bug Fixes
+
+
+* fix: SOL send validation with no amount provided (#5999)
+
+
+
+## [4.1.3](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.2...@exodus/send-validation@4.1.3) (2025-06-30)
+
+
+### Bug Fixes
+
+
+* fix: remove stray neo-lib dep (#5972)
+
+
+
+## [4.1.2](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.1...@exodus/send-validation@4.1.2) (2025-05-13)
+
+
+### Bug Fixes
+
+
+* fix: update send all gas warning copy, no warning when < 1 usd (#5631)
+
+
+
+## [4.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.1.0...@exodus/send-validation@4.1.1) (2025-05-09)
+
+
+### Bug Fixes
+
+
+* fix: validate fees when sending nft (#5583)
+
+
+
+## [4.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.0.1...@exodus/send-validation@4.1.0) (2025-05-08)
+
+
+### Features
+
+
+* feat: add cpfp and tax warnings to send-validation (#5579)
+
+
+
+## [4.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@4.0.0...@exodus/send-validation@4.0.1) (2025-05-08)
+
+
+### Bug Fixes
+
+
+* fix: send-validation improvements (#5575)
+
+
+
+## [4.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.1.1...@exodus/send-validation@4.0.0) (2025-05-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* new send validation api (#5407)
+
+### Features
+
+
+* feat!: new send validation api (#5407)
+
+
+
+## [3.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.1.0...@exodus/send-validation@3.1.1) (2025-04-08)
+
+
+### Bug Fixes
+
+
+* fix: solanaRentExemptAmountSenderValidator field (#5409)
+
+
+
+## [3.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.7...@exodus/send-validation@3.1.0) (2025-04-08)
+
+
+### Features
+
+
+* feat: Solana rent except sender validation (#5394)
+
+
+### Bug Fixes
+
+
+* fix: xrpTooEarlyToDeleteValidator will now use the correct address details (#5404)
+
+
+
+## [3.0.7](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.6...@exodus/send-validation@3.0.7) (2025-03-26)
+
+
+### Bug Fixes
+
+
+* fix: SOL validation rent (#5331)
+
+
+
+## [3.0.6](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.5...@exodus/send-validation@3.0.6) (2025-03-25)
+
+
+### Bug Fixes
+
+
+* fix: ADA validation fee failback to zero (#4988)
+
+* fix: SOL insufficient funds for rent (#5308)
+
+
+
 ## [3.0.5](https://github.com/ExodusMovement/assets/compare/@exodus/send-validation@3.0.4...@exodus/send-validation@3.0.5) (2025-01-09)
 
 

@@ -10,6 +10,7 @@ const apiMock = {
   }),
   watchAddress: jest.fn(),
   unwatchAddress: jest.fn(),
+
   getTransactions: async (...args) => {
     expect(args).toEqual([
       '8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X',
@@ -286,6 +287,8 @@ const apiMock = {
     }
   },
 
+  ownerChanged: async () => false,
+
   getStakeAccountsInfo: async (...args) => {
     expect(args).toEqual(['8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X'])
     return {
@@ -311,7 +314,7 @@ const apiMock = {
   },
 
   getRewards: async (...args) => {
-    expect(args).toEqual([['7XHXjJQ7Gzno3QarhCFXXmd4xxBrRDsSGooLLLbYV7XR']])
+    expect(args).toEqual(['8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X'])
     return 3333
   },
 
@@ -355,11 +358,39 @@ const apiMock = {
     ]
   },
 
-  getTokensBalance: async () => {
+  getTokensBalancesAndAccounts: async () => {
     return {
-      '8hgy_solana_43b58185': 9_000_000,
-      mean_solana_c5cba5c4: 540_000,
-      raydium: 2_386_293,
+      balances: {
+        '8hgy_solana_43b58185': 9_000_000,
+        mean_solana_c5cba5c4: 540_000,
+        raydium: 2_386_293,
+      },
+      accounts: [
+        {
+          tokenAccountAddress: '5oq1Kvmmtgp9UtDzLEwYi7QcmcHUm45ZWgmV9yRKL6rS',
+          owner: '8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X',
+          tokenName: '8hgy_solana_43b58185',
+          ticker: '8HGYsolana43B58185',
+          balance: '9000000',
+          mintAddress: '8HGyAAB1yoM1ttS7pXjHMa3dukTFGQggnFFH3hJZgzQh',
+        },
+        {
+          tokenAccountAddress: 'DfV8UWiwyn8fiMdNZv3mA3wtNJw3eRYKVtV8itRDVF1R',
+          owner: '8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X',
+          tokenName: 'mean_solana_c5cba5c4',
+          ticker: 'MEANsolanaC5CBA5C4',
+          balance: '540000',
+          mintAddress: 'MEANeD3XDdUmNMsRGjASkSWdC8prLYsoRJ61pPeHctD',
+        },
+        {
+          tokenAccountAddress: '4r6P9xCvb7413MB8bPrR7VCU8qcNbgpaFagkAJa57mPt',
+          owner: '8APBjTndtCF4kfKHaJG9boR2dREGNCK4yFRVfqUfzS4X',
+          tokenName: 'raydium',
+          ticker: 'RAY',
+          balance: '2386293',
+          mintAddress: '4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R',
+        },
+      ],
     }
   },
 
@@ -373,9 +404,9 @@ const apiMock = {
     return { lamports: 10_000_000, space: 5 }
   },
 
-  getMinimumBalanceForRentExemption: async (...args) => {
-    expect(args).toEqual([5])
-    return 200_000
+  getMinimumBalanceForRentExemption: (size) => {
+    expect(size).toEqual(5)
+    return 300_000
   },
 }
 

@@ -258,14 +258,14 @@ export function stakingServiceFactory({ assetClientInterface, server, stakingSer
     const { feeAsset } = await getStakeAssets()
 
     const amount = feeAsset.currency.ZERO
-    const gasLimit = await estimateGasLimit(
-      feeAsset,
-      from,
-      to,
-      amount, // staking contracts does not require ETH amount to interact with
-      txInput,
-      gasPrice
-    )
+    const gasLimit = await estimateGasLimit({
+      asset: feeAsset,
+      fromAddress: from,
+      toAddress: to,
+      amount,
+      data: txInput,
+      gasPrice,
+    })
 
     if (gasPrice === '0x0') {
       gasPrice = await server.gasPrice()
@@ -459,6 +459,7 @@ export function getPolygonStakingInfo({ assetClientInterface, stakingServer }) {
       unbondNonce,
       isDelegating,
       delegatedBalance,
+      activeStakedBalance: delegatedBalance,
       minRewardsToWithdraw,
       minDelegateAmount,
       ...unclaimedUndelegatedInfo,

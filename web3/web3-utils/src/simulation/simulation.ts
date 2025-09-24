@@ -25,11 +25,19 @@ const createEmptyBalanceChanges = <
 
 export const createEmptySimulationResult = <FeeDetails, AdvancedDetails = []>({
   asset,
+  baseAssetName,
 }: {
-  asset: Asset
+  asset?: Asset
+  baseAssetName?: string
 }): AggregatedTransactionSimulationResult<FeeDetails, AdvancedDetails> => {
+  // Not all web3 modules supply the `baseAssetName` property yet.
+  const resolvedBaseAssetName = baseAssetName ?? asset?.baseAssetName
+  if (!resolvedBaseAssetName) {
+    throw new Error("Either 'asset' or 'baseAssetName' should be supplied.")
+  }
+
   return {
-    baseAssetName: asset.baseAssetName,
+    baseAssetName: resolvedBaseAssetName,
     balanceChanges: createEmptyBalanceChanges(),
     transactions: [],
     displayDetails: { warnings: [] },
@@ -38,6 +46,7 @@ export const createEmptySimulationResult = <FeeDetails, AdvancedDetails = []>({
     metadata: {
       simulatedLocally: true,
     },
+    recipientAddresses: [],
   }
 }
 

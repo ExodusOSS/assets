@@ -4,7 +4,7 @@ import {
   condensePublicKey,
   deserializePublicKey,
   serializePublicKey,
-} from './keys.js'
+} from './keys.js' // eslint-disable-line @exodus/import/no-unresolved -- eslint doesn't understand importing a TS file from a JS file
 
 const publicKey = new PublicKey('A5EotUB6U3m5FQ7H5anvz9ZLZYjLLm7EMYEZXYLmAWHH')
 

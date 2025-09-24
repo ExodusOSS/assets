@@ -13,6 +13,7 @@ export const createGetKeyWithMetadata = ({
   privateKeysAddressMap,
   coinInfo,
   getKeyIdentifier,
+  getPrivateKeyFromMap = standardGetPrivateKeyFromMap,
 }) =>
   memoize(
     ({ address, derivationPath }) => {
@@ -36,10 +37,21 @@ export const createGetKeyWithMetadata = ({
     ({ address, derivationPath }) => address + '_' + derivationPath
   )
 
-function getPrivateKeyFromMap(privateKeysAddressMap, networkInfo, purpose, address) {
+function standardGetPrivateKeyFromMap(privateKeysAddressMap, networkInfo, purpose, address) {
   const privateWif = getOwnProperty(privateKeysAddressMap, address, 'string')
   assert(privateWif, `there is no private key for address ${address}`)
-  const { privateKey, compressed } = ECPair.fromWIF(privateWif, networkInfo)
+
+  // ECPair.fromWIF() rejects network objects whose pubKeyHash/scriptHash are wider than one byte (UInt8).
+  // so we skip the network argument in that case and let the library infer it from the WIF prefix.
+  const useNet =
+    networkInfo && networkInfo.pubKeyHash <= 0xff && networkInfo.scriptHash <= 0xff
+      ? networkInfo
+      : undefined
+
+  const { privateKey, compressed } = useNet
+    ? ECPair.fromWIF(privateWif, useNet)
+    : ECPair.fromWIF(privateWif)
+
   const publicKey = privateKeyToPublicKey({ privateKey, compressed, format: 'buffer' })
   return { privateKey, publicKey, purpose }
 }

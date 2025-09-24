@@ -5,14 +5,10 @@ import tokensParams from './tokens.js'
 const name = 'ethereum'
 const displayName = 'Ethereum'
 const ticker = 'ETH'
-const primaryColor = '#8C93AF'
-const gradientColors = ['#474A73', '#8C93AF']
-const gradientCoords = { x1: '17.71%', y1: '-46.968%', x2: '98.837%', y2: '152.777%' }
-const chainBadgeColors = ['#FFFFFF', '#D6DAFF']
+const primaryColor = '#8890D7'
+const gradientColors = ['#6870B5', '#8890D7']
+const chainBadgeColors = ['#8890D7', '#454A75']
 const chainId = 1
-
-const gasLimit = 21e3 // enough to send ETH to a normal address
-const contractGasLimit = 1e6 // used when estimateGas fails
 
 const units = {
   wei: 0,
@@ -43,11 +39,8 @@ const assetParams = {
   blockExplorer,
   chainBadgeColors,
   chainId,
-  contractGasLimit,
   displayName,
-  gasLimit,
   gradientColors,
-  gradientCoords,
   info,
   name,
   primaryColor,
@@ -63,8 +56,8 @@ const tokenOverrides = (token) => ({
     addressUrl: (address) =>
       `https://etherscan.io/token/${encodeURIComponent(token.addresses.current)}?a=${encodeURIComponent(address)}`,
   },
+  assetId: token.addresses.current.toLowerCase(),
   contract: token.addresses,
-  gasLimit: 120e3,
 })
 
 export const { asset, tokens, assetsList } = createMetaDef({

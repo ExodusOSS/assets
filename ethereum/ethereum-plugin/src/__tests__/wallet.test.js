@@ -39,6 +39,13 @@ describe(`ethereum wallet test using testing seed compatibilityMode = metamask`,
     assetName: 'ethereum',
     compatibilityMode: 'metamask',
     seed: getTestingSeed(),
+    assetConfig: {
+      supportsStaking: true,
+      allowMetaMaskCompat: true,
+      monitorType: 'clarity-v2',
+      monitorInterval: '1m',
+      serverUrl: 'https://eth-clarity.a.exodus.io',
+    },
     expectedAddresses: {
       ethereum_44_exodus_0_0_0: '0xF3d46F0De925B28fDa1219BbD60F5ae2a0128F9F',
       ethereum_44_exodus_1_0_0: '0x780984e59eDdA8b1f4bB09dc297241f1Ed0Dcc17',

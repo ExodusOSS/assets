@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.12.0...@exodus/web3-solana-utils@2.12.1) (2025-06-04)
+
+
+### Bug Fixes
+
+
+* fix: ensure solana wallet standard types are resolvable (#5612)
+
+
+
+## [2.12.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.11.2...@exodus/web3-solana-utils@2.12.0) (2025-05-27)
+
+
+### Features
+
+
+* feat: use exodus/crypto for ed25519 in web3 utils (#5714)
+
+
+
+## [2.11.2](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.11.1...@exodus/web3-solana-utils@2.11.2) (2025-03-18)
+
+
+### Bug Fixes
+
+
+* fix(web3-solana): add schema for signAndSendAllTransactions (#5240)
+
+
+
+## [2.11.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.11.0...@exodus/web3-solana-utils@2.11.1) (2025-02-24)
+
+
+### Bug Fixes
+
+
+* fix(solana): fix `isLegacyTransaction` type guard (#5094)
+
+* fix: tests (#5091)
+
+
+
+## [2.11.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.10.0...@exodus/web3-solana-utils@2.11.0) (2025-02-21)
+
+
+### Features
+
+
+* feat(solana): return recipient addresses from transaction simulation (#5079)
+
+
+
+## [2.10.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.9.1...@exodus/web3-solana-utils@2.10.0) (2025-01-31)
+
+
+### Features
+
+
+* feat: include human readable error in solana simulation result (#4955)
+
+
+
+## [2.9.1](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.9.0...@exodus/web3-solana-utils@2.9.1) (2025-01-27)
+
+**Note:** Version bump only for package @exodus/web3-solana-utils
+
+
+
+
+
+## [2.9.0](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.8.2...@exodus/web3-solana-utils@2.9.0) (2025-01-21)
+
+
+### Features
+
+
+* feat: expose `web3.simulateMessage` API (#4870)
+
+
+
 ## [2.8.2](https://github.com/ExodusMovement/assets/compare/@exodus/web3-solana-utils@2.8.1...@exodus/web3-solana-utils@2.8.2) (2024-12-19)
 
 

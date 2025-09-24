@@ -3,13 +3,12 @@ import {
   validate as validateDeps,
   validateCommonDeps,
 } from '@exodus/web3-rpc-handlers'
+import type { RPC, Transport } from '@exodus/web3-types'
 
+import type { Dependencies } from '../types.js'
 import { exposeHandlers } from './exposeHandlers.js'
 import { exposeSolanaMobileHandlers } from './exposeSolanaMobileHandlers.js'
 import { validateRequest } from './validator.js'
-
-import type { Dependencies } from '../types.js'
-import type { RPC, Transport } from '@exodus/web3-types'
 
 export { createSolanaDepsFactory } from './createSolanaDeps.js'
 
@@ -28,9 +27,11 @@ export const registerRPCHandlers = ({
       'Either `solana` or `solanaMobile` deps needs to be supplied.',
     )
   }
+
   if (!RPC) {
     throw new Error('"RPC" constructor parameter is required')
   }
+
   if (!transport) {
     throw new Error('"transport" parameter is required')
   }
@@ -44,6 +45,7 @@ export const registerRPCHandlers = ({
       'transactionSigner',
       'messageSigner',
       'getActiveWalletAccountData',
+      'getWalletAccountsData',
     ]
     const optionalKeys = ['getAsset']
 
@@ -53,6 +55,7 @@ export const registerRPCHandlers = ({
       optionalKeys,
     )
   }
+
   if (deps.solanaMobile) {
     const requiredKeys = [
       'getPublicKey',

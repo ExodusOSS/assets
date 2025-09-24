@@ -1,6 +1,6 @@
 {
   "name": "@exodus/matic-meta",
-  "version": "2.2.4",
+  "version": "2.2.7",
   "description": "Polygon constants, icons, colors and other metadata",
   "type": "module",
   "main": "src/index.js",
@@ -22,7 +22,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@exodus/asset": "^2.0.1"
+    "@exodus/asset": "^2.0.4"
   },
   "devDependencies": {
     "@exodus/assets-meta-testing": "workspace:^"

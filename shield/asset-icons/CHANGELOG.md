@@ -3,6 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@5.0.0...@exodus/asset-icons@5.1.0) (2025-08-29)
+
+
+### Features
+
+
+* feat: combined asset icons support (#6358)
+
+
+
+## [5.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.5...@exodus/asset-icons@5.0.0) (2025-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove assets-base option from asset-icons (#6344)
+
+
+* refactor!: remove assets-base option from asset-icons (#6344)
+
+
+
+## [4.3.5](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.4...@exodus/asset-icons@4.3.5) (2025-04-22)
+
+**Note:** Version bump only for package @exodus/asset-icons
+
+
+
+
+
+## [4.3.4](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.3...@exodus/asset-icons@4.3.4) (2025-03-24)
+
+
+### Bug Fixes
+
+
+* fix: downgrade js-yaml (#5322)
+
+
+
+## [4.3.3](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.2...@exodus/asset-icons@4.3.3) (2025-03-24)
+
+
+### Bug Fixes
+
+
+* fix: replace yalm with js-yaml (#5318)
+
+
+
+## [4.3.2](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.1...@exodus/asset-icons@4.3.2) (2025-03-21)
+
+
+### Bug Fixes
+
+
+* fix: remove transparent from asset-icons (#5309)
+
+
+
+## [4.3.1](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.3.0...@exodus/asset-icons@4.3.1) (2025-03-07)
+
+
+### Bug Fixes
+
+
+* fix: add missing network icons to metas (#5202)
+
+
+
+## [4.3.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.2.0...@exodus/asset-icons@4.3.0) (2025-01-23)
+
+
+### Features
+
+
+* feat: add songbird to assets-base (#4912)
+
+
+
+## [4.2.0](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.1.2...@exodus/asset-icons@4.2.0) (2025-01-10)
+
+
+### Features
+
+
+* feat: generate icons based on yarn lock files (#4832)
+
+
+
+## [4.1.2](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.1.1...@exodus/asset-icons@4.1.2) (2024-12-02)
+
+
+### License
+
+
+* license: re-license under MIT license (#4586)
+
+
+
 ## [4.1.1](https://github.com/ExodusMovement/assets/compare/@exodus/asset-icons@4.1.0...@exodus/asset-icons@4.1.1) (2024-09-24)
 
 **Note:** Version bump only for package @exodus/asset-icons

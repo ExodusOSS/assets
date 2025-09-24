@@ -47,13 +47,26 @@ export function toAsyncSigner({ privateKey, publicKey, isTaprootKeySpend }) {
         extraEntropy: defaultEntropy.getSchnorrEntropy(), // mockable with jest.spyOn
         format: 'buffer',
       }),
+    signEncoded: async ({ data, enc = 'sig' }) => {
+      assert(
+        ['der', 'sig'].includes(enc),
+        'signEncoded: invalid encoding type. Expected "der" or "sig".'
+      )
+      return secp256k1.ecdsaSignHash({
+        hash: data,
+        der: enc === 'der',
+        privateKey,
+        extraEntropy: null,
+        format: 'buffer',
+      })
+    },
     publicKey,
     privateKey,
   }
 }
 
 // signer: {
-//   sign: ({ data, ecOptions, enc, purpose, keyId, signatureType, tweak, extraEntropy }: KeychainSignerParams): Promise<any>
+//   sign: ({ data, enc, purpose, keyId, signatureType, tweak, extraEntropy }: KeychainSignerParams): Promise<any>
 //   getPublicKey: ({ keyId }) => Promise<Buffer>
 // }
 //
@@ -78,6 +91,9 @@ export async function toAsyncBufferSigner({ signer, keyId, isTaprootKeySpend }) 
         // defaultEntropy.getSchnorrEntropy() is mockable with jest.spyOn
         extraEntropy: defaultEntropy.getSchnorrEntropy(),
       })
+    },
+    signEncoded: async ({ data, enc = 'sig' }) => {
+      return signer.sign({ data, keyId, enc, signatureType: 'ecdsa' })
     },
     publicKey,
   }

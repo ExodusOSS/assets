@@ -1,11 +1,11 @@
 {
   "name": "@exodus/asset-lib",
-  "version": "5.2.2",
+  "version": "5.6.0",
   "description": "For all assets",
   "type": "module",
   "main": "src/index.js",
   "author": "Exodus Movement, Inc.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/ExodusMovement/assets/tree/master/shield/asset-lib",
   "files": [
     "src",
@@ -38,5 +38,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExodusMovement/assets.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

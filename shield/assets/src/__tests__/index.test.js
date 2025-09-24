@@ -9,25 +9,8 @@ test('should have basic properties', () => {
   assert.equal(assets.ripple.ticker, 'XRP') // used to verify Lerna is working (wildcard)
 })
 
-// ticker alias details: https://github.com/ExodusMovement/exodus-core/pull/195
-test('erc20 ticker alias is not used as the default unit', () => {
-  assert.deepStrictEqual(
-    assets.aragon.currency.defaultUnit(1).toDefaultString({ unit: true }),
-    '1 ANTv1'
-  )
-  assert.deepStrictEqual(
-    assets.augur.currency.defaultUnit(1).toDefaultString({ unit: true }),
-    '1 REPv1'
-  )
-})
-
-test('some assets have `curve` property', () => {
-  assert.equal(assets.elrond.curve, 'ed25519')
-})
-
 test('baseAsset', () => {
   expect(assets.ethereum.baseAsset).toBe(assets.ethereum)
-  expect(assets.aragon.baseAsset).toBe(assets.ethereum)
   expect(assets.busd.baseAsset).toBe(assets.ethereum)
 
   expect(assets.solana.baseAsset).toBe(assets.solana)
@@ -57,7 +40,6 @@ test('baseAsset', () => {
 
 test('feeAsset', () => {
   expect(assets.ethereum.feeAsset).toBe(assets.ethereum)
-  expect(assets.aragon.feeAsset).toBe(assets.ethereum)
   expect(assets.busd.feeAsset).toBe(assets.ethereum)
 
   expect(assets.neo.feeAsset).toBe(assets.neogas)
@@ -77,7 +59,6 @@ test('feeAsset', () => {
 })
 
 test('properTicker', () => {
-  expect(assets.aragonv2.properTicker).toBe('ANT')
   expect(assets.bsc.properTicker).toBe('BNB')
   expect(assets.cosmos.properTicker).toBe('ATOM')
   expect(assets.monero.properTicker).toBe('XMR')
@@ -86,19 +67,17 @@ test('properTicker', () => {
 test('displayNetworkTicker', () => {
   expect(assets.bsc.displayNetworkTicker).toBe('BSC')
   expect(assets.busd_bsc.displayNetworkTicker).toBe(assets.bsc.displayNetworkTicker)
-  expect(assets.pancakeswap.displayNetworkTicker).toBe(assets.bsc.displayNetworkTicker)
+  expect(assets['1inch_bsc_61c44543'].displayNetworkTicker).toBe(assets.bsc.displayNetworkTicker)
 
   expect(assets.ethereum.displayNetworkTicker).toBe('ETH')
-  expect(assets.aragonv2.displayNetworkTicker).toBe(assets.ethereum.displayNetworkTicker)
 })
 
 test('displayNetworkName', () => {
   expect(typeof assets.bsc.displayNetworkName).toBe('string')
   expect(assets.busd_bsc.displayNetworkName).toBe(assets.bsc.displayNetworkName)
-  expect(assets.pancakeswap.displayNetworkName).toBe(assets.bsc.displayNetworkName)
+  expect(assets['1inch_bsc_61c44543'].displayNetworkName).toBe(assets.bsc.displayNetworkName)
 
   expect(typeof assets.ethereum.displayNetworkName).toBe('string')
-  expect(assets.aragonv2.displayNetworkName).toBe(assets.ethereum.displayNetworkName)
 })
 
 test('all assets pass validation', () => {

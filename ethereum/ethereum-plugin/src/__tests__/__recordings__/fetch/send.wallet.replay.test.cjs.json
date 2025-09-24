@@ -1,11 +1,11 @@
 [
   {
     "request": {
-      "resource": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
       "options": {
-        "timeout": 15000,
-        "method": "GET",
-        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getCode\",\"params\":[\"0xf6c138C36341138dDFC314a11038dA8264B7Ef09\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
       }
     },
     "status": 200,
@@ -14,44 +14,41 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cf-cache-status", "DYNAMIC"],
-      ["cf-ray", "8ad9d4b29bd9bf43-WAW"],
+      ["cf-ray", "95f256575e86443f-EZE"],
       ["connection", "keep-alive"],
-      ["content-length", "4"],
-      [
-        "content-security-policy",
-        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
-      ],
+      ["content-length", "38"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Sat, 03 Aug 2024 22:44:11 GMT"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Mon, 14 Jul 2025 16:18:40 GMT"],
+      ["etag", "W/\"26-t2PLCDeyKgqvYpZvK4CpWq2ttL0\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
       ["server", "cloudflare"],
       [
         "set-cookie",
-        "route=1722725052.381.37.383443|ed817333ddf9ae6f5e2f21117235f5f3; Expires=Mon, 05-Aug-24 22:44:11 GMT; Max-Age=172800; Path=/; HttpOnly"
+        "route=1752509920.99.36.180917|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Wed, 16-Jul-25 16:18:39 GMT; Max-Age=172800; Path=/; HttpOnly"
       ],
       [
         "set-cookie",
-        "__cfruid=24fc86f4514f87c81f397a8fbf14a86776b34bcf-1722725051; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+        "_cfuvid=9sLAsJVTrcW_Gp8PlDyu5uXC6qhDm5y.l_qDsm6wDg0-1752509920093-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
       ],
-      [
-        "set-cookie",
-        "_cfuvid=iwbDbY_OFKEPp_PgP29omx9MPwgx.s3xZuHLngzTs8g-1722725051442-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
-      ],
+      ["vary", "Accept-Encoding"],
       ["x-content-type-options", "nosniff"],
-      ["x-frame-options", "DENY"]
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
     ],
-    "url": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
     "redirected": false,
     "type": "basic",
     "bodyType": "json",
-    "body": "0x"
-  },
-  {
+    "body": { "jsonrpc": "2.0", "id": 0, "result": "0x" }
+  }, {
     "request": {
-      "resource": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
       "options": {
-        "timeout": 15000,
-        "method": "GET",
-        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_getCode\",\"params\":[\"0x0D8775F648430679A709E98d2b0Cb6250d2887EF\",\"latest\"]}",
+        "headers": [["Content-Type", "application/json"]]
       }
     },
     "status": 200,
@@ -60,44 +57,46 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cf-cache-status", "DYNAMIC"],
-      ["cf-ray", "8ad9d4b49d87bf43-WAW"],
+      ["cf-ray", "95f2565958ae443f-EZE"],
       ["connection", "keep-alive"],
-      ["content-length", "4"],
-      [
-        "content-security-policy",
-        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
-      ],
+      ["content-encoding", "gzip"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Sat, 03 Aug 2024 22:44:11 GMT"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Mon, 14 Jul 2025 16:18:40 GMT"],
+      ["etag", "W/\"19ce-6SEJD1WvS4K9tnE6zhuA6aYEXdQ\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
       ["server", "cloudflare"],
       [
         "set-cookie",
-        "route=1722725052.676.38.175211|ed817333ddf9ae6f5e2f21117235f5f3; Expires=Mon, 05-Aug-24 22:44:11 GMT; Max-Age=172800; Path=/; HttpOnly"
+        "route=1752509921.312.38.69603|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Wed, 16-Jul-25 16:18:40 GMT; Max-Age=172800; Path=/; HttpOnly"
       ],
       [
         "set-cookie",
-        "__cfruid=24fc86f4514f87c81f397a8fbf14a86776b34bcf-1722725051; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+        "_cfuvid=_HW_t8yn3U_PHAg_UDJuubqhMf76euJY_pQ0d1n3sOE-1752509920411-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
       ],
-      [
-        "set-cookie",
-        "_cfuvid=Ztw_xYKC9mF3q3wKykVgA2GFh3URsAbiZwMz660LgiY-1722725051737-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
-      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
       ["x-content-type-options", "nosniff"],
-      ["x-frame-options", "DENY"]
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
     ],
-    "url": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_getCode&address=0xf6c138C36341138dDFC314a11038dA8264B7Ef09",
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
     "redirected": false,
     "type": "basic",
     "bodyType": "json",
-    "body": "0x"
-  },
-  {
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "result": "0x6060604052361561010c5763ffffffff60e060020a60003504166301a7a8c0811461010e57806306fdde031461013a578063095ea7b3146101ca57806318160ddd146101fd578063229a49781461021f57806323b872dd14610241578063313ce5671461027a5780634172d0801461029c5780634bb278f3146102be57806354fd4d50146102d0578063590e1ae3146103605780636f7920fd1461037257806370a08231146103945780638d4e4083146103c257806391b43d13146103e657806395d89b4114610408578063a81c3bdf14610498578063a9059cbb146104c4578063b4427263146104f7578063c039daf614610501578063d648a64714610523578063dd62ed3e14610545575bfe5b341561011657fe5b61011e610579565b60408051600160a060020a039092168252519081900360200190f35b341561014257fe5b61014a610588565b604080516020808252835181830152835191928392908301918501908083838215610190575b80518252602083111561019057601f199092019160209182019101610170565b505050905090810190601f1680156101bc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156101d257fe5b6101e9600160a060020a03600435166024356105bf565b604080519115158252519081900360200190f35b341561020557fe5b61020d61062a565b60408051918252519081900360200190f35b341561022757fe5b61020d610630565b60408051918252519081900360200190f35b341561024957fe5b6101e9600160a060020a0360043581169060243516604435610640565b604080519115158252519081900360200190f35b341561028257fe5b61020d610736565b60408051918252519081900360200190f35b34156102a457fe5b61020d61073b565b60408051918252519081900360200190f35b34156102c657fe5b6102ce610741565b005b34156102d857fe5b61014a61081a565b604080516020808252835181830152835191928392908301918501908083838215610190575b80518252602083111561019057601f199092019160209182019101610170565b505050905090810190601f1680156101bc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561036857fe5b6102ce6108a8565b005b341561037a57fe5b61020d6109dd565b60408051918252519081900360200190f35b341561039c57fe5b61020d600160a060020a03600435166109ed565b60408051918252519081900360200190f35b34156103ca57fe5b6101e9610a0c565b604080519115158252519081900360200190f35b34156103ee57fe5b61020d610a1c565b60408051918252519081900360200190f35b341561041057fe5b61014a610a22565b604080516020808252835181830152835191928392908301918501908083838215610190575b80518252602083111561019057601f199092019160209182019101610170565b505050905090810190601f1680156101bc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156104a057fe5b61011e610a59565b60408051600160a060020a039092168252519081900360200190f35b34156104cc57fe5b6101e9600160a060020a0360043516602435610a68565b604080519115158252519081900360200190f35b6102ce610b14565b005b341561050957fe5b61020d610bf3565b60408051918252519081900360200190f35b341561052b57fe5b61020d610c03565b60408051918252519081900360200190f35b341561054d57fe5b61020d600160a060020a0360043581169060243516610c09565b60408051918252519081900360200190f35b600554600160a060020a031681565b60408051808201909152601581527f426173696320417474656e74696f6e20546f6b656e0000000000000000000000602082015281565b600160a060020a03338116600081815260026020908152604080832094871680845294825280832086905580518681529051929493927f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925929181900390910190a35060015b92915050565b60005481565b6b019d971e4fe8401e7400000081565b600160a060020a0383166000908152600160205260408120548290108015906106905750600160a060020a0380851660009081526002602090815260408083203390941683529290522054829010155b801561069c5750600082115b1561072a57600160a060020a03808416600081815260016020908152604080832080548801905588851680845281842080548990039055600283528184203390961684529482529182902080548790039055815186815291519293927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9281900390910190a350600161072e565b5060005b5b9392505050565b601281565b61190081565b60055460a060020a900460ff16156107595760006000fd5b60045433600160a060020a039081169116146107755760006000fd5b6000546b022e58cf5246568f830000009010156107925760006000fd5b60075443111580156107b257506000546b04d8c55aefb8c05b5c00000014155b156107bd5760006000fd5b6005805474ff0000000000000000000000000000000000000000191660a060020a179055600454604051600160a060020a039182169130163180156108fc02916000818181858888f1935050505015156108175760006000fd5b5b565b6003805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156108a05780601f10610875576101008083540402835291602001916108a0565b820191906000526020600020905b81548152906001019060200180831161088357829003601f168201915b505050505081565b600554600090819060a060020a900460ff16156108c55760006000fd5b60075443116108d45760006000fd5b6000546b022e58cf5246568f8300000090106108f05760006000fd5b60055433600160a060020a039081169116141561090d5760006000fd5b600160a060020a03331660009081526001602052604090205491508115156109355760006000fd5b600160a060020a03331660009081526001602052604081208190555461095b9083610c36565b600055611900825b04905033600160a060020a03167fb6c0eca8138e097d71e2dd31e19a1266487f0553f170b7260ffe68bcbe9ff8a7826040518082815260200191505060405180910390a2604051600160a060020a0333169082156108fc029083906000818181858888f1935050505015156109d85760006000fd5b5b5050565b6b04d8c55aefb8c05b5c00000081565b600160a060020a0381166000908152600160205260409020545b919050565b60055460a060020a900460ff1681565b60075481565b60408051808201909152600381527f4241540000000000000000000000000000000000000000000000000000000000602082015281565b600454600160a060020a031681565b600160a060020a033316600090815260016020526040812054829010801590610a915750600082115b15610b0557600160a060020a03338116600081815260016020908152604080832080548890039055938716808352918490208054870190558351868152935191937fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef929081900390910190a3506001610624565b506000610624565b5b92915050565b600554600090819060a060020a900460ff1615610b315760006000fd5b600654431015610b415760006000fd5b600754431115610b515760006000fd5b341515610b5e5760006000fd5b610b6a34611900610c51565b9150610b7860005483610c80565b90506b04d8c55aefb8c05b5c00000081901015610b955760006000fd5b6000818155600160a060020a033316808252600160209081526040928390208054860190558251858152925191927fb33527d2e0d30b7aece2c5e82927985866c1b75173d671c14f4457bf67aa6910929081900390910190a25b5050565b6b022e58cf5246568f8300000081565b60065481565b600160a060020a038083166000908152600260209081526040808320938516835292905220545b92915050565b60008082841015610c4357fe5b5050808203805b5092915050565b6000828202831580610c6d5750828482811515610c6a57fe5b04145b1515610c7557fe5b8091505b5092915050565b6000828201838110801590610c6d5750828110155b1515610c7557fe5b8091505b50929150505600a165627a7a72305820e7d550d22cfb06e8da1efe14627217183e846b5986b9bac6199503c4780b03d70029"
+    }
+  }, {
     "request": {
-      "resource": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_estimateGas&from=0x90E481d9A664ebbE4Be180d9501962255463036d&to=0x0D8775F648430679A709E98d2b0Cb6250d2887EF&value=0x0&data=0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef090000000000000000000000000000000000000000000000000050e63686bce000&gasPrice=0x0&tag=latest",
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
       "options": {
-        "timeout": 15000,
-        "method": "GET",
-        "headers": [["Accept", "application/json"], ["Content-Type", "application/json"]]
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f86b010a841dcd6500850bc208d90082520894f6c138c36341138ddfc314a11038da8264b7ef096480c001a087bd84f3bd1251b5c92184bf7846d492a11dce6ed597ce5fc7f6d56bfda94f94a02ab2051da513c4f9f41b9641e4e33b32f3af153286d170a88122f0fdeb750fc0\"]}",
+        "headers": [["Content-Type", "application/json"]]
       }
     },
     "status": 200,
@@ -106,35 +105,124 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cf-cache-status", "DYNAMIC"],
-      ["cf-ray", "8ad9d4b5de89bf43-WAW"],
+      ["cf-ray", "95f2565b0b14443f-EZE"],
       ["connection", "keep-alive"],
-      ["content-length", "8"],
-      [
-        "content-security-policy",
-        "default-src 'self' exodus.com *.exodus.com exodus.io *.exodus.io *.a.exodus.io;"
-      ],
+      ["content-encoding", "gzip"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Sat, 03 Aug 2024 22:44:11 GMT"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Mon, 14 Jul 2025 16:18:40 GMT"],
+      ["etag", "W/\"66-n/KSACvoiTKwauSRzag/4GdiSQM\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
       ["server", "cloudflare"],
       [
         "set-cookie",
-        "route=1722725052.883.30.224069|ed817333ddf9ae6f5e2f21117235f5f3; Expires=Mon, 05-Aug-24 22:44:11 GMT; Max-Age=172800; Path=/; HttpOnly"
+        "route=1752509921.585.38.419533|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Wed, 16-Jul-25 16:18:40 GMT; Max-Age=172800; Path=/; HttpOnly"
       ],
       [
         "set-cookie",
-        "__cfruid=24fc86f4514f87c81f397a8fbf14a86776b34bcf-1722725051; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+        "_cfuvid=4L2ZO6NnRXjyFsR7bXH7hTrdEjMGWxLO173FuSxV6IE-1752509920706-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
       ],
-      [
-        "set-cookie",
-        "_cfuvid=cVpquM2xpHotTMORyRBYUtjxUEMapqsOzvF1NDJCKqg-1722725051953-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
-      ],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"],
       ["x-content-type-options", "nosniff"],
-      ["x-frame-options", "DENY"]
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
     ],
-    "url": "https://geth.a.exodus.io/wallet/v1/proxy?method=eth_estimateGas&from=0x90E481d9A664ebbE4Be180d9501962255463036d&to=0x0D8775F648430679A709E98d2b0Cb6250d2887EF&value=0x0&data=0xa9059cbb000000000000000000000000f6c138c36341138ddfc314a11038da8264b7ef090000000000000000000000000000000000000000000000000050e63686bce000&gasPrice=0x0&tag=latest",
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
     "redirected": false,
     "type": "basic",
     "bodyType": "json",
-    "body": "0xcbfe"
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "error": { "code": -32000, "message": "nonce too low: next nonce 19, tx nonce 10" }
+    }
+  }, {
+    "request": {
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_getTransactionByHash\",\"params\":[\"0x0e11b8e1477a5c8be823c83709408aecb37d572573f767ea4a9925dadf715061\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "95f2565c7ce2443f-EZE"],
+      ["connection", "keep-alive"],
+      ["content-length", "38"],
+      ["content-type", "application/json; charset=utf-8"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Mon, 14 Jul 2025 16:18:40 GMT"],
+      ["etag", "W/\"26-hrtxzAPXnVxBOmI8h3m2bTc7of8\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1752509921.81.38.321127|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Wed, 16-Jul-25 16:18:40 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=COVtrRTFxeKtNmKXjrr35eR7zDEhNpmxvOL3YwpgLv4-1752509920920-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept-Encoding"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
+    ],
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "jsonrpc": "2.0", "id": 1, "result": null }
+  }, {
+    "request": {
+      "resource": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
+      "options": {
+        "method": "POST",
+        "body": "{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"eth_getTransactionCount\",\"params\":[\"0x90E481d9A664ebbE4Be180d9501962255463036d\",\"pending\"]}",
+        "headers": [["Content-Type", "application/json"]]
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "ok": true,
+    "headers": [
+      ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "95f2565dea8aab29-EZE"],
+      ["connection", "keep-alive"],
+      ["content-length", "40"],
+      ["content-type", "application/json; charset=utf-8"],
+      ["cross-origin-opener-policy", "same-origin"],
+      ["date", "Mon, 14 Jul 2025 16:18:41 GMT"],
+      ["etag", "W/\"28-PkLL/mzP0b/xSG8k+rtapRN128c\""],
+      ["expect-ct", "max-age=86400, enforce"],
+      ["referrer-policy", "same-origin"],
+      ["server", "cloudflare"],
+      [
+        "set-cookie",
+        "route=1752509922.038.39.404481|c95532012acfcc2e3ee6dbf5e1aac279; Expires=Wed, 16-Jul-25 16:18:41 GMT; Max-Age=172800; Path=/; HttpOnly"
+      ],
+      [
+        "set-cookie",
+        "_cfuvid=5oJ3rp89fCg_FNCvbM27CA2G.Pm1jzkXvBfviyUychM-1752509921168-0.0.1.1-604800000; path=/; domain=.a.exodus.io; HttpOnly; Secure; SameSite=None"
+      ],
+      ["vary", "Accept-Encoding"],
+      ["x-content-type-options", "nosniff"],
+      ["x-frame-options", "SAMEORIGIN"],
+      ["x-xss-protection", "1; mode=block"]
+    ],
+    "url": "https://eth-clarity.a.exodus.io/api/v2/ethereum/rpc",
+    "redirected": false,
+    "type": "basic",
+    "bodyType": "json",
+    "body": { "jsonrpc": "2.0", "id": 2, "result": "0x13" }
   }
 ]

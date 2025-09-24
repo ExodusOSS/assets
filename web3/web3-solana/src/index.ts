@@ -1,4 +1,5 @@
 export { ExodusSolanaWallet } from './wallet-standard/index.js'
+export { ExodusSolanaWalletAccount } from './wallet-standard/account.js'
 export { SolanaProvider } from './provider/index.js'
 export { createSolanaDepsFactory } from './rpc-handlers/index.js'
 export { registerRPCHandlers } from './rpc-handlers/index.js'

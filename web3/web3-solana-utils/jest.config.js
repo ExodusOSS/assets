@@ -1,4 +1,4 @@
-import baseConfig from '../../../jest.config.cjs'
+import baseConfig from '../../jest.config.cjs'
 
 const config = {
   ...baseConfig,

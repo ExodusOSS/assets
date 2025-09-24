@@ -13,7 +13,6 @@ export default [
     },
     primaryColor: '#9391F7',
     gradientColors: ['#9391F7', '#B2B1FF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '20%', y2: '20%' },
   },
   {
     name: 'blok_matic_79cb78bc',
@@ -32,7 +31,6 @@ export default [
     },
     primaryColor: '#FF47FF',
     gradientColors: ['#AC18AC', '#FF47FF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'dai_matic_845af41b',
@@ -43,7 +41,6 @@ export default [
     addresses: { current: '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063' },
     primaryColor: '#f6b048',
     gradientColors: ['#FBCC5F', '#F9A606'],
-    gradientCoords: { x1: '3.912%', y1: '0%', x2: '89.933%', y2: '100%' },
   },
   {
     name: 'ghst_matic_d2b95a36',
@@ -62,7 +59,6 @@ export default [
     },
     primaryColor: '#FA34F3',
     gradientColors: ['#FA34F3', '#8F17F9'],
-    gradientCoords: { x1: '3%', y1: '8.5%', x2: '41.044%', y2: '23.738%' },
   },
   {
     name: 'gns_matic_4ae7a3c1',
@@ -80,7 +76,6 @@ export default [
     },
     primaryColor: '#4DFC8D',
     gradientColors: ['#37BE96', '#4DFC8D'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'link_matic_0fc0671d',
@@ -91,7 +86,6 @@ export default [
     addresses: { current: '0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39' },
     primaryColor: '#3FA0F1',
     gradientColors: ['#3FA0F1', '#295ADA'],
-    gradientCoords: { x1: '-22.982%', y1: '-43.915%', x2: '91.53%', y2: '101%' },
   },
   {
     name: 'mvx_matic_60b5e17b',
@@ -108,7 +102,6 @@ export default [
     },
     primaryColor: '#625CF4',
     gradientColors: ['#625CF4', '#9A96FF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
   {
     name: 'sand_matic_0472de85',
@@ -119,7 +112,6 @@ export default [
     addresses: { current: '0xBbba073C31bF03b8ACf7c28EF0738DeCF3695683' },
     primaryColor: '#00ADEF',
     gradientColors: ['#0084FF', '#00ADEF'],
-    gradientCoords: { x1: '9.954%', y1: '7.596%', x2: '34.509%', y2: '31.978%' },
   },
   {
     name: 'sportx_matic',
@@ -130,7 +122,6 @@ export default [
     addresses: { current: '0x840195888Db4D6A99ED9F73FcD3B225Bb3cB1A79' },
     primaryColor: '#00CC77',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: 'stmatic_matic_bac42ee5',
@@ -147,7 +138,6 @@ export default [
     },
     primaryColor: '#00BAFF',
     gradientColors: ['#00BAFF', '#3ADCFF'],
-    gradientCoords: { x1: '30%', y1: '-13.503%', x2: '-1.873%', y2: '-7.408%' },
   },
   {
     name: 'usdt_matic_86e249c1',
@@ -158,7 +148,6 @@ export default [
     addresses: { current: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F' },
     primaryColor: '#53AE94',
     gradientColors: ['#53AE94', '#2E9175'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '102%', y2: '101%' },
   },
   {
     name: 'usdc_matic_0a883d9b',
@@ -176,7 +165,6 @@ export default [
     },
     primaryColor: '#3E90E8',
     gradientColors: ['#3E90E8', '#2775CA'],
-    gradientCoords: { x1: '102%', y1: '101%', x2: '0%', y2: '0%' },
   },
   {
     name: 'wbtc_matic_298d6ace',
@@ -187,7 +175,6 @@ export default [
     addresses: { current: '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6' },
     primaryColor: '#8958AB',
     gradientColors: ['#8958AB', '#3D2F52'],
-    gradientCoords: { x1: '91.762%', y1: '69.532%', x2: '4.905%', y2: '24.223%' },
   },
   {
     name: 'weth_matic',
@@ -198,6 +185,5 @@ export default [
     addresses: { current: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619' },
     primaryColor: '#FF58A2',
     gradientColors: ['#EAEAEA', '#FFF'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
 ]

@@ -20,7 +20,6 @@ export default [
     },
     primaryColor: '#FBCC5F',
     gradientColors: ['#FBCC5F', '#FBF35F'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '20%', y2: '20%' },
   },
   {
     name: 'op_optimism_4a7ee59d',
@@ -37,7 +36,6 @@ export default [
     },
     primaryColor: '#FF0420',
     gradientColors: ['#FF0420', '#A10013'],
-    gradientCoords: { x1: '19.031%', y1: '-66.682%', x2: '123.324%', y2: '91.487%' },
   },
   {
     name: 'usdc_optimism_68bb70cd',
@@ -55,7 +53,6 @@ export default [
     },
     primaryColor: '#3E90E8',
     gradientColors: ['#3E90E8', '#2775CA'],
-    gradientCoords: { x1: '102%', y1: '101%', x2: '0%', y2: '0%' },
   },
   {
     name: 'usdt_optimism_26487766',
@@ -73,7 +70,6 @@ export default [
     },
     primaryColor: '#53AE94',
     gradientColors: ['#53AE94', '#2E9175'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '102%', y2: '101%' },
   },
   {
     name: 'wld_optimism_59dbb49e',
@@ -91,6 +87,5 @@ export default [
     },
     primaryColor: '#FFFFFF',
     gradientColors: ['#D5D5D5', '#FFFFFF'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '20%', y2: '20%' },
   },
 ]

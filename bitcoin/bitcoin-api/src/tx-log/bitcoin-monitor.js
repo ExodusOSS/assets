@@ -9,7 +9,7 @@ import InsightWSClient from '../insight-api-client/ws.js'
 import { resolveUnconfirmedAncestorData } from '../unconfirmed-ancestor-data.js'
 import { BitcoinMonitorScanner } from './bitcoin-monitor-scanner.js'
 
-const { isEmpty, isEqual, pickBy } = lodash
+const { isEmpty, isEqual } = lodash
 
 // NOTE: this is a frankenstein mashup of Exodus desktop
 // assets-refresh/insight action + Neo monitor
@@ -171,18 +171,8 @@ export class Monitor extends BaseMonitor {
       })
 
       const newData = {}
-      if (utxos || ordinalsUtxos) {
-        Object.assign(
-          newData,
-          pickBy(
-            {
-              utxos,
-              ordinalsUtxos,
-            },
-            Boolean
-          )
-        )
-      }
+      if (utxos) newData.utxos = utxos
+      if (ordinalsUtxos) newData.ordinalsUtxos = ordinalsUtxos
 
       if (txsToUpdate.length > 0) {
         await this.updateTxLog({ assetName, walletAccount, logItems: txsToUpdate })
@@ -254,17 +244,8 @@ export class Monitor extends BaseMonitor {
       })
 
     const newData = {}
-    if (utxos || ordinalsUtxos)
-      Object.assign(
-        newData,
-        pickBy(
-          {
-            utxos,
-            ordinalsUtxos,
-          },
-          Boolean
-        )
-      )
+    if (utxos) newData.utxos = utxos
+    if (ordinalsUtxos) newData.ordinalsUtxos = ordinalsUtxos
 
     if (!isEmpty(changedUnusedAddressIndexes)) {
       // Only for mobile atm, browser and hydra calculates from the latest txLogs
@@ -293,12 +274,6 @@ export class Monitor extends BaseMonitor {
         insightClient: this.#insightClient,
       })
       newData.mem = { unconfirmedTxAncestor }
-    }
-
-    if (this.fetchFungibleBalances) {
-      try {
-        newData.magicEdenApiFungibleBalances = await this.fetchFungibleBalances(walletAccount)
-      } catch {}
     }
 
     await aci.updateAccountState({

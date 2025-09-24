@@ -91,6 +91,7 @@ export async function connect(
   deps: BaseConnectDependencies,
   network: string,
   onlyIfTrusted = false,
+  silent = false,
 ): Promise<void> {
   const {
     approveConnection,
@@ -127,6 +128,11 @@ export async function connect(
     }
 
     await ensureTrusted(network)
+  }
+
+  if (onlyIfTrusted && silent) {
+    // onlyIfTrusted is used for an eager connection without user approval and should work when locked
+    return
   }
 
   const unlocked = await ensureUnlocked()

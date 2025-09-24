@@ -19,6 +19,5 @@ export default [
     },
     primaryColor: '#5deb5a',
     gradientColors: ['#5deb5a', '#8AFF88'],
-    gradientCoords: { x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
   },
 ]

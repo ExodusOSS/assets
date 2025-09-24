@@ -9,17 +9,6 @@ describe(`ethereum server integration tests`, () => {
 
   const { server, asset } = runEvmServerTestSuite({ assetPlugin, walletAddress, contractAddress })
 
-  // try moving the next ones to runEvmServerTestSuite
-  test('getLogs', async () => {
-    const logs = await server.getLogs({
-      fromBlock: '10000000',
-      toBlock: '10000001',
-      address: `0x6b175474e89094c44da98b954eedeac495271d0f`,
-      topics: '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
-    })
-    expect(logs).toEqual(expect.any(Array))
-  })
-
   describe('isForwarderContract with fallback', () => {
     test('isContract on forwarder contract returns is-a-contract', async () => {
       const isContract = await isForwarderContract({
@@ -75,7 +64,9 @@ describe(`ethereum server integration tests`, () => {
           'f864808506fc23ac0082520894ed32d62e940c7de772d6c8aea226f94b46f1483c80801ca06937e96f1a907b99f8fde65abebb363b6674b33dd357885233393ad8052fbdd2a0388a05206b979765924d842d6118bba87efe9a47f99fb8ba66d0865ee0d16185'
         )
       } catch (err) {
-        expect(err.message).toEqual('only replay-protected (EIP-155) transactions allowed over RPC')
+        expect(err.message).toMatch(
+          /only replay-protected \(EIP-155\) transactions allowed over RPC/
+        )
       }
     })
 
@@ -95,11 +86,26 @@ describe(`ethereum server integration tests`, () => {
     test('Transaction underprice', async () => {
       expect.assertions(1)
       try {
+        // {
+        //   "chainId": "1",
+        //   "type": "LegacyTransaction",
+        //   "valid": true,
+        //   "hash": "0x600aefe955a76f463bb624488e60ed2785da4a215d7f16b67754c93426c1c2bd",
+        //   "nonce": "2",
+        //   "gasPrice": "0",
+        //   "gasLimit": "21000",
+        //   "from": "0xa520cA9A99e3DA0FAa656ff5c0Ea0756a69bE58c",
+        //   "to": "0xa520ca9a99e3da0faa656ff5c0ea0756a69be58c",
+        //   "v": "25",
+        //   "r": "70215f44f4251ea773ca462ecbaf60c397363f770fbeab8dc8528f244b76c48e",
+        //   "s": "2ab2c889bb178092bd05aa13c74349a4a151997a9020557ca87ac60425eff3c9",
+        //   "value": "87112285931760246646623899502532662132735"
+        // }
         await server.sendRawTransaction(
           'f870028082520894a520ca9a99e3da0faa656ff5c0ea0756a69be58c91ffffffffffffffffffffffffffffffffff8025a070215f44f4251ea773ca462ecbaf60c397363f770fbeab8dc8528f244b76c48ea02ab2c889bb178092bd05aa13c74349a4a151997a9020557ca87ac60425eff3c9'
         )
       } catch (err) {
-        expect(err.message).toMatch(/transaction underpriced/)
+        expect(err.message).toMatch(/transaction gas price below minimum/)
       }
     }, 20_000)
   })
@@ -120,39 +126,8 @@ describe(`ethereum server integration tests`, () => {
 
   describe('getBalance', () => {
     test('0x7c71f5b89389b504dad3b50ed77f360706022ba6', async () => {
-      const balance = await server.getBalance('0x7c71f5b89389b504dad3b50ed77f360706022ba6', {})
-      expect(balance.confirmed).toBeInstanceOf(Object)
-      expect(balance.confirmed.value).toBeDefined()
-      expect(balance.unconfirmed).toBeInstanceOf(Object)
-      expect(balance.unconfirmed.value).toBeDefined()
-    })
-
-    test.skip('0x7c71f5b89389b504dad3b50ed77f360706022ba6 with endblock 3731625', async () => {
-      // endblock is not supported in magnifier
-      const balance = await server.getBalance('0x7c71f5b89389b504dad3b50ed77f360706022ba6', {
-        endblock: 3_731_625,
-      })
-      expect(balance).toContain({
-        confirmed: {
-          value: '125326086087732808',
-          '0x48c80f1f4d53d5951e5d5438b54cba84f29f32a5': '79624990000000000', // REP
-          '0xa74476443119a942de498590fe1f2454d7d4ac0d': '2000000000000000000', // GNT
-        },
-      })
-    })
-
-    test('token balance of 0xab3fd44bc9be1a6b908a625c8a852231e69cf3df with endblock 13992616', async () => {
-      // endblock is not supported in magnifier
-
-      // BAT token (https://etherscan.io/token/0x0d8775f648430679a709e98d2b0cb6250d2887ef#readContract)
-      const contractAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
-      const balance = await server.balanceOf(
-        '0x90E481d9A664ebbE4Be180d9501962255463036d',
-        contractAddress,
-        13_992_616 // endBlock
-      )
-      const confirmed = BigInt(balance?.confirmed?.[contractAddress])
-      expect(confirmed > BigInt(10_000)).toEqual(true)
+      const balance = await server.getBalance('0x7c71f5b89389b504dad3b50ed77f360706022ba6')
+      expect(balance).toBe('0x0')
     })
 
     test('proxied eth_getBalance works', async () => {
@@ -170,182 +145,89 @@ describe(`ethereum server integration tests`, () => {
     })
   })
 
-  describe('getTransactionByHash', () => {
-    test('fetch confirmed tx', async () => {
-      const tx = await server.getTransactionByHash(
-        '0xe17cf97dd49533417614042b8c38fd93c59831ce23d82d1a3f6f99631209c1d6'
-      )
-      expect(tx.blockNumber).toEqual(expect.any(String))
-    })
-
-    test('fetch pending / non-existent tx', async () => {
-      const tx = await server.getTransactionByHash(
-        '0x7e90eb1037907c9cbdfca048492a339dc4e98abf978f37945a4cd30b50b1e102'
-      )
-      expect(tx).toEqual(null)
-    })
-  })
-
   describe('getHistory', () => {
     test('empty list', async () => {
-      const list = await server.getHistory('0xde0b295669a9fd93d5f28d9ec85e40f4cb697bab')
-      expect(list).toEqual([])
+      const list = await server.getAllTransactions({
+        address: '0xde0b295669a9fd93d5f28d9ec85e40f4cb697bab',
+      })
+      expect(list).toEqual({
+        transactions: {
+          pending: [],
+          confirmed: [],
+        },
+        cursor: Buffer.from([0, 45, 49, 1, 0, 0, 0, 0]),
+      })
     })
 
     test('return history', async () => {
       const expected = [
         {
-          // raw: '0xf8ca03850ba43b740083015f909433990122638b9132ca29c723bdf037f1a891a70c80b864be99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded352062000000000000000000000000000000000000000000000000000000000000000011ba0a75e6cfdd5f96b9b8c93155ebb4ab32daf6e30f37fd59ae6952300cdf1812486a029b79a1d9a1c5a885ce9908f173a745f1d10c166b2b59466e45c1890771c7a87',
-          hash: '0x5236c351f1c5095962012e71352a7286e37802f367f1d39a89ef2df0a89f25af',
-          nonce: '0x3',
-          blockHash: '0xed76641c68a1c641aee09a94b3b471f4dc0316efe5ac19cf488e2674cf8d05b5',
-          blockNumber: '0x4510c',
-          timestamp: '0x5603d9be',
-          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
-          to: '0x33990122638b9132ca29c723bdf037f1a891a70c',
-          value: '0x0',
-          gasPrice: '0xba43b7400',
-          gas: '0x15f90',
-          // input: '0xbe99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded35206200000000000000000000000000000000000000000000000000000000000000001',
-          gasUsed: '0x105c2',
+          blockNumber: 282_892,
+          effects: [],
           error: null,
+          extraData: {},
+          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
+          gas: '90000',
+          gasPrice: '50000000000',
+          gasPriceEffective: '50000000000',
+          gasUsed: '43597',
+          gasUsedCumulative: '43597',
+          hash: '0x467bebe971601dc4ab900fb7199668085686c766bb52cbe044fcd5271ed981a4',
+          input: '0x432ced044861736852656700000000000000000000000000000000000000000000000000',
+          methodId: '0x432ced04',
+          nonce: '2',
           status: null,
-          internal: [],
-          erc20: [],
-          erc721: [],
-          data: '0xbe99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded35206200000000000000000000000000000000000000000000000000000000000000001',
+          timestamp: '0x14fff0a8e30',
+          to: '0x33990122638b9132ca29c723bdf037f1a891a70c',
+          transactionIndex: '0',
+          type: '0x0',
+          value: '0',
+          walletChanges: [],
         },
         {
-          // raw: '0xf88902850ba43b740083015f909433990122638b9132ca29c723bdf037f1a891a70c80a4432ced0448617368526567000000000000000000000000000000000000000000000000001ca069063dbc97f4863d36d7c50bcc52d0f8539e2f1f6c48afb2131b0241423ae7dda054d0b9891d70bac6d2b827b1e15eafef19f5627788ee398451542967b24064a8',
-          hash: '0x467bebe971601dc4ab900fb7199668085686c766bb52cbe044fcd5271ed981a4',
-          nonce: '0x2',
-          blockHash: '0xed76641c68a1c641aee09a94b3b471f4dc0316efe5ac19cf488e2674cf8d05b5',
-          blockNumber: '0x4510c',
-          timestamp: '0x5603d9be',
-          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
+          blockNumber: 282_892,
+          type: '0x0',
+          hash: '0x5236c351f1c5095962012e71352a7286e37802f367f1d39a89ef2df0a89f25af',
+          transactionIndex: '2',
+          nonce: '3',
+          gas: '90000',
+          gasPrice: '50000000000',
+          gasPriceEffective: '50000000000',
+          gasUsed: '67010',
+          gasUsedCumulative: '131607',
           to: '0x33990122638b9132ca29c723bdf037f1a891a70c',
-          value: '0x0',
-          gasPrice: '0xba43b7400',
-          gas: '0x15f90',
-          // input: '0x432ced044861736852656700000000000000000000000000000000000000000000000000',
-          gasUsed: '0xaa4d',
-          error: null,
+          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
+          timestamp: '0x14fff0a8e32',
+          value: '0',
           status: null,
-          internal: [],
-          erc20: [],
-          erc721: [],
-          data: '0x432ced044861736852656700000000000000000000000000000000000000000000000000',
+          error: null,
+          effects: [],
+          input:
+            '0xbe99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded35206200000000000000000000000000000000000000000000000000000000000000001',
+          methodId: '0xbe99a980',
+          walletChanges: [],
+          extraData: {},
         },
       ]
-      const list = await server.getHistory('0x33990122638b9132ca29c723bdf037f1a891a70c', {
-        endblock: '282892',
+      let {
+        transactions: { confirmed },
+      } = await server.getAllTransactions({
+        address: '0x33990122638b9132ca29c723bdf037f1a891a70c',
+        cursor: null,
       })
 
-      list.map((item) => expect(item.confirmations).toBeGreaterThanOrEqual(0))
+      confirmed.map((item) => expect(item.confirmations).toBeGreaterThanOrEqual(0))
 
-      expected.map((item) =>
-        expect(
-          list.map((item) => {
-            // confirmations number isn't constant so we need to delete it
-            // eslint-disable-next-line @exodus/mutable/no-param-reassign-prop-only
-            delete item.confirmations
-            return item
-          })
-        ).toContainEqual(item)
-      )
-    })
-  })
-
-  describe('getHistoryV2', () => {
-    test('empty list', async () => {
-      const list = await server.getHistoryV2('0xde0b295669a9fd93d5f28d9ec85e40f4cb697bab')
-      expect(list).toEqual([])
-    })
-
-    test('return history', async () => {
-      const expected = [
-        {
-          // raw: '0xf8ca03850ba43b740083015f909433990122638b9132ca29c723bdf037f1a891a70c80b864be99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded352062000000000000000000000000000000000000000000000000000000000000000011ba0a75e6cfdd5f96b9b8c93155ebb4ab32daf6e30f37fd59ae6952300cdf1812486a029b79a1d9a1c5a885ce9908f173a745f1d10c166b2b59466e45c1890771c7a87',
-          hash: '0x5236c351f1c5095962012e71352a7286e37802f367f1d39a89ef2df0a89f25af',
-          nonce: '0x3',
-          blockHash: '0xed76641c68a1c641aee09a94b3b471f4dc0316efe5ac19cf488e2674cf8d05b5',
-          blockNumber: '0x4510c',
-          timestamp: '0x5603d9be',
-          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
-          to: '0x33990122638b9132ca29c723bdf037f1a891a70c',
-          value: '0x0',
-          gasPrice: '0xba43b7400',
-          gas: '0x15f90',
-          // input: '0xbe99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded35206200000000000000000000000000000000000000000000000000000000000000001',
-          gasUsed: '0x105c2',
-          error: null,
-          status: null,
-          internal: [],
-          erc20: [],
-          erc721: [],
-          data: '0xbe99a980486173685265670000000000000000000000000000000000000000000000000000000000000000000000000023bf622b5a65f6060d855fca401133ded35206200000000000000000000000000000000000000000000000000000000000000001',
-        },
-        {
-          // raw: '0xf88902850ba43b740083015f909433990122638b9132ca29c723bdf037f1a891a70c80a4432ced0448617368526567000000000000000000000000000000000000000000000000001ca069063dbc97f4863d36d7c50bcc52d0f8539e2f1f6c48afb2131b0241423ae7dda054d0b9891d70bac6d2b827b1e15eafef19f5627788ee398451542967b24064a8',
-          hash: '0x467bebe971601dc4ab900fb7199668085686c766bb52cbe044fcd5271ed981a4',
-          nonce: '0x2',
-          blockHash: '0xed76641c68a1c641aee09a94b3b471f4dc0316efe5ac19cf488e2674cf8d05b5',
-          blockNumber: '0x4510c',
-          timestamp: '0x5603d9be',
-          from: '0xfe78b27b9a135636679f07fbccca7cabd8e5c370',
-          to: '0x33990122638b9132ca29c723bdf037f1a891a70c',
-          value: '0x0',
-          gasPrice: '0xba43b7400',
-          gas: '0x15f90',
-          // input: '0x432ced044861736852656700000000000000000000000000000000000000000000000000',
-          gasUsed: '0xaa4d',
-          error: null,
-          status: null,
-          internal: [],
-          erc20: [],
-          erc721: [],
-          data: '0x432ced044861736852656700000000000000000000000000000000000000000000000000',
-        },
-      ]
-      const list = await server.getHistoryV2('0x33990122638b9132ca29c723bdf037f1a891a70c', {
-        limit: 2,
-        index: 0,
+      confirmed = confirmed.slice(1, 3).map((item) => {
+        // confirmations number isn't constant so we need to delete it
+        // eslint-disable-next-line @exodus/mutable/no-param-reassign-prop-only
+        delete item.confirmations
+        return item
       })
 
-      list.map((item) => expect(item.confirmations).toBeGreaterThanOrEqual(0))
-
-      expected.map((item) =>
-        expect(
-          list.map((item) => {
-            // confirmations number isn't constant so we need to delete it
-            // eslint-disable-next-line @exodus/mutable/no-param-reassign-prop-only
-            delete item.confirmations
-            // eslint-disable-next-line @exodus/mutable/no-param-reassign-prop-only
-            delete item.addressIndex
-            return item
-          })
-        ).toContainEqual(item)
-      )
-    })
-
-    test('index is greater than amount of transactions', async () => {
-      const list = await server.getHistoryV2('0x33990122638b9132ca29c723bdf037f1a891a70c', {
-        limit: 1000,
-        index: 10 ** 6,
-      })
-
-      expect(list.length).toEqual(0)
-    })
-  })
-
-  describe('getGasEstimation', () => {
-    test('should return hexadecimal number', async () => {
-      const gasEstimationRaw = await server.getGasEstimation({
-        address: '0xfa103c21ea2df71dfb92b0652f8b1d795e51cdef',
-        data: '0x1cff79cd',
-      })
-      const gas = parseInt(gasEstimationRaw, 16)
-      expect(isFinite(gas) && gas > 21_000 && gas < 1e7).toBeTruthy()
+      for (const [i, element] of confirmed.entries()) {
+        expect(element).toEqual(expected.at(i))
+      }
     })
   })
 
@@ -375,7 +257,7 @@ describe(`ethereum server integration tests`, () => {
       try {
         await server.proxyToCoinNode({ method: 'eth_unknown' })
       } catch (e) {
-        expect(e.message.includes('does not exist/is not available')).toBeTruthy()
+        expect(e.message.includes('Unsupported Method')).toBeTruthy()
       }
     })
   })

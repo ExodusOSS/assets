@@ -11,6 +11,7 @@ export const signTxFactory = ({
   coinInfo,
   network,
   getKeyIdentifier,
+  getPrivateKeyFromMap,
   Psbt = DefaultPsbt,
   Transaction = DefaultTransaction,
 }) => {
@@ -43,6 +44,7 @@ export const signTxFactory = ({
       hdkeys,
       resolvePurpose,
       privateKeysAddressMap,
+      getPrivateKeyFromMap,
       addressPathsMap,
       coinInfo,
       network,

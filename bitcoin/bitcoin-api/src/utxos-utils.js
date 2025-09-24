@@ -10,8 +10,8 @@ export const getInscriptionTxId = (inscriptionId) => {
   return inscriptionId.split('i')[0]
 }
 
-export function getInscriptionIds({ nft, brc20 }) {
-  return nft?.tokenId ? [nft?.tokenId] : brc20 ? brc20.inscriptionIds : undefined
+export function getInscriptionIds({ nft }) {
+  return nft?.tokenId ? [nft?.tokenId] : undefined
 }
 
 export function getTransferOrdinalsUtxos({ inscriptionIds, ordinalsUtxos }) {
@@ -252,8 +252,9 @@ export function getUsableUtxos({
     (utxo) => !utxo.isCoinbase || utxo.confirmations >= COINBASE_MATURITY_HEIGHT
   )
 
-  if (!['bitcoin', 'bitcointestnet', 'bitcoinregtest'].includes(asset.name))
+  if (!['bitcoin', 'bitcointestnet', 'bitcoinregtest'].includes(asset.name)) {
     return filterDustUtxos({ utxos, feeData })
+  }
 
   assert(feeData.fastestFee, 'feeData.fastestFee is required')
   assert(

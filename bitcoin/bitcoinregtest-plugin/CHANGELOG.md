@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoinregtest-plugin@2.0.0...@exodus/bitcoinregtest-plugin@2.0.1) (2025-08-06)
+
+
+### Bug Fixes
+
+
+* fix: bump bitcoin-api to v4 (#6208)
+
+
+
+## [2.0.0](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoinregtest-plugin@1.11.1...@exodus/bitcoinregtest-plugin@2.0.0) (2025-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+* refactor!: remove deprecated asset.getSpendableBalance and asset.getAvailableBalance  (#6013)
+
+
+
 ## [1.11.1](https://github.com/ExodusMovement/assets/compare/@exodus/bitcoinregtest-plugin@1.11.0...@exodus/bitcoinregtest-plugin@1.11.1) (2024-12-12)
 
 

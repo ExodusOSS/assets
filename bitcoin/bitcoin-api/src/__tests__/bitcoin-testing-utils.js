@@ -72,9 +72,12 @@ export const collectBalances = async ({ getBalances, useDefaultUnit }) => {
   )
 }
 
-export const createSignTestCases = ({ fixturesPath }) => {
+export const createSignTestCases = ({ fixturesPath, fixturesRequire }) => {
+  const fixturesImport = (name) => import(join(fixturesPath, name))
+  // When require() is present, use fixturesRequire as a loader for bundle compatibility
+  const load = fixturesRequire && typeof require !== 'undefined' ? fixturesRequire : fixturesImport
   const unsignedTxTestCases = Object.fromEntries(
-    readdirSync(fixturesPath).map((file) => [file, import(join(fixturesPath, file))])
+    readdirSync(fixturesPath).map((file) => [file, load(file)])
   )
   return mapValues(
     unsignedTxTestCases,
